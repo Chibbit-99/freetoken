@@ -1,0 +1,15 @@
+{
+  "id": "provider-2",
+  "name": "Provider 2",
+  "website": "https://provider-2.example.com",
+  "docs": "https://provider-2.example.com/docs",
+  "description": "Placeholder description for provider 2.",
+  "offer": { "type": "research", "label": "Experimental access", "tone": "blue" },
+  "privacy": { "type": "private", "label": "Private prompts" },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "model-7", "name": "Model 7", "family": "Family 3", "context_window": 131072, "metrics": { "tps": 95, "intelligence": 64, "tpm": 2000 } },
+    { "id": "model-8", "name": "Model 8", "family": "Family 3", "context_window": 32768, "metrics": { "tps": 88, "intelligence": 60, "tpm": 2000 } }
+  ]
+}

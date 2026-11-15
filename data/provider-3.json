@@ -1,0 +1,18 @@
+{
+  "id": "provider-3",
+  "name": "Provider 3",
+  "website": "https://provider-3.example.com",
+  "docs": "https://provider-3.example.com/docs",
+  "description": "Placeholder description for provider 3.",
+  "offer": { "type": "always-free", "label": "Always-free quota", "tone": "emerald" },
+  "privacy": { "type": "private", "label": "Private prompts" },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "model-9", "name": "Model 9", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 210, "intelligence": 42, "tpm": 6000 } },
+    { "id": "model-10", "name": "Model 10", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 175, "intelligence": 56, "tpm": 6000 } },
+    { "id": "model-11", "name": "Model 11", "family": "Family 3", "context_window": 32768, "metrics": { "tps": 160, "intelligence": 48, "tpm": 5000 } },
+    { "id": "model-12", "name": "Model 12", "family": "Family 4", "context_window": 8192, "metrics": { "tps": 140, "intelligence": 52, "tpm": 5000 } },
+    { "id": "model-13", "name": "Model 13", "family": "Family 3", "context_window": 32768, "metrics": { "tps": 120, "intelligence": 50, "tpm": 4000 } }
+  ]
+}

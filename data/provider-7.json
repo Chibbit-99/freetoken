@@ -1,0 +1,17 @@
+{
+  "id": "provider-7",
+  "name": "Provider 7",
+  "website": "https://provider-7.example.com",
+  "docs": "https://provider-7.example.com/docs",
+  "description": "Placeholder description for provider 7.",
+  "offer": { "type": "always-free", "label": "Always-free quota", "tone": "emerald" },
+  "privacy": { "type": "private", "label": "Private prompts" },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "model-28", "name": "Model 28", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 190, "intelligence": 40, "tpm": 8000 } },
+    { "id": "model-29", "name": "Model 29", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 120, "intelligence": 53, "tpm": 9500 } },
+    { "id": "model-30", "name": "Model 30", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 45, "intelligence": 64, "tpm": 6000 } },
+    { "id": "model-31", "name": "Model 31", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 25, "intelligence": 68, "tpm": 2500 } }
+  ]
+}

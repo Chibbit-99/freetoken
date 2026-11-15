@@ -214,7 +214,7 @@
                         </svg>
                     </span>
 
-                    <input id="catalogue-search" type="text" placeholder="Search a provider or model (Gemini, Llama, Qwen...)" class="w-full bg-slate-50 border border-slate-200 text-xs rounded pl-10 pr-4 py-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-300 focus:ring-1 focus:ring-slate-300/30 transition-all font-sans">
+                    <input id="catalogue-search" type="text" placeholder="Search a provider or model (Provider 1, Model 1, Family 1...)" class="w-full bg-slate-50 border border-slate-200 text-xs rounded pl-10 pr-4 py-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-300 focus:ring-1 focus:ring-slate-300/30 transition-all font-sans">
                 </div>
                 <!-- Family Select Dropdown (options populated from /data JSON) -->
                 <div class="relative min-w-[180px]">
@@ -552,7 +552,9 @@
                     if (m.family && families.indexOf(m.family) === -1) families.push(m.family);
                 });
             });
-            families.sort();
+            families.sort(function (a, b) {
+                return a.localeCompare(b, undefined, { numeric: true });
+            });
             families.forEach(function (f) {
                 var opt = document.createElement('option');
                 opt.value = f;
