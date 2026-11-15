@@ -9,7 +9,7 @@
   "requires_payment_card": false,
   "last_updated": "2026-11-15",
   "models": [
-    { "id": "model-26", "name": "Model 26", "family": "Family 12" },
-    { "id": "model-27", "name": "Model 27", "family": "Family 13" }
+    { "id": "model-26", "name": "Model 26", "family": "Family 12", "rate_limits": "40 RPM, 1000 RPD" },
+    { "id": "model-27", "name": "Model 27", "family": "Family 13", "rate_limits": "40 RPM, 1000 RPD" }
   ]
 }

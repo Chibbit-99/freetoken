@@ -181,7 +181,7 @@
                     </div>
                     <p class="text-[11px] text-slate-400 border-b border-slate-100 pb-3 mb-4">
 
-                        Maximum baseline request tokens allowed per minute under default text tier allocations — Higher is better.
+                        Free token allowance granted per model, measured in tokens per day &mdash; Higher is better. Models without a daily allowance are left blank.
                     </p>
 
                     <!-- Data Bars Representation (rendered from /data JSON) -->
@@ -460,6 +460,15 @@
             }).join('');
         }
 
+        function compactTokens(v) {
+            if (v >= 1000000) {
+                var n = v / 1000000;
+                return (Math.round(n * 10) / 10) + 'M';
+            }
+            if (v >= 1000) return Math.round(v / 1000) + 'K';
+            return String(v);
+        }
+
         function renderDashboard() {
             renderBars('speed-bars', topByMetric(function (m) {
                 return m.metrics && m.metrics.tps;
@@ -482,9 +491,14 @@
             });
 
             renderBars('allowance-bars', topByMetric(function (m) {
-                return m.metrics && m.metrics.tpm;
+                return m.token_allowance;
             }, 3).map(function (r) {
-                return { primary: r.provider.name, secondary: r.model.name, value: r.v.toLocaleString('en-US') + ' TPM', v: r.v };
+                return {
+                    primary: r.provider.name,
+                    secondary: r.model.name + (r.model.rate_limits ? ' \u00b7 ' + r.model.rate_limits : ''),
+                    value: compactTokens(r.v) + ' tokens/day',
+                    v: r.v
+                };
             }), {
                 scale: 'relative',
                 barClasses: ['bg-amber-500', 'bg-slate-700', 'bg-slate-400'],

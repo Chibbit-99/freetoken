@@ -17,7 +17,9 @@
         "name": "model display name",
         "family": "model family used for filtering/chips",
         "context_window": "optional integer (tokens)",
-        "metrics": { "tps": "optional tokens/sec", "intelligence": "optional 0-100 score", "tpm": "optional tokens/min allowance" }
+        "metrics": { "tps": "optional generation speed, tokens/sec", "intelligence": "optional 0-100 score" },
+        "token_allowance": "optional integer — free tokens per day granted for this model (omit/blank if the provider does not grant free usage as a daily token allowance)",
+        "rate_limits": "optional string — free-form rate limits when allowance is not expressible as tokens/day, e.g. \"40 RPM, 1000 RPD\""
       }
     ]
   },

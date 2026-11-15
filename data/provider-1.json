@@ -9,11 +9,11 @@
   "requires_payment_card": false,
   "last_updated": "2026-11-15",
   "models": [
-    { "id": "model-1", "name": "Model 1", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 240, "intelligence": 58, "tpm": 14400 } },
-    { "id": "model-2", "name": "Model 2", "family": "Family 2", "context_window": 131072, "metrics": { "tps": 200, "intelligence": 55, "tpm": 10000 } },
-    { "id": "model-3", "name": "Model 3", "family": "Family 3", "context_window": 131072, "metrics": { "tps": 170, "intelligence": 59, "tpm": 8000 } },
-    { "id": "model-4", "name": "Model 4", "family": "Family 3", "context_window": 32768, "metrics": { "tps": 150, "intelligence": 61, "tpm": 9000 } },
-    { "id": "model-5", "name": "Model 5", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 180, "intelligence": 66, "tpm": 12000 } },
-    { "id": "model-6", "name": "Model 6", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 60, "intelligence": 70, "tpm": 3000 } }
+    { "id": "model-1", "name": "Model 1", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 240, "intelligence": 58 }, "token_allowance": 1000000 },
+    { "id": "model-2", "name": "Model 2", "family": "Family 2", "context_window": 131072, "metrics": { "tps": 200, "intelligence": 55 }, "token_allowance": 500000 },
+    { "id": "model-3", "name": "Model 3", "family": "Family 3", "context_window": 131072, "metrics": { "tps": 170, "intelligence": 59 }, "token_allowance": 250000 },
+    { "id": "model-4", "name": "Model 4", "family": "Family 3", "context_window": 32768, "metrics": { "tps": 150, "intelligence": 61 }, "token_allowance": 250000 },
+    { "id": "model-5", "name": "Model 5", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 180, "intelligence": 66 }, "token_allowance": 500000 },
+    { "id": "model-6", "name": "Model 6", "family": "Family 1", "context_window": 131072, "metrics": { "tps": 60, "intelligence": 70 }, "token_allowance": 100000 }
   ]
 }
