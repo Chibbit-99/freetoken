@@ -1,0 +1,17 @@
+{
+  "id": "cohere-free",
+  "name": "Cohere Free",
+  "website": "https://cohere.com",
+  "docs": "https://docs.cohere.com",
+  "description": "Free trial keys for the Command and Aya families with monthly token credits.",
+  "offer": { "type": "monthly-credits", "label": "Monthly credits", "tone": "violet" },
+  "privacy": { "type": "partial", "label": "Partially private prompts" },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "command-r-plus", "name": "Command R+", "family": "Command", "context_window": 128000, "metrics": { "tps": 60, "intelligence": 65, "tpm": 4000 } },
+    { "id": "command-r", "name": "Command R", "family": "Command", "context_window": 128000, "metrics": { "tps": 90, "intelligence": 61, "tpm": 10000 } },
+    { "id": "command", "name": "Command", "family": "Command", "context_window": 32768, "metrics": { "tps": 110, "intelligence": 55, "tpm": 8000 } },
+    { "id": "aya-expanse-8b", "name": "Aya Expanse 8B", "family": "Aya", "context_window": 8192, "metrics": { "tps": 140, "intelligence": 52, "tpm": 6000 } }
+  ]
+}

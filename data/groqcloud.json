@@ -1,0 +1,19 @@
+{
+  "id": "groqcloud",
+  "name": "GroqCloud",
+  "website": "https://groq.com",
+  "docs": "https://console.groq.com/docs",
+  "description": "High-throughput inference on Groq LPUs with an always-free developer quota.",
+  "offer": { "type": "always-free", "label": "Always-free quota", "tone": "emerald" },
+  "privacy": { "type": "private", "label": "Private prompts" },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "llama-3.1-8b-instant", "name": "Llama 3.1 8B Instant", "family": "Llama", "context_window": 131072, "metrics": { "tps": 240, "intelligence": 58, "tpm": 14400 } },
+    { "id": "gpt-oss-20b", "name": "GPT OSS 20B", "family": "GPT OSS", "context_window": 131072, "metrics": { "tps": 200, "intelligence": 55, "tpm": 10000 } },
+    { "id": "qwen3-14b", "name": "Qwen3 14B", "family": "Qwen", "context_window": 131072, "metrics": { "tps": 170, "intelligence": 59, "tpm": 8000 } },
+    { "id": "qwen2.5-32b", "name": "Qwen 2.5 32B", "family": "Qwen", "context_window": 32768, "metrics": { "tps": 150, "intelligence": 61, "tpm": 9000 } },
+    { "id": "llama-3.3-70b-versatile", "name": "Llama 3.3 70B Versatile", "family": "Llama", "context_window": 131072, "metrics": { "tps": 180, "intelligence": 66, "tpm": 12000 } },
+    { "id": "llama-3.1-405b", "name": "Llama 3.1 405B", "family": "Llama", "context_window": 131072, "metrics": { "tps": 60, "intelligence": 70, "tpm": 3000 } }
+  ]
+}

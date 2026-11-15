@@ -29,7 +29,7 @@
     <header class="border-b border-slate-200 sticky top-0 bg-white/95 backdrop-blur-sm z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                
+
                 <div class="flex items-center gap-6 h-full">
                     <div class="flex items-center gap-2">
                         <!-- Icon linked horizontally to prevent vertical compression -->
@@ -53,7 +53,7 @@
                         <a href="#" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Docs</a>
                     </nav>
                 </div>
-                
+
                 <!-- Action Controls -->
                 <div class="flex items-center gap-3">
                     <div class="relative hidden sm:block">
@@ -88,15 +88,14 @@
                         Browse the Catalogue
                     </a>
                     <div class="text-sm text-purple-600 font-medium font-sans">
-                        Tracking <span class="font-bold font-mono text-purple-700">7</span> providers live
+                        Tracking <span id="provider-count" class="font-bold font-mono text-purple-700">&ndash;</span> providers live
                     </div>
                 </div>
             </div>
-            
+
             <!-- Announcements / Updates Feed Area -->
             <div class="border-t border-slate-200 lg:border-t-0 lg:border-l lg:pl-6 space-y-4">
                 <div class="text-xs font-bold tracking-tight text-slate-400">Latest index updates</div>
-                
 
                 <div class="space-y-1 group relative">
                     <div class="flex items-center justify-between text-xs">
@@ -137,37 +136,9 @@
                         Average text generation throughput measured in tokens per second over structured workloads — Higher is faster.
                     </p>
 
-
-                    <!-- Data Bars Representation -->
-                    <div class="space-y-3">
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">Groq Cloud <span class="text-[10px] text-slate-400 font-mono">(Llama 3.1)</span></span>
-                                <span class="font-bold text-emerald-600 font-mono">240 TPS</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-emerald-500 h-full rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">DeepSeek Engine <span class="text-[10px] text-slate-400 font-mono">(V4.1)</span></span>
-                                <span class="font-bold text-slate-900 font-mono">115 TPS</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-slate-700 h-full rounded-full" style="width: 48%"></div>
-                            </div>
-
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">OpenRouter Free <span class="text-[10px] text-slate-400 font-mono">(Mistral)</span></span>
-                                <span class="font-bold text-slate-900 font-mono">55 TPS</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-slate-400 h-full rounded-full" style="width: 23%"></div>
-                            </div>
-                        </div>
+                    <!-- Data Bars Representation (rendered from /data JSON) -->
+                    <div id="speed-bars" class="space-y-3">
+                        <p class="text-[11px] text-slate-400 font-sans">Loading metrics&hellip;</p>
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
@@ -189,37 +160,9 @@
                         Standardized validation benchmarking mapping reasoning and text output density — Higher is better.
                     </p>
 
-                    <!-- Data Bars Representation -->
-                    <div class="space-y-3">
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">Claude Fable 5.2 <span class="text-[10px] text-slate-400 font-mono">(maxi)</span></span>
-                                <span class="font-bold text-slate-900">85</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-
-                                <div class="bg-indigo-600 h-full rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">Gemini 4 Carbon <span class="text-[10px] text-slate-400 font-mono">(high)</span></span>
-                                <span class="font-bold text-slate-900">80</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-slate-700 h-full rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">GPT-6 Astra <span class="text-[10px] text-slate-400 font-mono">(maxi)</span></span>
-                                <span class="font-bold text-slate-900">77</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-slate-400 h-full rounded-full" style="width: 77%"></div>
-
-                            </div>
-                        </div>
+                    <!-- Data Bars Representation (rendered from /data JSON) -->
+                    <div id="intelligence-bars" class="space-y-3">
+                        <p class="text-[11px] text-slate-400 font-sans">Loading metrics&hellip;</p>
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
@@ -241,36 +184,9 @@
                         Maximum baseline request tokens allowed per minute under default text tier allocations — Higher is better.
                     </p>
 
-                    <!-- Data Bars Representation -->
-                    <div class="space-y-3">
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">Groq Cloud <span class="text-[10px] text-slate-400 font-mono">(Llama 3.x)</span></span>
-                                <span class="font-bold text-slate-900">14,400 TPM</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-amber-500 h-full rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">Cohere Free <span class="text-[10px] text-slate-400 font-mono">(Command-R)</span></span>
-                                <span class="font-bold text-slate-900">10,000 TPM</span>
-                            </div>
-
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-slate-700 h-full rounded-full" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="flex justify-between text-xs font-mono">
-                                <span class="text-slate-700 font-sans font-medium">Google AI Studio <span class="text-[10px] text-slate-400 font-mono">(Per Minute)</span></span>
-                                <span class="font-bold text-slate-900">15 RPM</span>
-                            </div>
-                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                                <div class="bg-slate-400 h-full rounded-full" style="width: 35%"></div>
-                            </div>
-                        </div>
+                    <!-- Data Bars Representation (rendered from /data JSON) -->
+                    <div id="allowance-bars" class="space-y-3">
+                        <p class="text-[11px] text-slate-400 font-sans">Loading metrics&hellip;</p>
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
@@ -286,7 +202,7 @@
 
     <!-- Catalogue Container Section -->
     <section id="catalogue" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16 scroll-mt-20">
-        
+
         <!-- Interactive Catalogue Filtering Sub-System Component -->
         <div class="mb-6 space-y-4">
             <!-- Search & Family Selection Block -->
@@ -298,18 +214,21 @@
                         </svg>
                     </span>
 
-                    <input type="text" placeholder="Search a provider or model (Gemini, Llama, Qwen...)" class="w-full bg-slate-50 border border-slate-200 text-xs rounded pl-10 pr-4 py-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-300 focus:ring-1 focus:ring-slate-300/30 transition-all font-sans">
+                    <input id="catalogue-search" type="text" placeholder="Search a provider or model (Gemini, Llama, Qwen...)" class="w-full bg-slate-50 border border-slate-200 text-xs rounded pl-10 pr-4 py-2.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-300 focus:ring-1 focus:ring-slate-300/30 transition-all font-sans">
                 </div>
-                <!-- Flat Select Dropdown Container -->
+                <!-- Family Select Dropdown (options populated from /data JSON) -->
                 <div class="relative min-w-[180px]">
-                    <div class="flex items-center justify-between w-full bg-slate-50 border border-slate-200 rounded px-3 py-2 text-xs text-slate-800 font-sans cursor-pointer hover:bg-slate-100/70 transition-colors">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <div class="flex items-center justify-between w-full bg-slate-50 border border-slate-200 rounded px-3 py-2 text-xs text-slate-800 font-sans hover:bg-slate-100/70 transition-colors">
+                        <div class="flex items-center gap-2 flex-1 min-w-0">
+                            <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"></path>
                             </svg>
-                            <span>Model: <span class="font-semibold text-slate-900">Any family</span></span>
+                            <span class="whitespace-nowrap">Model:</span>
+                            <select id="family-filter" class="bg-transparent border-0 text-xs font-semibold text-slate-900 focus:outline-none cursor-pointer flex-1 min-w-0">
+                                <option value="any">Any family</option>
+                            </select>
                         </div>
-                        <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <svg class="w-3 h-3 text-slate-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
                         </svg>
                     </div>
@@ -321,13 +240,13 @@
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pt-1">
                 <!-- Navigation Filter Items Tabs -->
                 <div class="flex flex-wrap items-center gap-1.5 text-xs text-slate-700 font-medium">
-                    <button class="bg-slate-900 text-white font-semibold px-3 py-1 rounded transition-colors">All offers</button>
-                    <button class="hover:bg-slate-100 text-slate-700 px-3 py-1 rounded transition-colors">Always free</button>
-                    <button class="hover:bg-slate-100 text-slate-700 px-3 py-1 rounded transition-colors">Free models</button>
-                    <button class="hover:bg-slate-100 text-slate-700 px-3 py-1 rounded transition-colors">Monthly credits</button>
-                    <button class="hover:bg-slate-100 text-slate-700 px-3 py-1 rounded transition-colors">Research</button>
-                    <button class="hover:bg-slate-100 text-slate-700 px-3 py-1 rounded transition-colors">Trials</button>
-                    <button class="hover:bg-slate-100 text-slate-700 px-3 py-1 rounded transition-colors">Community</button>
+                    <button class="offer-tab px-3 py-1 rounded transition-colors bg-slate-900 text-white font-semibold" data-offer="all">All offers</button>
+                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="always-free">Always free</button>
+                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="free-models">Free models</button>
+                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="monthly-credits">Monthly credits</button>
+                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="research">Research</button>
+                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="trials">Trials</button>
+                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="community">Community</button>
                 </div>
 
                 <!-- Hard Parameter Requirement Checkboxes -->
@@ -335,13 +254,13 @@
                     <span class="text-slate-400 font-mono text-[11px] tracking-tight">Require</span>
                     <!-- Checkbox 1 -->
                     <label class="flex items-center gap-2 cursor-pointer group select-none">
-                        <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-slate-900 focus:ring-0 focus:ring-offset-0 bg-white border accent-slate-900">
+                        <input id="req-no-card" type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-slate-900 focus:ring-0 focus:ring-offset-0 bg-white border accent-slate-900">
                         <span class="text-slate-800 font-medium group-hover:text-slate-950 transition-colors">No payment card</span>
 
                     </label>
                     <!-- Checkbox 2 -->
                     <label class="flex items-center gap-2 cursor-pointer group select-none">
-                        <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-slate-900 focus:ring-0 focus:ring-offset-0 bg-white border accent-slate-900">
+                        <input id="req-private" type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-slate-900 focus:ring-0 focus:ring-offset-0 bg-white border accent-slate-900">
                         <span class="text-slate-800 font-medium group-hover:text-slate-950 transition-colors">Private prompts</span>
                     </label>
                 </div>
@@ -353,111 +272,9 @@
             Provider
         </div>
 
-        <!-- High-density Data Table Layout -->
-        <div class="border border-slate-200 bg-white divide-y divide-slate-200 text-sm">
-            
-            <!-- Row 1: GroqCloud -->
-
-            <div class="p-4 hover:bg-slate-50/50 transition-colors">
-                <div class="font-bold text-slate-900 tracking-tight mb-1 text-base">GroqCloud</div>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-                    <span class="text-emerald-600 font-medium font-sans">Always-free quota</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-600 font-medium underline decoration-dotted font-sans">Private prompts</span>
-                    <span class="text-slate-600 font-medium">Llama</span>
-                    <span class="text-slate-600 font-medium">Qwen</span>
-                    <span class="text-slate-600 font-medium">GPT OSS</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-500 font-sans">10 models</span>
-                </div>
-            </div>
-
-            <!-- Row 2: Hetzner Experiments -->
-            <div class="p-4 hover:bg-slate-50/50 transition-colors">
-                <div class="font-bold text-slate-900 tracking-tight mb-1 text-base">Hetzner Experiments Inference API</div>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-                    <span class="text-blue-600 font-medium font-sans">Experimental access</span>
-
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-600 font-medium underline decoration-dotted font-sans">Private prompts</span>
-                    <span class="text-slate-600 font-medium">Qwen</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-500 font-sans">2 models</span>
-                </div>
-            </div>
-
-            <!-- Row 3: Cloudflare Workers AI -->
-            <div class="p-4 hover:bg-slate-50/50 transition-colors">
-                <div class="font-bold text-slate-900 tracking-tight mb-1 text-base">Cloudflare Workers AI</div>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-                    <span class="text-emerald-600 font-medium font-sans">Always-free quota</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-600 font-medium underline decoration-dotted font-sans">Private prompts</span>
-                    <span class="text-slate-600 font-medium">Gemma</span>
-                    <span class="text-slate-600 font-medium">Llama</span>
-                    <span class="text-slate-600 font-medium">Qwen</span>
-                    <span class="text-slate-300">&middot;</span>
-
-                    <span class="text-slate-500 font-sans">9 models</span>
-                </div>
-            </div>
-
-            <!-- Row 4: Arli AI -->
-            <div class="p-4 hover:bg-slate-50/50 transition-colors">
-                <div class="font-bold text-slate-900 tracking-tight mb-1 text-base">Arli AI</div>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-                    <span class="text-emerald-600 font-medium font-sans">Always-free quota</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-600 font-medium underline decoration-dotted font-sans">Private prompts</span>
-                    <span class="text-slate-600 font-medium">Model inference</span>
-                </div>
-            </div>
-
-            <!-- Row 5: OpenRouter -->
-            <div class="p-4 hover:bg-slate-50/50 transition-colors">
-                <div class="font-bold text-slate-900 tracking-tight mb-1 text-base">OpenRouter</div>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-
-                    <span class="text-emerald-600 font-medium font-sans">Free model routes</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-amber-600 font-medium underline decoration-dotted font-sans">Partially private prompts</span>
-                    <span class="text-slate-600 font-medium">Gemma</span>
-                    <span class="text-slate-600 font-medium">Nemotron</span>
-                    <span class="text-slate-600 font-medium">Command</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-500 font-sans">20 models</span>
-                </div>
-            </div>
-
-            <!-- Row 6: Jina Reader -->
-            <div class="p-4 hover:bg-slate-50/50 transition-colors">
-                <div class="font-bold text-slate-900 tracking-tight mb-1 text-base">Jina Reader and anonymous utility APIs</div>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-                    <span class="text-emerald-600 font-medium font-sans">Always-free quota</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-amber-600 font-medium underline decoration-dotted font-sans">Partially private prompts</span>
-                    <span class="text-slate-600 font-medium">Webpage To Markdown</span>
-
-                    <span class="text-slate-600 font-medium">Pdf Extraction</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-500 font-sans">2 models</span>
-                </div>
-            </div>
-
-            <!-- Row 7: AwanLLM -->
-            <div class="p-4 hover:bg-slate-50/50 transition-colors">
-                <div class="font-bold text-slate-900 tracking-tight mb-1 text-base">AwanLLM</div>
-                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">
-                    <span class="text-emerald-600 font-medium font-sans">Always-free quota</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-600 font-medium underline decoration-dotted font-sans">Private prompts</span>
-                    <span class="text-slate-600 font-medium">Llama</span>
-                    <span class="text-slate-300">&middot;</span>
-                    <span class="text-slate-500 font-sans">6 models</span>
-                </div>
-            </div>
-
-
+        <!-- High-density Data Table Layout (rows rendered from /data JSON) -->
+        <div id="catalogue-rows" class="border border-slate-200 bg-white divide-y divide-slate-200 text-sm">
+            <div class="p-8 text-center text-xs text-slate-400 font-sans">Loading provider data&hellip;</div>
         </div>
     </section>
 
@@ -523,7 +340,312 @@
         </div>
     </footer>
 
+    <!--
+        Data-driven rendering.
+        All provider content (hero count, dashboard bars, catalogue rows, family
+        filter options) is loaded at runtime from the JSON files in /data.
+
+        Adding a provider requires NO changes to this file:
+          1. create data/<id>.json following the schema in data/providers.json
+          2. append "<id>.json" to the "providers" array in data/providers.json
+    -->
+    <script>
+    (function () {
+        'use strict';
+
+        // Candidate base URLs for the /data directory, relative to this page.
+        // The first that responds wins, so the page works whether it is served
+        // from the repository root or from app/ with data/ alongside it.
+        var DATA_BASES = ['../data/', 'data/', '/data/'];
+
+        var TONE = {
+            emerald: 'text-emerald-600',
+            blue: 'text-blue-600',
+            amber: 'text-amber-600',
+            violet: 'text-violet-600',
+            sky: 'text-sky-600',
+            rose: 'text-rose-600',
+            slate: 'text-slate-600'
+        };
+
+        var PRIVACY = {
+            'private': 'text-slate-600 underline decoration-dotted',
+            'partial': 'text-amber-600 underline decoration-dotted',
+            'none': 'text-slate-400'
+        };
+
+        var state = {
+            q: '',
+            offer: 'all',
+            family: 'any',
+            noCard: false,
+            privatePrompts: false,
+            providers: []
+        };
+
+        function $(id) { return document.getElementById(id); }
+
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+            });
+        }
+
+        function fetchJSON(url) {
+            return fetch(url).then(function (r) {
+                if (!r.ok) throw new Error(url + ' -> HTTP ' + r.status);
+                return r.json();
+            });
+        }
+
+        // Try each URL in order; resolve with the first that parses as JSON.
+        function fetchFirst(urls) {
+            return new Promise(function (resolve, reject) {
+                var i = 0;
+                var errors = [];
+                function attempt() {
+                    if (i >= urls.length) { reject(new Error(errors.join('; '))); return; }
+                    var url = urls[i++];
+                    fetchJSON(url).then(function (data) {
+                        resolve({ url: url, data: data });
+                    }).catch(function (e) {
+                        errors.push(String(e));
+                        attempt();
+                    });
+                }
+                attempt();
+            });
+        }
+
+        // Best model per provider for a given metric, top n providers.
+        function topByMetric(pick, n) {
+            var rows = [];
+            state.providers.forEach(function (p) {
+                var best = null;
+                (p.models || []).forEach(function (m) {
+                    var v = pick(m);
+                    if (typeof v === 'number' && (!best || v > best.v)) {
+                        best = { v: v, model: m, provider: p };
+                    }
+                });
+                if (best) rows.push(best);
+            });
+            rows.sort(function (a, b) { return b.v - a.v; });
+            return rows.slice(0, n);
+        }
+
+        function renderBars(id, rows, opts) {
+            var box = $(id);
+            if (!box) return;
+            if (!rows.length) {
+                box.innerHTML = '<p class="text-[11px] text-slate-400 font-sans">No metric data available yet.</p>';
+                return;
+            }
+            var max = rows[0].v || 1;
+            box.innerHTML = rows.map(function (r, i) {
+                var width = opts.scale === 'absolute'
+                    ? Math.min(100, Math.max(4, Math.round(r.v)))
+                    : Math.min(100, Math.max(6, Math.round(r.v / max * 100)));
+                return '' +
+                    '<div class="space-y-1">' +
+                        '<div class="flex justify-between text-xs font-mono">' +
+                            '<span class="text-slate-700 font-sans font-medium">' + esc(r.primary) +
+                                ' <span class="text-[10px] text-slate-400 font-mono">(' + esc(r.secondary) + ')</span></span>' +
+                            '<span class="font-bold font-mono ' + (opts.valueClasses[i] || 'text-slate-900') + '">' + esc(r.value) + '</span>' +
+                        '</div>' +
+                        '<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">' +
+                            '<div class="' + (opts.barClasses[i] || 'bg-slate-400') + ' h-full rounded-full" style="width: ' + width + '%"></div>' +
+                        '</div>' +
+                    '</div>';
+            }).join('');
+        }
+
+        function renderDashboard() {
+            renderBars('speed-bars', topByMetric(function (m) {
+                return m.metrics && m.metrics.tps;
+            }, 3).map(function (r) {
+                return { primary: r.provider.name, secondary: r.model.name, value: r.v + ' TPS', v: r.v };
+            }), {
+                scale: 'relative',
+                barClasses: ['bg-emerald-500', 'bg-slate-700', 'bg-slate-400'],
+                valueClasses: ['text-emerald-600', 'text-slate-900', 'text-slate-900']
+            });
+
+            renderBars('intelligence-bars', topByMetric(function (m) {
+                return m.metrics && m.metrics.intelligence;
+            }, 3).map(function (r) {
+                return { primary: r.model.name, secondary: r.provider.name, value: String(r.v), v: r.v };
+            }), {
+                scale: 'absolute',
+                barClasses: ['bg-indigo-600', 'bg-slate-700', 'bg-slate-400'],
+                valueClasses: ['text-slate-900', 'text-slate-900', 'text-slate-900']
+            });
+
+            renderBars('allowance-bars', topByMetric(function (m) {
+                return m.metrics && m.metrics.tpm;
+            }, 3).map(function (r) {
+                return { primary: r.provider.name, secondary: r.model.name, value: r.v.toLocaleString('en-US') + ' TPM', v: r.v };
+            }), {
+                scale: 'relative',
+                barClasses: ['bg-amber-500', 'bg-slate-700', 'bg-slate-400'],
+                valueClasses: ['text-slate-900', 'text-slate-900', 'text-slate-900']
+            });
+        }
+
+        function modelFamilies(p) {
+            var families = [];
+            (p.models || []).forEach(function (m) {
+                if (m.family && families.indexOf(m.family) === -1) families.push(m.family);
+            });
+            return families;
+        }
+
+        function providerMatches(p) {
+            if (state.offer !== 'all' && (!p.offer || p.offer.type !== state.offer)) return false;
+            if (state.family !== 'any' && !(p.models || []).some(function (m) { return m.family === state.family; })) return false;
+            if (state.noCard && p.requires_payment_card) return false;
+            if (state.privatePrompts && (!p.privacy || p.privacy.type !== 'private')) return false;
+            if (state.q) {
+                var hay = [p.name, p.description, (p.models || []).map(function (m) {
+                    return m.name + ' ' + m.family;
+                }).join(' ')].join(' ').toLowerCase();
+                if (hay.indexOf(state.q) === -1) return false;
+            }
+            return true;
+        }
+
+        function renderCatalogue() {
+            var box = $('catalogue-rows');
+            if (!box) return;
+            var list = state.providers.filter(providerMatches);
+            if (!list.length) {
+                box.innerHTML = '<div class="p-8 text-center text-xs text-slate-400 font-sans">No providers match the current filters.</div>';
+                return;
+            }
+            box.innerHTML = list.map(function (p) {
+                var tone = TONE[(p.offer && p.offer.tone) || 'slate'] || TONE.slate;
+                var priv = PRIVACY[(p.privacy && p.privacy.type) || 'none'] || PRIVACY.none;
+                var models = p.models || [];
+                return '' +
+                    '<div class="p-4 hover:bg-slate-50/50 transition-colors">' +
+                        '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" title="' + esc(p.description || '') + '" class="font-bold text-slate-900 tracking-tight mb-1 text-base hover:underline inline-block">' + esc(p.name) + '</a>' +
+                        '<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">' +
+                            '<span class="' + tone + ' font-medium font-sans">' + esc(p.offer && p.offer.label) + '</span>' +
+                            '<span class="text-slate-300">&middot;</span>' +
+                            '<span class="' + priv + ' font-medium font-sans">' + esc(p.privacy && p.privacy.label) + '</span>' +
+                            modelFamilies(p).map(function (f) {
+                                return '<span class="text-slate-600 font-medium">' + esc(f) + '</span>';
+                            }).join('') +
+                            '<span class="text-slate-300">&middot;</span>' +
+                            '<span class="text-slate-500 font-sans">' + models.length + ' model' + (models.length === 1 ? '' : 's') + '</span>' +
+                        '</div>' +
+                    '</div>';
+            }).join('');
+        }
+
+        function populateFamilyFilter() {
+            var sel = $('family-filter');
+            if (!sel) return;
+            var families = [];
+            state.providers.forEach(function (p) {
+                (p.models || []).forEach(function (m) {
+                    if (m.family && families.indexOf(m.family) === -1) families.push(m.family);
+                });
+            });
+            families.sort();
+            families.forEach(function (f) {
+                var opt = document.createElement('option');
+                opt.value = f;
+                opt.textContent = f;
+                sel.appendChild(opt);
+            });
+        }
+
+        function showError(err) {
+            var detail = esc((err && err.message) || err);
+            ['speed-bars', 'intelligence-bars', 'allowance-bars'].forEach(function (id) {
+                var box = $(id);
+                if (box) box.innerHTML = '<p class="text-[11px] text-slate-400 font-sans">Provider data unavailable.</p>';
+            });
+            var rows = $('catalogue-rows');
+            if (rows) {
+                rows.innerHTML =
+                    '<div class="p-6 text-xs font-sans text-rose-700 bg-rose-50 border border-rose-200 rounded-lg m-4">' +
+                        'Couldn\'t load provider data from <code class="font-mono">/data</code>. ' +
+                        'Serve the repository root over HTTP so <code class="font-mono">app/index.html</code> can fetch the JSON files.' +
+                        '<span class="block mt-2 text-rose-400 font-mono text-[10px]">' + detail + '</span>' +
+                    '</div>';
+            }
+            var count = $('provider-count');
+            if (count) count.textContent = '\u2013';
+        }
+
+        function wireFilters() {
+            var search = $('catalogue-search');
+            if (search) {
+                search.addEventListener('input', function (e) {
+                    state.q = e.target.value.trim().toLowerCase();
+                    renderCatalogue();
+                });
+            }
+            var family = $('family-filter');
+            if (family) {
+                family.addEventListener('change', function (e) {
+                    state.family = e.target.value;
+                    renderCatalogue();
+                });
+            }
+            var noCard = $('req-no-card');
+            if (noCard) {
+                noCard.addEventListener('change', function (e) {
+                    state.noCard = e.target.checked;
+                    renderCatalogue();
+                });
+            }
+            var priv = $('req-private');
+            if (priv) {
+                priv.addEventListener('change', function (e) {
+                    state.privatePrompts = e.target.checked;
+                    renderCatalogue();
+                });
+            }
+            Array.prototype.forEach.call(document.querySelectorAll('.offer-tab'), function (btn) {
+                btn.addEventListener('click', function () {
+                    state.offer = btn.getAttribute('data-offer');
+                    Array.prototype.forEach.call(document.querySelectorAll('.offer-tab'), function (b) {
+                        b.className = 'offer-tab px-3 py-1 rounded transition-colors ' +
+                            (b === btn ? 'bg-slate-900 text-white font-semibold' : 'hover:bg-slate-100 text-slate-700');
+                    });
+                    renderCatalogue();
+                });
+            });
+        }
+
+        function init() {
+            wireFilters();
+            fetchFirst(DATA_BASES.map(function (b) { return b + 'providers.json'; })).then(function (res) {
+                var base = res.url.replace(/providers\.json$/, '');
+                var files = res.data.providers || [];
+                return Promise.all(files.map(function (f) {
+                    return fetchJSON(base + String(f).replace(/^\.?\//, ''));
+                }));
+            }).then(function (providers) {
+                state.providers = providers;
+                var count = $('provider-count');
+                if (count) count.textContent = String(providers.length);
+                populateFamilyFilter();
+                renderDashboard();
+                renderCatalogue();
+            }).catch(showError);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
+
 </body>
 </html>
-
-

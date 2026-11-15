@@ -1,0 +1,15 @@
+{
+  "id": "hetzner-experiments",
+  "name": "Hetzner Experiments Inference API",
+  "website": "https://www.hetzner.com",
+  "docs": "https://docs.hetzner.com",
+  "description": "Experimental inference endpoints exposed for public testing on Hetzner infrastructure.",
+  "offer": { "type": "research", "label": "Experimental access", "tone": "blue" },
+  "privacy": { "type": "private", "label": "Private prompts" },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "qwen3-30b-a3b", "name": "Qwen3 30B A3B", "family": "Qwen", "context_window": 131072, "metrics": { "tps": 95, "intelligence": 64, "tpm": 2000 } },
+    { "id": "qwen2.5-coder-32b", "name": "Qwen 2.5 Coder 32B", "family": "Qwen", "context_window": 32768, "metrics": { "tps": 88, "intelligence": 60, "tpm": 2000 } }
+  ]
+}

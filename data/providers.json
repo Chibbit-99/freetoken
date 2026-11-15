@@ -1,0 +1,35 @@
+{
+  "name": "FreeToken Provider Index",
+  "description": "Manifest of provider data files for the FreeToken catalogue. Each entry in 'providers' is the filename of a JSON file in this directory. To add a provider: create a new JSON file here following the same schema as the existing files, then append its filename to the 'providers' array. No changes to app/index.html are required — the app discovers providers from this manifest.",
+  "schema": {
+    "id": "stable slug for the provider",
+    "name": "display name",
+    "website": "public site URL",
+    "docs": "API documentation URL",
+    "description": "one-line summary",
+    "offer": { "type": "always-free | free-models | monthly-credits | research | trials | community", "label": "display badge text", "tone": "emerald | blue | amber | violet | sky | rose | slate" },
+    "privacy": { "type": "private | partial | none", "label": "display badge text" },
+    "requires_payment_card": "boolean — true if signup requires a payment card",
+    "last_updated": "YYYY-MM-DD",
+    "models": [
+      {
+        "id": "model slug",
+        "name": "model display name",
+        "family": "model family used for filtering/chips",
+        "context_window": "optional integer (tokens)",
+        "metrics": { "tps": "optional tokens/sec", "intelligence": "optional 0-100 score", "tpm": "optional tokens/min allowance" }
+      }
+    ]
+  },
+  "updated": "2026-11-15",
+  "providers": [
+    "groqcloud.json",
+    "hetzner-experiments.json",
+    "cloudflare-workers-ai.json",
+    "arli-ai.json",
+    "openrouter.json",
+    "jina-reader.json",
+    "awanllm.json",
+    "cohere-free.json"
+  ]
+}

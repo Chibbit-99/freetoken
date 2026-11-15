@@ -1,0 +1,21 @@
+{
+  "id": "openrouter",
+  "name": "OpenRouter",
+  "website": "https://openrouter.ai",
+  "docs": "https://openrouter.ai/docs",
+  "description": "Unified router with free :free model routes across many upstream labs.",
+  "offer": { "type": "free-models", "label": "Free model routes", "tone": "emerald" },
+  "privacy": { "type": "partial", "label": "Partially private prompts" },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "claude-fable-5.2", "name": "Claude Fable 5.2", "family": "Claude", "context_window": 200000, "metrics": { "tps": 40, "intelligence": 85, "tpm": 500 } },
+    { "id": "gemini-4-carbon", "name": "Gemini 4 Carbon", "family": "Gemini", "context_window": 1000000, "metrics": { "tps": 48, "intelligence": 80, "tpm": 500 } },
+    { "id": "gpt-6-astra", "name": "GPT-6 Astra", "family": "GPT", "context_window": 256000, "metrics": { "tps": 45, "intelligence": 77, "tpm": 500 } },
+    { "id": "llama-3.3-70b-free", "name": "Llama 3.3 70B Free", "family": "Llama", "context_window": 131072, "metrics": { "tps": 35, "intelligence": 66, "tpm": 800 } },
+    { "id": "gemma-3-27b", "name": "Gemma 3 27B", "family": "Gemma", "context_window": 131072, "metrics": { "tps": 75, "intelligence": 64, "tpm": 1200 } },
+    { "id": "mistral-small-3.2", "name": "Mistral Small 3.2", "family": "Mistral", "context_window": 131072, "metrics": { "tps": 55, "intelligence": 62, "tpm": 1000 } },
+    { "id": "command-r7b", "name": "Command R7B", "family": "Command", "context_window": 131072, "metrics": { "tps": 100, "intelligence": 50, "tpm": 1500 } },
+    { "id": "nemotron-4-mini", "name": "Nemotron 4 Mini", "family": "Nemotron", "context_window": 32768, "metrics": { "tps": 130, "intelligence": 52, "tpm": 2000 } }
+  ]
+}
