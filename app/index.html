@@ -181,7 +181,7 @@
                     </div>
                     <p class="text-[11px] text-slate-400 border-b border-slate-100 pb-3 mb-4">
 
-                        Free token allowance granted per model, measured in tokens per day &mdash; Higher is better. Models without a daily allowance are left blank.
+                        Free token allowance granted per model, measured in tokens per day &mdash; Higher is better. A blank allowance means unlimited.
                     </p>
 
                     <!-- Data Bars Representation (rendered from /data JSON) -->
@@ -346,7 +346,7 @@
         filter options) is loaded at runtime from the JSON files in /data.
 
         Adding a provider requires NO changes to this file:
-          1. create data/<id>.json following the schema in data/providers.json
+          1. create data/<id>.json following the schema in data/SCHEMA.md
           2. append "<id>.json" to the "providers" array in data/providers.json
     -->
     <script>
@@ -443,9 +443,11 @@
             }
             var max = rows[0].v || 1;
             box.innerHTML = rows.map(function (r, i) {
-                var width = opts.scale === 'absolute'
-                    ? Math.min(100, Math.max(4, Math.round(r.v)))
-                    : Math.min(100, Math.max(6, Math.round(r.v / max * 100)));
+                var width = typeof r.width === 'number'
+                    ? r.width
+                    : (opts.scale === 'absolute'
+                        ? Math.min(100, Math.max(4, Math.round(r.v)))
+                        : Math.min(100, Math.max(6, Math.round(r.v / max * 100))));
                 return '' +
                     '<div class="space-y-1">' +
                         '<div class="flex justify-between text-xs font-mono">' +
@@ -461,11 +463,11 @@
         }
 
         function compactTokens(v) {
-            if (v >= 1000000) {
-                var n = v / 1000000;
-                return (Math.round(n * 10) / 10) + 'M';
+            function fmt(n) {
+                return (Math.round(n * 10) / 10).toFixed(1).replace(/\.0$/, '');
             }
-            if (v >= 1000) return Math.round(v / 1000) + 'K';
+            if (v >= 1000000) return fmt(v / 1000000) + 'M';
+            if (v >= 1000) return fmt(v / 1000) + 'K';
             return String(v);
         }
 
@@ -490,14 +492,21 @@
                 valueClasses: ['text-slate-900', 'text-slate-900', 'text-slate-900']
             });
 
-            renderBars('allowance-bars', topByMetric(function (m) {
-                return m.token_allowance;
-            }, 3).map(function (r) {
+            var allowanceRows = topByMetric(function (m) {
+                // blank token_allowance means unlimited
+                return typeof m.token_allowance === 'number' ? m.token_allowance : Infinity;
+            }, 3);
+            var maxFinite = 0;
+            allowanceRows.forEach(function (r) {
+                if (isFinite(r.v) && r.v > maxFinite) maxFinite = r.v;
+            });
+            renderBars('allowance-bars', allowanceRows.map(function (r) {
                 return {
                     primary: r.provider.name,
                     secondary: r.model.name + (r.model.rate_limits ? ' \u00b7 ' + r.model.rate_limits : ''),
-                    value: compactTokens(r.v) + ' tokens/day',
-                    v: r.v
+                    value: isFinite(r.v) ? compactTokens(r.v) + ' tokens/day' : 'Unlimited',
+                    v: r.v,
+                    width: isFinite(r.v) ? Math.min(100, Math.max(6, Math.round(r.v / (maxFinite || 1) * 100))) : 100
                 };
             }), {
                 scale: 'relative',
