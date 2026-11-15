@@ -9,7 +9,7 @@
   "requires_payment_card": false,
   "last_updated": "2026-11-15",
   "models": [
-    { "id": "model-7", "name": "Model 7", "family": "Family 3", "context_window": 131072, "metrics": { "tps": 95, "intelligence": 64 }, "rate_limits": "30 RPM, 500 RPD" },
-    { "id": "model-8", "name": "Model 8", "family": "Family 3", "context_window": 32768, "metrics": { "tps": 88, "intelligence": 60 } }
+    { "id": "model-7", "name": "Model 7", "family": "Family 3", "context_window": 131072, "metrics": { "tps": 95, "intelligence": 64 }, "token_allowance": 1200000, "rate_limits": "30 RPM, 500 RPD" },
+    { "id": "model-8", "name": "Model 8", "family": "Family 3", "context_window": 32768, "metrics": { "tps": 88, "intelligence": 60 }, "token_allowance": 600000 }
   ]
 }
