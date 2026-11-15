@@ -1,0 +1,17 @@
+{
+  "id": "provider-8",
+  "name": "Provider 8",
+  "website": "https://provider-8.example.com",
+  "docs": "https://provider-8.example.com/docs",
+  "description": "Placeholder description for provider 8.",
+  "offer": { "type": "monthly-credits", "label": "Monthly credits", "tone": "violet" },
+  "privacy": { "type": "partial", "label": "Partially private prompts" },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-15",
+  "models": [
+    { "id": "model-32", "name": "Model 32", "family": "Family 10", "context_window": 128000, "metrics": { "tps": 60, "intelligence": 65 }, "token_allowance": 50000 },
+    { "id": "model-33", "name": "Model 33", "family": "Family 10", "context_window": 128000, "metrics": { "tps": 90, "intelligence": 61 }, "token_allowance": 400000 },
+    { "id": "model-34", "name": "Model 34", "family": "Family 10", "context_window": 32768, "metrics": { "tps": 110, "intelligence": 55 }, "token_allowance": 250000 },
+    { "id": "model-35", "name": "Model 35", "family": "Family 14", "context_window": 8192, "metrics": { "tps": 140, "intelligence": 52 }, "token_allowance": 100000, "rate_limits": "60 RPM" }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "FreeToken Provider Index",
+  "description": "Manifest of provider data files for the FreeToken catalogue. Each entry in 'providers' is the filename of a JSON file in this directory. All provider, model, and family names currently in the data are placeholders — to add a provider, create a new JSON file here following the same schema as the existing files, then append its filename to the 'providers' array. No changes to app/index.html are required — the app discovers providers from this manifest.",
+  "schema": {
+    "id": "stable slug for the provider",
+    "name": "display name",
+    "website": "public site URL",
+    "docs": "API documentation URL",
+    "description": "one-line summary",
+    "offer": { "type": "always-free | free-models | monthly-credits | research | trials | community", "label": "display badge text", "tone": "emerald | blue | amber | violet | sky | rose | slate" },
+    "privacy": { "type": "private | partial | none", "label": "display badge text" },
+    "requires_payment_card": "boolean — true if signup requires a payment card",
+    "last_updated": "YYYY-MM-DD",
+    "models": [
+      {
+        "id": "model slug",
+        "name": "model display name",
+        "family": "model family used for filtering/chips",
+        "context_window": "optional integer (tokens)",
+        "metrics": { "tps": "optional generation speed, tokens/sec", "intelligence": "optional 0-100 score" },
+        "token_allowance": "optional integer — free tokens per day granted for this model (omit/blank if the provider does not grant free usage as a daily token allowance)",
+        "rate_limits": "optional string — free-form rate limits when allowance is not expressible as tokens/day, e.g. \"40 RPM, 1000 RPD\""
+      }
+    ]
+  },
+  "updated": "2026-11-15",
+  "providers": [
+    "provider-1.json",
+    "provider-2.json",
+    "provider-3.json",
+    "provider-4.json",
+    "provider-5.json",
+    "provider-6.json",
+    "provider-7.json",
+    "provider-8.json"
+  ]
+}
