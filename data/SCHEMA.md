@@ -362,6 +362,38 @@ A free-model-only provider with no token-denominated quota:
 }
 ```
 
+## Announcements
+
+`data/announcements.json` is the index changelog and the source for the
+`#/updates` page and the "Latest updates" strip on the dashboard.
+
+```json
+{
+  "updated": "2026-11-17",
+  "intro": "…",
+  "items": [
+    {
+      "id": "2026-11-17-xkiro-cheapllm",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "xKiro and cheapllm.shop added; nine non-text rows pruned",
+      "summary": "One or two sentences on what changed for the reader.",
+      "providers": ["xkiro", "cheapllm-shop"],
+      "details": ["Bullet with the number that matters.", "Where the evidence is."]
+    }
+  ]
+}
+```
+
+- `kind` is one of `added`, `pruned`, `corrected`, `audit`, `changed`,
+  `update`; the page colours each badge.
+- `providers` holds catalogue ids, rendered as chips that link to
+  `#/providers/<id>`. An id with no file still renders, greyed out.
+- Items are sorted **newest first**; `updated` tracks the newest date.
+- Add entries with `python3 tools/add_announcement.py --date … --kind …   --title … --summary … [--providers a,b] [--details "x;y"]`, which prepends,
+  sorts, then validates the whole file (unique ids, ISO dates, known kinds,
+  known provider ids).
+
 ## Maintenance rules
 
 - Free tiers change without notice. Re-check `verified.checked` and drop any
@@ -372,6 +404,9 @@ A free-model-only provider with no token-denominated quota:
   at the time of the check.
 - Never present a card-gated one-time credit as a free tier: use `trials`,
   set `requires_payment_card`, and say so in `notes`.
+- Every pass that changes `data/` ends with an announcement entry, so the
+  `#/updates` page explains the diff to anyone reading the site rather than the
+  commit log.
 - A model that appears in the vendor's console but answers only on a paid plan
   is **not** a free model. Mistral's Limits page lists Mistral Large 4 and the
   GLM routes with free-mode token caps, yet both are gated, so they are absent

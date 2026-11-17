@@ -4,8 +4,8 @@
   "website": "https://pollinations.ai",
   "docs": "https://github.com/pollinations/pollinations",
   "signup": "https://enter.pollinations.ai",
-  "description": "Open-source generative platform with a free key, 130 vendor text models and a community tier.",
-  "overview": "Pollinations is an open-source platform for text, image and audio generation served from gen.pollinations.ai. Anonymous access is gone, so you need a free secret key from the dashboard. Text models come in two tiers: vendor models billed in Pollen, where free usage is drawn from Quest Pollen earned by solving GitHub quests, trying models or shipping an app; and community models — 104 of them at the last count — published by independent operators, most of which sit in the catalogue at zero Pollen. A community model marked 'Free' costs nothing to call and is limited only by its own requests-per-minute cap, while one marked 'Quest' bills that operator's rates out of your earned balance. Community endpoints run on someone else's hardware and under their own logging policy, so treat prompts accordingly.",
+  "description": "Open-source generative platform: free key, 130 vendor text models and 104 community models.",
+  "overview": "Pollinations serves text, image and audio generation from gen.pollinations.ai behind a free secret key. The text catalogue has two tiers. Vendor models — OpenAI, Anthropic, Google, DeepSeek, Z.ai, MiniMax and friends — are billed in Pollen, and free usage comes from Quest Pollen earned by solving GitHub quests, trying models or shipping an app; the dashboard spends Quest pollen before paid pollen. Community models are published by independent operators and appear in the same catalogue with a Free or Quest badge: a Free entry costs zero Pollen and is limited only by that operator's requests-per-minute cap, while a Quest entry bills the operator's per-token rates out of your earned balance. Both tiers are callable from the OpenAI-compatible /v1 endpoint, and a handful of vendor stealth models are also priced at zero.",
   "offer": {
     "type": "free-models",
     "label": "Free key + Pollen",
@@ -32,47 +32,56 @@
     "About 1 request/15s on vendor models without extra credit"
   ],
   "api_endpoint": "https://gen.pollinations.ai/v1",
-  "notes": "Community models are third-party endpoints: several log prompts, and their availability is best-effort (status flips between Alpha, Degraded and Down). Check the model card before sending anything sensitive. Pollen balances are earned, not replenished on a schedule.",
+  "notes": "Community models are third-party endpoints: several log prompts and their status flips between Alpha, Degraded and Down, so check the model card before sending anything sensitive. Quest pollen is earned, not replenished on a schedule, and it is spent before any paid pollen in the wallet.",
   "models": [
     {
-      "id": "gpt-oss-20b",
+      "id": "openai/gpt-5.4-nano",
+      "name": "GPT-5.4 Nano",
+      "family": "GPT-5",
+      "context_window": 400000,
+      "rate_limits": "Quest pollen · 400K context"
+    },
+    {
+      "id": "openai/gpt-6.1-terra",
+      "name": "GPT-6.1 Terra",
+      "family": "GPT-6",
+      "context_window": 1048576,
+      "rate_limits": "Quest pollen · 1M context"
+    },
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "family": "GLM",
+      "context_window": 1048576,
+      "rate_limits": "Quest pollen · 1M context"
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576,
+      "rate_limits": "Quest pollen · 1M context"
+    },
+    {
+      "id": "minimax/minimax-m3.1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "rate_limits": "Quest pollen · 1M context"
+    },
+    {
+      "id": "openai/gpt-oss-20b",
       "name": "GPT-OSS 20B",
       "family": "GPT-OSS",
       "context_window": 131072,
-      "metrics": {
-        "tps": 310
-      },
-      "rate_limits": "~1 request/15s; higher with free key"
+      "rate_limits": "Quest pollen · 131K context"
     },
     {
-      "id": "qwen3-4b",
-      "name": "Qwen3 4B",
-      "family": "Qwen 3",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 95
-      },
-      "rate_limits": "~1 request/15s; higher with free key"
-    },
-    {
-      "id": "gemma-3-4b",
-      "name": "Gemma 3 4B",
-      "family": "Gemma 3",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 105
-      },
-      "rate_limits": "~1 request/15s; higher with free key"
-    },
-    {
-      "id": "mistral-small-3-2",
-      "name": "Mistral Small 3.2 24B",
-      "family": "Mistral",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 50
-      },
-      "rate_limits": "~1 request/15s; higher with free key"
+      "id": "stealth/glyph-cluster",
+      "name": "Glyph Cluster (stealth)",
+      "family": "Glyph",
+      "context_window": 262144,
+      "rate_limits": "Free — 0 Pollen, 8 RPM"
     },
     {
       "id": "community/morriszdweck/glm-5.3-flash-free",
@@ -91,6 +100,20 @@
     {
       "id": "community/CloudCompile/nvidia-nemotron-3-ultra-550b-a55b:free",
       "name": "Nemotron 3 Ultra (community)",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "rate_limits": "Free — 0 Pollen"
+    },
+    {
+      "id": "community/scriptsnsenses-sys/deepseek-v4-flash-0731",
+      "name": "DeepSeek V4 Flash (community)",
+      "family": "DeepSeek",
+      "context_window": 1048576,
+      "rate_limits": "Free — 0 Pollen, 10 RPM"
+    },
+    {
+      "id": "community/YoannDev90/vercel-nemotron-3.5-lightning:free",
+      "name": "Nemotron 3.5 Lightning (community)",
       "family": "Nemotron",
       "context_window": 1048576,
       "rate_limits": "Free — 0 Pollen"

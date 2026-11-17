@@ -141,6 +141,8 @@
     "ppio.json",
     "slashai.json",
     "xkiro.json",
-    "cheapllm-shop.json"
+    "cheapllm-shop.json",
+    "electronhub.json",
+    "anyapi.json"
   ]
 }
