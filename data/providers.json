@@ -129,6 +129,13 @@
     "viggle.json",
     "stability-ai.json",
     "wavespeed.json",
-    "inferon.json"
+    "inferon.json",
+    "aihubmix.json",
+    "simplellm.json",
+    "moark.json",
+    "bytez.json",
+    "experiential-labs.json",
+    "hpc-ai.json",
+    "tencent-tokenhub.json"
   ]
 }

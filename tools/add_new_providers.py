@@ -15,6 +15,7 @@ from models import MODELS  # noqa: E402
 from speed import tps_for  # noqa: E402
 from new_providers_a import PART_A  # noqa: E402
 from new_providers_b import PART_B  # noqa: E402
+from new_providers_c import PART_C  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -30,6 +31,13 @@ OFFER = {
 PRIVACY = {"pv": "private", "pp": "partial", "nn": "none", None: "none"}
 
 # Providers whose free offer is not text-model specific still need a model row.
+MODEL_EXTRA = {
+    "inception": {
+        "mercury-2": {"token_allowance": 100000000},
+    },
+}
+MERCURY_LIMITS = "100M one-time signup balance shared across Mercury 2/2.5/3; 100 RPM, 100K input TPM, 10K output TPM"
+
 MODEL_FIX = {
     "oracle-oci": ["command-r-plus", "llama-4-maverick", "cohere-embed"],
     "aws-bedrock": ["llama-4-maverick", "mistral-large-4", "command-r-plus"],
@@ -71,10 +79,15 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B:
+    for row in PART_A + PART_B + PART_C:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         models = build_models(MODEL_FIX.get(pid, mids), pid)
+        if pid == "inception":
+            for m in models:
+                m["rate_limits"] = MERCURY_LIMITS
+                if m["id"] == "mercury-2":
+                    m["token_allowance"] = 100000000
         if not models:
             raise SystemExit("no models for " + pid)
         offer_type, tone = OFFER[offer_code]

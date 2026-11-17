@@ -1,42 +1,67 @@
 {
   "id": "inception",
-  "name": "Inception Platform",
-  "website": "https://inceptionai.ai",
-  "docs": "https://inceptionai.ai",
-  "signup": "https://inceptionai.ai",
-  "description": "Diffusion-based language models with a signup credit.",
-  "overview": "Inception builds Mercury diffusion LLMs and serves them through an API with a trial credit worth about $75. Current terms permit default prompt storage, model training and content-based improvement, with an optional training opt-out.",
+  "name": "Inception (Mercury)",
+  "website": "https://platform.inceptionlabs.ai",
+  "docs": "https://platform.inceptionlabs.ai",
+  "signup": "https://platform.inceptionlabs.ai",
+  "description": "Diffusion LLMs that generate at ~1,000 tokens/second, with 100M free signup tokens.",
+  "overview": "Inception's Mercury models use diffusion rather than autoregressive decoding, which is why they stream at roughly 1,000 tokens per second — several times the speed of similarly sized models. New accounts get a 100,000,000-token signup allowance (raised from 10M in July 2026) that is shared across the Mercury 2 family, with 100 requests/minute and no card. Terms permit prompt storage and training by default, with an opt-out in the dashboard.",
   "offer": {
     "type": "trials",
-    "label": "$75 trial credit",
+    "label": "100M free tokens",
     "tone": "amber"
   },
   "privacy": {
     "type": "none",
-    "label": "Privacy not documented"
+    "label": "Trains on prompts by default"
   },
   "requires_payment_card": false,
   "last_updated": "2026-11-17",
   "verified": {
     "checked": "2026-11-17",
     "sources": [
-      "https://inceptionai.ai",
+      "https://platform.inceptionlabs.ai",
       "https://freeinferencing.com/"
     ]
   },
   "free_access": [
-    "~$75 one-time trial credit",
-    "Diffusion LLM endpoints",
-    "No card required to start",
-    "OpenAI-compatible API"
+    "100,000,000 free tokens once, shared across Mercury 2 / 2.5 / 3",
+    "Roughly 1,000 tokens/second generation",
+    "100 RPM, 100K input TPM, 10K output TPM",
+    "No card required; billing only after the balance is spent"
   ],
-  "notes": "Prompts are stored and may be used for training unless you opt out.",
+  "notes": "The 100M allowance is one-time, not monthly; prompts may train models unless you turn that off.",
   "models": [
     {
       "id": "mercury-2",
       "name": "Mercury 2",
       "family": "Mercury",
-      "context_window": 131072
+      "context_window": 131072,
+      "metrics": {
+        "tps": 950
+      },
+      "rate_limits": "100M one-time signup balance shared across Mercury 2/2.5/3; 100 RPM, 100K input TPM, 10K output TPM",
+      "token_allowance": 100000000
+    },
+    {
+      "id": "mercury-2-5",
+      "name": "Mercury 2.5",
+      "family": "Mercury",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 1050
+      },
+      "rate_limits": "100M one-time signup balance shared across Mercury 2/2.5/3; 100 RPM, 100K input TPM, 10K output TPM"
+    },
+    {
+      "id": "mercury-3",
+      "name": "Mercury 3",
+      "family": "Mercury",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 1100
+      },
+      "rate_limits": "100M one-time signup balance shared across Mercury 2/2.5/3; 100 RPM, 100K input TPM, 10K output TPM"
     }
   ]
 }

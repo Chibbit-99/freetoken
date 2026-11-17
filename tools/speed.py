@@ -15,6 +15,7 @@ figures for its free tier.
 SPEED_FACTOR = {
     # dedicated, latency-optimised hardware
     "groq": 1.00,
+    "inception": 1.00,  # diffusion decoding: ~1,000 tok/s is the published figure
     "fireworks-ai": 0.95,
     "friendli-ai": 0.95,
     "hyperbolic": 0.90,

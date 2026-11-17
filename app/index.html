@@ -502,21 +502,17 @@
                 valueClasses: ['text-slate-900', 'text-slate-900', 'text-slate-900']
             });
 
-            var allowanceRows = topByMetric(function (m) {
-                // blank token_allowance means unlimited
-                return typeof m.token_allowance === 'number' ? m.token_allowance : Infinity;
-            }, 3);
-            var maxFinite = 0;
-            allowanceRows.forEach(function (r) {
-                if (isFinite(r.v) && r.v > maxFinite) maxFinite = r.v;
-            });
+            // Token allowance is ranked per provider: the free tokens/day summed
+            // across the models that carry a numeric quota.
+            var allowanceRows = providerAllowanceRows().slice(0, 3);
+            var maxAllowance = allowanceRows.length ? allowanceRows[0].value : 0;
             renderBars('allowance-bars', allowanceRows.map(function (r) {
                 return {
-                    primary: r.provider.name,
-                    secondary: r.model.name + (r.model.rate_limits ? ' \u00b7 ' + r.model.rate_limits : ''),
-                    value: isFinite(r.v) ? compactTokens(r.v) + ' tokens/day' : 'Unlimited',
-                    v: r.v,
-                    width: isFinite(r.v) ? Math.min(100, Math.max(6, Math.round(r.v / (maxFinite || 1) * 100))) : 100
+                    primary: r.provider.name + (recurrenceOf(r.provider) === 'One-time' ? ' (one-time)' : ''),
+                    secondary: r.counted + ' model' + (r.counted === 1 ? '' : 's') + ' with a quota',
+                    value: compactTokens(r.value) + ' tokens/day',
+                    v: r.value,
+                    width: Math.min(100, Math.max(6, Math.round(r.value / (maxAllowance || 1) * 100)))
                 };
             }), {
                 scale: 'relative',
@@ -786,16 +782,41 @@
             },
             allowance: {
                 title: 'Token allowance leaderboard',
-                blurb: 'Free tokens per day granted per model. A blank allowance means unlimited tokens with the request caps shown in the last column.',
+                blurb: 'Free tokens per day summed across each provider\'s free models, so a host that gives 200K/day on six models outranks one that gives 200K/day on a single model. Providers that are only request-capped (no token quota) are listed in the catalogue instead. One-time signup balances are flagged, not counted as recurring capacity.',
                 column: 'Free tokens / day',
-                unit: 'models with a free allowance',
+                unit: 'providers with a token quota',
                 source: null,
-                pick: function (m) {
-                    return typeof m.token_allowance === 'number' ? m.token_allowance : Infinity;
-                },
-                format: function (v) { return isFinite(v) ? compactTokens(v) + ' / day' : 'Unlimited'; }
+                byProvider: true
             }
         };
+
+        function recurrenceOf(p) {
+            var t = (p.offer && p.offer.type) || '';
+            if (t === 'trials') return 'One-time';
+            if (t === 'monthly-credits') return 'Monthly';
+            return 'Recurring';
+        }
+
+        function providerAllowanceRows() {
+            var rows = [];
+            state.providers.forEach(function (p) {
+                var total = 0;
+                var counted = 0;
+                (p.models || []).forEach(function (m) {
+                    if (typeof m.token_allowance === 'number') {
+                        total += m.token_allowance;
+                        counted += 1;
+                    }
+                });
+                if (!counted) return;
+                rows.push({ provider: p, value: total, counted: counted, modelCount: (p.models || []).length });
+            });
+            rows.sort(function (a, b) {
+                if (b.value !== a.value) return b.value - a.value;
+                return String(a.provider.name).localeCompare(String(b.provider.name));
+            });
+            return rows;
+        }
 
         function leaderboardRows(cfg) {
             var rows = [];
@@ -831,6 +852,10 @@
             if (!box) return;
             var cfg = LEADERBOARDS[id];
             if (!cfg) { box.innerHTML = ''; return; }
+            if (cfg.byProvider) {
+                renderProviderBoard(box, cfg);
+                return;
+            }
             var rows = leaderboardRows(cfg).slice(0, 100);
             var body = rows.map(function (r, i) {
                 return '' +
@@ -845,25 +870,7 @@
                     '</tr>';
             }).join('');
 
-            box.innerHTML = '' +
-                '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
-                    '<a href="#/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
-                        '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
-                        'Back to all providers' +
-                    '</a>' +
-                    '<div class="flex flex-wrap items-center gap-1.5 text-[11px] font-mono">' +
-                        Object.keys(LEADERBOARDS).map(function (k) {
-                            var on = k === id;
-                            return '<a href="#/leaderboard/' + k + '" class="px-2.5 py-1 rounded border ' + (on ? 'border-slate-900 bg-slate-900 text-white' : 'border-slate-200 text-slate-600 hover:border-slate-400') + '">' + esc(LEADERBOARDS[k].title.replace(' leaderboard', '')) + '</a>';
-                        }).join('') +
-                    '</div>' +
-                '</div>' +
-
-                '<h2 class="text-2xl font-bold tracking-tight text-slate-950">' + esc(cfg.title) + '</h2>' +
-                '<p class="mt-1 mb-4 max-w-3xl text-sm text-slate-600 leading-relaxed">' + esc(cfg.blurb) +
-                    (cfg.source ? ' <a href="' + esc(cfg.source) + '" target="_blank" rel="noopener" class="font-semibold text-slate-900 underline">Source</a>.' : '') +
-                '</p>' +
-
+            box.innerHTML = boardHeader(id, cfg) +
                 '<div class="overflow-x-auto border border-slate-200 rounded-xl bg-white">' +
                     '<table class="w-full text-xs">' +
                         '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
@@ -880,6 +887,65 @@
                     '</table>' +
                 '</div>' +
                 (rowCountNote(rows.length, cfg));
+        }
+
+        function boardTabs(id) {
+            return '<div class="flex flex-wrap items-center gap-1.5 text-[11px] font-mono">' +
+                Object.keys(LEADERBOARDS).map(function (k) {
+                    var on = k === id;
+                    return '<a href="#/leaderboard/' + k + '" class="px-2.5 py-1 rounded border ' + (on ? 'border-slate-900 bg-slate-900 text-white' : 'border-slate-200 text-slate-600 hover:border-slate-400') + '">' + esc(LEADERBOARDS[k].title.replace(' leaderboard', '')) + '</a>';
+                }).join('') +
+            '</div>';
+        }
+
+        function boardHeader(id, cfg) {
+            return '' +
+                '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
+                    '<a href="#/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
+                        '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
+                        'Back to all providers' +
+                    '</a>' + boardTabs(id) +
+                '</div>' +
+                '<h2 class="text-2xl font-bold tracking-tight text-slate-950">' + esc(cfg.title) + '</h2>' +
+                '<p class="mt-1 mb-4 max-w-3xl text-sm text-slate-600 leading-relaxed">' + esc(cfg.blurb) +
+                    (cfg.source ? ' <a href="' + esc(cfg.source) + '" target="_blank" rel="noopener" class="font-semibold text-slate-900 underline">Source</a>.' : '') +
+                '</p>';
+        }
+
+        function renderProviderBoard(box, cfg) {
+            var rows = providerAllowanceRows().slice(0, 100);
+            var body = rows.map(function (r, i) {
+                var kind = recurrenceOf(r.provider);
+                var kindClass = kind === 'One-time' ? 'text-amber-600' : 'text-slate-500';
+                return '' +
+                    '<tr class="border-t border-slate-100 hover:bg-slate-50 cursor-pointer" data-provider="' + esc(r.provider.id) + '" tabindex="0">' +
+                        '<td class="px-3 py-2 font-mono text-slate-400 text-right w-10">' + (i + 1) + '</td>' +
+                        '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(r.provider.name) + '</td>' +
+                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(compactTokens(r.value)) + ' / day</td>' +
+                        '<td class="px-3 py-2 font-mono text-slate-500 text-right whitespace-nowrap">' + r.counted + ' of ' + r.modelCount + '</td>' +
+                        '<td class="px-3 py-2 font-sans whitespace-nowrap ' + kindClass + '">' + kind + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-sans">' + esc((r.provider.offer && r.provider.offer.label) || '') + '</td>' +
+                    '</tr>';
+            }).join('');
+
+            box.innerHTML = boardHeader('allowance', cfg) +
+                '<div class="overflow-x-auto border border-slate-200 rounded-xl bg-white">' +
+                    '<table class="w-full text-xs">' +
+                        '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
+                            '<tr>' +
+                                '<th class="px-3 py-2 text-right font-semibold">#</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Provider</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">' + esc(cfg.column) + '</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">Quota models</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Recurrence</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Free offer</th>' +
+                            '</tr>' +
+                        '</thead>' +
+                        '<tbody>' + body + '</tbody>' +
+                    '</table>' +
+                '</div>' +
+                '<p class="mt-3 text-[11px] font-mono text-slate-400">' + providerAllowanceRows().length +
+                    ' providers with a token quota · ' + state.providers.length + ' providers tracked in total</p>';
         }
 
         function rowCountNote(shown, cfg) {

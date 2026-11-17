@@ -163,10 +163,18 @@ day), never a metric.
   - IBM watsonx.ai Lite: `300K tokens/month` → `10000`.
 - Purely request-, neuron- or credit-denominated free tiers leave
   `token_allowance` blank and describe the real quota in `rate_limits`.
-- The Token Allowance leaderboard ranks models by `token_allowance` with
-  unlimited first, and shortens values: `1000000` → `1M`, `5000` → `5K`,
-  `1200000` → `1.2M`, `5400` → `5.4K`. Models whose provider has no better
-  model for the metric occupy one leaderboard slot per provider.
+- The Token Allowance leaderboard ranks **providers**, not models: the free
+  tokens/day are summed across every model in the file that carries a numeric
+  `token_allowance`, and the row shows how many models contributed. Providers
+  that are only request-capped (no token quota anywhere) do not appear on that
+  board — they are still listed in the catalogue. One-time signup balances (for
+  example Inception's 100M tokens) **do count**, but the row is labelled
+  "One-time" so a credit is never mistaken for recurring capacity.
+- Values are shortened for display: `1000000` → `1M`, `5400` → `5.4K`.
+- When a provider gives one shared account-wide balance rather than a per-model
+  quota, put the number on the single model the balance is priced against (see
+  Inception) instead of copying it onto every model, so the provider total is
+  not multiplied.
 
 ## Model catalogue (`tools/`)
 
