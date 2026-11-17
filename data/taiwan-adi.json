@@ -31,6 +31,7 @@
     "Applications reviewed periodically"
   ],
   "notes": "Award-based: you must apply and be accepted.",
+  "catalog_size": 48,
   "models": [
     {
       "id": "gemma-4-31b",

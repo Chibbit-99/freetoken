@@ -54,5 +54,6 @@
       },
       "rate_limits": "$10 one-time credit"
     }
-  ]
+  ],
+  "catalog_size": 4
 }

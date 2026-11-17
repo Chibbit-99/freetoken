@@ -31,6 +31,7 @@
     "No card required"
   ],
   "notes": "Research access is granted per project.",
+  "catalog_size": 7,
   "models": [
     {
       "id": "qwen3-8-27b",

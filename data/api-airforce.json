@@ -31,6 +31,7 @@
     "OpenAI-compatible endpoint"
   ],
   "notes": "Small, unaudited provider — verify uptime before relying on it.",
+  "catalog_size": 28,
   "models": [
     {
       "id": "gemma-4-31b",

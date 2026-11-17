@@ -31,6 +31,7 @@
     "No card required"
   ],
   "notes": "Requests are proxied through a third-party router.",
+  "catalog_size": 8,
   "models": [
     {
       "id": "gemini-3-5-flash",

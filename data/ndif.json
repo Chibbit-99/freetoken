@@ -31,6 +31,7 @@
     "No card required"
   ],
   "notes": "Requires an approved research account.",
+  "catalog_size": 113,
   "models": [
     {
       "id": "gemma-4-31b",

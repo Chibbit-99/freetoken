@@ -31,6 +31,7 @@
     "No card required"
   ],
   "notes": "All interactions are logged and preserved without a published retention cap.",
+  "catalog_size": 10,
   "models": [
     {
       "id": "qwen3-8-27b",

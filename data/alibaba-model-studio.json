@@ -41,8 +41,7 @@
       "metrics": {
         "tps": 75
       },
-      "rate_limits": "1M free tokens (90 days)",
-      "token_allowance": 11111
+      "rate_limits": "1M free tokens (90 days)"
     },
     {
       "id": "qwen3-8-plus",
@@ -52,8 +51,7 @@
       "metrics": {
         "tps": 120
       },
-      "rate_limits": "1M free tokens (90 days)",
-      "token_allowance": 11111
+      "rate_limits": "1M free tokens (90 days)"
     },
     {
       "id": "qwen3-8-flash",
@@ -64,8 +62,7 @@
         "tps": 185,
         "intelligence": 29
       },
-      "rate_limits": "1M free tokens (90 days)",
-      "token_allowance": 11111
+      "rate_limits": "1M free tokens (90 days)"
     },
     {
       "id": "qwen3-8-27b",
@@ -76,8 +73,7 @@
         "tps": 145,
         "intelligence": 20
       },
-      "rate_limits": "1M free tokens (90 days)",
-      "token_allowance": 11111
+      "rate_limits": "1M free tokens (90 days)"
     },
     {
       "id": "qwen3-5-397b-a17b",
@@ -87,8 +83,9 @@
       "metrics": {
         "tps": 70
       },
-      "rate_limits": "1M free tokens (90 days)",
-      "token_allowance": 11111
+      "rate_limits": "1M free tokens (90 days)"
     }
-  ]
+  ],
+  "free_token_allowance": 3000000,
+  "allowance_period": "one-time"
 }

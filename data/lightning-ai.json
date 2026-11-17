@@ -31,6 +31,7 @@
     "OpenAI-compatible API"
   ],
   "notes": "Retention rules for model APIs are not fully documented.",
+  "catalog_size": 37,
   "models": [
     {
       "id": "gemini-3-5-flash",

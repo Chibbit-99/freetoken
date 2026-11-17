@@ -512,8 +512,8 @@
             renderBars('allowance-bars', allowanceRows.map(function (r) {
                 return {
                     primary: r.provider.name,
-                    secondary: recurrenceOf(r.provider) + ' \u00b7 ' + r.counted + ' of ' + r.modelCount + ' model' + (r.modelCount === 1 ? '' : 's'),
-                    value: compactTokens(r.value) + ' tokens/day',
+                    secondary: recurrenceOf(r.provider) + ' \u00b7 ' + (r.shared ? 'shared pool' : 'per-model quotas'),
+                    value: formatAllowance(r.value, r.period),
                     v: r.value,
                     width: Math.min(100, Math.max(6, Math.round(r.value / (maxAllowance || 1) * 100)))
                 };
@@ -548,6 +548,13 @@
 
         // ---------------------------------------------------------------- list
 
+        function modelCountLabel(p) {
+            var n = (p.models || []).length;
+            var total = typeof p.catalog_size === 'number' && p.catalog_size > n ? p.catalog_size : null;
+            if (total) return n + ' of ' + total + ' models';
+            return n + ' model' + (n === 1 ? '' : 's');
+        }
+
         function renderCatalogue() {
             var box = $('catalogue-rows');
             if (!box) return;
@@ -574,7 +581,7 @@
                                     '<span class="text-slate-300">&middot;</span>' +
                                     '<span class="' + priv + ' font-medium font-sans">' + esc(p.privacy && p.privacy.label) + '</span>' +
                                     '<span class="text-slate-300">&middot;</span>' +
-                                    '<span class="text-slate-500 font-sans">' + models.length + ' model' + (models.length === 1 ? '' : 's') + '</span>' +
+                                    '<span class="text-slate-500 font-sans">' + modelCountLabel(p) + '</span>' +
                                 '</div>' +
                             '</div>' +
                             '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" data-external="1" title="Open ' + esc(p.name) + ' in a new tab" class="shrink-0 text-[11px] font-semibold text-slate-400 hover:text-slate-900 transition-colors">Site &nearr;</a>' +
@@ -611,9 +618,12 @@
             return typeof v === 'number' ? esc(String(v) + (suffix || '')) : '<span class="text-slate-300">&mdash;</span>';
         }
 
-        function allowanceText(m) {
+        function allowanceText(m, p) {
+            if (p && typeof p.free_token_allowance === 'number') {
+                return '<span class="text-slate-600">Shared ' + esc(formatAllowance(p.free_token_allowance, p.allowance_period || 'day')) + '</span>';
+            }
             if (typeof m.token_allowance === 'number') return esc(compactTokens(m.token_allowance) + ' / day');
-            return '<span class="text-slate-400">Unlimited tokens</span>';
+            return '<span class="text-slate-400">Request-capped</span>';
         }
 
         function linkRow(label, url) {
@@ -648,7 +658,7 @@
                         '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + ctxText(m.context_window) + '</td>' +
                         '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + metricText(m, 'tps', '') + '</td>' +
                         '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + metricText(m, 'intelligence', '') + '</td>' +
-                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + allowanceText(m) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + allowanceText(m, p) + '</td>' +
                         '<td class="px-3 py-2 text-slate-500 font-sans">' + esc(m.rate_limits || '') + '</td>' +
                     '</tr>';
             }).join('');
@@ -705,7 +715,10 @@
                                 }).join('') + '</ul>'
                             ) : '') +
 
-                            '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mt-8 mb-2">Free models (' + models.length + ')</h3>' +
+                            '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mt-8 mb-2">Free models (' +
+                                (typeof p.catalog_size === 'number' && p.catalog_size > models.length
+                                    ? models.length + ' of ' + p.catalog_size + ' listed'
+                                    : models.length) + ')</h3>' +
                             '<div class="overflow-x-auto border border-slate-200 rounded-lg">' +
                                 '<table class="w-full text-xs">' +
                                     '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
@@ -722,6 +735,10 @@
                                     '<tbody>' + rows + '</tbody>' +
                                 '</table>' +
                             '</div>' +
+                            (typeof p.catalog_size === 'number' && p.catalog_size > models.length
+                                ? '<p class="mt-2 text-[11px] text-slate-500 font-sans">The free tier carries ' + p.catalog_size +
+                                  ' models; the most useful ' + models.length + ' are listed here with limits and scores.</p>'
+                                : '') +
                         '</div>' +
 
                         '<aside class="p-6 space-y-6 bg-slate-50/50 text-xs">' +
@@ -786,7 +803,7 @@
             allowance: {
                 title: 'Token allowance leaderboard',
                 blurb: 'Free tokens per day summed across each provider\'s free models, so a host that gives 200K/day on six models outranks one that gives 200K/day on a single model. Providers that are only request-capped (no token quota) are listed in the catalogue instead. One-time signup balances are flagged, not counted as recurring capacity.',
-                column: 'Free tokens / day',
+                column: 'Free tokens',
                 unit: 'providers with a token quota',
                 source: null,
                 byProvider: true
@@ -800,9 +817,32 @@
             return 'Recurring';
         }
 
+        function periodLabel(period) {
+            if (period === 'one-time') return 'one-time';
+            if (period === 'month') return '/ month';
+            return '/ day';
+        }
+
+        function formatAllowance(value, period) {
+            return compactTokens(value) + ' ' + periodLabel(period);
+        }
+
         function providerAllowanceRows() {
             var rows = [];
             state.providers.forEach(function (p) {
+                var modelCount = (p.models || []).length;
+                // An account-wide pool shared by every model beats summing per-model quotas.
+                if (typeof p.free_token_allowance === 'number') {
+                    rows.push({
+                        provider: p,
+                        value: p.free_token_allowance,
+                        period: p.allowance_period || 'day',
+                        shared: true,
+                        counted: modelCount,
+                        modelCount: modelCount
+                    });
+                    return;
+                }
                 var total = 0;
                 var counted = 0;
                 (p.models || []).forEach(function (m) {
@@ -812,7 +852,10 @@
                     }
                 });
                 if (!counted) return;
-                rows.push({ provider: p, value: total, counted: counted, modelCount: (p.models || []).length });
+                rows.push({
+                    provider: p, value: total, period: 'day', shared: false,
+                    counted: counted, modelCount: modelCount
+                });
             });
             rows.sort(function (a, b) {
                 if (b.value !== a.value) return b.value - a.value;
@@ -924,8 +967,8 @@
                     '<tr class="border-t border-slate-100 hover:bg-slate-50 cursor-pointer" data-provider="' + esc(r.provider.id) + '" tabindex="0">' +
                         '<td class="px-3 py-2 font-mono text-slate-400 text-right w-10">' + (i + 1) + '</td>' +
                         '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(r.provider.name) + '</td>' +
-                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(compactTokens(r.value)) + ' / day</td>' +
-                        '<td class="px-3 py-2 font-mono text-slate-500 text-right whitespace-nowrap">' + r.counted + ' of ' + r.modelCount + '</td>' +
+                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(formatAllowance(r.value, r.period)) + '</td>' +
+                        '<td class="px-3 py-2 font-mono text-slate-500 text-right whitespace-nowrap">' + (r.shared ? 'account-wide' : r.counted + ' of ' + r.modelCount) + '</td>' +
                         '<td class="px-3 py-2 font-sans whitespace-nowrap ' + kindClass + '">' + kind + '</td>' +
                         '<td class="px-3 py-2 text-slate-600 font-sans">' + esc((r.provider.offer && r.provider.offer.label) || '') + '</td>' +
                     '</tr>';
@@ -939,7 +982,7 @@
                                 '<th class="px-3 py-2 text-right font-semibold">#</th>' +
                                 '<th class="px-3 py-2 text-left font-semibold">Provider</th>' +
                                 '<th class="px-3 py-2 text-right font-semibold">' + esc(cfg.column) + '</th>' +
-                                '<th class="px-3 py-2 text-right font-semibold">Quota models</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">Scope</th>' +
                                 '<th class="px-3 py-2 text-left font-semibold">Recurrence</th>' +
                                 '<th class="px-3 py-2 text-left font-semibold">Free offer</th>' +
                             '</tr>' +

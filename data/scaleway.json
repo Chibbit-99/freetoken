@@ -42,8 +42,7 @@
         "tps": 375,
         "intelligence": 4
       },
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     },
     {
       "id": "deepseek-v4-1-flash",
@@ -54,8 +53,7 @@
         "tps": 70,
         "intelligence": 33
       },
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     },
     {
       "id": "glm-5-3",
@@ -66,8 +64,7 @@
         "tps": 130,
         "intelligence": 32
       },
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     },
     {
       "id": "gemma-4-26b-a4b",
@@ -77,8 +74,7 @@
       "metrics": {
         "tps": 175
       },
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     },
     {
       "id": "qwen3-8-27b",
@@ -89,8 +85,7 @@
         "tps": 120,
         "intelligence": 20
       },
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     },
     {
       "id": "mistral-small-4",
@@ -101,23 +96,22 @@
         "tps": 130,
         "intelligence": 4
       },
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     },
     {
       "id": "bge-m3",
       "name": "BGE-M3 Embeddings",
       "family": "BGE",
       "context_window": 8192,
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     },
     {
       "id": "whisper-large-v3",
       "name": "Whisper Large v3",
       "family": "Whisper",
-      "rate_limits": "60 RPM, 1M free tokens",
-      "token_allowance": 33333
+      "rate_limits": "60 RPM, 1M free tokens"
     }
-  ]
+  ],
+  "free_token_allowance": 1000000,
+  "allowance_period": "one-time"
 }

@@ -31,6 +31,7 @@
     "No card required"
   ],
   "notes": "Retention and operator-access rules are set by institutional policy, not a public DPA.",
+  "catalog_size": 15,
   "models": [
     {
       "id": "llama-3-3-70b",

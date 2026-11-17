@@ -31,6 +31,7 @@
     "Runs on ALCF hardware"
   ],
   "notes": "Requires an ALCF allocation or collaborator status.",
+  "catalog_size": 7,
   "models": [
     {
       "id": "gemma-4-31b",

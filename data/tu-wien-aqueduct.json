@@ -31,6 +31,7 @@
     "OpenAI-compatible endpoints"
   ],
   "notes": "Access is tied to a university account.",
+  "catalog_size": 8,
   "models": [
     {
       "id": "qwen3-8-27b",

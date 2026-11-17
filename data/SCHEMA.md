@@ -64,6 +64,9 @@ The order of the `providers` array is the display order in the catalogue.
 | `requires_payment_card` | boolean | yes | `true` if sign-up requires a payment card. Drives the "No card" filter. |
 | `last_updated` | string | yes | `YYYY-MM-DD` of the last data update. |
 | `verified` | object | yes | Where and when free access was checked (see below). |
+| `free_token_allowance` | integer | no | Account-wide free tokens shared by every model. Takes precedence over summing per-model `token_allowance` on the allowance leaderboard. |
+| `allowance_period` | string | no | `day` (default), `month` or `one-time`. Controls how the allowance is labelled — a one-time signup balance is never shown as tokens/day. |
+| `catalog_size` | integer | no | Total number of models the free tier carries, when the provider states it. The app shows "4 of 22 models" and a "4 of 22 listed" heading instead of implying the listed models are the whole catalogue. |
 | `free_access` | array of strings | yes | Exactly four bullets summarising the free offer and its conditions, shown in the detail view. Keep each under ~80 characters. |
 | `api_endpoint` | string | no | Base URL of the OpenAI-compatible API, where one exists. Omit for speech-only, embeddings-only or non-OpenAI APIs. |
 | `notes` | string | no | Caveats that do not fit the bullets: phone verification, rotating free models, expiry, one-time-credit traps. |

@@ -31,6 +31,7 @@
     "No card required"
   ],
   "notes": "Usage metadata may be retained indefinitely; sensitive data is not allowed.",
+  "catalog_size": 34,
   "models": [
     {
       "id": "apertus-70b",

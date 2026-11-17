@@ -64,5 +64,6 @@
       },
       "rate_limits": "Dynamic Gemini 3 limits"
     }
-  ]
+  ],
+  "catalog_size": 5
 }

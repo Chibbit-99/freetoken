@@ -41,8 +41,7 @@
         "tps": 120,
         "intelligence": 5
       },
-      "rate_limits": "300K tokens/month (Lite)",
-      "token_allowance": 10000
+      "rate_limits": "300K tokens/month (Lite)"
     },
     {
       "id": "granite-4-2-30b",
@@ -52,8 +51,9 @@
       "metrics": {
         "tps": 65
       },
-      "rate_limits": "300K tokens/month (Lite)",
-      "token_allowance": 10000
+      "rate_limits": "300K tokens/month (Lite)"
     }
-  ]
+  ],
+  "free_token_allowance": 300000,
+  "allowance_period": "month"
 }

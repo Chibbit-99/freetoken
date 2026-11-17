@@ -42,8 +42,7 @@
         "tps": 300,
         "intelligence": 4
       },
-      "rate_limits": "30-day trial, 1M tokens/day",
-      "token_allowance": 1000000
+      "rate_limits": "30-day trial, 1M tokens/day"
     },
     {
       "id": "qwen3-8-27b",
@@ -54,8 +53,7 @@
         "tps": 100,
         "intelligence": 20
       },
-      "rate_limits": "30-day trial, 1M tokens/day",
-      "token_allowance": 1000000
+      "rate_limits": "30-day trial, 1M tokens/day"
     },
     {
       "id": "gemma-4-31b",
@@ -66,8 +64,7 @@
         "tps": 75,
         "intelligence": 4
       },
-      "rate_limits": "30-day trial, 1M tokens/day",
-      "token_allowance": 1000000
+      "rate_limits": "30-day trial, 1M tokens/day"
     },
     {
       "id": "apertus-70b",
@@ -77,8 +74,7 @@
       "metrics": {
         "tps": 40
       },
-      "rate_limits": "30-day trial, 1M tokens/day",
-      "token_allowance": 1000000
+      "rate_limits": "30-day trial, 1M tokens/day"
     },
     {
       "id": "llama-3-3-70b",
@@ -88,8 +84,9 @@
       "metrics": {
         "tps": 45
       },
-      "rate_limits": "30-day trial, 1M tokens/day",
-      "token_allowance": 1000000
+      "rate_limits": "30-day trial, 1M tokens/day"
     }
-  ]
+  ],
+  "free_token_allowance": 1000000,
+  "allowance_period": "day"
 }

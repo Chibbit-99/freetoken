@@ -31,6 +31,8 @@
     "No card required; billing only after the balance is spent"
   ],
   "notes": "The 100M allowance is one-time, not monthly; prompts may train models unless you turn that off.",
+  "free_token_allowance": 100000000,
+  "allowance_period": "one-time",
   "models": [
     {
       "id": "mercury-2",

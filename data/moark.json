@@ -31,6 +31,7 @@
     "No card required"
   ],
   "notes": "The free allowance is call-counted, not token-counted.",
+  "catalog_size": 200,
   "models": [
     {
       "id": "qwen3-8-flash",

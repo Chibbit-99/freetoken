@@ -31,6 +31,7 @@
     "10 models listed"
   ],
   "notes": "Free routes may collect prompts and completions for training.",
+  "catalog_size": 10,
   "models": [
     {
       "id": "deepseek-v4-1-flash",

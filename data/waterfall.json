@@ -31,6 +31,7 @@
     "OpenAI-compatible endpoint"
   ],
   "notes": "No published policy for how free-route prompts are handled.",
+  "catalog_size": 21,
   "models": [
     {
       "id": "gemma-4-31b",

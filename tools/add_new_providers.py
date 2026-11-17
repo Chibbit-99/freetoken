@@ -41,6 +41,32 @@ SKIP = {
     "vlm-run",
 }
 
+# Account-wide pools and published catalogue sizes, written onto the provider.
+PROVIDER_EXTRA = {
+    "inception": {"free_token_allowance": 100000000, "allowance_period": "one-time"},
+    "amd-radeon-cloud": {"catalog_size": 9},
+    "logfare": {"catalog_size": 22},
+    "ndif": {"catalog_size": 113},
+    "swiss-ai": {"catalog_size": 34},
+    "gwdg-saia": {"catalog_size": 15},
+    "helmholtz-blablador": {"catalog_size": 15},
+    "nsf-nrp": {"catalog_size": 10},
+    "virginia-tech-arc": {"catalog_size": 10},
+    "tu-wien-aqueduct": {"catalog_size": 8},
+    "goethe-ai-toollab": {"catalog_size": 17},
+    "eth-sph": {"catalog_size": 8},
+    "alcf-inference": {"catalog_size": 7},
+    "westai": {"catalog_size": 7},
+    "fastrouter": {"catalog_size": 20},
+    "waterfall": {"catalog_size": 21},
+    "api-airforce": {"catalog_size": 28},
+    "lightning-ai": {"catalog_size": 37},
+    "opencode-zen": {"catalog_size": 10},
+    "taiwan-adi": {"catalog_size": 48},
+    "airawat": {"catalog_size": 16},
+    "moark": {"catalog_size": 200},
+}
+
 MODEL_EXTRA = {
     "inception": {
         "mercury-2": {"token_allowance": 100000000},
@@ -124,6 +150,7 @@ def main():
             entry["privacy"]["label"] = "Privacy not documented"
         if notes:
             entry["notes"] = notes
+        entry.update(PROVIDER_EXTRA.get(pid, {}))
         entry["models"] = models
         if dry:
             print("would write", pid, len(models), "models")
