@@ -180,6 +180,10 @@ day), never a metric.
   board — they are still listed in the catalogue. One-time signup balances (for
   example Inception's 100M tokens) **do count**, but the row is labelled
   "One-time" so a credit is never mistaken for recurring capacity.
+- Rows are ordered by a **30-day equivalent** (`value x 30` when the period is
+  `day`, the face value for `month` and `one-time`), because raw figures with
+  different periods are not comparable — 7M/day is more capacity than
+  30M/month. The value column always shows the period the provider publishes.
 - Values are shortened for display: `1000000` → `1M`, `5400` → `5.4K`.
 - When a provider gives one shared account-wide balance rather than a per-model
   quota, put the number on the single model the balance is priced against (see

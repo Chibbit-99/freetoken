@@ -508,14 +508,14 @@
             // Token allowance is ranked per provider: the free tokens/day summed
             // across the models that carry a numeric quota.
             var allowanceRows = providerAllowanceRows().slice(0, 3);
-            var maxAllowance = allowanceRows.length ? allowanceRows[0].value : 0;
+            var maxAllowance = allowanceRows.length ? allowanceRows[0].monthly : 0;
             renderBars('allowance-bars', allowanceRows.map(function (r) {
                 return {
                     primary: r.provider.name,
                     secondary: recurrenceOf(r.provider) + ' \u00b7 ' + (r.shared ? 'shared pool' : 'per-model quotas'),
                     value: formatAllowance(r.value, r.period),
-                    v: r.value,
-                    width: Math.min(100, Math.max(6, Math.round(r.value / (maxAllowance || 1) * 100)))
+                    v: r.monthly,
+                    width: Math.min(100, Math.max(6, Math.round(r.monthly / (maxAllowance || 1) * 100)))
                 };
             }), {
                 scale: 'relative',
@@ -802,7 +802,7 @@
             },
             allowance: {
                 title: 'Token allowance leaderboard',
-                blurb: 'Free tokens each provider hands out, ranked by provider rather than by model. A shared account-wide pool — IteraCompute\'s 30M/month, Inception\'s 100M signup balance — is shown once with scope account-wide; otherwise the per-model quotas are summed and the scope column says how many models carry one. Request-capped providers with no token quota stay in the catalogue instead.',
+                blurb: 'Free tokens each provider hands out, ranked by provider rather than by model. A shared account-wide pool — IteraCompute\'s 30M/month, Inception\'s 100M signup balance — is shown once with scope account-wide; otherwise the per-model quotas are summed and the scope column says how many models carry one. Request-capped providers with no token quota stay in the catalogue instead. Ranks compare a 30-day equivalent — a daily cap times 30 — while each row shows the period the provider actually publishes.',
                 column: 'Free tokens',
                 unit: 'providers with a token quota',
                 source: null,
@@ -862,7 +862,14 @@
                     counted: counted, modelCount: modelCount
                 });
             });
+            // Periods are not comparable as raw numbers: 7M/day is far more than
+            // 30M/month. Rank on a 30-day equivalent while still showing the
+            // published period, and treat a one-time balance as a single lump.
+            rows.forEach(function (r) {
+                r.monthly = r.period === 'day' ? r.value * 30 : r.value;
+            });
             rows.sort(function (a, b) {
+                if (b.monthly !== a.monthly) return b.monthly - a.monthly;
                 if (b.value !== a.value) return b.value - a.value;
                 return String(a.provider.name).localeCompare(String(b.provider.name));
             });

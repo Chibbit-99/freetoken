@@ -124,6 +124,9 @@
     "merkium.json",
     "iteracompute.json",
     "miapi.json",
-    "sambanova.json"
+    "sambanova.json",
+    "nara-router.json",
+    "plamo.json",
+    "api-free-llm.json"
   ]
 }

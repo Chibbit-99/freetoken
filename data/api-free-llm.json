@@ -1,0 +1,42 @@
+{
+  "id": "api-free-llm",
+  "name": "ApiFreeLLM",
+  "website": "https://apifreellm.com",
+  "docs": "https://apifreellm.com",
+  "signup": "https://apifreellm.com",
+  "description": "Community sandbox that hands out a free key for a single hosted model.",
+  "overview": "ApiFreeLLM splits its service in two: a Community Best-Effort sandbox that is free and a credit-based Managed path that is not. The free tier needs only a Google sign-in, takes 50 requests a day with an 8,000-token input ceiling, and answers through a single model with no reliability guarantee — its own dashboard reported 74.5% success and roughly 25 tokens/second over a recent 24 hours. The endpoint takes `message` rather than `messages`, so the OpenAI SDKs cannot be pointed at it.",
+  "offer": {
+    "type": "always-free",
+    "label": "50 free requests/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://apifreellm.com/en/api-access",
+      "https://apifreellm.com/en"
+    ]
+  },
+  "free_access": [
+    "50 free requests/day",
+    "8,000-token input ceiling",
+    "Google sign-in, no card",
+    "Best-effort sandbox; OpenAI-compatible endpoint is paid-only"
+  ],
+  "notes": "Custom request schema (message, not messages) and roughly 75% success in the vendor's own metrics.",
+  "models": [
+    {
+      "id": "apifreellm",
+      "name": "ApiFreeLLM Community",
+      "family": "ApiFreeLLM",
+      "rate_limits": "50 requests/day; 8K input tokens; best-effort capacity"
+    }
+  ]
+}

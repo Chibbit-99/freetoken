@@ -1,15 +1,15 @@
 {
   "id": "inferall",
-  "name": "InferAll no-card NIM trial",
+  "name": "InferAll",
   "website": "https://inferall.ai",
   "docs": "https://inferall.ai",
   "signup": "https://inferall.ai",
-  "description": "Gateway offering a no-card trial of NVIDIA NIM models.",
-  "overview": "InferAll mirrors a slice of NVIDIA's NIM catalog for a no-card trial covering Gemma, Llama and GPT-OSS. Non-retention is described as product intent rather than a binding end-to-end promise, and upstream model terms still apply.",
+  "description": "Gateway whose open NVIDIA NIM models stay free every day after a short trial.",
+  "overview": "InferAll fronts OpenAI, Anthropic, Google, NVIDIA NIM, Replicate and Runway behind one key. New accounts get 25 NIM-model calls up front, and after that the open NIM roster — Nemotron 3 Ultra, gpt-oss-20b and the rest — remains free at 25 calls a day, resetting at 00:00 UTC, with no card. A $5 starter pack raises the daily ceiling to 50 chat calls and becomes spendable balance. Non-retention is product intent rather than a contractual promise.",
   "offer": {
-    "type": "trials",
-    "label": "No-card NIM trial",
-    "tone": "amber"
+    "type": "always-free",
+    "label": "25 free NIM calls/day",
+    "tone": "emerald"
   },
   "privacy": {
     "type": "partial",
@@ -25,12 +25,12 @@
     ]
   },
   "free_access": [
-    "No-card trial of 14 NIM models",
-    "Gemma, Llama and GPT-OSS",
-    "OpenAI-compatible API",
-    "No card required"
+    "25 free NIM calls/day, no card",
+    "Open models at $0 in and $0 out",
+    "OpenAI- and Anthropic-compatible endpoints",
+    "$5 starter pack lifts the cap to 50 calls/day"
   ],
-  "notes": "Rate limits are tight; non-retention is not contractual.",
+  "notes": "The free allowance covers NVIDIA-hosted open models only; premium providers are metered.",
   "models": [
     {
       "id": "gemma-4-31b",

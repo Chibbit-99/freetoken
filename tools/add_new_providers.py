@@ -18,6 +18,7 @@ from new_providers_b import PART_B  # noqa: E402
 from new_providers_c import PART_C  # noqa: E402
 from new_providers_d import PART_D  # noqa: E402
 from new_providers_e import PART_E  # noqa: E402
+from new_providers_f import PART_F  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -54,11 +55,15 @@ SOURCES = {
     "sea-lion": ["https://sea-lion.ai/try-sea-lion/", "https://docs.sea-lion.ai/guides/inferencing/api"],
     "opentyphoon": ["https://docs.opentyphoon.ai/en/rate-limits/", "https://docs.opentyphoon.ai/en/faq/"],
     "agnes-ai": ["https://wiki.agnes-ai.com/en/docs/pricing", "https://wiki.agnes-ai.com/en/docs/faqs"],
+    "nara-router": ["https://router.bynara.id/api/plans", "https://router.bynara.id/docs"],
+    "plamo": ["https://docs.plamo.preferredai.jp/en/api", "https://plamo.preferredai.jp/"],
+    "api-free-llm": ["https://apifreellm.com/en/api-access", "https://apifreellm.com/en"],
 }
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
 PROVIDER_EXTRA = {
     "iteracompute": {"free_token_allowance": 30000000, "allowance_period": "month"},
+    "nara-router": {"free_token_allowance": 7000000, "allowance_period": "day"},
     "inception": {"free_token_allowance": 100000000, "allowance_period": "one-time"},
     "amd-radeon-cloud": {"catalog_size": 9},
     "logfare": {"catalog_size": 22},
@@ -140,7 +145,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:
