@@ -1,0 +1,76 @@
+{
+  "id": "nebius",
+  "name": "Nebius Token Factory",
+  "website": "https://nebius.com",
+  "docs": "https://nebius.com",
+  "signup": "https://nebius.com",
+  "description": "European GPU cloud with an OpenAI-compatible token factory.",
+  "overview": "Nebius Token Factory serves open models on Nebius's EU GPU cloud through an OpenAI-compatible API. Trial credits cover initial use; training is excluded but prompts and outputs may be stored unless zero-data-retention mode is enabled.",
+  "offer": {
+    "type": "trials",
+    "label": "Trial credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Stored unless ZDR enabled"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://nebius.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "One-time trial credits",
+    "Open models with an OpenAI-compatible API",
+    "Zero-data-retention mode available",
+    "No card required to start"
+  ],
+  "notes": "Enable zero-data-retention mode to avoid prompt storage.",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 28
+      }
+    }
+  ]
+}

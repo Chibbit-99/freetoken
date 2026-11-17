@@ -1,0 +1,59 @@
+{
+  "id": "oracle-oci",
+  "name": "OCI Generative AI",
+  "website": "https://www.oracle.com/artificial-intelligence/generative-ai/",
+  "docs": "https://www.oracle.com/artificial-intelligence/generative-ai/",
+  "signup": "https://www.oracle.com/artificial-intelligence/generative-ai/",
+  "description": "Oracle Cloud's managed generative AI service with a $300 trial.",
+  "overview": "OCI Generative AI serves hosted models through Oracle Cloud with private endpoints and no ordinary inference retention. New tenancies get $300 of trial credit valid for 30 days; a payment card is required to open the tenancy.",
+  "offer": {
+    "type": "trials",
+    "label": "$300 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No storage of inference"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.oracle.com/artificial-intelligence/generative-ai/",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$300 one-time trial credit",
+    "30-day trial window",
+    "Private endpoints, no inference retention",
+    "Card required"
+  ],
+  "notes": "Trial credit expires after 30 days.",
+  "models": [
+    {
+      "id": "command-r-plus",
+      "name": "Command R+",
+      "family": "Command",
+      "context_window": 128000,
+      "metrics": {
+        "tps": 60
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130
+      }
+    },
+    {
+      "id": "cohere-embed-v4",
+      "name": "Embed v4",
+      "family": "Cohere Embed"
+    }
+  ]
+}

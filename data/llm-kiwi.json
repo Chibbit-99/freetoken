@@ -33,29 +33,56 @@
   "notes": "Free limits are described as baseline and are not published.",
   "models": [
     {
-      "id": "auto-router",
-      "name": "Auto router",
-      "family": "LLM.kiwi",
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 4
+      },
       "rate_limits": "Baseline rate limits (unpublished)"
     },
     {
       "id": "minimax-m3",
       "name": "MiniMax M3",
       "family": "MiniMax",
+      "context_window": 1048576,
       "metrics": {
         "tps": 80,
-        "intelligence": 70
+        "intelligence": 19
       },
       "rate_limits": "Baseline rate limits (unpublished)"
     },
     {
-      "id": "nemotron-3-ultra",
-      "name": "Nemotron 3 Ultra",
+      "id": "nemotron-3-ultra-550b",
+      "name": "Nemotron 3 Ultra 550B A55B",
       "family": "Nemotron",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
         "tps": 110,
-        "intelligence": 71
+        "intelligence": 12
+      },
+      "rate_limits": "Baseline rate limits (unpublished)"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      },
+      "rate_limits": "Baseline rate limits (unpublished)"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 200
       },
       "rate_limits": "Baseline rate limits (unpublished)"
     }

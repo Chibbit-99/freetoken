@@ -1,0 +1,65 @@
+{
+  "id": "alcf-inference",
+  "name": "Argonne LCF Inference",
+  "website": "https://www.alcf.anl.gov",
+  "docs": "https://www.alcf.anl.gov",
+  "signup": "https://www.alcf.anl.gov",
+  "description": "Argonne Leadership Computing Facility endpoints for open models.",
+  "overview": "The Argonne Leadership Computing Facility runs inference endpoints for Gemma, Llama and Mistral models on its research systems. Institutional controls apply, but endpoint-wide retention, training and deletion terms are not public.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Institutional controls"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.alcf.anl.gov",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for allocated research projects",
+    "7 open models",
+    "No card required",
+    "Runs on ALCF hardware"
+  ],
+  "notes": "Requires an ALCF allocation or collaborator status.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 4
+      }
+    }
+  ]
+}

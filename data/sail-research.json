@@ -1,0 +1,74 @@
+{
+  "id": "sail-research",
+  "name": "Sail Research",
+  "website": "https://sailresearch.org",
+  "docs": "https://sailresearch.org",
+  "signup": "https://sailresearch.org",
+  "description": "Research cloud with recurring monthly credits and ephemeral inference handling.",
+  "overview": "Sail Research is an academic research cloud whose model APIs receive $5 of free credits each month. Its data processing agreement requires ephemeral processing on the inference path and prohibits training or improvement on that content without written consent; stateful Sailboxes are governed separately.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "$5 monthly credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "Ephemeral inference processing"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://sailresearch.org",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$5 of free credits every month",
+    "Credits cover the shared inference catalog",
+    "No card required for the research tier",
+    "Ephemeral processing on the inference path"
+  ],
+  "notes": "Research accounts only; capacity is shared with teaching workloads.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      }
+    }
+  ]
+}

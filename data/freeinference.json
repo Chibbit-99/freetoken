@@ -39,8 +39,8 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
-        "intelligence": 68
+        "tps": 220,
+        "intelligence": 28
       },
       "rate_limits": "Not published; 429 when throttled"
     },
@@ -48,10 +48,9 @@
       "id": "deepseek-v4-flash",
       "name": "DeepSeek V4 Flash",
       "family": "DeepSeek V4",
-      "context_window": 1048576,
+      "context_window": 262144,
       "metrics": {
-        "tps": 95,
-        "intelligence": 70
+        "tps": 95
       },
       "rate_limits": "Not published; 429 when throttled"
     },
@@ -62,23 +61,23 @@
       "context_window": 1048576,
       "metrics": {
         "tps": 80,
-        "intelligence": 70
+        "intelligence": 19
       },
       "rate_limits": "Not published; 429 when throttled"
     },
     {
-      "id": "qwen3-6-35b-a3b",
-      "name": "Qwen3.6 35B A3B",
-      "family": "Qwen 3.6",
+      "id": "qwen3-5-35b-a3b",
+      "name": "Qwen3.5 35B A3B",
+      "family": "Qwen 3.5",
+      "context_window": 262144,
       "metrics": {
-        "tps": 220,
-        "intelligence": 66
+        "tps": 230
       },
       "rate_limits": "Not published; 429 when throttled"
     },
     {
-      "id": "bge-m3-embeddings",
-      "name": "BGE-M3 (embeddings)",
+      "id": "bge-m3",
+      "name": "BGE-M3 Embeddings",
       "family": "BGE",
       "context_window": 8192,
       "rate_limits": "Not published; 429 when throttled"

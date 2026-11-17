@@ -37,32 +37,76 @@
       "id": "nemotron-3-5-lightning",
       "name": "Nemotron 3.5 Lightning",
       "family": "Nemotron",
-      "context_window": 131072,
+      "context_window": 1048576,
       "metrics": {
         "tps": 400,
-        "intelligence": 60
+        "intelligence": 6
       },
       "rate_limits": "200 requests/hour per IP"
     },
     {
-      "id": "nemotron-3-nano-omni-reasoning",
-      "name": "Nemotron 3 Nano Omni Reasoning",
-      "family": "Nemotron",
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 28
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 33
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 30
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 29
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 29
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 200,
-        "intelligence": 58
-      },
-      "rate_limits": "200 requests/hour per IP"
-    },
-    {
-      "id": "lfm2-5-2-6b",
-      "name": "LFM2.5 2.6B",
-      "family": "LFM",
-      "context_window": 32768,
-      "metrics": {
-        "tps": 300,
-        "intelligence": 45
+        "tps": 520,
+        "intelligence": 4
       },
       "rate_limits": "200 requests/hour per IP"
     }

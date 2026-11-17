@@ -40,7 +40,7 @@
       "context_window": 1048576,
       "metrics": {
         "tps": 180,
-        "intelligence": 70
+        "intelligence": 32
       },
       "rate_limits": "Trial credits; adaptive limits"
     },
@@ -50,19 +50,18 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
-        "intelligence": 68
+        "tps": 220,
+        "intelligence": 28
       },
       "rate_limits": "Trial credits; adaptive limits"
     },
     {
       "id": "glm-5-2",
-      "name": "GLM 5.2",
+      "name": "GLM-5.2",
       "family": "GLM 5.2",
       "context_window": 1048576,
       "metrics": {
-        "tps": 160,
-        "intelligence": 68
+        "tps": 170
       },
       "rate_limits": "Trial credits; adaptive limits"
     },
@@ -73,7 +72,7 @@
       "context_window": 262144,
       "metrics": {
         "tps": 130,
-        "intelligence": 62
+        "intelligence": 4
       },
       "rate_limits": "Trial credits; adaptive limits"
     }

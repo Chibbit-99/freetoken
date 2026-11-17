@@ -34,46 +34,45 @@
   "notes": "Small, young provider: verify terms before relying on it. Longer inputs consume more daily units.",
   "models": [
     {
-      "id": "qwen3-7-flash",
-      "name": "Qwen3.7 Flash",
-      "family": "Qwen 3.7",
-      "context_window": 131072,
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
       "metrics": {
-        "tps": 200,
-        "intelligence": 66
+        "tps": 220,
+        "intelligence": 29
       },
       "rate_limits": "10 RPM, 60 units/day"
     },
     {
-      "id": "reflection-beam-free",
-      "name": "Reflection Beam (free)",
+      "id": "beam-1-0",
+      "name": "Beam 1.0",
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
         "tps": 60,
-        "intelligence": 72
+        "intelligence": 18
       },
       "rate_limits": "10 RPM, 60 units/day"
     },
     {
-      "id": "nemotron-3-5-lightning-free",
-      "name": "Nemotron 3.5 Lightning (free)",
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
       "family": "Nemotron",
-      "context_window": 131072,
+      "context_window": 1048576,
       "metrics": {
         "tps": 400,
-        "intelligence": 60
+        "intelligence": 6
       },
       "rate_limits": "10 RPM, 60 units/day"
     },
     {
-      "id": "deepseek-v4-flash-0731-free",
-      "name": "DeepSeek V4 Flash 0731 (free)",
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
       "family": "DeepSeek V4",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 95,
-        "intelligence": 70
+        "tps": 95
       },
       "rate_limits": "10 RPM, 60 units/day"
     }

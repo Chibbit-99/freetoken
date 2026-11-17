@@ -34,40 +34,61 @@
   "notes": "Enable Free Quota Only in the console to stop automatically being billed when the grant runs out.",
   "models": [
     {
-      "id": "qwen3-8-flash",
-      "name": "Qwen3.8 Flash",
-      "family": "Qwen 3.8",
-      "context_window": 262144,
-      "metrics": {
-        "tps": 200,
-        "intelligence": 68
-      },
-      "token_allowance": 11111,
-      "rate_limits": "1M free tokens (90 days)"
-    },
-    {
       "id": "qwen3-8-max",
       "name": "Qwen3.8 Max",
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 90,
-        "intelligence": 74
+        "tps": 90
       },
-      "token_allowance": 11111,
-      "rate_limits": "1M free tokens (90 days)"
+      "rate_limits": "1M free tokens (90 days)",
+      "token_allowance": 11111
     },
     {
-      "id": "qwen3-7-plus",
-      "name": "Qwen3.7 Plus",
-      "family": "Qwen 3.7",
-      "context_window": 131072,
+      "id": "qwen3-8-plus",
+      "name": "Qwen3.8 Plus",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
       "metrics": {
-        "tps": 120,
-        "intelligence": 68
+        "tps": 140
       },
-      "token_allowance": 11111,
-      "rate_limits": "1M free tokens (90 days)"
+      "rate_limits": "1M free tokens (90 days)",
+      "token_allowance": 11111
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 29
+      },
+      "rate_limits": "1M free tokens (90 days)",
+      "token_allowance": 11111
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      },
+      "rate_limits": "1M free tokens (90 days)",
+      "token_allowance": 11111
+    },
+    {
+      "id": "qwen3-5-397b-a17b",
+      "name": "Qwen3.5 397B A17B",
+      "family": "Qwen 3.5",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 80
+      },
+      "rate_limits": "1M free tokens (90 days)",
+      "token_allowance": 11111
     }
   ]
 }

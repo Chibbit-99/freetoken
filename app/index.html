@@ -70,7 +70,7 @@
     </header>
 
     <!-- Hero Section / Independent Layout Pattern -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 border-b border-slate-100">
+    <section id="hero-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 border-b border-slate-100">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             <div class="lg:col-span-2">
                 <!-- Controlled Line Breaking Layout to keep phrases unbroken while allowing standard word-wrap -->
@@ -80,7 +80,7 @@
 
                 </h1>
                 <p class="text-sm sm:text-base text-slate-600 max-w-xl font-normal leading-relaxed mb-6">
-                    Free hosted LLM endpoints, legitimately verified for your next project.
+                    Free hosted LLM endpoints, verified against provider docs. Scores from the Artificial Analysis Intelligence Index.
                 </p>
                 <!-- CTA Button and Updated Purple Text Metric -->
                 <div class="flex flex-wrap items-center gap-5">
@@ -99,22 +99,22 @@
 
                 <div class="space-y-1 group relative">
                     <div class="flex items-center justify-between text-xs">
-                        <h4 class="text-xs font-bold text-slate-900">API Performance Benchmarking v3</h4>
+                        <h4 class="text-xs font-bold text-slate-900">126 providers, hosted only</h4>
                         <a href="#" class="text-slate-400 group-hover:text-slate-900 transition-colors">
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
                         </a>
                     </div>
-                    <p class="text-[11px] text-slate-500 leading-normal">Time per task is now our headline performance metric, with agentic token streams added.</p>
+                    <p class="text-[11px] text-slate-500 leading-normal">Local runtimes are out; every entry is a hosted API with a checked free offer, including 72 added from freeinferencing.com.</p>
                 </div>
 
                 <div class="space-y-1 group relative pt-2 border-t border-slate-100">
                     <div class="flex items-center justify-between text-xs">
-                        <h4 class="text-xs font-bold text-slate-900">Decision Index v2.1</h4>
+                        <h4 class="text-xs font-bold text-slate-900">Quality scores from Artificial Analysis</h4>
                         <a href="#" class="text-slate-400 group-hover:text-slate-900 transition-colors">
                             <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
                         </a>
                     </div>
-                    <p class="text-[11px] text-slate-500 leading-normal">New private instruction metrics and formatting scores that evaluate system prompt adherence limits.</p>
+                    <p class="text-[11px] text-slate-500 leading-normal">Every model now carries the Artificial Analysis Intelligence Index (v5.0.1) instead of an in-house estimate.</p>
                 </div>
 
             </div>
@@ -122,7 +122,7 @@
     </section>
 
     <!-- Data Dashboard Grid -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <main id="dashboard-main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- Card Column 1: Speed (TPS) -->
@@ -157,7 +157,7 @@
                         <h3 class="text-sm font-bold text-slate-900 tracking-tight">Intelligence</h3>
                     </div>
                     <p class="text-[11px] text-slate-400 border-b border-slate-100 pb-3 mb-4">
-                        Standardized validation benchmarking mapping reasoning and text output density — Higher is better.
+                        Artificial Analysis Intelligence Index (v5.0.1) — Higher is better. Unscored models are omitted.
                     </p>
 
                     <!-- Data Bars Representation (rendered from /data JSON) -->
@@ -166,8 +166,8 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
-                    <a href="#" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
-                        View intelligence leaderboard &rarr;
+                    <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
+                        Artificial Analysis leaderboard &rarr;
                     </a>
                 </div>
             </div>
@@ -584,7 +584,9 @@
         // -------------------------------------------------------------- detail
 
         function hashProviderId() {
-            var m = /^#provider\/(.+)$/.exec(window.location.hash || '');
+            // Detail routes look like /#/providers/groq (the older #provider/groq form
+            // is still accepted so existing links keep working).
+            var m = /^#\/?(?:providers?|p)(?:\/|=)([^/?#]+)$/.exec(window.location.hash || '');
             return m ? decodeURIComponent(m[1]) : null;
         }
 
@@ -595,7 +597,7 @@
         }
 
         function openProvider(id) {
-            window.location.hash = 'provider/' + encodeURIComponent(id);
+            window.location.hash = '/providers/' + encodeURIComponent(id);
         }
 
         function ctxText(v) {
@@ -662,7 +664,7 @@
 
             box.innerHTML = '' +
                 '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
-                    '<a href="#catalogue" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
+                    '<a href="#/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
                         '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
                         'Back to all providers' +
                     '</a>' +
@@ -746,16 +748,24 @@
             var p = findProvider(hashProviderId() || '');
             var listView = $('catalogue-list-view');
             var detail = $('provider-detail');
+            // Home-only blocks (hero, leaderboards) are hidden on a provider page.
+            var homeOnly = ['hero-section', 'dashboard-main'];
+            homeOnly.forEach(function (id) {
+                var el = $(id);
+                if (el) el.classList.toggle('hidden', !!p);
+            });
             if (p) {
                 if (listView) listView.classList.add('hidden');
                 if (detail) {
                     detail.classList.remove('hidden');
                     renderDetail(p);
                 }
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                document.title = p.name + ' — FreeToken';
+                window.scrollTo(0, 0);
             } else {
                 if (detail) { detail.classList.add('hidden'); detail.innerHTML = ''; }
                 if (listView) listView.classList.remove('hidden');
+                document.title = 'FreeToken — Free Text LLM API Index';
             }
         }
 

@@ -37,10 +37,10 @@
       "id": "deepseek-v4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "family": "DeepSeek V4",
-      "context_window": 131072,
+      "context_window": 1048576,
       "metrics": {
         "tps": 100,
-        "intelligence": 72
+        "intelligence": 33
       },
       "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
     },
@@ -48,21 +48,21 @@
       "id": "mimo-v2-6-flash",
       "name": "MiMo V2.6 Flash",
       "family": "MiMo",
-      "context_window": 131072,
+      "context_window": 1048576,
       "metrics": {
-        "tps": 150,
-        "intelligence": 62
+        "tps": 160,
+        "intelligence": 27
       },
       "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
     },
     {
-      "id": "th-rudder",
-      "name": "TH-Rudder",
-      "family": "TH-Rudder",
-      "context_window": 131072,
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
       "metrics": {
-        "tps": 120,
-        "intelligence": 58
+        "tps": 220,
+        "intelligence": 30
       },
       "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
     }

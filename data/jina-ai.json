@@ -34,16 +34,17 @@
   "notes": "Embeddings, rerank and Reader only, not chat completion.",
   "models": [
     {
-      "id": "jina-embeddings-v5-text-small",
+      "id": "jina-embeddings-v5",
       "name": "Jina Embeddings v5 Text Small",
       "family": "Jina Embeddings",
       "context_window": 8192,
       "rate_limits": "100 RPM, 100K TPM"
     },
     {
-      "id": "jina-reader",
-      "name": "Jina Reader",
-      "family": "Jina Reader",
+      "id": "jina-reranker-v3",
+      "name": "Jina Reranker v3",
+      "family": "Jina Reranker",
+      "context_window": 131072,
       "rate_limits": "100 RPM, 100K TPM"
     }
   ]

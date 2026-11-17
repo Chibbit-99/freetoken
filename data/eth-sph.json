@@ -1,0 +1,64 @@
+{
+  "id": "eth-sph",
+  "name": "ETH Zurich SPH LLM API",
+  "website": "https://ethz.ch",
+  "docs": "https://ethz.ch",
+  "signup": "https://ethz.ch",
+  "description": "ETH Zurich's public-health school gateway, routed through OpenRouter aliases.",
+  "overview": "The SPH LLM API at ETH Zurich gives staff and students access to Gemini, Llama and Mistral models. Requests are routed through OpenRouter aliases, and the university publishes no plan-specific retention, training or deletion commitment.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free internal API",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No plan-specific policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ethz.ch",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for ETH members",
+    "Gemini, Llama and Mistral routes",
+    "8 models",
+    "No card required"
+  ],
+  "notes": "Requests are proxied through a third-party router.",
+  "models": [
+    {
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "family": "Gemini 3.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 300
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 4
+      }
+    }
+  ]
+}

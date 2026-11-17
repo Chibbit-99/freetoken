@@ -37,32 +37,30 @@
       "id": "qwen3-8-27b",
       "name": "Qwen3.8 27B",
       "family": "Qwen 3.8",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 150,
-        "intelligence": 66
+        "tps": 170,
+        "intelligence": 20
       },
       "rate_limits": "10/min, 30/hr per IP anonymous"
     },
     {
-      "id": "gemma-4-26b-a4b-it",
-      "name": "Gemma 4 26B A4B IT",
-      "family": "Gemma 4",
-      "context_window": 131072,
+      "id": "llama-4-scout",
+      "name": "Llama 4 Scout",
+      "family": "Llama 4",
+      "context_window": 10000000,
       "metrics": {
-        "tps": 130,
-        "intelligence": 60
+        "tps": 150
       },
       "rate_limits": "10/min, 30/hr per IP anonymous"
     },
     {
-      "id": "qwen3-5-0-8b",
-      "name": "Qwen3.5 0.8B",
-      "family": "Qwen 3.5",
-      "context_window": 32768,
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma 3",
+      "context_window": 131072,
       "metrics": {
-        "tps": 300,
-        "intelligence": 35
+        "tps": 120
       },
       "rate_limits": "10/min, 30/hr per IP anonymous"
     }

@@ -1,0 +1,65 @@
+{
+  "id": "inferall",
+  "name": "InferAll no-card NIM trial",
+  "website": "https://inferall.ai",
+  "docs": "https://inferall.ai",
+  "signup": "https://inferall.ai",
+  "description": "Gateway offering a no-card trial of NVIDIA NIM models.",
+  "overview": "InferAll mirrors a slice of NVIDIA's NIM catalog for a no-card trial covering Gemma, Llama and GPT-OSS. Non-retention is described as product intent rather than a binding end-to-end promise, and upstream model terms still apply.",
+  "offer": {
+    "type": "trials",
+    "label": "No-card NIM trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Non-retention unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://inferall.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "No-card trial of 14 NIM models",
+    "Gemma, Llama and GPT-OSS",
+    "OpenAI-compatible API",
+    "No card required"
+  ],
+  "notes": "Rate limits are tight; non-retention is not contractual.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 4
+      }
+    }
+  ]
+}

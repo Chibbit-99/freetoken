@@ -34,35 +34,75 @@
   "notes": "Free mode is intended for evaluation and prototyping; opt out of training in the Admin panel.",
   "models": [
     {
+      "id": "mistral-large-4",
+      "name": "Mistral Large 4",
+      "family": "Mistral",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 26
+      },
+      "rate_limits": "1 request/s (Free mode)"
+    },
+    {
+      "id": "mistral-medium-3-5",
+      "name": "Mistral Medium 3.5",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 5
+      },
+      "rate_limits": "1 request/s (Free mode)"
+    },
+    {
       "id": "mistral-small-4",
       "name": "Mistral Small 4",
       "family": "Mistral",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 120,
-        "intelligence": 61
+        "tps": 180,
+        "intelligence": 4
       },
       "rate_limits": "1 request/s (Free mode)"
     },
     {
-      "id": "mistral-large-4-preview",
-      "name": "Mistral Large 4 (Preview)",
+      "id": "magistral-medium",
+      "name": "Magistral Medium",
+      "family": "Magistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 90
+      },
+      "rate_limits": "1 request/s (Free mode)"
+    },
+    {
+      "id": "codestral",
+      "name": "Codestral",
+      "family": "Codestral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 160
+      },
+      "rate_limits": "1 request/s (Free mode)"
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo 12B",
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 60,
-        "intelligence": 68
+        "tps": 110
       },
       "rate_limits": "1 request/s (Free mode)"
     },
     {
-      "id": "codestral-2508",
-      "name": "Codestral 2508",
-      "family": "Codestral",
+      "id": "mistral-small-3-2",
+      "name": "Mistral Small 3.2 24B",
+      "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 130,
-        "intelligence": 58
+        "tps": 120
       },
       "rate_limits": "1 request/s (Free mode)"
     }

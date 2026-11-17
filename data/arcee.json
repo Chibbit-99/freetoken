@@ -1,0 +1,65 @@
+{
+  "id": "arcee",
+  "name": "Arcee Open Models API",
+  "website": "https://arcee.ai",
+  "docs": "https://arcee.ai",
+  "signup": "https://arcee.ai",
+  "description": "US lab serving its own and third-party open models in beta.",
+  "overview": "Arcee's open-models API beta serves DeepSeek, GLM and Kimi routes alongside Arcee's own fine-tunes with $5 of starter credit. Terms permit storage and processing of inputs and outputs, aggregate research use, and model development on non-confidential content.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Training on non-confidential content"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://arcee.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$5 one-time trial credit",
+    "DeepSeek, GLM and Kimi routes",
+    "No card required to start",
+    "OpenAI-compatible API"
+  ],
+  "notes": "Do not send confidential content; it may be used for model development.",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 28
+      }
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 90
+      }
+    }
+  ]
+}

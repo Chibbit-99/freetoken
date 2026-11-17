@@ -1,0 +1,65 @@
+{
+  "id": "lightning-ai",
+  "name": "Lightning AI Model APIs",
+  "website": "https://lightning.ai",
+  "docs": "https://lightning.ai",
+  "signup": "https://lightning.ai",
+  "description": "Studio platform that also serves hosted model APIs.",
+  "overview": "Lightning AI's litAI model APIs serve Gemini, Gemma and Qwen routes from its platform with $5 of starter credit. Model-API retention, training, publisher access and plan-specific protections are not documented in full.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Retention not fully documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://lightning.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$5 one-time credit",
+    "37 hosted model routes",
+    "No card required to start",
+    "OpenAI-compatible API"
+  ],
+  "notes": "Retention rules for model APIs are not fully documented.",
+  "models": [
+    {
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "family": "Gemini 3.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 300
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      }
+    }
+  ]
+}

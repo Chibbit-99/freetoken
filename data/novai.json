@@ -38,30 +38,18 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 120,
-        "intelligence": 62
+        "tps": 200
       },
       "rate_limits": "5 RPM before first top-up"
     },
     {
-      "id": "glm-4-6v-flash",
-      "name": "GLM-4.6V Flash",
-      "family": "GLM 4.6V",
-      "context_window": 131072,
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
       "metrics": {
-        "tps": 100,
-        "intelligence": 55
-      },
-      "rate_limits": "5 RPM before first top-up"
-    },
-    {
-      "id": "glm-4-1v-thinking-flash",
-      "name": "GLM-4.1V Thinking Flash",
-      "family": "GLM 4.1V",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 90,
-        "intelligence": 52
+        "tps": 220,
+        "intelligence": 28
       },
       "rate_limits": "5 RPM before first top-up"
     }

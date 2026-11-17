@@ -34,35 +34,75 @@
   "notes": "Only models marked free (for example Reflection Beam) are covered; other cloud models bill per token.",
   "models": [
     {
-      "id": "reflection-beam-501b",
-      "name": "Reflection Beam 501B",
+      "id": "beam-1-0",
+      "name": "Beam 1.0",
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
         "tps": 60,
-        "intelligence": 72
+        "intelligence": 18
       },
       "rate_limits": "1 concurrent model, light usage"
     },
     {
-      "id": "gemma-4-26b-a4b",
-      "name": "Gemma 4 26B A4B",
-      "family": "Gemma 4",
-      "context_window": 262144,
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
       "metrics": {
-        "tps": 130,
-        "intelligence": 60
+        "tps": 520,
+        "intelligence": 4
       },
       "rate_limits": "1 concurrent model, light usage"
     },
     {
-      "id": "deepseek-v4-1-flash",
-      "name": "DeepSeek V4.1 Flash",
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 780
+      },
+      "rate_limits": "1 concurrent model, light usage"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 100,
-        "intelligence": 72
+        "tps": 95
+      },
+      "rate_limits": "1 concurrent model, light usage"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      },
+      "rate_limits": "1 concurrent model, light usage"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 90
+      },
+      "rate_limits": "1 concurrent model, light usage"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 200
       },
       "rate_limits": "1 concurrent model, light usage"
     }

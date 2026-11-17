@@ -1,0 +1,42 @@
+{
+  "id": "scale-down",
+  "name": "ScaleDown SLM API",
+  "website": "https://scaledown.ai",
+  "docs": "https://scaledown.ai",
+  "signup": "https://scaledown.ai",
+  "description": "Task-specific small-model API with a small trial credit.",
+  "overview": "ScaleDown serves task-specific small language models for summarisation, extraction and classification with $2.50 of starter credit. Its incorporated DPA excludes persistent retention, training and secondary use of inference content; metadata is retained separately.",
+  "offer": {
+    "type": "trials",
+    "label": "$2.50 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No persistent retention"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://scaledown.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$2.50 one-time trial credit",
+    "Task-specific SLMs",
+    "No persistent retention of content",
+    "No card required to start"
+  ],
+  "notes": "Specialised models, not a general chat endpoint.",
+  "models": [
+    {
+      "id": "scaledown-task-slm",
+      "name": "ScaleDown Task SLM",
+      "family": "ScaleDown",
+      "context_window": 262144
+    }
+  ]
+}

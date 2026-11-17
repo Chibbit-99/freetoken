@@ -33,16 +33,27 @@
   "notes": "Lite plan adds 20 Capacity Unit Hours per month; billing details are required at signup.",
   "models": [
     {
-      "id": "granite-4-h-small",
-      "name": "Granite 4 H Small",
+      "id": "granite-4-2-8b",
+      "name": "Granite 4.2 8B",
       "family": "Granite",
       "context_window": 131072,
       "metrics": {
         "tps": 200,
-        "intelligence": 45
+        "intelligence": 5
       },
-      "token_allowance": 10000,
-      "rate_limits": "300K tokens/month (Lite)"
+      "rate_limits": "300K tokens/month (Lite)",
+      "token_allowance": 10000
+    },
+    {
+      "id": "granite-4-2-30b",
+      "name": "Granite 4.2 30B",
+      "family": "Granite",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110
+      },
+      "rate_limits": "300K tokens/month (Lite)",
+      "token_allowance": 10000
     }
   ]
 }

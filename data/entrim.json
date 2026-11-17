@@ -1,0 +1,66 @@
+{
+  "id": "entrim",
+  "name": "Entrim.ai",
+  "website": "https://entrim.ai",
+  "docs": "https://entrim.ai",
+  "signup": "https://entrim.ai",
+  "description": "Gateway with no content logging and a small trial credit.",
+  "overview": "Entrim serves Gemma, Qwen and DeepSeek models without content logs or training, keeping API-key-partitioned KV state cached for up to seven days. Zero-data-retention mode disables persistent caches but not volatile GPU state.",
+  "offer": {
+    "type": "trials",
+    "label": "$10 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No content logs; KV cache 7 days"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://entrim.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$10 one-time trial credit",
+    "No content logs or training",
+    "KV cache retained up to 7 days",
+    "No card required"
+  ],
+  "notes": "KV state can remain cached for a week even with logging disabled.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 33
+      }
+    }
+  ]
+}

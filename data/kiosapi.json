@@ -35,23 +35,21 @@
   "models": [
     {
       "id": "glm-4-7-flash",
-      "name": "GLM 4.7 Flash",
+      "name": "GLM-4.7 Flash",
       "family": "GLM 4.7",
-      "context_window": 131072,
+      "context_window": 200000,
       "metrics": {
-        "tps": 120,
-        "intelligence": 62
+        "tps": 200
       },
       "rate_limits": "5 RPM, 50 RPD"
     },
     {
-      "id": "gemma-4-26b",
-      "name": "Gemma 4 26B",
+      "id": "gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
       "family": "Gemma 4",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 130,
-        "intelligence": 60
+        "tps": 240
       },
       "rate_limits": "5 RPM, 50 RPD"
     },
@@ -61,8 +59,7 @@
       "family": "SEA-LION",
       "context_window": 131072,
       "metrics": {
-        "tps": 150,
-        "intelligence": 60
+        "tps": 150
       },
       "rate_limits": "5 RPM, 50 RPD"
     },
@@ -72,8 +69,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 200,
-        "intelligence": 40
+        "tps": 220
       },
       "rate_limits": "5 RPM, 50 RPD"
     }

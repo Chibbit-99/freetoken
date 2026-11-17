@@ -1,0 +1,41 @@
+{
+  "id": "respan-span-01",
+  "name": "Respan span-01 Lite",
+  "website": "https://respan.ai",
+  "docs": "https://respan.ai",
+  "signup": "https://respan.ai",
+  "description": "Observability vendor with a free in-house inference model.",
+  "overview": "Respan, an LLM observability platform, offers span-01 Lite as a free in-house model alongside its tracing product. Public policies do not establish content retention, training exclusions or operator-access controls for the free model.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free model",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Retention undocumented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://respan.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free span-01 Lite model",
+    "No card required",
+    "OpenAI-compatible endpoint",
+    "Pairs with the tracing product"
+  ],
+  "notes": "Single small model; retention policy is not documented.",
+  "models": [
+    {
+      "id": "span-01-lite",
+      "name": "span-01 Lite",
+      "family": "Respan"
+    }
+  ]
+}

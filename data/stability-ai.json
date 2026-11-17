@@ -1,0 +1,41 @@
+{
+  "id": "stability-ai",
+  "name": "Stability AI",
+  "website": "https://platform.stability.ai",
+  "docs": "https://platform.stability.ai",
+  "signup": "https://platform.stability.ai",
+  "description": "Image, video and audio generation platform.",
+  "overview": "Stability AI's developer platform serves Stable Diffusion and Stable Audio endpoints with a nominal trial credit. Platform API content may be retained and used for model training by default; you must opt out to exclude that use.",
+  "offer": {
+    "type": "trials",
+    "label": "$0.25 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Trains on platform content"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://platform.stability.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$0.25 trial credit",
+    "Image, video and audio models",
+    "Card required",
+    "Opt out to exclude training"
+  ],
+  "notes": "Training on platform content is on by default.",
+  "models": [
+    {
+      "id": "sd-4",
+      "name": "Stable Diffusion 4",
+      "family": "Stable Diffusion"
+    }
+  ]
+}

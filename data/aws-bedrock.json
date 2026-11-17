@@ -1,0 +1,64 @@
+{
+  "id": "aws-bedrock",
+  "name": "Amazon Bedrock",
+  "website": "https://aws.amazon.com/bedrock/",
+  "docs": "https://aws.amazon.com/bedrock/",
+  "signup": "https://aws.amazon.com/bedrock/",
+  "description": "AWS's managed model service, covered by AWS free-tier credits.",
+  "overview": "Amazon Bedrock serves Claude, Llama, Nova and open models with zero retention and no training by default. New AWS accounts receive free-tier credits (about $100 of Bedrock usage), but a card is required and some models carry abuse-review retention.",
+  "offer": {
+    "type": "trials",
+    "label": "$100 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Zero retention by default"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aws.amazon.com/bedrock/",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "~$100 of free-tier Bedrock usage",
+    "Zero retention by default",
+    "Claude, Llama, Nova and open models",
+    "Card required"
+  ],
+  "notes": "Named model routes can retain content for abuse review.",
+  "models": [
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130
+      }
+    },
+    {
+      "id": "mistral-large-4",
+      "name": "Mistral Large 4",
+      "family": "Mistral",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 26
+      }
+    },
+    {
+      "id": "command-r-plus",
+      "name": "Command R+",
+      "family": "Command",
+      "context_window": 128000,
+      "metrics": {
+        "tps": 60
+      }
+    }
+  ]
+}

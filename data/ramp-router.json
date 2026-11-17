@@ -1,0 +1,66 @@
+{
+  "id": "ramp-router",
+  "name": "Ramp Router",
+  "website": "https://ramp.com/router",
+  "docs": "https://ramp.com/router",
+  "signup": "https://ramp.com/router",
+  "description": "Fintech platform's model router with a trial credit.",
+  "overview": "Ramp Router proxies model traffic for Ramp customers and grants a small trial credit. Content recording is on by default: inputs, outputs and tool calls can be retained for a year for semantic analysis and product improvement.",
+  "offer": {
+    "type": "trials",
+    "label": "$26 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Records content for one year"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ramp.com/router",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "One-time trial credit (~$26 equivalent)",
+    "Multi-model routing",
+    "Requires a Ramp account",
+    "No card required to start"
+  ],
+  "notes": "Inputs and outputs can be retained for a year.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 28
+      }
+    }
+  ]
+}

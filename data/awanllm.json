@@ -1,0 +1,63 @@
+{
+  "id": "awanllm",
+  "name": "AwanLLM",
+  "website": "https://awanllm.ai",
+  "docs": "https://awanllm.ai",
+  "signup": "https://awanllm.ai",
+  "description": "Reliability-first Llama host with a standing free tier and no logging of prompts.",
+  "overview": "AwanLLM runs Llama models on its own GPUs and offers a standing free tier to developers. Its terms state that prompts and generations are not logged, and the platform publishes no content-based training or improvement use. Rate limits are modest and shared across the free queue.",
+  "offer": {
+    "type": "always-free",
+    "label": "Always-free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://awanllm.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free tier with no card",
+    "Prompts and generations are not logged",
+    "Shared free queue with per-key limits",
+    "Llama 3.x and 4 models"
+  ],
+  "notes": "Free capacity is queued behind paying traffic at peak times.",
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      }
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 220
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130
+      }
+    }
+  ]
+}

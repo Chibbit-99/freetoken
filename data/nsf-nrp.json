@@ -1,0 +1,65 @@
+{
+  "id": "nsf-nrp",
+  "name": "National Research Platform",
+  "website": "https://nrp.ai",
+  "docs": "https://nrp.ai",
+  "signup": "https://nrp.ai",
+  "description": "US national research platform with managed open-model endpoints.",
+  "overview": "The NSF National Research Platform hosts managed LLM endpoints for US researchers, running Gemma, Qwen and DeepSeek models across its distributed cluster. Caching is user-scoped, but no endpoint-wide retention TTL or training rule is published.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Caching guidance only"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://nrp.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for US research projects",
+    "OpenAI-compatible managed endpoints",
+    "10 open models",
+    "No card required"
+  ],
+  "notes": "Requires an NRP allocation or sponsored project.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
+      }
+    }
+  ]
+}

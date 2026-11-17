@@ -33,35 +33,64 @@
   "notes": "Free catalog rotates and limits are not published; verify current numbers on the portal.",
   "models": [
     {
-      "id": "stepfun-step-3-7-flash",
-      "name": "StepFun Step 3.7 Flash",
-      "family": "Step",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 150,
-        "intelligence": 64
-      },
-      "rate_limits": "Not published"
-    },
-    {
-      "id": "ornith-1-5-122b",
-      "name": "Ornith 1.5 122B",
-      "family": "Ornith",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 90,
-        "intelligence": 68
-      },
-      "rate_limits": "Not published"
-    },
-    {
-      "id": "reflection-beam-1-0",
-      "name": "Reflection Beam 1.0",
+      "id": "beam-1-0",
+      "name": "Beam 1.0",
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
         "tps": 60,
-        "intelligence": 72
+        "intelligence": 18
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "hermes-4-70b",
+      "name": "Hermes 4 70B",
+      "family": "Hermes",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 70
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3.1 405B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 40
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 200
       },
       "rate_limits": "Not published"
     }

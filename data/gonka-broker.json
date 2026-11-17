@@ -39,7 +39,7 @@
       "context_window": 131072,
       "metrics": {
         "tps": 180,
-        "intelligence": 68
+        "intelligence": 28
       },
       "rate_limits": "Monthly token grant"
     },
@@ -49,8 +49,7 @@
       "family": "DeepSeek V4",
       "context_window": 131072,
       "metrics": {
-        "tps": 95,
-        "intelligence": 70
+        "tps": 95
       },
       "rate_limits": "Monthly token grant"
     },
@@ -60,8 +59,7 @@
       "family": "MiniMax",
       "context_window": 131072,
       "metrics": {
-        "tps": 90,
-        "intelligence": 68
+        "tps": 90
       },
       "rate_limits": "Monthly token grant"
     }

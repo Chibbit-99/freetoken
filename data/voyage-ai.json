@@ -38,8 +38,24 @@
       "name": "Voyage 4 Large",
       "family": "Voyage",
       "context_window": 32768,
-      "token_allowance": 6666667,
-      "rate_limits": "200M free tokens per model"
+      "rate_limits": "200M free tokens per model",
+      "token_allowance": 6666667
+    },
+    {
+      "id": "voyage-4-lite",
+      "name": "Voyage 4 Lite",
+      "family": "Voyage",
+      "context_window": 32768,
+      "rate_limits": "200M free tokens per model",
+      "token_allowance": 6666667
+    },
+    {
+      "id": "voyage-rerank-3",
+      "name": "Voyage Rerank 3",
+      "family": "Voyage Reranker",
+      "context_window": 32768,
+      "rate_limits": "200M free tokens per model",
+      "token_allowance": 6666667
     }
   ]
 }

@@ -35,34 +35,41 @@
   "models": [
     {
       "id": "qwen3-8b",
-      "name": "Qwen3-8B",
+      "name": "Qwen3 8B",
       "family": "Qwen 3",
-      "context_window": 32768,
+      "context_window": 131072,
       "metrics": {
-        "tps": 150,
-        "intelligence": 52
+        "tps": 200
       },
       "rate_limits": "Fixed limits for free models (login to view)"
     },
     {
-      "id": "glm-4-9b",
-      "name": "GLM-4-9B",
-      "family": "GLM 4",
-      "context_window": 32768,
+      "id": "glm-4-6",
+      "name": "GLM-4.6",
+      "family": "GLM 4.6",
+      "context_window": 200000,
       "metrics": {
-        "tps": 140,
-        "intelligence": 48
+        "tps": 130
       },
       "rate_limits": "Fixed limits for free models (login to view)"
     },
     {
-      "id": "deepseek-r1-distill-qwen-7b",
-      "name": "DeepSeek-R1 Distill Qwen 7B",
+      "id": "deepseek-r1-0528",
+      "name": "DeepSeek R1 0528",
       "family": "DeepSeek R1",
-      "context_window": 32768,
+      "context_window": 131072,
       "metrics": {
-        "tps": 120,
-        "intelligence": 50
+        "tps": 45
+      },
+      "rate_limits": "Fixed limits for free models (login to view)"
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
       },
       "rate_limits": "Fixed limits for free models (login to view)"
     }

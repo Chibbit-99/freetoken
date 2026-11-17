@@ -34,13 +34,12 @@
   "notes": "Only one small free model; rate limits are shown in the console rather than published.",
   "models": [
     {
-      "id": "qwen3-5-4b-free",
-      "name": "Qwen3.5 4B (free)",
+      "id": "qwen3-5-4b",
+      "name": "Qwen3.5 4B",
       "family": "Qwen 3.5",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 250,
-        "intelligence": 45
+        "tps": 250
       },
       "rate_limits": "Per-org limits in console"
     }

@@ -39,33 +39,52 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 140,
-        "intelligence": 63
+        "tps": 520,
+        "intelligence": 4
       },
       "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
     },
     {
-      "id": "llama-3-3-70b-instruct",
-      "name": "Llama 3.3 70B Instruct",
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 65,
-        "intelligence": 48
+        "tps": 80
       },
+      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo 12B",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110
+      },
+      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
+    },
+    {
+      "id": "whisper-large-v3",
+      "name": "Whisper Large v3",
+      "family": "Whisper",
       "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
     },
     {
       "id": "bge-m3",
-      "name": "BGE-M3",
+      "name": "BGE-M3 Embeddings",
       "family": "BGE",
       "context_window": 8192,
-      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "name": "Whisper Large v3 Turbo",
-      "family": "Whisper",
       "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
     }
   ]

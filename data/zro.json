@@ -39,8 +39,8 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
-        "intelligence": 68
+        "tps": 220,
+        "intelligence": 28
       },
       "rate_limits": "Daily allowance (unpublished)"
     },
@@ -51,7 +51,7 @@
       "context_window": 1048576,
       "metrics": {
         "tps": 100,
-        "intelligence": 72
+        "intelligence": 33
       },
       "rate_limits": "Daily allowance (unpublished)"
     }

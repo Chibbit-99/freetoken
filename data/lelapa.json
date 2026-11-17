@@ -1,0 +1,46 @@
+{
+  "id": "lelapa",
+  "name": "Lelapa AI Vulavula",
+  "website": "https://lelapa.ai",
+  "docs": "https://lelapa.ai",
+  "signup": "https://lelapa.ai",
+  "description": "African-language speech and translation API with a free tier.",
+  "overview": "Lelapa's Vulavula API covers speech-to-text, translation and language identification for African languages, with a free tier for developers. Client data is not used for model training, but audio and transcript retention is governed by a DPA whose TTL is not public.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No training on client data"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://lelapa.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free tier for African-language speech",
+    "Translation and language ID endpoints",
+    "No card required",
+    "No training on client data"
+  ],
+  "notes": "Retention TTL is set by the DPA and is not public.",
+  "models": [
+    {
+      "id": "vulavula-stt",
+      "name": "Vulavula Speech-to-Text",
+      "family": "Vulavula"
+    },
+    {
+      "id": "vulavula-translate",
+      "name": "Vulavula Translation",
+      "family": "Vulavula"
+    }
+  ]
+}

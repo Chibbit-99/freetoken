@@ -126,14 +126,22 @@ the free offer no longer exists.
 
 | Field | Type | Description |
 | ---- | ---- | ----------- |
-| `tps` | number | Generation speed in tokens per second. |
-| `intelligence` | number | Standardized 0-100 quality score. |
+| `tps` | number | Generation speed in tokens per second (curated estimate). |
+| `intelligence` | number | Artificial Analysis Intelligence Index score (0-100). |
 
-`metrics` are **curated estimates** for ranking, not verified provider figures:
-providers do not publish comparable speed or quality numbers. Only fill them in
-when you can defend the value from public benchmarks or measured runs, and leave
-`metrics` out entirely when you cannot (embeddings, rerankers, speech). Token
-*allowance* is always `token_allowance` (tokens per day), never a metric.
+`intelligence` is the **Artificial Analysis Intelligence Index v5.0.1**, read
+from <https://artificialanalysis.ai/leaderboards/models>. It is copied as
+published — never estimated and never rescaled — so the catalogue's quality
+column is comparable with everyone else's. Artificial Analysis has not scored
+every model (most small and audio models are blank there); when there is no
+published score, **omit the field** rather than inventing a number. If a model's
+score changes upstream, update it; the index is versioned (v5.0.1 at the time of
+writing), so re-read the leaderboard when bumping the version.
+
+`tps` is a curated throughput estimate used only to rank speed; providers do not
+publish comparable figures. Leave `metrics` out entirely for models where neither
+value exists (embeddings, rerankers, speech). Token *allowance* is always
+`token_allowance` (tokens per day), never a metric.
 
 ## Token allowance semantics
 
@@ -156,10 +164,31 @@ when you can defend the value from public benchmarks or measured runs, and leave
   `1200000` → `1.2M`, `5400` → `5.4K`. Models whose provider has no better
   model for the metric occupy one leaderboard slot per provider.
 
+## Model catalogue (`tools/`)
+
+Model rows are not hand-written per provider. `tools/models.py` holds one entry
+per model — name, family, context window, Artificial Analysis score, curated TPS
+— and `tools/provider_models.py` maps each provider to the model ids its free
+offer reaches. `tools/rebuild_models.py` then rewrites the `models` arrays, so a
+model served by ten providers has identical numbers everywhere.
+
+To add a model: add it to `tools/models.py` with
+`C("id", "Name", "Family", ctx, aa_score, tps)`, reference the id in the
+provider map, and run `python3 tools/rebuild_models.py`. Providers whose free
+line-up is not in the map keep whatever is in their JSON file.
+
+`tools/new_providers_a.py` / `_b.py` hold the providers appended from
+<https://freeinferencing.com/> (snapshot 2026-10-06), and
+`tools/add_new_providers.py` writes them out and updates the manifest.
+
 ## Detail view
 
-Clicking a catalogue row replaces the table with a detail panel rendered
-entirely from the provider file:
+Clicking a catalogue row opens `/#/providers/<id>` — a standalone page: the
+hero, the three leaderboards and the catalogue filters are hidden, the document
+title becomes the provider name, and browser back returns to the index. The
+older `#provider/<id>` form is still accepted.
+
+The panel is rendered entirely from the provider file:
 
 - `name`, `offer.label` and `privacy.label` as badges;
 - `overview`;

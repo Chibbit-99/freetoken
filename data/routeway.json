@@ -34,35 +34,46 @@
   "notes": "Free capacity is shared and the free list can change; listings are partly community-sourced.",
   "models": [
     {
-      "id": "deepseek-v4-1-flash-free",
-      "name": "DeepSeek V4.1 Flash (free)",
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
       "family": "DeepSeek V4",
-      "context_window": 42000,
+      "context_window": 1048576,
       "metrics": {
         "tps": 100,
-        "intelligence": 72
+        "intelligence": 33
       },
       "rate_limits": "5 RPM, 200 RPD"
     },
     {
-      "id": "minimax-m3-1-flash-free",
-      "name": "MiniMax M3.1 Flash (free)",
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
       "family": "MiniMax",
-      "context_window": 42000,
+      "context_window": 1048576,
       "metrics": {
         "tps": 150,
-        "intelligence": 66
+        "intelligence": 29
       },
       "rate_limits": "5 RPM, 200 RPD"
     },
     {
-      "id": "muse-glimmer-30b",
+      "id": "muse-glimmer",
       "name": "Muse Glimmer 30B",
       "family": "Muse",
       "context_window": 131072,
       "metrics": {
         "tps": 160,
-        "intelligence": 55
+        "intelligence": 6
+      },
+      "rate_limits": "5 RPM, 200 RPD"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
       },
       "rate_limits": "5 RPM, 200 RPD"
     }

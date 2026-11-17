@@ -1,0 +1,65 @@
+{
+  "id": "asu-rc",
+  "name": "Arizona State University RC",
+  "website": "https://cores.research.asu.edu",
+  "docs": "https://cores.research.asu.edu",
+  "signup": "https://cores.research.asu.edu",
+  "description": "ASU Research Computing's hosted model API for campus projects.",
+  "overview": "ASU Research Computing exposes text-generation models from its own hardware, so prompts never reach a commercial provider. Retention, training, administrator access and deletion rules are not published, so privacy is classified partial.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free research gateway",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "On-campus only, retention unclear"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cores.research.asu.edu",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for ASU research projects",
+    "Prompts stay on ASU hardware",
+    "OpenAI-compatible text generation",
+    "No card required"
+  ],
+  "notes": "Access requires an ASU research computing account.",
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    }
+  ]
+}

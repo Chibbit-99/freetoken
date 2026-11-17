@@ -39,41 +39,37 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 200,
-        "intelligence": 56
+        "tps": 780
       },
       "rate_limits": "~1 request/15s; higher with free key"
     },
     {
-      "id": "mistral-large-3",
-      "name": "Mistral Large 3",
+      "id": "qwen3-4b",
+      "name": "Qwen3 4B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 240
+      },
+      "rate_limits": "~1 request/15s; higher with free key"
+    },
+    {
+      "id": "gemma-3-4b",
+      "name": "Gemma 3 4B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 260
+      },
+      "rate_limits": "~1 request/15s; higher with free key"
+    },
+    {
+      "id": "mistral-small-3-2",
+      "name": "Mistral Small 3.2 24B",
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 60,
-        "intelligence": 65
-      },
-      "rate_limits": "~1 request/15s; higher with free key"
-    },
-    {
-      "id": "kimi-k2-6",
-      "name": "Kimi K2.6",
-      "family": "Kimi",
-      "context_window": 262144,
-      "metrics": {
-        "tps": 70,
-        "intelligence": 74
-      },
-      "rate_limits": "~1 request/15s; higher with free key"
-    },
-    {
-      "id": "deepseek-v4-flash",
-      "name": "DeepSeek V4 Flash",
-      "family": "DeepSeek V4",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 95,
-        "intelligence": 70
+        "tps": 120
       },
       "rate_limits": "~1 request/15s; higher with free key"
     }

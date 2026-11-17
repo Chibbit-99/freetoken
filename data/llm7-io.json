@@ -35,34 +35,72 @@
   "models": [
     {
       "id": "nemotron-3-nano-30b",
-      "name": "Nemotron 3 Nano 30B",
+      "name": "Nemotron 3 Nano 30B A3B",
       "family": "Nemotron",
-      "context_window": 1000000,
+      "context_window": 1048576,
       "metrics": {
-        "tps": 180,
-        "intelligence": 58
+        "tps": 300
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     },
     {
       "id": "glm-5-3-flash",
-      "name": "GLM 5.3 Flash",
+      "name": "GLM-5.3 Flash",
       "family": "GLM 5.3",
-      "context_window": 400000,
+      "context_window": 1048576,
       "metrics": {
-        "tps": 180,
-        "intelligence": 68
+        "tps": 220,
+        "intelligence": 28
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     },
     {
-      "id": "mistral-nemo-instruct-2407",
-      "name": "Mistral Nemo Instruct 2407",
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo 12B",
       "family": "Mistral",
-      "context_window": 128000,
+      "context_window": 131072,
       "metrics": {
-        "tps": 110,
-        "intelligence": 45
+        "tps": 110
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "codestral",
+      "name": "Codestral",
+      "family": "Codestral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 160
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 90
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 780
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     }

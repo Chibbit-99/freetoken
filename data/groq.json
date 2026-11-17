@@ -40,10 +40,10 @@
       "context_window": 131072,
       "metrics": {
         "tps": 520,
-        "intelligence": 63
+        "intelligence": 4
       },
-      "token_allowance": 200000,
-      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
+      "token_allowance": 200000
     },
     {
       "id": "gpt-oss-20b",
@@ -51,35 +51,51 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 780,
-        "intelligence": 56
+        "tps": 780
       },
-      "token_allowance": 200000,
-      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
+      "token_allowance": 200000
     },
     {
       "id": "qwen3-8-27b",
       "name": "Qwen3.8 27B",
       "family": "Qwen 3.8",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 610,
-        "intelligence": 66
+        "tps": 170,
+        "intelligence": 20
       },
-      "token_allowance": 200000,
-      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
+      "token_allowance": 200000
     },
     {
-      "id": "qwen3-6-27b",
-      "name": "Qwen3.6 27B",
-      "family": "Qwen 3.6",
-      "context_window": 131072,
+      "id": "qwen3-5-35b-a3b",
+      "name": "Qwen3.5 35B A3B",
+      "family": "Qwen 3.5",
+      "context_window": 262144,
       "metrics": {
-        "tps": 640,
-        "intelligence": 64
+        "tps": 230
       },
-      "token_allowance": 200000,
-      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
+      "token_allowance": 200000
+    },
+    {
+      "id": "llama-4-scout",
+      "name": "Llama 4 Scout",
+      "family": "Llama 4",
+      "context_window": 10000000,
+      "metrics": {
+        "tps": 150
+      },
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
+      "token_allowance": 200000
+    },
+    {
+      "id": "whisper-large-v3-turbo",
+      "name": "Whisper Large v3 Turbo",
+      "family": "Whisper",
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
+      "token_allowance": 200000
     }
   ]
 }

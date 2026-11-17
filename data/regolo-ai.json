@@ -39,35 +39,35 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 140,
-        "intelligence": 63
+        "tps": 520,
+        "intelligence": 4
       },
-      "token_allowance": 1000000,
-      "rate_limits": "30-day trial, 1M tokens/day"
+      "rate_limits": "30-day trial, 1M tokens/day",
+      "token_allowance": 1000000
     },
     {
       "id": "qwen3-8-27b",
       "name": "Qwen3.8 27B",
       "family": "Qwen 3.8",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 160,
-        "intelligence": 66
+        "tps": 170,
+        "intelligence": 20
       },
-      "token_allowance": 1000000,
-      "rate_limits": "30-day trial, 1M tokens/day"
+      "rate_limits": "30-day trial, 1M tokens/day",
+      "token_allowance": 1000000
     },
     {
       "id": "gemma-4-31b",
       "name": "Gemma 4 31B",
       "family": "Gemma 4",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
         "tps": 130,
-        "intelligence": 62
+        "intelligence": 4
       },
-      "token_allowance": 1000000,
-      "rate_limits": "30-day trial, 1M tokens/day"
+      "rate_limits": "30-day trial, 1M tokens/day",
+      "token_allowance": 1000000
     },
     {
       "id": "apertus-70b",
@@ -75,11 +75,21 @@
       "family": "Apertus",
       "context_window": 131072,
       "metrics": {
-        "tps": 70,
-        "intelligence": 55
+        "tps": 70
       },
-      "token_allowance": 1000000,
-      "rate_limits": "30-day trial, 1M tokens/day"
+      "rate_limits": "30-day trial, 1M tokens/day",
+      "token_allowance": 1000000
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      },
+      "rate_limits": "30-day trial, 1M tokens/day",
+      "token_allowance": 1000000
     }
   ]
 }

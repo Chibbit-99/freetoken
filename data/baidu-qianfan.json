@@ -1,0 +1,42 @@
+{
+  "id": "baidu-qianfan",
+  "name": "Baidu Qianfan",
+  "website": "https://cloud.baidu.com/product/wenxinworkshop",
+  "docs": "https://cloud.baidu.com/product/wenxinworkshop",
+  "signup": "https://cloud.baidu.com/product/wenxinworkshop",
+  "description": "Baidu's ERNIE platform with a small new-account trial.",
+  "overview": "Qianfan serves Baidu's ERNIE family and open models through an OpenAI-compatible endpoint. New accounts get CNY 20 of trial quota; terms limit user-data use to service delivery but permit compliance review and publish no plan-wide no-training commitment.",
+  "offer": {
+    "type": "trials",
+    "label": "CNY 20 trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Service-delivery use only"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cloud.baidu.com/product/wenxinworkshop",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "CNY 20 one-time trial",
+    "ERNIE and open models",
+    "OpenAI-compatible endpoint",
+    "Real-name verification required"
+  ],
+  "notes": "Chinese real-name verification is required to claim the trial.",
+  "models": [
+    {
+      "id": "ernie-5-0",
+      "name": "ERNIE 5.0",
+      "family": "ERNIE",
+      "context_window": 131072
+    }
+  ]
+}

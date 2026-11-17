@@ -1,0 +1,66 @@
+{
+  "id": "mara",
+  "name": "MARA Inference Cloud",
+  "website": "https://mara.com",
+  "docs": "https://mara.com",
+  "signup": "https://mara.com",
+  "description": "Bitcoin-miner-turned-GPU-cloud with open-model inference.",
+  "overview": "MARA Inference Cloud serves Gemma, DeepSeek and GPT-OSS models from its GPU fleet with $5 of starter credit. No usable public inference-data policy was found for the service.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://mara.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$5 one-time trial credit",
+    "Gemma, DeepSeek and GPT-OSS",
+    "No card required to start",
+    "OpenAI-compatible API"
+  ],
+  "notes": "No published inference-data policy.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 4
+      }
+    }
+  ]
+}

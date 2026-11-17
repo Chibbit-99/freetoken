@@ -37,10 +37,9 @@
       "id": "sarvam-105b",
       "name": "Sarvam 105B",
       "family": "Sarvam",
-      "context_window": 32768,
+      "context_window": 131072,
       "metrics": {
-        "tps": 80,
-        "intelligence": 58
+        "tps": 80
       },
       "rate_limits": "INR 100 signup credit"
     }

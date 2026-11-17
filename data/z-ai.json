@@ -35,34 +35,32 @@
   "models": [
     {
       "id": "glm-4-7-flash",
-      "name": "GLM-4.7-Flash",
+      "name": "GLM-4.7 Flash",
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 120,
-        "intelligence": 62
+        "tps": 200
       },
       "rate_limits": "~1 request/s (Flash models)"
     },
     {
-      "id": "glm-4-5-flash",
-      "name": "GLM-4.5-Flash",
-      "family": "GLM 4.5",
-      "context_window": 131072,
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
       "metrics": {
-        "tps": 110,
-        "intelligence": 58
+        "tps": 220,
+        "intelligence": 28
       },
       "rate_limits": "~1 request/s (Flash models)"
     },
     {
-      "id": "glm-4-6v-flash",
-      "name": "GLM-4.6V-Flash",
-      "family": "GLM 4.6V",
-      "context_window": 131072,
+      "id": "glm-4-6",
+      "name": "GLM-4.6",
+      "family": "GLM 4.6",
+      "context_window": 200000,
       "metrics": {
-        "tps": 100,
-        "intelligence": 55
+        "tps": 130
       },
       "rate_limits": "~1 request/s (Flash models)"
     }

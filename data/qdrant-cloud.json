@@ -1,0 +1,47 @@
+{
+  "id": "qdrant-cloud",
+  "name": "Qdrant Cloud Inference",
+  "website": "https://qdrant.tech",
+  "docs": "https://qdrant.tech",
+  "signup": "https://qdrant.tech",
+  "description": "Vector database with hosted embedding and reranking inference.",
+  "overview": "Qdrant Cloud bundles managed embedding and reranking models with its free vector-database tier, so you can embed and rerank without an extra vendor. Inference-specific retention boundaries are only partly documented, and free hosted models run in the United States.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free cloud tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Service-delivery use only"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://qdrant.tech",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free tier includes managed inference",
+    "Dense and sparse embedding models",
+    "No card required",
+    "Runs alongside a free 1 GB cluster"
+  ],
+  "notes": "Free clusters and inference run in the US region.",
+  "models": [
+    {
+      "id": "qdrant-multilingual-e5",
+      "name": "Qdrant Multilingual E5 (dense)",
+      "family": "Qdrant Embeddings",
+      "context_window": 512
+    },
+    {
+      "id": "qdrant-bm25",
+      "name": "Qdrant BM25 (sparse)",
+      "family": "Qdrant Embeddings"
+    }
+  ]
+}

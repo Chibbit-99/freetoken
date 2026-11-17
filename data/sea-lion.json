@@ -39,8 +39,7 @@
       "family": "SEA-LION",
       "context_window": 131072,
       "metrics": {
-        "tps": 150,
-        "intelligence": 64
+        "tps": 150
       },
       "rate_limits": "10 RPM per user"
     },
@@ -50,8 +49,7 @@
       "family": "SEA-LION",
       "context_window": 131072,
       "metrics": {
-        "tps": 65,
-        "intelligence": 58
+        "tps": 65
       },
       "rate_limits": "10 RPM per user"
     },
@@ -61,8 +59,7 @@
       "family": "SEA-LION",
       "context_window": 131072,
       "metrics": {
-        "tps": 200,
-        "intelligence": 45
+        "tps": 200
       },
       "rate_limits": "10 RPM per user"
     }

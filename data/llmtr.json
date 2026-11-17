@@ -35,34 +35,34 @@
   "models": [
     {
       "id": "nemotron-3-ultra-550b",
-      "name": "Nemotron 3 Ultra 550B",
+      "name": "Nemotron 3 Ultra 550B A55B",
       "family": "Nemotron",
-      "context_window": 1048576,
+      "context_window": 262144,
       "metrics": {
         "tps": 110,
-        "intelligence": 71
+        "intelligence": 12
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
     },
     {
-      "id": "qwen3-8-27b-free",
-      "name": "Qwen3.8 27B (free)",
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
       "family": "Qwen 3.8",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
-        "tps": 160,
-        "intelligence": 66
+        "tps": 170,
+        "intelligence": 20
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
     },
     {
-      "id": "agnes-3-0-flash",
-      "name": "Agnes 3.0 Flash",
+      "id": "agnes-2-5-pro-theta",
+      "name": "Agnes 2.5 Pro Theta",
       "family": "Agnes",
-      "context_window": 524288,
+      "context_window": 1048576,
       "metrics": {
-        "tps": 150,
-        "intelligence": 60
+        "tps": 120,
+        "intelligence": 24
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
     },
@@ -72,8 +72,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 700,
-        "intelligence": 45
+        "tps": 700
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
     }

@@ -34,35 +34,42 @@
   "notes": "Free quotas range by model (50-500 requests/day); one listed GLM Flash route reportedly needs a top-up.",
   "models": [
     {
-      "id": "manta-pro-1-0",
-      "name": "Manta Pro 1.0",
-      "family": "Manta",
-      "context_window": 65000,
-      "metrics": {
-        "tps": 120,
-        "intelligence": 55
-      },
-      "rate_limits": "20-200 RPM, 50-500 RPD"
-    },
-    {
-      "id": "manta-flash-1-0",
-      "name": "Manta Flash 1.0",
-      "family": "Manta",
-      "context_window": 16000,
-      "metrics": {
-        "tps": 200,
-        "intelligence": 48
-      },
-      "rate_limits": "20-200 RPM, 50-500 RPD"
-    },
-    {
-      "id": "mistral-small-3-2-24b",
+      "id": "mistral-small-3-2",
       "name": "Mistral Small 3.2 24B",
       "family": "Mistral",
-      "context_window": 8000,
+      "context_window": 131072,
       "metrics": {
-        "tps": 120,
-        "intelligence": 50
+        "tps": 120
+      },
+      "rate_limits": "20-200 RPM, 50-500 RPD"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 220
+      },
+      "rate_limits": "20-200 RPM, 50-500 RPD"
+    },
+    {
+      "id": "gemma-3-12b",
+      "name": "Gemma 3 12B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 180
+      },
+      "rate_limits": "20-200 RPM, 50-500 RPD"
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200
       },
       "rate_limits": "20-200 RPM, 50-500 RPD"
     }

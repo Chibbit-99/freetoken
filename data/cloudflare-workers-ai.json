@@ -34,47 +34,116 @@
   "notes": "The daily neuron allowance resets at 00:00 UTC; heavier models consume more neurons per request.",
   "models": [
     {
-      "id": "glm-5-3-flash",
-      "name": "GLM-5.3 Flash",
-      "family": "GLM 5.3",
-      "context_window": 131072,
+      "id": "llama-4-scout",
+      "name": "Llama 4 Scout",
+      "family": "Llama 4",
+      "context_window": 10000000,
       "metrics": {
-        "tps": 180,
-        "intelligence": 68
+        "tps": 150
       },
       "rate_limits": "10K neurons/day, 300 RPM"
     },
     {
-      "id": "gpt-oss-120b",
-      "name": "GPT-OSS 120B",
-      "family": "GPT-OSS",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 140,
-        "intelligence": 63
-      },
-      "rate_limits": "10K neurons/day, 300 RPM"
-    },
-    {
-      "id": "qwen3-8-27b",
-      "name": "Qwen3.8 27B",
-      "family": "Qwen 3.8",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 150,
-        "intelligence": 66
-      },
-      "rate_limits": "10K neurons/day, 300 RPM"
-    },
-    {
-      "id": "llama-3-3-70b-instruct",
-      "name": "Llama 3.3 70B Instruct",
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 65,
-        "intelligence": 48
+        "tps": 80
       },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 220
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "gemma-4-12b",
+      "name": "Gemma 4 12B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 260
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "mistral-small-3-2",
+      "name": "Mistral Small 3.2 24B",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 780
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "nemotron-3-nano-30b",
+      "name": "Nemotron 3 Nano 30B A3B",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 300
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "whisper-large-v3",
+      "name": "Whisper Large v3",
+      "family": "Whisper",
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "bge-m3",
+      "name": "BGE-M3 Embeddings",
+      "family": "BGE",
+      "context_window": 8192,
       "rate_limits": "10K neurons/day, 300 RPM"
     }
   ]

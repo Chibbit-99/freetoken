@@ -1,0 +1,65 @@
+{
+  "id": "goethe-ai-toollab",
+  "name": "Goethe AI-ToolLab",
+  "website": "https://www.uni-frankfurt.de",
+  "docs": "https://www.uni-frankfurt.de",
+  "signup": "https://www.uni-frankfurt.de",
+  "description": "Frankfurt university gateway that never stores prompts.",
+  "overview": "The AI-ToolLab at Goethe University Frankfurt provides an OpenAI-compatible gateway for teaching and research. The gateway states that prompts are never stored and only metadata is logged, while GWDG-routed requests follow that provider's handling.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free academic gateway",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Metadata-only logging"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.uni-frankfurt.de",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for university members",
+    "Prompts are never stored",
+    "17 open models",
+    "No card required"
+  ],
+  "notes": "Deletion controls and GWDG-routed handling are only partly documented.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 4
+      }
+    }
+  ]
+}

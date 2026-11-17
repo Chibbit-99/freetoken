@@ -1,0 +1,42 @@
+{
+  "id": "poolside",
+  "name": "Poolside",
+  "website": "https://poolside.ai",
+  "docs": "https://poolside.ai",
+  "signup": "https://poolside.ai",
+  "description": "Code-focused model lab running a limited free promotion.",
+  "overview": "Poolside serves its code models through a direct API and periodically runs limited free promotions. Its July 2026 terms permit default training and improvement on prompts and outputs; opting out still leaves feedback and safety-review exceptions.",
+  "offer": {
+    "type": "trials",
+    "label": "Limited promotion",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Training permitted by default"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://poolside.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Limited free promotion",
+    "Code-focused models",
+    "No card required during the promotion",
+    "OpenAI-compatible API"
+  ],
+  "notes": "Promotions are time-limited; prompts may be used for training.",
+  "models": [
+    {
+      "id": "poolside-laguna",
+      "name": "Laguna",
+      "family": "Poolside",
+      "context_window": 262144
+    }
+  ]
+}

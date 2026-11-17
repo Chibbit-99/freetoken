@@ -1,0 +1,41 @@
+{
+  "id": "llmapi-ai",
+  "name": "LLM.API",
+  "website": "https://llmapi.ai",
+  "docs": "https://llmapi.ai",
+  "signup": "https://llmapi.ai",
+  "description": "Router with free routes that claims zero retention and no training.",
+  "overview": "LLM.API is an OpenAI-compatible router that defaults to zero retention and no training on request content; optional logging changes that. Upstream providers are independently governed, so end-to-end handling depends on the selected route.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free model routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Zero retention by default"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://llmapi.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free model routes",
+    "Zero retention by default",
+    "No card required",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "Only one free route is currently listed.",
+  "models": [
+    {
+      "id": "llmapi-free",
+      "name": "LLM.API free route",
+      "family": "LLM.API"
+    }
+  ]
+}

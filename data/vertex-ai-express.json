@@ -34,26 +34,35 @@
   "notes": "Trial window is 90 days; limits follow the Vertex free tier (Gemini 2.5 models at 10 RPM).",
   "models": [
     {
-      "id": "gemini-3-1-pro-preview",
-      "name": "Gemini 3.1 Pro Preview",
+      "id": "gemini-3-1-pro",
+      "name": "Gemini 3.1 Pro",
       "family": "Gemini 3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 120,
-        "intelligence": 80
+        "tps": 120
       },
       "rate_limits": "Dynamic Gemini 3 limits"
     },
     {
-      "id": "gemini-2-5-flash",
-      "name": "Gemini 2.5 Flash",
-      "family": "Gemini 2.5",
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 250,
-        "intelligence": 68
+        "tps": 300
       },
-      "rate_limits": "10 RPM"
+      "rate_limits": "Dynamic Gemini 3 limits"
+    },
+    {
+      "id": "gemini-3-5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "family": "Gemini 3.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 420,
+        "intelligence": 12
+      },
+      "rate_limits": "Dynamic Gemini 3 limits"
     }
   ]
 }

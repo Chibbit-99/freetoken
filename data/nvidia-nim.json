@@ -34,24 +34,116 @@
   "notes": "Trial access excludes enterprise features and support; check each model page for deprecation notices.",
   "models": [
     {
-      "id": "glm-5-3-flash",
-      "name": "GLM-5.3 Flash",
-      "family": "GLM 5.3",
-      "context_window": 131072,
+      "id": "nemotron-3-ultra-550b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "family": "Nemotron",
+      "context_window": 262144,
       "metrics": {
-        "tps": 180,
-        "intelligence": 68
+        "tps": 110,
+        "intelligence": 12
       },
       "rate_limits": "~40 RPM (not published)"
     },
     {
-      "id": "nemotron-3-ultra",
-      "name": "Nemotron 3 Ultra",
+      "id": "nemotron-3-5-super-vl",
+      "name": "Nemotron 3.5 Super VL",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 14
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 400,
+        "intelligence": 6
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "nemotron-3-nano-30b",
+      "name": "Nemotron 3 Nano 30B A3B",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 300
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "nemotron-nano-9b-v2",
+      "name": "Nemotron Nano 9B V2",
       "family": "Nemotron",
       "context_window": 131072,
       "metrics": {
-        "tps": 110,
-        "intelligence": 71
+        "tps": 380
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3.1 405B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 40
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 220
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "llama-4-scout",
+      "name": "Llama 4 Scout",
+      "family": "Llama 4",
+      "context_window": 10000000,
+      "metrics": {
+        "tps": 150
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 23
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -59,21 +151,229 @@
       "id": "deepseek-v4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "family": "DeepSeek V4",
-      "context_window": 131072,
+      "context_window": 1048576,
       "metrics": {
         "tps": 100,
-        "intelligence": 72
+        "intelligence": 33
       },
       "rate_limits": "~40 RPM (not published)"
     },
     {
-      "id": "kimi-k2-6",
-      "name": "Kimi K2.6",
+      "id": "deepseek-r1-0528",
+      "name": "DeepSeek R1 0528",
+      "family": "DeepSeek R1",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "qwen3-5-397b-a17b",
+      "name": "Qwen3.5 397B A17B",
+      "family": "Qwen 3.5",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 80
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 170,
+        "intelligence": 20
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 32
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 200
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 70,
-        "intelligence": 74
+        "tps": 90
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 80,
+        "intelligence": 19
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 4
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 780
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "mistral-large-4",
+      "name": "Mistral Large 4",
+      "family": "Mistral",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 26
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "mistral-medium-3-5",
+      "name": "Mistral Medium 3.5",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 5
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo 12B",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "phi-4-multimodal",
+      "name": "Phi-4 Multimodal",
+      "family": "Phi",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 140
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "command-a",
+      "name": "Command A",
+      "family": "Command",
+      "context_window": 256000,
+      "metrics": {
+        "tps": 85
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "solar-pro-4",
+      "name": "Solar Pro 4",
+      "family": "Solar",
+      "context_window": 524288,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 14
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "granite-4-2-8b",
+      "name": "Granite 4.2 8B",
+      "family": "Granite",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 5
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "olmo-3-1-32b",
+      "name": "OLMo 3.1 32B Think",
+      "family": "OLMo",
+      "context_window": 66000,
+      "metrics": {
+        "tps": 90
       },
       "rate_limits": "~40 RPM (not published)"
     }

@@ -34,35 +34,33 @@
   "notes": "Trial keys are for evaluation and prototyping, not production traffic.",
   "models": [
     {
+      "id": "command-a-plus",
+      "name": "Command A+",
+      "family": "Command",
+      "context_window": 192000,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 6
+      },
+      "rate_limits": "20 RPM, 1,000 calls/month"
+    },
+    {
       "id": "command-a",
       "name": "Command A",
-      "family": "Command A",
+      "family": "Command",
       "context_window": 256000,
       "metrics": {
-        "tps": 70,
-        "intelligence": 58
+        "tps": 85
       },
       "rate_limits": "20 RPM, 1,000 calls/month"
     },
     {
-      "id": "command-a-reasoning",
-      "name": "Command A Reasoning",
-      "family": "Command A",
-      "context_window": 256000,
+      "id": "command-r-plus",
+      "name": "Command R+",
+      "family": "Command",
+      "context_window": 128000,
       "metrics": {
-        "tps": 60,
-        "intelligence": 62
-      },
-      "rate_limits": "20 RPM, 1,000 calls/month"
-    },
-    {
-      "id": "command-a-vision",
-      "name": "Command A Vision",
-      "family": "Command A",
-      "context_window": 256000,
-      "metrics": {
-        "tps": 60,
-        "intelligence": 56
+        "tps": 60
       },
       "rate_limits": "20 RPM, 1,000 calls/month"
     },
@@ -70,10 +68,10 @@
       "id": "north-mini-code",
       "name": "North Mini Code",
       "family": "North",
-      "context_window": 131072,
+      "context_window": 256000,
       "metrics": {
         "tps": 200,
-        "intelligence": 52
+        "intelligence": 3
       },
       "rate_limits": "20 RPM, 1,000 calls/month"
     }

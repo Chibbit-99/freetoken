@@ -34,13 +34,22 @@
   "notes": "Phone verification required; documentation is primarily in Chinese.",
   "models": [
     {
-      "id": "spark-lite",
-      "name": "Spark Lite",
-      "family": "Spark",
-      "context_window": 8192,
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
       "metrics": {
-        "tps": 90,
-        "intelligence": 45
+        "tps": 780
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200
       },
       "rate_limits": "Not published"
     }

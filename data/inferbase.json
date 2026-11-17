@@ -39,41 +39,40 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 140,
-        "intelligence": 63
+        "tps": 520,
+        "intelligence": 4
       },
       "rate_limits": "100 managed requests/day"
     },
     {
-      "id": "deepseek-v4-flash",
-      "name": "DeepSeek V4 Flash",
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 95,
-        "intelligence": 70
+        "tps": 100,
+        "intelligence": 33
       },
       "rate_limits": "100 managed requests/day"
     },
     {
-      "id": "gemma-4-31b-it",
-      "name": "Gemma 4 31B IT",
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
         "tps": 130,
-        "intelligence": 62
+        "intelligence": 4
       },
       "rate_limits": "100 managed requests/day"
     },
     {
-      "id": "kimi-k2-7-code",
-      "name": "Kimi K2.7 Code",
+      "id": "kimi-k3",
+      "name": "Kimi K3",
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 70,
-        "intelligence": 72
+        "tps": 90
       },
       "rate_limits": "100 managed requests/day"
     },
@@ -83,8 +82,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 120,
-        "intelligence": 62
+        "tps": 200
       },
       "rate_limits": "100 managed requests/day"
     }

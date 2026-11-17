@@ -34,57 +34,75 @@
   "notes": "Prompts on the unpaid quota can be reviewed and used to improve Google products outside the EEA, Switzerland and the UK.",
   "models": [
     {
-      "id": "gemini-3-8-flash",
-      "name": "Gemini 3.8 Flash",
-      "family": "Gemini 3",
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300,
-        "intelligence": 78
-      },
-      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
-    },
-    {
-      "id": "gemini-3-6-flash",
-      "name": "Gemini 3.6 Flash",
-      "family": "Gemini 3",
-      "context_window": 1048576,
-      "metrics": {
-        "tps": 285,
-        "intelligence": 76
+        "tps": 300
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     },
     {
       "id": "gemini-3-5-flash-lite",
       "name": "Gemini 3.5 Flash-Lite",
-      "family": "Gemini 3",
+      "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 380,
-        "intelligence": 71
+        "tps": 420,
+        "intelligence": 12
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     },
     {
-      "id": "gemini-2-5-flash",
-      "name": "Gemini 2.5 Flash",
-      "family": "Gemini 2.5",
-      "context_window": 1048576,
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
       "metrics": {
-        "tps": 250,
-        "intelligence": 68
+        "tps": 130,
+        "intelligence": 4
       },
-      "rate_limits": "10 RPM, 250 RPD (existing projects)"
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     },
     {
-      "id": "gemma-4-31b-it",
-      "name": "Gemma 4 31B IT",
+      "id": "gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 240
+      },
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
+    },
+    {
+      "id": "gemma-4-12b",
+      "name": "Gemma 4 12B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 260
+      },
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
+    },
+    {
+      "id": "gemma-4-e4b",
+      "name": "Gemma 4 E4B",
       "family": "Gemma 4",
       "context_window": 131072,
       "metrics": {
-        "tps": 140,
-        "intelligence": 62
+        "tps": 320,
+        "intelligence": 5
+      },
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
+    },
+    {
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     }

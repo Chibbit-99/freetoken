@@ -35,12 +35,12 @@
   "models": [
     {
       "id": "glm-5-3",
-      "name": "GLM 5.3",
+      "name": "GLM-5.3",
       "family": "GLM 5.3",
-      "context_window": 262144,
+      "context_window": 1048576,
       "metrics": {
         "tps": 180,
-        "intelligence": 70
+        "intelligence": 32
       },
       "rate_limits": "60 RPM, trial credits"
     },
@@ -48,10 +48,10 @@
       "id": "deepseek-v4-1-flash",
       "name": "DeepSeek V4.1 Flash",
       "family": "DeepSeek V4",
-      "context_window": 262144,
+      "context_window": 1048576,
       "metrics": {
         "tps": 100,
-        "intelligence": 72
+        "intelligence": 33
       },
       "rate_limits": "60 RPM, trial credits"
     },
@@ -61,8 +61,29 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 160,
-        "intelligence": 66
+        "tps": 170,
+        "intelligence": 20
+      },
+      "rate_limits": "60 RPM, trial credits"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 90
+      },
+      "rate_limits": "60 RPM, trial credits"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 80,
+        "intelligence": 19
       },
       "rate_limits": "60 RPM, trial credits"
     }

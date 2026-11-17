@@ -1,0 +1,41 @@
+{
+  "id": "neuralk",
+  "name": "Neuralk Seldon API",
+  "website": "https://neuralk.com",
+  "docs": "https://neuralk.com",
+  "signup": "https://neuralk.com",
+  "description": "Model-serving platform with a small trial allowance.",
+  "overview": "Neuralk exposes Seldon-hosted models through an API with trial credits. Default predictions are memory-only and discarded, but the optional upload mode retains datasets for up to 90 days and the public terms do not settle training rights for every mode.",
+  "offer": {
+    "type": "trials",
+    "label": "Trial credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Memory-only by default"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://neuralk.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "One-time trial credits",
+    "Seldon-based serving",
+    "Memory-only default predictions",
+    "No card required to start"
+  ],
+  "notes": "Upload mode retains datasets for up to 90 days.",
+  "models": [
+    {
+      "id": "neuralk-seldon",
+      "name": "Seldon-hosted model",
+      "family": "Neuralk"
+    }
+  ]
+}

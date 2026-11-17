@@ -33,24 +33,33 @@
   "notes": "Free only for the duration of the public beta; paid tiers are announced but not yet live.",
   "models": [
     {
-      "id": "sensenova-6-8-flash-lite",
-      "name": "SenseNova 6.8 Flash Lite",
-      "family": "SenseNova",
-      "context_window": 131072,
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
       "metrics": {
-        "tps": 140,
-        "intelligence": 58
+        "tps": 170,
+        "intelligence": 20
       },
       "rate_limits": "Free during public beta"
     },
     {
-      "id": "u1-fast",
-      "name": "U1 Fast",
-      "family": "SenseNova",
-      "context_window": 131072,
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
       "metrics": {
-        "tps": 200,
-        "intelligence": 52
+        "tps": 95
+      },
+      "rate_limits": "Free during public beta"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 200
       },
       "rate_limits": "Free during public beta"
     }

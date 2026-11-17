@@ -33,13 +33,62 @@
   "notes": "Free plan covers a single model with one concurrent request and a 12K context ceiling.",
   "models": [
     {
-      "id": "qwen3-5-27b-derestricted",
-      "name": "Qwen3.5 27B Derestricted",
-      "family": "Qwen 3.5",
-      "context_window": 12288,
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
       "metrics": {
-        "tps": 130,
-        "intelligence": 60
+        "tps": 80
+      },
+      "rate_limits": "1 concurrent request, 12K context"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 220
+      },
+      "rate_limits": "1 concurrent request, 12K context"
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo 12B",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110
+      },
+      "rate_limits": "1 concurrent request, 12K context"
+    },
+    {
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "1 concurrent request, 12K context"
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200
+      },
+      "rate_limits": "1 concurrent request, 12K context"
+    },
+    {
+      "id": "deepseek-r1-0528",
+      "name": "DeepSeek R1 0528",
+      "family": "DeepSeek R1",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
       },
       "rate_limits": "1 concurrent request, 12K context"
     }

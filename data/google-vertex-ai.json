@@ -1,0 +1,74 @@
+{
+  "id": "google-vertex-ai",
+  "name": "Google Cloud Vertex AI",
+  "website": "https://cloud.google.com/vertex-ai",
+  "docs": "https://cloud.google.com/vertex-ai",
+  "signup": "https://cloud.google.com/vertex-ai",
+  "description": "Google's enterprise AI platform, with the standard $300 new-customer credit.",
+  "overview": "Vertex AI exposes Gemini and partner models through Google Cloud with regional endpoints and IAM. New customers get $300 of credit for 90 days; caching and grounding features introduce bounded retention, and a billing account is required.",
+  "offer": {
+    "type": "trials",
+    "label": "$300 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No training without permission"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cloud.google.com/vertex-ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$300 one-time trial credit",
+    "90-day trial window",
+    "Gemini and partner models",
+    "Card required"
+  ],
+  "notes": "Billing account required; cached and grounded requests are retained.",
+  "models": [
+    {
+      "id": "gemini-3-1-pro",
+      "name": "Gemini 3.1 Pro",
+      "family": "Gemini 3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120
+      }
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "family": "Gemini 3.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 300
+      }
+    },
+    {
+      "id": "gemini-3-5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "family": "Gemini 3.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 420,
+        "intelligence": 12
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      }
+    }
+  ]
+}

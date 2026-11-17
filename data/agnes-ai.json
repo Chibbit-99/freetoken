@@ -33,31 +33,45 @@
   "notes": "Rate limits are reported by third parties (about 30 RPM) rather than published by the provider.",
   "models": [
     {
-      "id": "agnes-3-0-flash",
-      "name": "Agnes 3.0 Flash",
+      "id": "agnes-2-5-pro-theta",
+      "name": "Agnes 2.5 Pro Theta",
       "family": "Agnes",
-      "context_window": 131072,
+      "context_window": 1048576,
       "metrics": {
-        "tps": 150,
-        "intelligence": 60
+        "tps": 120,
+        "intelligence": 24
       },
       "rate_limits": "~30 RPM (video 2 RPM)"
     },
     {
-      "id": "agnes-2-5-flash",
-      "name": "Agnes 2.5 Flash",
-      "family": "Agnes",
-      "context_window": 131072,
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
       "metrics": {
-        "tps": 140,
-        "intelligence": 56
+        "tps": 170,
+        "intelligence": 20
       },
       "rate_limits": "~30 RPM (video 2 RPM)"
     },
     {
-      "id": "agnes-image-2-1-flash",
-      "name": "Agnes Image 2.1 Flash",
-      "family": "Agnes",
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
+      },
+      "rate_limits": "~30 RPM (video 2 RPM)"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 200
+      },
       "rate_limits": "~30 RPM (video 2 RPM)"
     }
   ]

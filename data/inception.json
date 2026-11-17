@@ -1,0 +1,42 @@
+{
+  "id": "inception",
+  "name": "Inception Platform",
+  "website": "https://inceptionai.ai",
+  "docs": "https://inceptionai.ai",
+  "signup": "https://inceptionai.ai",
+  "description": "Diffusion-based language models with a signup credit.",
+  "overview": "Inception builds Mercury diffusion LLMs and serves them through an API with a trial credit worth about $75. Current terms permit default prompt storage, model training and content-based improvement, with an optional training opt-out.",
+  "offer": {
+    "type": "trials",
+    "label": "$75 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://inceptionai.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "~$75 one-time trial credit",
+    "Diffusion LLM endpoints",
+    "No card required to start",
+    "OpenAI-compatible API"
+  ],
+  "notes": "Prompts are stored and may be used for training unless you opt out.",
+  "models": [
+    {
+      "id": "mercury-2",
+      "name": "Mercury 2",
+      "family": "Mercury",
+      "context_window": 131072
+    }
+  ]
+}

@@ -34,35 +34,191 @@
   "notes": "50 requests/day rises to 1,000/day after $10 of lifetime credit purchases; opting out of training-only providers is available in settings.",
   "models": [
     {
-      "id": "gemma-4-31b-it",
-      "name": "Gemma 4 31B IT",
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
       "family": "Gemma 4",
-      "context_window": 131072,
+      "context_window": 262144,
       "metrics": {
         "tps": 130,
-        "intelligence": 62
+        "intelligence": 4
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
     {
-      "id": "nvidia-nemotron-3-ultra",
-      "name": "NVIDIA Nemotron 3 Ultra",
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
       "family": "Nemotron",
-      "context_window": 131072,
+      "context_window": 1048576,
       "metrics": {
-        "tps": 110,
-        "intelligence": 71
+        "tps": 400,
+        "intelligence": 6
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
     {
-      "id": "recursive-flint-v1-0",
-      "name": "Recursive Flint v1.0",
-      "family": "Flint",
-      "context_window": 131072,
+      "id": "beam-1-0",
+      "name": "Beam 1.0",
+      "family": "Reflection Beam",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 18
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 200
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 30
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "family": "MiniMax",
+      "context_window": 1048576,
       "metrics": {
         "tps": 150,
-        "intelligence": 65
+        "intelligence": 29
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 29
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 4
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 780
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 4
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "muse-glimmer",
+      "name": "Muse Glimmer 30B",
+      "family": "Muse",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 6
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "kimi-linear-48b",
+      "name": "Kimi Linear 48B A3B",
+      "family": "Kimi",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "nemotron-3-nano-30b",
+      "name": "Nemotron 3 Nano 30B A3B",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 300
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "qwen3-4b",
+      "name": "Qwen3 4B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 240
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "phi-4-multimodal",
+      "name": "Phi-4 Multimodal",
+      "family": "Phi",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 140
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     }
