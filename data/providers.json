@@ -139,6 +139,8 @@
     "stepfun.json",
     "baichuan.json",
     "ppio.json",
-    "slashai.json"
+    "slashai.json",
+    "xkiro.json",
+    "cheapllm-shop.json"
   ]
 }

@@ -132,19 +132,6 @@
         "tps": 135
       },
       "rate_limits": "10K neurons/day, 300 RPM"
-    },
-    {
-      "id": "whisper-large-v3",
-      "name": "Whisper Large v3",
-      "family": "Whisper",
-      "rate_limits": "10K neurons/day, 300 RPM"
-    },
-    {
-      "id": "bge-m3",
-      "name": "BGE-M3 Embeddings",
-      "family": "BGE",
-      "context_window": 8192,
-      "rate_limits": "10K neurons/day, 300 RPM"
     }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "id": "cheapllm-shop",
+  "name": "cheapllm.shop",
+  "website": "https://cheapllm.shop",
+  "docs": "https://cheapllm.shop",
+  "signup": "https://cheapllm.shop",
+  "description": "Single-model API with a permanent hourly free allowance and no card.",
+  "overview": "cheapllm.shop serves one model, DeepSeek V4.1 Flash 1017, through OpenAI, Anthropic Messages and Responses formats so existing SDKs work by changing the base URL. During its beta every account is unmetered; when the beta closes the vendor promises a permanent free tier of at least 5,000 input and 1,000 output tokens per hour per account with no card, with usage beyond that billed at $0.005 per million input tokens. One request runs at a time per account.",
+  "offer": {
+    "type": "always-free",
+    "label": "Permanent free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Beta service, no published retention policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cheapllm.shop/docs",
+      "https://cheapllm.shop"
+    ]
+  },
+  "free_access": [
+    "Permanent free tier: at least 5K input + 1K output tokens/hour",
+    "No card; key from the dashboard",
+    "OpenAI, Anthropic and Responses formats",
+    "One concurrent request per account"
+  ],
+  "notes": "Free tier is currently unmetered during beta; the published floor is 6K tokens/hour afterwards.",
+  "free_token_allowance": 144000,
+  "allowance_period": "day",
+  "catalog_size": 1,
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "DeepSeek",
+      "context_window": 1048576,
+      "rate_limits": "5K input + 1K output tokens/hour free; one request at a time"
+    }
+  ]
+}

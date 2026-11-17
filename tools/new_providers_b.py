@@ -53,7 +53,7 @@ PART_B = [
      "Run open models and community fine-tunes behind one API.",
      "Replicate hosts thousands of open models and community fine-tunes, including language, image and audio models. New accounts get a small starter credit; API data is deleted after one hour by default, though community models define their own handling.",
      ["Small one-time starter credit", "Hundreds of open and community models", "API data deleted after one hour by default", "No card required to start"],
-     ["llama-3-3-70b", "gemma-4-31b", "whisper-large-v3"],
+     ["llama-3-3-70b", "gemma-4-31b"],
      "Community models can have their own retention behaviour."),
     ("nebius", "Nebius Token Factory", "https://nebius.com", "tr",
      "Trial credits", "pp", "Stored unless ZDR enabled", False,

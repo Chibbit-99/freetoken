@@ -21,7 +21,6 @@ PROVIDER_MODELS = {
         "qwen3-8-27b",
         "qwen3-5-35b-a3b",
         "llama-4-scout",
-        "whisper-large-v3-turbo",
     ],
     "openrouter": [
         "gemma-4-31b",
@@ -69,8 +68,6 @@ PROVIDER_MODELS = {
         "mistral-small-3-2",
         "gpt-oss-20b",
         "nemotron-3-nano-30b",
-        "whisper-large-v3",
-        "bge-m3",
     ],
     "nvidia-nim": [
         "nemotron-3-ultra-550b",
@@ -117,8 +114,6 @@ PROVIDER_MODELS = {
         "qwen3-32b",
         "llama-3-3-70b",
         "mistral-nemo",
-        "whisper-large-v3",
-        "bge-m3",
     ],
     "modelscope": [
         "qwen3-8-27b",
@@ -319,8 +314,6 @@ PROVIDER_MODELS = {
         "gemma-4-26b-a4b",
         "qwen3-8-27b",
         "mistral-small-4",
-        "bge-m3",
-        "whisper-large-v3",
     ],
     "novita-ai": [
         "glm-5-3",

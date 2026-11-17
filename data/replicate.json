@@ -50,11 +50,6 @@
         "tps": 70,
         "intelligence": 4
       }
-    },
-    {
-      "id": "whisper-large-v3",
-      "name": "Whisper Large v3",
-      "family": "Whisper"
     }
   ]
 }

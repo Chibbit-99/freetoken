@@ -4,8 +4,8 @@
   "website": "https://pollinations.ai",
   "docs": "https://github.com/pollinations/pollinations",
   "signup": "https://enter.pollinations.ai",
-  "description": "Open-source generative platform with a free key and an OpenAI-compatible text endpoint.",
-  "overview": "Pollinations is an open-source platform for text, image and audio generation. Anonymous access was removed, so you now need a free secret key from the dashboard; free usage is then drawn from Quest Pollen earned there. The OpenAI-compatible endpoint serves a rotating mix of open models.",
+  "description": "Open-source generative platform with a free key, 130 vendor text models and a community tier.",
+  "overview": "Pollinations is an open-source platform for text, image and audio generation served from gen.pollinations.ai. Anonymous access is gone, so you need a free secret key from the dashboard. Text models come in two tiers: vendor models billed in Pollen, where free usage is drawn from Quest Pollen earned by solving GitHub quests, trying models or shipping an app; and community models — 104 of them at the last count — published by independent operators, most of which sit in the catalogue at zero Pollen. A community model marked 'Free' costs nothing to call and is limited only by its own requests-per-minute cap, while one marked 'Quest' bills that operator's rates out of your earned balance. Community endpoints run on someone else's hardware and under their own logging policy, so treat prompts accordingly.",
   "offer": {
     "type": "free-models",
     "label": "Free key + Pollen",
@@ -20,18 +20,19 @@
   "verified": {
     "checked": "2026-11-17",
     "sources": [
-      "https://github.com/pollinations/pollinations",
-      "https://free-llm.com/provider/pollinations-ai"
+      "https://gen.pollinations.ai/models",
+      "https://gen.pollinations.ai/docs",
+      "https://pollinations.ai/"
     ]
   },
   "free_access": [
     "Free secret key, no card required",
-    "Free usage paid from earned Quest Pollen",
-    "About 1 request/15s without extra credit",
-    "Text, image and audio endpoints"
+    "Community models priced at zero Pollen — free to call, capped by their own RPM",
+    "Quest Pollen covers vendor models; earned via GitHub quests or trying models",
+    "About 1 request/15s on vendor models without extra credit"
   ],
   "api_endpoint": "https://gen.pollinations.ai/v1",
-  "notes": "Pollen balances are earned in the dashboard and can be exhausted; throughput is modest.",
+  "notes": "Community models are third-party endpoints: several log prompts, and their availability is best-effort (status flips between Alpha, Degraded and Down). Check the model card before sending anything sensitive. Pollen balances are earned, not replenished on a schedule.",
   "models": [
     {
       "id": "gpt-oss-20b",
@@ -72,6 +73,27 @@
         "tps": 50
       },
       "rate_limits": "~1 request/15s; higher with free key"
+    },
+    {
+      "id": "community/morriszdweck/glm-5.3-flash-free",
+      "name": "GLM 5.3 Flash (community)",
+      "family": "GLM",
+      "context_window": 1048576,
+      "rate_limits": "Free — 0 Pollen, 500 RPM"
+    },
+    {
+      "id": "community/YoannDev90/nvidia-mistral-large-4-1t-a52b:free",
+      "name": "Mistral Large 4 (community)",
+      "family": "Mistral",
+      "context_window": 262144,
+      "rate_limits": "Free — 0 Pollen"
+    },
+    {
+      "id": "community/CloudCompile/nvidia-nemotron-3-ultra-550b-a55b:free",
+      "name": "Nemotron 3 Ultra (community)",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "rate_limits": "Free — 0 Pollen"
     }
   ]
 }

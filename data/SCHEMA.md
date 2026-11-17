@@ -16,7 +16,12 @@ even when they are free and hosted — the catalogue previously carried ElevenLa
 Cartesia, Deepgram, AssemblyAI, Speechmatics, Palabra, Async Voice, Paxa Labs,
 Lelapa, Viggle, Stability AI, WaveSpeed, Inferon, Clarifai, Voyage AI, Jina AI,
 Qdrant and MongoDB Atlas, and all of them were pruned on 2026-11-17. A provider
-stays in scope only if it serves at least one text-generation model. Self-hosted and local runtimes (Ollama,
+stays in scope only if it serves at least one text-generation model, and
+non-text models are pruned from otherwise in-scope providers too: on 2026-11-17
+the Whisper speech rows came out of Groq, Cloudflare Workers AI, OVHcloud AI
+Endpoints, Scaleway and Replicate, and the BGE / Cohere Embed rows came out of
+Cloudflare, OVHcloud, Scaleway and OCI. Groq's leaderboard total therefore moved
+from 1.2M to 1.0M tokens/day (five text models at 200K each). Self-hosted and local runtimes (Ollama,
 LM Studio, llama.cpp, Jan, KoboldCpp, GPT4All, TextGen WebUI, vLLM, BentoML,
 llamafile, …) are **out of scope** and must not be added — the catalogue answers
 "who will run a model for me for free", not "what can I run on my own GPU".
@@ -171,6 +176,9 @@ day), never a metric.
   - Alibaba Cloud Model Studio: `1M free tokens per model, 90 days` → `11111`.
   - Voyage AI: `200M free tokens per model` → `6666667`.
   - IBM watsonx.ai Lite: `300K tokens/month` → `10000`.
+- A quota published per hour becomes `x24` per day: cheapllm.shop's floor of
+  5,000 input + 1,000 output tokens/hour is `144000` tokens/day, with the hourly
+  wording kept in `rate_limits`.
 - Purely request-, neuron- or credit-denominated free tiers leave
   `token_allowance` blank and describe the real quota in `rate_limits`.
 - The Token Allowance leaderboard ranks **providers**, not models: the free
@@ -364,3 +372,11 @@ A free-model-only provider with no token-denominated quota:
   at the time of the check.
 - Never present a card-gated one-time credit as a free tier: use `trials`,
   set `requires_payment_card`, and say so in `notes`.
+- A model that appears in the vendor's console but answers only on a paid plan
+  is **not** a free model. Mistral's Limits page lists Mistral Large 4 and the
+  GLM routes with free-mode token caps, yet both are gated, so they are absent
+  from `data/mistral-ai.json` and the gate is recorded in `notes`.
+- Community-operated models (Pollinations) are listed only when their catalogue
+  price is exactly zero Pollen; a "Quest"-priced community model is a paid
+  model that happens to accept earned credit, so it is described in `overview`
+  instead of being enumerated as a free row.

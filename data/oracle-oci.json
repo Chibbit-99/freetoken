@@ -49,11 +49,6 @@
       "metrics": {
         "tps": 70
       }
-    },
-    {
-      "id": "cohere-embed-v4",
-      "name": "Embed v4",
-      "family": "Cohere Embed"
     }
   ]
 }

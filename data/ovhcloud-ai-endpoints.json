@@ -73,19 +73,6 @@
         "tps": 65
       },
       "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
-    },
-    {
-      "id": "whisper-large-v3",
-      "name": "Whisper Large v3",
-      "family": "Whisper",
-      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
-    },
-    {
-      "id": "bge-m3",
-      "name": "BGE-M3 Embeddings",
-      "family": "BGE",
-      "context_window": 8192,
-      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
     }
   ]
 }

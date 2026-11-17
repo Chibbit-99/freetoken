@@ -20,6 +20,7 @@ from new_providers_d import PART_D  # noqa: E402
 from new_providers_e import PART_E  # noqa: E402
 from new_providers_f import PART_F  # noqa: E402
 from new_providers_g import PART_G  # noqa: E402
+from new_providers_h import PART_H  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -71,12 +72,16 @@ SOURCES = {
     "baichuan": ["https://platform.baichuan-ai.com", "https://www.baichuan-ai.com"],
     "ppio": ["https://ppio.com", "https://docs.ppio.com"],
     "slashai": ["https://slashai.my.id", "https://slashai.my.id/docs"],
+    "xkiro": ["https://xkiro.com/models", "https://docs.xkiro.com/guides/sdk-openai/"],
+    "cheapllm-shop": ["https://cheapllm.shop/docs", "https://cheapllm.shop"],
 }
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
 PROVIDER_EXTRA = {
     "iteracompute": {"free_token_allowance": 30000000, "allowance_period": "month"},
     "nara-router": {"free_token_allowance": 7000000, "allowance_period": "day"},
+    "xkiro": {"free_token_allowance": 500000, "allowance_period": "day", "catalog_size": 69},
+    "cheapllm-shop": {"free_token_allowance": 144000, "allowance_period": "day", "catalog_size": 1},
     "navy-ai": {"free_token_allowance": 150000, "allowance_period": "day"},
     "ant-ling": {"free_token_allowance": 500000, "allowance_period": "day"},
     "baichuan": {"free_token_allowance": 5000000, "allowance_period": "one-time"},
@@ -121,7 +126,7 @@ MODEL_EXTRA = {
     },
 }
 MODEL_FIX = {
-    "oracle-oci": ["command-r-plus", "llama-4-maverick", "cohere-embed"],
+    "oracle-oci": ["command-r-plus", "llama-4-maverick"],
     "aws-bedrock": ["llama-4-maverick", "mistral-large-4", "command-r-plus"],
     "azure-ai-foundry": ["gpt-oss-120b", "llama-4-maverick", "mistral-small-4"],
     "ramp-router": ["gpt-oss-120b", "qwen3-8-27b", "glm-5-3-flash"],
@@ -161,7 +166,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

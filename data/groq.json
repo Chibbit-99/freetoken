@@ -89,13 +89,6 @@
       },
       "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
       "token_allowance": 200000
-    },
-    {
-      "id": "whisper-large-v3-turbo",
-      "name": "Whisper Large v3 Turbo",
-      "family": "Whisper",
-      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
-      "token_allowance": 200000
     }
   ]
 }

@@ -97,19 +97,6 @@
         "intelligence": 4
       },
       "rate_limits": "60 RPM, 1M free tokens"
-    },
-    {
-      "id": "bge-m3",
-      "name": "BGE-M3 Embeddings",
-      "family": "BGE",
-      "context_window": 8192,
-      "rate_limits": "60 RPM, 1M free tokens"
-    },
-    {
-      "id": "whisper-large-v3",
-      "name": "Whisper Large v3",
-      "family": "Whisper",
-      "rate_limits": "60 RPM, 1M free tokens"
     }
   ],
   "free_token_allowance": 1000000,
