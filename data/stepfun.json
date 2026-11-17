@@ -1,0 +1,50 @@
+{
+  "id": "stepfun",
+  "name": "StepFun",
+  "website": "https://platform.stepfun.com",
+  "docs": "https://platform.stepfun.com",
+  "signup": "https://platform.stepfun.com",
+  "description": "Step-series models with a signup credit and a 15-day plan trial.",
+  "overview": "StepFun's open platform serves the Step family — Step-2, Step 3.5 Flash and agent-oriented models — over an OpenAI-compatible endpoint at api.stepfun.com/v1. New accounts receive roughly ¥10 of credit (about a million tokens) at 5 RPM, and periodic promotions add 15 days of the Step Plan subscription, extendable by inviting other developers. Step Plan traffic uses a separate base URL and quota pool.",
+  "offer": {
+    "type": "trials",
+    "label": "¥10 signup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Real-name verification required"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://platform.stepfun.com",
+      "https://api.stepfun.com/v1"
+    ]
+  },
+  "free_access": [
+    "~¥10 free credit (about 1M tokens)",
+    "5 RPM on the free credit",
+    "15-day Step Plan promotions",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "Step Plan and pay-as-you-go use separate base URLs and separate quotas.",
+  "models": [
+    {
+      "id": "step-3-5-flash",
+      "name": "Step 3.5 Flash",
+      "family": "Step",
+      "context_window": 262144,
+      "rate_limits": "~1M free tokens at 5 RPM"
+    },
+    {
+      "id": "step-2",
+      "name": "Step-2",
+      "family": "Step",
+      "context_window": 65536,
+      "rate_limits": "~1M free tokens at 5 RPM"
+    }
+  ]
+}

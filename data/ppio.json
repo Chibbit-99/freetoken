@@ -1,0 +1,45 @@
+{
+  "id": "ppio",
+  "name": "PPIO",
+  "website": "https://ppio.com",
+  "docs": "https://ppio.com",
+  "signup": "https://ppio.com",
+  "description": "Decentralised compute platform reselling open models with a small starter credit.",
+  "overview": "PPIO is a decentralised GPU cloud that also exposes open models — DeepSeek V4 Flash and other popular weights — through an OpenAI-compatible inference API. New accounts receive ¥5 of credit, roughly five million DeepSeek-V3 tokens, which is enough for evaluation; beyond that it is per-token billing. Registration requires real-name verification and a mainland payment method for top-ups.",
+  "offer": {
+    "type": "trials",
+    "label": "¥5 signup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Real-name verification required"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ppio.com",
+      "https://docs.ppio.com"
+    ]
+  },
+  "free_access": [
+    "¥5 starter credit (~5M DeepSeek tokens)",
+    "OpenAI-compatible inference API",
+    "Open-weight catalogue",
+    "Per-token pricing after the credit"
+  ],
+  "notes": "Small credit; the startup programme offers larger grants by application.",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    }
+  ]
+}

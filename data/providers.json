@@ -127,6 +127,18 @@
     "sambanova.json",
     "nara-router.json",
     "plamo.json",
-    "api-free-llm.json"
+    "api-free-llm.json",
+    "navy-ai.json",
+    "ant-ling.json",
+    "sakura-ai-engine.json",
+    "mlvoca.json",
+    "gmi-cloud.json",
+    "nscale.json",
+    "volcengine-ark.json",
+    "xiaomi-mimo.json",
+    "stepfun.json",
+    "baichuan.json",
+    "ppio.json",
+    "slashai.json"
   ]
 }

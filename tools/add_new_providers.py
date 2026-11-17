@@ -19,6 +19,7 @@ from new_providers_c import PART_C  # noqa: E402
 from new_providers_d import PART_D  # noqa: E402
 from new_providers_e import PART_E  # noqa: E402
 from new_providers_f import PART_F  # noqa: E402
+from new_providers_g import PART_G  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -58,12 +59,27 @@ SOURCES = {
     "nara-router": ["https://router.bynara.id/api/plans", "https://router.bynara.id/docs"],
     "plamo": ["https://docs.plamo.preferredai.jp/en/api", "https://plamo.preferredai.jp/"],
     "api-free-llm": ["https://apifreellm.com/en/api-access", "https://apifreellm.com/en"],
+    "navy-ai": ["https://api.navy", "https://nejib1.github.io/Free-LLM/"],
+    "ant-ling": ["https://ling.tbox.cn", "https://api.tbox.cn/api/llm/v1"],
+    "sakura-ai-engine": ["https://cloud.sakura.ad.jp/aipf/ai-engine/", "https://manual.sakura.ad.jp/cloud/ai-engine/"],
+    "mlvoca": ["https://mlvoca.com", "https://github.com/mlvoca/free-llm-api"],
+    "gmi-cloud": ["https://www.gmicloud.ai/en/blog/best-free-gpu-cloud-options-for-ai-startups-and-researchers", "https://www.gmicloud.ai"],
+    "nscale": ["https://www.nscale.com", "https://docs.nscale.com"],
+    "volcengine-ark": ["https://www.volcengine.com/product/ark", "https://www.volcengine.com/docs/82379"],
+    "xiaomi-mimo": ["https://platform.xiaomimimo.com", "https://api.xiaomimimo.com/v1"],
+    "stepfun": ["https://platform.stepfun.com", "https://api.stepfun.com/v1"],
+    "baichuan": ["https://platform.baichuan-ai.com", "https://www.baichuan-ai.com"],
+    "ppio": ["https://ppio.com", "https://docs.ppio.com"],
+    "slashai": ["https://slashai.my.id", "https://slashai.my.id/docs"],
 }
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
 PROVIDER_EXTRA = {
     "iteracompute": {"free_token_allowance": 30000000, "allowance_period": "month"},
     "nara-router": {"free_token_allowance": 7000000, "allowance_period": "day"},
+    "navy-ai": {"free_token_allowance": 150000, "allowance_period": "day"},
+    "ant-ling": {"free_token_allowance": 500000, "allowance_period": "day"},
+    "baichuan": {"free_token_allowance": 5000000, "allowance_period": "one-time"},
     "inception": {"free_token_allowance": 100000000, "allowance_period": "one-time"},
     "amd-radeon-cloud": {"catalog_size": 9},
     "logfare": {"catalog_size": 22},
@@ -145,7 +161,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

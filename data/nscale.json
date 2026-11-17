@@ -1,0 +1,64 @@
+{
+  "id": "nscale",
+  "name": "Nscale",
+  "website": "https://www.nscale.com",
+  "docs": "https://www.nscale.com",
+  "signup": "https://www.nscale.com",
+  "description": "European GPU cloud with a no-card starter credit on serverless inference.",
+  "overview": "Nscale is a European GPU cloud whose serverless inference API is OpenAI-compatible at inference.api.nscale.com/v1 with a 128K context. New accounts get $5 of starter credit without a card, which covers a few million tokens on smaller open models before switching to pay-as-you-go; no RPM or standing free catalogue is published, so treat the credit as a trial rather than a tier.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 starter credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.nscale.com",
+      "https://docs.nscale.com"
+    ]
+  },
+  "free_access": [
+    "$5 starter credit, no card",
+    "OpenAI-compatible serverless endpoint",
+    "128K context",
+    "EU-hosted inference"
+  ],
+  "notes": "Credit, not a recurring tier: plan for pay-as-you-go once the $5 is spent.",
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    }
+  ]
+}

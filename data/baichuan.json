@@ -1,0 +1,45 @@
+{
+  "id": "baichuan",
+  "name": "Baichuan AI",
+  "website": "https://platform.baichuan-ai.com",
+  "docs": "https://platform.baichuan-ai.com",
+  "signup": "https://platform.baichuan-ai.com",
+  "description": "Baichuan's model platform with a 5M-token signup grant.",
+  "overview": "Baichuan's platform serves the Baichuan 4 family behind an OpenAI-style API, with 5,000,000 free tokens for new accounts at 5 requests per minute. The weights of the open Baichuan 2 models are separately downloadable under Apache 2.0 for anyone who would rather self-host, but the hosted API is the free-to-call route that fits this catalogue.",
+  "offer": {
+    "type": "trials",
+    "label": "5M free tokens",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Real-name verification required"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://platform.baichuan-ai.com",
+      "https://www.baichuan-ai.com"
+    ]
+  },
+  "free_access": [
+    "5,000,000 free tokens on signup",
+    "5 RPM",
+    "OpenAI-style API",
+    "Recharge only after the grant is spent"
+  ],
+  "notes": "Mainland platform: real-name verification and a Chinese payment method for top-ups.",
+  "free_token_allowance": 5000000,
+  "allowance_period": "one-time",
+  "models": [
+    {
+      "id": "baichuan-4",
+      "name": "Baichuan 4",
+      "family": "Baichuan",
+      "context_window": 32768,
+      "rate_limits": "5M free tokens at 5 RPM"
+    }
+  ]
+}

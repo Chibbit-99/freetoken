@@ -1,0 +1,43 @@
+{
+  "id": "xiaomi-mimo",
+  "name": "Xiaomi MiMo",
+  "website": "https://platform.xiaomimimo.com",
+  "docs": "https://platform.xiaomimimo.com",
+  "signup": "https://platform.xiaomimimo.com",
+  "description": "Xiaomi's MiMo platform with signup credit and a developer incentive programme.",
+  "overview": "Xiaomi's MiMo open platform serves the natively multimodal MiMo V2.5 family through an OpenAI-compatible API at api.xiaomimimo.com/v1, usable from Claude Code, Cursor and OpenClaw. New accounts get ¥10 of API credit (about a million tokens) that stops rather than overdraws when spent, and a separate creator programme grants much larger blocks by application. Chinese accounts need real-name verification.",
+  "offer": {
+    "type": "trials",
+    "label": "¥10 signup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Real-name verification required"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://platform.xiaomimimo.com",
+      "https://api.xiaomimimo.com/v1"
+    ]
+  },
+  "free_access": [
+    "¥10 signup credit that never overdraws",
+    "OpenAI-compatible endpoint",
+    "MiMo V2.5 multimodal family",
+    "Larger blocks via the creator programme"
+  ],
+  "notes": "TTS models are currently free on the same platform, but this catalogue is text-only.",
+  "models": [
+    {
+      "id": "mimo-v2-5",
+      "name": "MiMo V2.5",
+      "family": "MiMo",
+      "context_window": 262144,
+      "rate_limits": "¥10 signup credit; creator programme grants larger blocks"
+    }
+  ]
+}
