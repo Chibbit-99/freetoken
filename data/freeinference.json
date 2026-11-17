@@ -1,0 +1,87 @@
+{
+  "id": "freeinference",
+  "name": "FreeInference",
+  "website": "https://freeinference.org",
+  "docs": "https://freeinference.org",
+  "signup": "https://freeinference.org",
+  "description": "Harvard MadSys Lab's free API for open-source, research and education use.",
+  "overview": "FreeInference is a free, OpenAI- and Anthropic-compatible LLM API run by the MadSys Lab at Harvard SEAS for open-source, research and education use. Email sign-up needs no card, and free accounts can use several large open models with 1M-token context plus bge-m3 embeddings. The quota is described as generous but is not published, and requests may be logged for research.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Requests may be logged for research"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://freeinference.org",
+      "https://free-llm.com/provider/freeinference"
+    ]
+  },
+  "free_access": [
+    "Free for research, open-source and education use",
+    "No published daily cap ('generous quota')",
+    "No credit card required",
+    "1M-token context on the larger models"
+  ],
+  "api_endpoint": "https://freeinference.org/v1",
+  "notes": "A native Anthropic endpoint at /anthropic works with Claude Code; some models are Pro-only.",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 68
+      },
+      "rate_limits": "Not published; 429 when throttled"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 70
+      },
+      "rate_limits": "Not published; 429 when throttled"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 80,
+        "intelligence": 70
+      },
+      "rate_limits": "Not published; 429 when throttled"
+    },
+    {
+      "id": "qwen3-6-35b-a3b",
+      "name": "Qwen3.6 35B A3B",
+      "family": "Qwen 3.6",
+      "metrics": {
+        "tps": 220,
+        "intelligence": 66
+      },
+      "rate_limits": "Not published; 429 when throttled"
+    },
+    {
+      "id": "bge-m3-embeddings",
+      "name": "BGE-M3 (embeddings)",
+      "family": "BGE",
+      "context_window": 8192,
+      "rate_limits": "Not published; 429 when throttled"
+    }
+  ]
+}

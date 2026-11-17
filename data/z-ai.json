@@ -1,0 +1,70 @@
+{
+  "id": "z-ai",
+  "name": "Z.AI (GLM)",
+  "website": "https://z.ai",
+  "docs": "https://docs.z.ai/guides/overview/pricing",
+  "signup": "https://z.ai/manage-apikey/apikey-list",
+  "description": "Zhipu's international platform, with GLM Flash models priced at zero on a free API key.",
+  "overview": "Z.AI is Zhipu's international platform for the GLM family. Its pricing page lists GLM-4.7-Flash, GLM-4.5-Flash and GLM-4.6V-Flash at zero cost, with low rate limits aimed at coding assistants and prototyping. The API is OpenAI-compatible.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free Flash models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on API data"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.z.ai/guides/overview/pricing",
+      "https://free-llm.com/provider/z-ai"
+    ]
+  },
+  "free_access": [
+    "GLM-4.7-Flash, GLM-4.5-Flash and GLM-4.6V-Flash are $0",
+    "About 1 request/second",
+    "No credit card required",
+    "No training on API data"
+  ],
+  "api_endpoint": "https://api.z.ai/api/paas/v4",
+  "notes": "Free Flash models are rate-limited to roughly one request per second and can queue at peak times.",
+  "models": [
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7-Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 62
+      },
+      "rate_limits": "~1 request/s (Flash models)"
+    },
+    {
+      "id": "glm-4-5-flash",
+      "name": "GLM-4.5-Flash",
+      "family": "GLM 4.5",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 58
+      },
+      "rate_limits": "~1 request/s (Flash models)"
+    },
+    {
+      "id": "glm-4-6v-flash",
+      "name": "GLM-4.6V-Flash",
+      "family": "GLM 4.6V",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 55
+      },
+      "rate_limits": "~1 request/s (Flash models)"
+    }
+  ]
+}

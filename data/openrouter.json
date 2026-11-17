@@ -1,0 +1,70 @@
+{
+  "id": "openrouter",
+  "name": "OpenRouter",
+  "website": "https://openrouter.ai",
+  "docs": "https://openrouter.ai/docs/api-reference/limits",
+  "signup": "https://openrouter.ai/keys",
+  "description": "One OpenAI-compatible key for hundreds of models, with a rotating roster of free models.",
+  "overview": "OpenRouter is a single OpenAI-compatible API in front of hundreds of models from many providers. Models whose id ends in :free cost nothing, subject to platform-wide request caps, and the free roster rotates often. Prompt handling depends on whichever provider serves the free model.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models (:free)",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Provider-dependent"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://openrouter.ai/docs/api-reference/limits",
+      "https://free-llm.com/provider/openrouter"
+    ]
+  },
+  "free_access": [
+    "20 requests/minute platform-wide",
+    "50 requests/day on free models (1,000/day after $10 lifetime credit)",
+    "No credit card required",
+    "Training policy depends on the serving provider"
+  ],
+  "api_endpoint": "https://openrouter.ai/api/v1",
+  "notes": "50 requests/day rises to 1,000/day after $10 of lifetime credit purchases; opting out of training-only providers is available in settings.",
+  "models": [
+    {
+      "id": "gemma-4-31b-it",
+      "name": "Gemma 4 31B IT",
+      "family": "Gemma 4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 62
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "nvidia-nemotron-3-ultra",
+      "name": "NVIDIA Nemotron 3 Ultra",
+      "family": "Nemotron",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 71
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "recursive-flint-v1-0",
+      "name": "Recursive Flint v1.0",
+      "family": "Flint",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 65
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    }
+  ]
+}

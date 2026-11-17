@@ -1,0 +1,81 @@
+{
+  "id": "cloudflare-workers-ai",
+  "name": "Cloudflare Workers AI",
+  "website": "https://www.cloudflare.com/products/workers-ai/",
+  "docs": "https://developers.cloudflare.com/workers-ai/",
+  "signup": "https://dash.cloudflare.com/profile/api-tokens",
+  "description": "Open-model inference on Cloudflare's edge network with 10,000 free neurons a day.",
+  "overview": "Workers AI runs open models on Cloudflare's global network and is billed in neurons rather than tokens. Every account, free or paid, receives 10,000 neurons per day shared across the catalog, which covers text, vision, image and speech models. Requests need your account ID in the URL.",
+  "offer": {
+    "type": "always-free",
+    "label": "10K free neurons/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://developers.cloudflare.com/workers-ai/",
+      "https://free-llm.com/provider/cloudflare-workers-ai"
+    ]
+  },
+  "free_access": [
+    "10,000 neurons/day on every account",
+    "300 requests/minute for text generation",
+    "No credit card required",
+    "No training on customer prompts"
+  ],
+  "api_endpoint": "https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/run/",
+  "notes": "The daily neuron allowance resets at 00:00 UTC; heavier models consume more neurons per request.",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 68
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 140,
+        "intelligence": 63
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 66
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    },
+    {
+      "id": "llama-3-3-70b-instruct",
+      "name": "Llama 3.3 70B Instruct",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 65,
+        "intelligence": 48
+      },
+      "rate_limits": "10K neurons/day, 300 RPM"
+    }
+  ]
+}

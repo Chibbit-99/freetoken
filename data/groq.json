@@ -1,0 +1,85 @@
+{
+  "id": "groq",
+  "name": "Groq",
+  "website": "https://groq.com",
+  "docs": "https://console.groq.com/docs/rate-limits",
+  "signup": "https://console.groq.com/keys",
+  "description": "Very fast LPU inference with a standing free Developer plan and published daily caps.",
+  "overview": "GroqCloud runs open models on Groq's LPU hardware and is among the fastest inference providers available. The free Developer plan needs no card and publishes per-model limits for GPT-OSS and Qwen3.x, plus Whisper for speech-to-text. Older Llama 3.x and Compound models were retired during 2026.",
+  "offer": {
+    "type": "always-free",
+    "label": "Always-free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://console.groq.com/docs/rate-limits",
+      "https://free-llm.com/provider/groq-cloud"
+    ]
+  },
+  "free_access": [
+    "30 requests/minute and 1,000 requests/day per model",
+    "200,000 tokens/day per model",
+    "No credit card required",
+    "No training on customer prompts"
+  ],
+  "api_endpoint": "https://api.groq.com/openai/v1",
+  "notes": "Limits apply at the organisation level; cached tokens do not count towards them.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 520,
+        "intelligence": 63
+      },
+      "token_allowance": 200000,
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 780,
+        "intelligence": 56
+      },
+      "token_allowance": 200000,
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 610,
+        "intelligence": 66
+      },
+      "token_allowance": 200000,
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+    },
+    {
+      "id": "qwen3-6-27b",
+      "name": "Qwen3.6 27B",
+      "family": "Qwen 3.6",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 640,
+        "intelligence": 64
+      },
+      "token_allowance": 200000,
+      "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD"
+    }
+  ]
+}

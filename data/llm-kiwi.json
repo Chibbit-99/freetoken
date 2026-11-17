@@ -1,0 +1,63 @@
+{
+  "id": "llm-kiwi",
+  "name": "LLM.kiwi",
+  "website": "https://llm.kiwi",
+  "docs": "https://llm.kiwi",
+  "signup": "https://llm.kiwi",
+  "description": "Hosted OpenAI-compatible API with a no-card Free plan and an automatic model router.",
+  "overview": "LLM.kiwi is a hosted OpenAI-compatible API with Google or GitHub sign-in. The Free plan includes three API keys, the AUTO router and what the provider calls baseline rate limits; Pro raises resource limits fivefold. Exact free figures are not published.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free plan",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://llm.kiwi",
+      "https://free-llm.com/provider/llm-kiwi"
+    ]
+  },
+  "free_access": [
+    "$0 Free plan with no card",
+    "Three API keys included",
+    "Automatic AUTO router",
+    "Baseline rate limits (unpublished)"
+  ],
+  "notes": "Free limits are described as baseline and are not published.",
+  "models": [
+    {
+      "id": "auto-router",
+      "name": "Auto router",
+      "family": "LLM.kiwi",
+      "rate_limits": "Baseline rate limits (unpublished)"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "family": "MiniMax",
+      "metrics": {
+        "tps": 80,
+        "intelligence": 70
+      },
+      "rate_limits": "Baseline rate limits (unpublished)"
+    },
+    {
+      "id": "nemotron-3-ultra",
+      "name": "Nemotron 3 Ultra",
+      "family": "Nemotron",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 71
+      },
+      "rate_limits": "Baseline rate limits (unpublished)"
+    }
+  ]
+}

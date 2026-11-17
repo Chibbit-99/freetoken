@@ -1,0 +1,50 @@
+{
+  "id": "jina-ai",
+  "name": "Jina AI",
+  "website": "https://jina.ai",
+  "docs": "https://jina.ai/reader/",
+  "signup": "https://jina.ai/api-dashboard",
+  "description": "Search foundation APIs (embeddings, reranking, Reader) with free tokens on every key.",
+  "overview": "Jina AI's search foundation APIs cover embeddings, rerankers and the Reader URL-to-markdown service. Every new visitor gets an auto-generated API key with free tokens usable on any Jina model. These are embedding, rerank and reader models rather than chat LLMs.",
+  "offer": {
+    "type": "trials",
+    "label": "Free API key tokens",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://jina.ai",
+      "https://free-llm.com/provider/jina-ai"
+    ]
+  },
+  "free_access": [
+    "Free tokens on an auto-generated key",
+    "100 RPM and 100K TPM",
+    "No credit card required",
+    "Embeddings, rerank and Reader endpoints"
+  ],
+  "api_endpoint": "https://api.jina.ai/v1",
+  "notes": "Embeddings, rerank and Reader only, not chat completion.",
+  "models": [
+    {
+      "id": "jina-embeddings-v5-text-small",
+      "name": "Jina Embeddings v5 Text Small",
+      "family": "Jina Embeddings",
+      "context_window": 8192,
+      "rate_limits": "100 RPM, 100K TPM"
+    },
+    {
+      "id": "jina-reader",
+      "name": "Jina Reader",
+      "family": "Jina Reader",
+      "rate_limits": "100 RPM, 100K TPM"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "agnes-ai",
+  "name": "Agnes AI",
+  "website": "https://agnes-ai.com",
+  "docs": "https://agnes-ai.com",
+  "signup": "https://platform.agnes-ai.com/settings/apiKeys",
+  "description": "Self-described free multimodal platform serving its own Agnes text and image models.",
+  "overview": "Agnes AI serves its own text, image and video models behind an OpenAI-compatible API and calls itself a free multimodal platform. The team states no payment information is required, and new accounts get a default balance for creating keys. Limits come from third-party listings rather than a published pricing page.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free platform",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://agnes-ai.com",
+      "https://free-llm.com/provider/agnes-ai"
+    ]
+  },
+  "free_access": [
+    "Free to use with no payment information",
+    "Default balance on new accounts",
+    "Around 30 requests/minute (video 2 RPM)",
+    "Text, image and video models"
+  ],
+  "notes": "Rate limits are reported by third parties (about 30 RPM) rather than published by the provider.",
+  "models": [
+    {
+      "id": "agnes-3-0-flash",
+      "name": "Agnes 3.0 Flash",
+      "family": "Agnes",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 60
+      },
+      "rate_limits": "~30 RPM (video 2 RPM)"
+    },
+    {
+      "id": "agnes-2-5-flash",
+      "name": "Agnes 2.5 Flash",
+      "family": "Agnes",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 140,
+        "intelligence": 56
+      },
+      "rate_limits": "~30 RPM (video 2 RPM)"
+    },
+    {
+      "id": "agnes-image-2-1-flash",
+      "name": "Agnes Image 2.1 Flash",
+      "family": "Agnes",
+      "rate_limits": "~30 RPM (video 2 RPM)"
+    }
+  ]
+}

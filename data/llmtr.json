@@ -1,0 +1,81 @@
+{
+  "id": "llmtr",
+  "name": "LLMTR",
+  "website": "https://llmtr.com",
+  "docs": "https://llmtr.com/en/terms",
+  "signup": "https://llmtr.com/dashboard/api-keys",
+  "description": "Turkish gateway whose free models can be called from a zero-balance new account.",
+  "overview": "LLMTR is a Turkish OpenAI-compatible gateway whose terms allow free chat models to be called on a new account with zero balance before any top-up. Its keyless catalog lists several $0 models, including Nemotron 3 Ultra with a 1M context and dated previews. Paid use is prepaid.",
+  "offer": {
+    "type": "always-free",
+    "label": "Zero-balance free models",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Some free models may train"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://llmtr.com/en/terms",
+      "https://free-llm.com/provider/llmtr"
+    ]
+  },
+  "free_access": [
+    "Free models callable with zero balance",
+    "Per-model daily allowances (e.g. 200K tokens/day on previews)",
+    "No credit card required",
+    "Catalog shows $0 model ids"
+  ],
+  "api_endpoint": "https://llmtr.com/v1",
+  "notes": "Some dated previews need a prior top-up and expire; free Nemotron VL inputs may be used for training.",
+  "models": [
+    {
+      "id": "nemotron-3-ultra-550b",
+      "name": "Nemotron 3 Ultra 550B",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 71
+      },
+      "rate_limits": "Zero-balance free; daily allowance varies"
+    },
+    {
+      "id": "qwen3-8-27b-free",
+      "name": "Qwen3.8 27B (free)",
+      "family": "Qwen 3.8",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 66
+      },
+      "rate_limits": "Zero-balance free; daily allowance varies"
+    },
+    {
+      "id": "agnes-3-0-flash",
+      "name": "Agnes 3.0 Flash",
+      "family": "Agnes",
+      "context_window": 524288,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 60
+      },
+      "rate_limits": "Zero-balance free; daily allowance varies"
+    },
+    {
+      "id": "gpt-oss-safeguard-20b",
+      "name": "GPT-OSS Safeguard 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 700,
+        "intelligence": 45
+      },
+      "rate_limits": "Zero-balance free; daily allowance varies"
+    }
+  ]
+}

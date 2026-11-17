@@ -1,0 +1,70 @@
+{
+  "id": "zhipu-bigmodel",
+  "name": "Zhipu BigModel",
+  "website": "https://www.bigmodel.cn",
+  "docs": "https://docs.bigmodel.cn",
+  "signup": "https://open.bigmodel.cn/usercenter/apikeys",
+  "description": "Zhipu's mainland-China platform, which marks its Flash models as free with no token charge.",
+  "overview": "BigModel is Zhipu's mainland-China platform, separate from Z.AI international. Its model overview marks a set of Flash models as free, including GLM-4.7-Flash with a 200K context, plus free image and video Flash models. Free Flash models run with low concurrency.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free Flash models",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.bigmodel.cn",
+      "https://free-llm.com/provider/zhipu-bigmodel"
+    ]
+  },
+  "free_access": [
+    "Flash models marked free with no token charge",
+    "GLM-4.7-Flash included at 200K context",
+    "Free CogView/CogVideo Flash media models",
+    "No credit card required"
+  ],
+  "api_endpoint": "https://open.bigmodel.cn/api/paas/v4",
+  "notes": "Phone verification required; GLM-4.7-Flash is reported at one concurrent request.",
+  "models": [
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7-Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 62
+      },
+      "rate_limits": "1 concurrent request"
+    },
+    {
+      "id": "glm-4-5-flash",
+      "name": "GLM-4.5-Flash",
+      "family": "GLM 4.5",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 58
+      },
+      "rate_limits": "Low concurrency"
+    },
+    {
+      "id": "glm-4-flash-250414",
+      "name": "GLM-4-Flash-250414",
+      "family": "GLM 4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 52
+      },
+      "rate_limits": "Low concurrency"
+    }
+  ]
+}

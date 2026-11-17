@@ -1,0 +1,81 @@
+{
+  "id": "bazaarlink",
+  "name": "BazaarLink",
+  "website": "https://bazaarlink.ai",
+  "docs": "https://bazaarlink.ai/free",
+  "signup": "https://bazaarlink.ai/free",
+  "description": "Taiwanese gateway with a daily free tier of weighted request units and no card.",
+  "overview": "BazaarLink is a Taiwanese OpenAI-compatible gateway to 120+ models, operated by Jilian Technology. Its daily free tier is measured in weighted request units rather than tokens, with two concurrent free requests and a reset at 00:00 UTC. The free model list rotates.",
+  "offer": {
+    "type": "always-free",
+    "label": "Daily free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check gateway terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://bazaarlink.ai/free",
+      "https://free-llm.com/provider/bazaarlink"
+    ]
+  },
+  "free_access": [
+    "60 weighted request units/day (120 with any credit)",
+    "10 requests/minute, 2 concurrent free requests",
+    "No credit card required",
+    "Rotating free models"
+  ],
+  "api_endpoint": "https://api.bazaarlink.ai/v1",
+  "notes": "Small, young provider: verify terms before relying on it. Longer inputs consume more daily units.",
+  "models": [
+    {
+      "id": "qwen3-7-flash",
+      "name": "Qwen3.7 Flash",
+      "family": "Qwen 3.7",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 66
+      },
+      "rate_limits": "10 RPM, 60 units/day"
+    },
+    {
+      "id": "reflection-beam-free",
+      "name": "Reflection Beam (free)",
+      "family": "Reflection Beam",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 72
+      },
+      "rate_limits": "10 RPM, 60 units/day"
+    },
+    {
+      "id": "nemotron-3-5-lightning-free",
+      "name": "Nemotron 3.5 Lightning (free)",
+      "family": "Nemotron",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 400,
+        "intelligence": 60
+      },
+      "rate_limits": "10 RPM, 60 units/day"
+    },
+    {
+      "id": "deepseek-v4-flash-0731-free",
+      "name": "DeepSeek V4 Flash 0731 (free)",
+      "family": "DeepSeek V4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 70
+      },
+      "rate_limits": "10 RPM, 60 units/day"
+    }
+  ]
+}

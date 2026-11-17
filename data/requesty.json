@@ -1,0 +1,91 @@
+{
+  "id": "requesty",
+  "name": "Requesty",
+  "website": "https://requesty.ai",
+  "docs": "https://requesty.ai",
+  "signup": "https://requesty.ai",
+  "description": "AI router with automatic fallback, caching and a no-card free tier on selected models.",
+  "overview": "Requesty is an AI gateway and router that spreads requests across providers with automatic fallback, caching and load balancing. Its free tier covers a set of open models at 200 requests per day without a card. It can also route your own provider keys.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free routed models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Provider-dependent"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://requesty.ai",
+      "https://free-llm.com/provider/requesty"
+    ]
+  },
+  "free_access": [
+    "200 requests/day on free models",
+    "No credit card required",
+    "Automatic provider fallback and caching",
+    "Free models include Nemotron, Gemma and Ling"
+  ],
+  "api_endpoint": "https://router.requesty.ai/v1",
+  "models": [
+    {
+      "id": "gemma-4-31b-it",
+      "name": "Gemma 4 31B IT",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 62
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "nemotron-3-5-lightning-30b-a3b",
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 400,
+        "intelligence": 60
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "nvidia-nemotron-3-ultra",
+      "name": "NVIDIA Nemotron 3 Ultra",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 71
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "inclusionai-ling-3-1-flash",
+      "name": "inclusionAI Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 58
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "meta-muse-glimmer-30b",
+      "name": "Meta Muse Glimmer 30B",
+      "family": "Muse",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 55
+      },
+      "rate_limits": "200 requests/day on free models"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "vertex-ai-express",
+  "name": "Vertex AI Express Mode",
+  "website": "https://cloud.google.com/vertex-ai",
+  "docs": "https://cloud.google.com/vertex-ai/generative-ai/docs/express-mode",
+  "signup": "https://console.cloud.google.com/vertex-ai",
+  "description": "Key-only Vertex AI access for Gemini models with no billing details, free for 90 days.",
+  "overview": "Express mode gives new Google Cloud users an API key for Vertex AI Gemini models without billing information. It works for up to 90 days within the Vertex free-tier quotas and uses the global endpoint with no project ID or location. Billing can be added later to raise quotas.",
+  "offer": {
+    "type": "trials",
+    "label": "90-day free trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "May train on free-tier prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cloud.google.com/vertex-ai/generative-ai/docs/express-mode",
+      "https://free-llm.com/provider/vertex-ai-express"
+    ]
+  },
+  "free_access": [
+    "API key with no billing information",
+    "Up to 90 days of free-tier access",
+    "Gemini 2.5 models at 10 RPM",
+    "Global endpoint, no project required"
+  ],
+  "api_endpoint": "https://aiplatform.googleapis.com/v1",
+  "notes": "Trial window is 90 days; limits follow the Vertex free tier (Gemini 2.5 models at 10 RPM).",
+  "models": [
+    {
+      "id": "gemini-3-1-pro-preview",
+      "name": "Gemini 3.1 Pro Preview",
+      "family": "Gemini 3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 80
+      },
+      "rate_limits": "Dynamic Gemini 3 limits"
+    },
+    {
+      "id": "gemini-2-5-flash",
+      "name": "Gemini 2.5 Flash",
+      "family": "Gemini 2.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 250,
+        "intelligence": 68
+      },
+      "rate_limits": "10 RPM"
+    }
+  ]
+}

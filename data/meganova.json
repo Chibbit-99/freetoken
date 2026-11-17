@@ -1,0 +1,70 @@
+{
+  "id": "meganova",
+  "name": "MegaNova AI",
+  "website": "https://meganova.ai",
+  "docs": "https://docs.meganova.ai/tiers",
+  "signup": "https://meganova.ai/api-keys",
+  "description": "Roleplay-heavy open-model host with a no-card free tier and daily request quotas.",
+  "overview": "MegaNova AI is an OpenAI-compatible inference platform with a large catalog of roleplay models, community fine-tunes and its own Manta family. Free Tier 1 needs only registration and gives daily request quotas on free models under 100B parameters, with 20-200 requests per minute depending on the model. Models are 8K-65K context for the most part.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free Tier 1",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.meganova.ai/tiers",
+      "https://free-llm.com/provider/meganova"
+    ]
+  },
+  "free_access": [
+    "Free Tier 1 with registration only",
+    "50-500 free-model requests/day depending on model",
+    "20-200 requests/minute",
+    "No credit card required"
+  ],
+  "api_endpoint": "https://api.meganova.ai/v1",
+  "notes": "Free quotas range by model (50-500 requests/day); one listed GLM Flash route reportedly needs a top-up.",
+  "models": [
+    {
+      "id": "manta-pro-1-0",
+      "name": "Manta Pro 1.0",
+      "family": "Manta",
+      "context_window": 65000,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 55
+      },
+      "rate_limits": "20-200 RPM, 50-500 RPD"
+    },
+    {
+      "id": "manta-flash-1-0",
+      "name": "Manta Flash 1.0",
+      "family": "Manta",
+      "context_window": 16000,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 48
+      },
+      "rate_limits": "20-200 RPM, 50-500 RPD"
+    },
+    {
+      "id": "mistral-small-3-2-24b",
+      "name": "Mistral Small 3.2 24B",
+      "family": "Mistral",
+      "context_window": 8000,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 50
+      },
+      "rate_limits": "20-200 RPM, 50-500 RPD"
+    }
+  ]
+}

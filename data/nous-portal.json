@@ -1,0 +1,69 @@
+{
+  "id": "nous-portal",
+  "name": "Nous Research Portal",
+  "website": "https://portal.nousresearch.com",
+  "docs": "https://portal.nousresearch.com",
+  "signup": "https://portal.nousresearch.com",
+  "description": "Nous Research's official portal for Hermes models, with a standing free tier and no card.",
+  "overview": "The Nous Portal is Nous Research's official API for their open-weight Hermes family, and it also serves a rotating catalog of partner models. It has a standing $0/month free tier with no card required, though the exact rate limits are not published. It is aimed at open-weight and research use.",
+  "offer": {
+    "type": "always-free",
+    "label": "Standing free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check portal terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://portal.nousresearch.com",
+      "https://free-llm.com/provider/nous-portal"
+    ]
+  },
+  "free_access": [
+    "$0/month standing free tier",
+    "Rotating free-model catalog",
+    "No credit card required",
+    "Limits not published"
+  ],
+  "notes": "Free catalog rotates and limits are not published; verify current numbers on the portal.",
+  "models": [
+    {
+      "id": "stepfun-step-3-7-flash",
+      "name": "StepFun Step 3.7 Flash",
+      "family": "Step",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 64
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "ornith-1-5-122b",
+      "name": "Ornith 1.5 122B",
+      "family": "Ornith",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 68
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "reflection-beam-1-0",
+      "name": "Reflection Beam 1.0",
+      "family": "Reflection Beam",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 72
+      },
+      "rate_limits": "Not published"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "google-ai-studio",
+  "name": "Google AI Studio",
+  "website": "https://aistudio.google.com",
+  "docs": "https://ai.google.dev/gemini-api/docs/rate-limits",
+  "signup": "https://aistudio.google.com/apikey",
+  "description": "Google's free Gemini API tier, covering the Flash family and Gemma 4.",
+  "overview": "Google AI Studio is the free prototyping console and API for the Gemini model family. The free tier covers the current Flash and Flash-Lite models, Gemini 3 Flash Preview and the Gemini 2.5 models, while the newest Pro models are paid only. Rate limits are set per project and are shown in AI Studio rather than published in the docs.",
+  "offer": {
+    "type": "always-free",
+    "label": "Always-free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "May train on free-tier prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ai.google.dev/gemini-api/docs/rate-limits",
+      "https://free-llm.com/provider/google-ai-studio"
+    ]
+  },
+  "free_access": [
+    "Free of charge on the Flash, Flash-Lite and 2.5 model families",
+    "Per-project RPM/TPM/RPD shown in AI Studio (roughly 5-30 RPM)",
+    "No credit card required",
+    "Free-tier prompts may be used to improve Google products"
+  ],
+  "api_endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/",
+  "notes": "Prompts on the unpaid quota can be reviewed and used to improve Google products outside the EEA, Switzerland and the UK.",
+  "models": [
+    {
+      "id": "gemini-3-8-flash",
+      "name": "Gemini 3.8 Flash",
+      "family": "Gemini 3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 300,
+        "intelligence": 78
+      },
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
+    },
+    {
+      "id": "gemini-3-6-flash",
+      "name": "Gemini 3.6 Flash",
+      "family": "Gemini 3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 76
+      },
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
+    },
+    {
+      "id": "gemini-3-5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "family": "Gemini 3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 380,
+        "intelligence": 71
+      },
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
+    },
+    {
+      "id": "gemini-2-5-flash",
+      "name": "Gemini 2.5 Flash",
+      "family": "Gemini 2.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 250,
+        "intelligence": 68
+      },
+      "rate_limits": "10 RPM, 250 RPD (existing projects)"
+    },
+    {
+      "id": "gemma-4-31b-it",
+      "name": "Gemma 4 31B IT",
+      "family": "Gemma 4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 140,
+        "intelligence": 62
+      },
+      "rate_limits": "5-30 RPM, per-project caps in AI Studio"
+    }
+  ]
+}

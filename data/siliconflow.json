@@ -1,0 +1,70 @@
+{
+  "id": "siliconflow",
+  "name": "SiliconFlow",
+  "website": "https://www.siliconflow.cn",
+  "docs": "https://docs.siliconflow.cn",
+  "signup": "https://cloud.siliconflow.cn/account/ak",
+  "description": "Chinese inference platform whose China site keeps a set of models at zero price.",
+  "overview": "SiliconFlow is a Chinese inference platform with an OpenAI-compatible API. Its China site keeps a set of small and distilled models at $0, while the international site offers only a $1 starter credit. Free models require a Chinese mobile number for verification.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.siliconflow.cn",
+      "https://free-llm.com/provider/siliconflow"
+    ]
+  },
+  "free_access": [
+    "Selected models priced at $0 on siliconflow.cn",
+    "Fixed per-model limits (visible after login)",
+    "No credit card required",
+    "Chinese mobile verification needed"
+  ],
+  "api_endpoint": "https://api.siliconflow.cn/v1",
+  "notes": "Free $0 models are on siliconflow.cn and need a Chinese mobile number; siliconflow.com has no free models.",
+  "models": [
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3-8B",
+      "family": "Qwen 3",
+      "context_window": 32768,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 52
+      },
+      "rate_limits": "Fixed limits for free models (login to view)"
+    },
+    {
+      "id": "glm-4-9b",
+      "name": "GLM-4-9B",
+      "family": "GLM 4",
+      "context_window": 32768,
+      "metrics": {
+        "tps": 140,
+        "intelligence": 48
+      },
+      "rate_limits": "Fixed limits for free models (login to view)"
+    },
+    {
+      "id": "deepseek-r1-distill-qwen-7b",
+      "name": "DeepSeek-R1 Distill Qwen 7B",
+      "family": "DeepSeek R1",
+      "context_window": 32768,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 50
+      },
+      "rate_limits": "Fixed limits for free models (login to view)"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "sensenova",
+  "name": "SenseNova",
+  "website": "https://www.sensenova.cn",
+  "docs": "https://www.sensenova.cn/doc",
+  "signup": "https://platform.sensenova.cn",
+  "description": "SenseTime's multimodal model platform, free of charge for the whole public beta.",
+  "overview": "SenseNova is SenseTime's model platform, currently in public beta at a zero-cost monthly tier. The provider states the beta is fully free while paid tiers are being prepared, covering its native multimodal SenseNova and U1 models. Access needs phone verification.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free public beta",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.sensenova.cn/doc",
+      "https://free-llm.com/provider/sensenova"
+    ]
+  },
+  "free_access": [
+    "Zero-cost plan during the public beta",
+    "Multimodal SenseNova and U1 models",
+    "No credit card required (phone verification)",
+    "Paid tiers not yet launched"
+  ],
+  "notes": "Free only for the duration of the public beta; paid tiers are announced but not yet live.",
+  "models": [
+    {
+      "id": "sensenova-6-8-flash-lite",
+      "name": "SenseNova 6.8 Flash Lite",
+      "family": "SenseNova",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 140,
+        "intelligence": 58
+      },
+      "rate_limits": "Free during public beta"
+    },
+    {
+      "id": "u1-fast",
+      "name": "U1 Fast",
+      "family": "SenseNova",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 52
+      },
+      "rate_limits": "Free during public beta"
+    }
+  ]
+}

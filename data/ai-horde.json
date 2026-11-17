@@ -1,0 +1,70 @@
+{
+  "id": "ai-horde",
+  "name": "AI Horde",
+  "website": "https://aihorde.net",
+  "docs": "https://aihorde.net/api",
+  "signup": "https://aihorde.net/register",
+  "description": "Crowdsourced, volunteer-run inference network with an OpenAI-compatible front end.",
+  "overview": "AI Horde is a free, open-source crowdsourced inference network where volunteers donate GPU time. Requests are queued rather than served instantly, and anonymous callers get the lowest priority. Registered users earn kudos, which raise their queue priority, and an OpenAI-compatible front end is available.",
+  "offer": {
+    "type": "always-free",
+    "label": "Volunteer network",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Volunteer workers see prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aihorde.net/api",
+      "https://free-llm.com/provider/ai-horde"
+    ]
+  },
+  "free_access": [
+    "Completely free, no payment details",
+    "Anonymous use with the shared 0000000000 key",
+    "Kudos raise queue priority",
+    "Community-operated text and image workers"
+  ],
+  "api_endpoint": "https://oai.aihorde.net/v1",
+  "notes": "Queue-based, so latency is unpredictable; anonymous requests use the lowest priority.",
+  "models": [
+    {
+      "id": "gemma-4-e4b-it",
+      "name": "Gemma 4 E4B IT",
+      "family": "Gemma 4",
+      "context_window": 32768,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 55
+      },
+      "rate_limits": "Queue priority via kudos"
+    },
+    {
+      "id": "qwen3-4b",
+      "name": "Qwen3 4B",
+      "family": "Qwen 3",
+      "context_window": 32768,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 50
+      },
+      "rate_limits": "Queue priority via kudos"
+    },
+    {
+      "id": "llama-3-2-1b-instruct",
+      "name": "Llama 3.2 1B Instruct",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 40
+      },
+      "rate_limits": "Queue priority via kudos"
+    }
+  ]
+}

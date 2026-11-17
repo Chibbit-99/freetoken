@@ -1,0 +1,70 @@
+{
+  "id": "ollama-cloud",
+  "name": "Ollama Cloud",
+  "website": "https://ollama.com",
+  "docs": "https://docs.ollama.com",
+  "signup": "https://ollama.com/settings/keys",
+  "description": "Hosted models behind the Ollama CLI and API, with a limited free tier on selected models.",
+  "overview": "Ollama Cloud runs large open models on hosted GPUs using the same CLI and API as local Ollama. Since November 2026 the plans are pay-as-you-go, Pro and Max, with only selected cloud models labelled free. It is the hosted counterpart to the local runtime.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free cloud models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.ollama.com",
+      "https://free-llm.com/provider/ollama-cloud"
+    ]
+  },
+  "free_access": [
+    "Selected cloud models are free",
+    "1 concurrent model on the light usage tier",
+    "No credit card required",
+    "Same CLI/API as local Ollama"
+  ],
+  "api_endpoint": "https://ollama.com/api",
+  "notes": "Only models marked free (for example Reflection Beam) are covered; other cloud models bill per token.",
+  "models": [
+    {
+      "id": "reflection-beam-501b",
+      "name": "Reflection Beam 501B",
+      "family": "Reflection Beam",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 72
+      },
+      "rate_limits": "1 concurrent model, light usage"
+    },
+    {
+      "id": "gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 60
+      },
+      "rate_limits": "1 concurrent model, light usage"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 72
+      },
+      "rate_limits": "1 concurrent model, light usage"
+    }
+  ]
+}

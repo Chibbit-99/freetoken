@@ -1,0 +1,81 @@
+{
+  "id": "nvidia-nim",
+  "name": "NVIDIA NIM",
+  "website": "https://build.nvidia.com",
+  "docs": "https://docs.api.nvidia.com",
+  "signup": "https://build.nvidia.com/settings/api-keys",
+  "description": "Free, rate-limited NIM endpoints for prototyping on a large catalog of open models.",
+  "overview": "The NVIDIA API Catalog exposes hosted NIM endpoints for prototyping, research and testing. Access is free through the NVIDIA Developer Program after phone verification, with limits of roughly 40 requests per minute and no published daily cap. NVIDIA rotates and retires endpoints often, so model availability moves.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free trial endpoints",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No storage of trial sessions"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.api.nvidia.com/nim/docs/product",
+      "https://free-llm.com/provider/nvidia-nim"
+    ]
+  },
+  "free_access": [
+    "Free NIM endpoints through the Developer Program",
+    "Around 40 requests/minute, no published daily cap",
+    "No credit card required (phone verification)",
+    "Trial session content is not stored"
+  ],
+  "api_endpoint": "https://integrate.api.nvidia.com/v1",
+  "notes": "Trial access excludes enterprise features and support; check each model page for deprecation notices.",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 68
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "nemotron-3-ultra",
+      "name": "Nemotron 3 Ultra",
+      "family": "Nemotron",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 71
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 72
+      },
+      "rate_limits": "~40 RPM (not published)"
+    },
+    {
+      "id": "kimi-k2-6",
+      "name": "Kimi K2.6",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 74
+      },
+      "rate_limits": "~40 RPM (not published)"
+    }
+  ]
+}

@@ -203,6 +203,9 @@
     <!-- Catalogue Container Section -->
     <section id="catalogue" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16 scroll-mt-20">
 
+      <!-- List view: filters + rows. Hidden while a provider detail is open. -->
+      <div id="catalogue-list-view">
+
         <!-- Interactive Catalogue Filtering Sub-System Component -->
         <div class="mb-6 space-y-4">
             <!-- Search & Family Selection Block -->
@@ -246,7 +249,6 @@
                     <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="monthly-credits">Monthly credits</button>
                     <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="research">Research</button>
                     <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="trials">Trials</button>
-                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="community">Community</button>
                 </div>
 
                 <!-- Hard Parameter Requirement Checkboxes -->
@@ -268,14 +270,19 @@
         </div>
 
         <!-- Catalogue Header Grouping Context Bar -->
-        <div class="bg-slate-50 border border-slate-200 border-b-0 px-4 py-2 text-xs font-semibold text-slate-500 font-mono mt-8">
-            Provider
+        <div class="bg-slate-50 border border-slate-200 border-b-0 px-4 py-2 mt-8 flex items-center justify-between gap-3 text-xs font-semibold text-slate-500 font-mono">
+            <span>Provider</span>
+            <span class="text-[10px] font-normal text-slate-400">Click a row for free-tier details</span>
         </div>
 
         <!-- High-density Data Table Layout (rows rendered from /data JSON) -->
         <div id="catalogue-rows" class="border border-slate-200 bg-white divide-y divide-slate-200 text-sm">
             <div class="p-8 text-center text-xs text-slate-400 font-sans">Loading provider data&hellip;</div>
         </div>
+      </div>
+
+      <!-- Provider detail view (rendered from the same /data JSON files) -->
+      <div id="provider-detail" class="hidden"></div>
     </section>
 
     <!-- Enhanced Minimalistic Site Footer -->
@@ -537,6 +544,8 @@
             return true;
         }
 
+        // ---------------------------------------------------------------- list
+
         function renderCatalogue() {
             var box = $('catalogue-rows');
             if (!box) return;
@@ -550,20 +559,237 @@
                 var priv = PRIVACY[(p.privacy && p.privacy.type) || 'none'] || PRIVACY.none;
                 var models = p.models || [];
                 return '' +
-                    '<div class="p-4 hover:bg-slate-50/50 transition-colors">' +
-                        '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" title="' + esc(p.description || '') + '" class="font-bold text-slate-900 tracking-tight mb-1 text-base hover:underline inline-block">' + esc(p.name) + '</a>' +
-                        '<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">' +
-                            '<span class="' + tone + ' font-medium font-sans">' + esc(p.offer && p.offer.label) + '</span>' +
-                            '<span class="text-slate-300">&middot;</span>' +
-                            '<span class="' + priv + ' font-medium font-sans">' + esc(p.privacy && p.privacy.label) + '</span>' +
-                            modelFamilies(p).map(function (f) {
-                                return '<span class="text-slate-600 font-medium">' + esc(f) + '</span>';
-                            }).join('') +
-                            '<span class="text-slate-300">&middot;</span>' +
-                            '<span class="text-slate-500 font-sans">' + models.length + ' model' + (models.length === 1 ? '' : 's') + '</span>' +
+                    '<div class="p-4 hover:bg-slate-50 transition-colors cursor-pointer group" data-provider="' + esc(p.id) + '" role="button" tabindex="0" aria-label="Open details for ' + esc(p.name) + '">' +
+                        '<div class="flex items-start justify-between gap-3">' +
+                            '<div class="min-w-0">' +
+                                '<div class="flex items-center gap-1.5">' +
+                                    '<span class="font-bold text-slate-900 tracking-tight text-base group-hover:underline">' + esc(p.name) + '</span>' +
+                                    '<svg class="w-3.5 h-3.5 text-slate-300 group-hover:text-slate-600 transition-colors" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>' +
+                                '</div>' +
+                                '<p class="text-xs text-slate-500 mt-0.5 font-sans leading-snug">' + esc(p.description) + '</p>' +
+                                '<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono mt-1.5">' +
+                                    '<span class="' + tone + ' font-medium font-sans">' + esc(p.offer && p.offer.label) + '</span>' +
+                                    '<span class="text-slate-300">&middot;</span>' +
+                                    '<span class="' + priv + ' font-medium font-sans">' + esc(p.privacy && p.privacy.label) + '</span>' +
+                                    '<span class="text-slate-300">&middot;</span>' +
+                                    '<span class="text-slate-500 font-sans">' + models.length + ' model' + (models.length === 1 ? '' : 's') + '</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" data-external="1" title="Open ' + esc(p.name) + ' in a new tab" class="shrink-0 text-[11px] font-semibold text-slate-400 hover:text-slate-900 transition-colors">Site &nearr;</a>' +
                         '</div>' +
                     '</div>';
             }).join('');
+        }
+
+        // -------------------------------------------------------------- detail
+
+        function hashProviderId() {
+            var m = /^#provider\/(.+)$/.exec(window.location.hash || '');
+            return m ? decodeURIComponent(m[1]) : null;
+        }
+
+        function findProvider(id) {
+            var found = null;
+            state.providers.forEach(function (p) { if (p.id === id) found = p; });
+            return found;
+        }
+
+        function openProvider(id) {
+            window.location.hash = 'provider/' + encodeURIComponent(id);
+        }
+
+        function ctxText(v) {
+            return typeof v === 'number' ? compactTokens(v) : '&mdash;';
+        }
+
+        function metricText(m, key, suffix) {
+            var v = m.metrics && m.metrics[key];
+            return typeof v === 'number' ? esc(String(v) + (suffix || '')) : '<span class="text-slate-300">&mdash;</span>';
+        }
+
+        function allowanceText(m) {
+            if (typeof m.token_allowance === 'number') return esc(compactTokens(m.token_allowance) + ' / day');
+            return '<span class="text-slate-400">Unlimited tokens</span>';
+        }
+
+        function linkRow(label, url) {
+            if (!url) return '';
+            return '' +
+                '<a href="' + esc(url) + '" target="_blank" rel="noopener" class="flex items-center justify-between gap-2 rounded border border-slate-200 bg-white px-2.5 py-1.5 hover:border-slate-400 transition-colors">' +
+                    '<span class="font-semibold text-slate-700">' + esc(label) + '</span>' +
+                    '<svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>' +
+                '</a>';
+        }
+
+        function renderDetail(p) {
+            var box = $('provider-detail');
+            if (!box) return;
+            var tone = TONE[(p.offer && p.offer.tone) || 'slate'] || TONE.slate;
+            var priv = PRIVACY[(p.privacy && p.privacy.type) || 'none'] || PRIVACY.none;
+            var models = p.models || [];
+            var bullets = (p.free_access || []);
+            var verified = p.verified || {};
+            var sources = verified.sources || [];
+
+            var chips = '' +
+                '<span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold font-sans ' + tone + '">' + esc(p.offer && p.offer.label) + '</span>' +
+                '<span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold font-sans ' + priv + '">' + esc(p.privacy && p.privacy.label) + '</span>' +
+                '<span class="inline-flex items-center rounded-full border ' + (p.requires_payment_card ? 'border-amber-200 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-600') + ' px-2.5 py-1 text-[11px] font-semibold font-sans">' + (p.requires_payment_card ? 'Card required' : 'No card needed') + '</span>';
+
+            var rows = models.map(function (m) {
+                return '' +
+                    '<tr class="border-t border-slate-100 align-top">' +
+                        '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(m.name) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-500 font-mono whitespace-nowrap">' + esc(m.family) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + ctxText(m.context_window) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + metricText(m, 'tps', '') + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + metricText(m, 'intelligence', '') + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + allowanceText(m) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-500 font-sans">' + esc(m.rate_limits || '') + '</td>' +
+                    '</tr>';
+            }).join('');
+
+            var endpoint = p.api_endpoint
+                ? '<div>' +
+                        '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">API endpoint</h3>' +
+                        '<div class="flex items-center gap-2">' +
+                            '<code class="flex-1 min-w-0 truncate rounded border border-slate-200 bg-white px-2 py-1.5 font-mono text-[11px] text-slate-700" title="' + esc(p.api_endpoint) + '">' + esc(p.api_endpoint) + '</code>' +
+                            '<button type="button" data-copy="' + esc(p.api_endpoint) + '" class="shrink-0 rounded border border-slate-200 bg-white px-2 py-1.5 text-[11px] font-semibold text-slate-600 hover:border-slate-400 transition-colors">Copy</button>' +
+                        '</div>' +
+                        '<p class="mt-1.5 text-[10px] text-slate-400 font-sans leading-snug">OpenAI-compatible base URL, where the provider offers one.</p>' +
+                    '</div>'
+                : '';
+
+            box.innerHTML = '' +
+                '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
+                    '<a href="#catalogue" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
+                        '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
+                        'Back to all providers' +
+                    '</a>' +
+                    '<span class="text-[11px] font-mono text-slate-400">checked ' + esc(verified.checked || p.last_updated || '') + '</span>' +
+                '</div>' +
+
+                '<div class="border border-slate-200 rounded-xl bg-white shadow-sm overflow-hidden">' +
+                    '<div class="p-6 border-b border-slate-100">' +
+                        '<div class="flex flex-wrap items-start justify-between gap-4">' +
+                            '<div class="min-w-0">' +
+                                '<h2 class="text-2xl font-bold tracking-tight text-slate-950">' + esc(p.name) + '</h2>' +
+                                '<p class="mt-1 text-sm text-slate-600 max-w-2xl leading-relaxed">' + esc(p.description) + '</p>' +
+                            '</div>' +
+                            '<div class="flex flex-wrap items-center gap-1.5">' + chips + '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<div class="grid grid-cols-1 lg:grid-cols-3">' +
+                        '<div class="lg:col-span-2 p-6 lg:border-r border-slate-100">' +
+                            '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Overview</h3>' +
+                            '<p class="text-sm text-slate-700 leading-relaxed">' + esc(p.overview || '') + '</p>' +
+
+                            (bullets.length ? (
+                                '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mt-6 mb-2">What is free</h3>' +
+                                '<ul class="space-y-2">' + bullets.map(function (b) {
+                                    return '<li class="flex items-start gap-2 text-sm text-slate-700 font-sans">' +
+                                        '<svg class="w-3.5 h-3.5 mt-0.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path></svg>' +
+                                        '<span>' + esc(b) + '</span>' +
+                                    '</li>';
+                                }).join('') + '</ul>'
+                            ) : '') +
+
+                            '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mt-8 mb-2">Free models (' + models.length + ')</h3>' +
+                            '<div class="overflow-x-auto border border-slate-200 rounded-lg">' +
+                                '<table class="w-full text-xs">' +
+                                    '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
+                                        '<tr>' +
+                                            '<th class="px-3 py-2 text-left font-semibold">Model</th>' +
+                                            '<th class="px-3 py-2 text-left font-semibold">Family</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">Context</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">TPS</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">Quality</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">Free tokens</th>' +
+                                            '<th class="px-3 py-2 text-left font-semibold">Free limits</th>' +
+                                        '</tr>' +
+                                    '</thead>' +
+                                    '<tbody>' + rows + '</tbody>' +
+                                '</table>' +
+                            '</div>' +
+                        '</div>' +
+
+                        '<aside class="p-6 space-y-6 bg-slate-50/50 text-xs">' +
+                            endpoint +
+                            '<div>' +
+                                '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Links</h3>' +
+                                '<div class="space-y-1.5">' +
+                                    linkRow('Website', p.website) +
+                                    linkRow('API docs', p.docs) +
+                                    linkRow('Get an API key', p.signup) +
+                                '</div>' +
+                            '</div>' +
+                            '<div>' +
+                                '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Verified</h3>' +
+                                '<p class="text-slate-600 font-sans leading-relaxed mb-1.5">Free access checked on <span class="font-semibold text-slate-900">' + esc(verified.checked || p.last_updated || '') + '</span>.</p>' +
+                                '<ul class="space-y-1">' + sources.map(function (u) {
+                                    return '<li><a href="' + esc(u) + '" target="_blank" rel="noopener" class="font-mono text-[10px] text-sky-700 hover:underline break-all">' + esc(String(u).replace(/^https?:\/\//, '')) + '</a></li>';
+                                }).join('') + '</ul>' +
+                            '</div>' +
+                            (p.notes ? (
+                                '<div>' +
+                                    '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Watch out</h3>' +
+                                    '<p class="text-slate-600 font-sans leading-relaxed">' + esc(p.notes) + '</p>' +
+                                '</div>'
+                            ) : '') +
+                        '</aside>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        function renderView() {
+            var p = findProvider(hashProviderId() || '');
+            var listView = $('catalogue-list-view');
+            var detail = $('provider-detail');
+            if (p) {
+                if (listView) listView.classList.add('hidden');
+                if (detail) {
+                    detail.classList.remove('hidden');
+                    renderDetail(p);
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                if (detail) { detail.classList.add('hidden'); detail.innerHTML = ''; }
+                if (listView) listView.classList.remove('hidden');
+            }
+        }
+
+        function wireDetailRouting() {
+            window.addEventListener('hashchange', renderView);
+
+            var rows = $('catalogue-rows');
+            if (rows) {
+                rows.addEventListener('click', function (e) {
+                    var target = e.target;
+                    if (target.closest && target.closest('[data-external]')) return;
+                    var row = target.closest ? target.closest('[data-provider]') : null;
+                    if (row) openProvider(row.getAttribute('data-provider'));
+                });
+                rows.addEventListener('keydown', function (e) {
+                    if (e.key !== 'Enter' && e.key !== ' ') return;
+                    var row = e.target.closest ? e.target.closest('[data-provider]') : null;
+                    if (!row) return;
+                    e.preventDefault();
+                    openProvider(row.getAttribute('data-provider'));
+                });
+            }
+
+            var detail = $('provider-detail');
+            if (detail) {
+                detail.addEventListener('click', function (e) {
+                    var btn = e.target.closest ? e.target.closest('[data-copy]') : null;
+                    if (!btn || !navigator.clipboard) return;
+                    navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function () {
+                        btn.textContent = 'Copied';
+                        setTimeout(function () { btn.textContent = 'Copy'; }, 1200);
+                    });
+                });
+            }
         }
 
         function populateFamilyFilter() {
@@ -648,6 +874,7 @@
 
         function init() {
             wireFilters();
+            wireDetailRouting();
             fetchFirst(DATA_BASES.map(function (b) { return b + 'providers.json'; })).then(function (res) {
                 var base = res.url.replace(/providers\.json$/, '');
                 var files = res.data.providers || [];
@@ -661,6 +888,7 @@
                 populateFamilyFilter();
                 renderDashboard();
                 renderCatalogue();
+                renderView();
             }).catch(showError);
         }
 

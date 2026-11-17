@@ -1,0 +1,70 @@
+{
+  "id": "sea-lion",
+  "name": "SEA-LION API",
+  "website": "https://aisingapore.org",
+  "docs": "https://docs.sea-lion.ai",
+  "signup": "https://playground.sea-lion.ai",
+  "description": "AI Singapore's hosted API for Southeast Asian language models, free with a trial key.",
+  "overview": "SEA-LION is AI Singapore's family of models tuned for Southeast Asian languages, served through a hosted OpenAI-compatible API. You sign in to the playground with Google and create a trial key at no cost. It is a research showcase aimed at regional language work.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Research preview terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.sea-lion.ai",
+      "https://free-llm.com/provider/sea-lion"
+    ]
+  },
+  "free_access": [
+    "Free trial API key via Google sign-in",
+    "10 requests/minute per user",
+    "No credit card required",
+    "Southeast Asian language models"
+  ],
+  "api_endpoint": "https://api.sea-lion.ai/v1",
+  "notes": "10 requests/minute per user by default; increases available on request.",
+  "models": [
+    {
+      "id": "qwen-sea-lion-v4-5-27b-instruct",
+      "name": "Qwen SEA-LION v4.5 27B Instruct",
+      "family": "SEA-LION",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 64
+      },
+      "rate_limits": "10 RPM per user"
+    },
+    {
+      "id": "llama-sea-lion-v3-5-70b-reasoning",
+      "name": "Llama SEA-LION v3.5 70B Reasoning",
+      "family": "SEA-LION",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 65,
+        "intelligence": 58
+      },
+      "rate_limits": "10 RPM per user"
+    },
+    {
+      "id": "sea-guard",
+      "name": "SEA-Guard",
+      "family": "SEA-LION",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 45
+      },
+      "rate_limits": "10 RPM per user"
+    }
+  ]
+}

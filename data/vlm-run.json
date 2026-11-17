@@ -1,0 +1,70 @@
+{
+  "id": "vlm-run",
+  "name": "VLM Run Gateway",
+  "website": "https://vlm.run",
+  "docs": "https://docs.vlm.run",
+  "signup": "https://vlm.run",
+  "description": "Vision, OCR and language gateway that accepts anonymous calls within per-IP free limits.",
+  "overview": "VLM Run is an OpenAI-compatible gateway for vision, OCR and language models. Calls work anonymously within per-IP limits, and a free account adds a small credit balance plus much higher limits. Every call is still priced per token or image, with a small minimum.",
+  "offer": {
+    "type": "always-free",
+    "label": "Anonymous free calls",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.vlm.run",
+      "https://free-llm.com/provider/vlm-run"
+    ]
+  },
+  "free_access": [
+    "Anonymous calls with no key or card",
+    "10 requests/minute and 30/hour per IP",
+    "Free account adds about $1 of credit and 240 RPM",
+    "Vision, OCR and text models"
+  ],
+  "api_endpoint": "https://api.vlm.run/v1",
+  "notes": "No key is needed for anonymous use; a free key raises limits from 10/min to 240/min.",
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 66
+      },
+      "rate_limits": "10/min, 30/hr per IP anonymous"
+    },
+    {
+      "id": "gemma-4-26b-a4b-it",
+      "name": "Gemma 4 26B A4B IT",
+      "family": "Gemma 4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 60
+      },
+      "rate_limits": "10/min, 30/hr per IP anonymous"
+    },
+    {
+      "id": "qwen3-5-0-8b",
+      "name": "Qwen3.5 0.8B",
+      "family": "Qwen 3.5",
+      "context_window": 32768,
+      "metrics": {
+        "tps": 300,
+        "intelligence": 35
+      },
+      "rate_limits": "10/min, 30/hr per IP anonymous"
+    }
+  ]
+}

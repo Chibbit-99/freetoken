@@ -1,0 +1,70 @@
+{
+  "id": "mistral-ai",
+  "name": "Mistral AI",
+  "website": "https://mistral.ai",
+  "docs": "https://docs.mistral.ai",
+  "signup": "https://console.mistral.ai/api-keys",
+  "description": "European model lab whose default Free (Experiment) plan gives rate-limited API access.",
+  "overview": "Mistral's La Plateforme defaults new accounts to the Free (Experiment) plan, which exposes the current Mistral, Codestral and vision models at roughly one request per second. The plan uses your data for training unless you opt out in the admin panel, and signup needs phone verification.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free (Experiment) plan",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Trains unless opted out"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://help.mistral.ai/en/articles/698531-why-am-i-hitting-api-rate-limits-and-how-do-i-increase-them",
+      "https://free-llm.com/provider/mistral-ai"
+    ]
+  },
+  "free_access": [
+    "Free (Experiment) plan is the default for new accounts",
+    "About 1 request/second",
+    "No credit card required (phone verification)",
+    "Training on by default, with an opt-out toggle"
+  ],
+  "api_endpoint": "https://api.mistral.ai/v1",
+  "notes": "Free mode is intended for evaluation and prototyping; opt out of training in the Admin panel.",
+  "models": [
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 61
+      },
+      "rate_limits": "1 request/s (Free mode)"
+    },
+    {
+      "id": "mistral-large-4-preview",
+      "name": "Mistral Large 4 (Preview)",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 68
+      },
+      "rate_limits": "1 request/s (Free mode)"
+    },
+    {
+      "id": "codestral-2508",
+      "name": "Codestral 2508",
+      "family": "Codestral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 58
+      },
+      "rate_limits": "1 request/s (Free mode)"
+    }
+  ]
+}

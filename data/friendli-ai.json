@@ -1,0 +1,81 @@
+{
+  "id": "friendli-ai",
+  "name": "FriendliAI",
+  "website": "https://friendli.ai",
+  "docs": "https://docs.friendli.ai",
+  "signup": "https://suite.friendli.ai",
+  "description": "Low-latency serverless model APIs with $10 of trial credits at onboarding.",
+  "overview": "FriendliAI runs serverless Model APIs on its own inference engine, optimised for latency and throughput. New accounts receive $10 of trial credits at onboarding with no card, covering the current GLM and Gemma lineup. After the credit runs out, continued use requires billing.",
+  "offer": {
+    "type": "trials",
+    "label": "$10 trial credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.friendli.ai",
+      "https://free-llm.com/provider/friendli-ai"
+    ]
+  },
+  "free_access": [
+    "$10 one-time trial credits",
+    "No credit card required to start",
+    "Adaptive tier-0 limits (60 RPM from tier 1)",
+    "1M-token context on GLM 5.x models"
+  ],
+  "api_endpoint": "https://inference.friendli.ai/v1",
+  "notes": "Trial credit is one-time; tier 0 limits are adaptive and reach 60 RPM from tier 1.",
+  "models": [
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 70
+      },
+      "rate_limits": "Trial credits; adaptive limits"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 68
+      },
+      "rate_limits": "Trial credits; adaptive limits"
+    },
+    {
+      "id": "glm-5-2",
+      "name": "GLM 5.2",
+      "family": "GLM 5.2",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 68
+      },
+      "rate_limits": "Trial credits; adaptive limits"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 62
+      },
+      "rate_limits": "Trial credits; adaptive limits"
+    }
+  ]
+}

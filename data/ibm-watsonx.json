@@ -1,0 +1,48 @@
+{
+  "id": "ibm-watsonx",
+  "name": "IBM watsonx.ai",
+  "website": "https://www.ibm.com/products/watsonx-ai",
+  "docs": "https://www.ibm.com/docs/en/watsonx",
+  "signup": "https://www.ibm.com/products/watsonx-ai",
+  "description": "IBM's Lite plan includes a monthly allowance of Granite foundation-model tokens.",
+  "overview": "IBM watsonx.ai is IBM's enterprise AI platform, and its Lite (playground) plan includes a monthly allowance of Granite foundation-model tokens plus Capacity Unit Hours. Inference goes through the watsonx REST API with an IBM Cloud IAM token and a project or space ID. A payment card is required to create the account.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "300K tokens/month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.ibm.com/products/watsonx-ai",
+      "https://free-llm.com/provider/ibm-watsonx"
+    ]
+  },
+  "free_access": [
+    "300,000 foundation-model tokens/month on Lite",
+    "20 Capacity Unit Hours per month",
+    "Granite models included",
+    "Card required for signup"
+  ],
+  "notes": "Lite plan adds 20 Capacity Unit Hours per month; billing details are required at signup.",
+  "models": [
+    {
+      "id": "granite-4-h-small",
+      "name": "Granite 4 H Small",
+      "family": "Granite",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 45
+      },
+      "token_allowance": 10000,
+      "rate_limits": "300K tokens/month (Lite)"
+    }
+  ]
+}

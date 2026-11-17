@@ -1,0 +1,59 @@
+{
+  "id": "fireworks-ai",
+  "name": "Fireworks AI",
+  "website": "https://fireworks.ai",
+  "docs": "https://docs.fireworks.ai",
+  "signup": "https://fireworks.ai/account/api-keys",
+  "description": "Production inference platform with a small trial credit and low no-card rate limits.",
+  "overview": "Fireworks AI is a production inference platform for open models with fast function calling and JSON mode. New accounts get a small one-time credit, and without a payment method the account runs at roughly 10 requests per minute. Adding a card and credits raises limits substantially.",
+  "offer": {
+    "type": "trials",
+    "label": "$1 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.fireworks.ai",
+      "https://free-llm.com/provider/fireworks-ai"
+    ]
+  },
+  "free_access": [
+    "$1 one-time trial credit",
+    "10 requests/minute without a payment method",
+    "No credit card required to start",
+    "Open-model catalog"
+  ],
+  "api_endpoint": "https://api.fireworks.ai/inference/v1",
+  "notes": "Trial credit is one-time; no-card accounts are limited to about 10 RPM.",
+  "models": [
+    {
+      "id": "nemotron-3-5-lightning-30b-a3b",
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "family": "Nemotron",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 400,
+        "intelligence": 60
+      },
+      "rate_limits": "10 RPM without payment method"
+    },
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "family": "GLM 5.3",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 70
+      },
+      "rate_limits": "10 RPM without payment method"
+    }
+  ]
+}

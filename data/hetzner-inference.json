@@ -1,0 +1,58 @@
+{
+  "id": "hetzner-inference",
+  "name": "Hetzner Inference API",
+  "website": "https://www.hetzner.com",
+  "docs": "https://docs.hetzner.com",
+  "signup": "https://console.hetzner.cloud",
+  "description": "Experimental EU-hosted inference API that is free of charge while it remains in beta.",
+  "overview": "Hetzner, the German cloud and hosting company, runs an experimental OpenAI-compatible inference API launched in July 2026. It serves Qwen models with very large context windows on EU servers and is not billed while experimental. A regular Hetzner account with full billing details is required.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free while experimental",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "EU-hosted, no training"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.hetzner.com",
+      "https://free-llm.com/provider/hetzner-inference"
+    ]
+  },
+  "free_access": [
+    "Free of charge during the experimental phase",
+    "10 requests/minute; 4M input and 100K output tokens/minute",
+    "No charge for inference",
+    "Models run on EU servers"
+  ],
+  "notes": "Some users are asked for a card or ID to verify new Hetzner accounts, even though inference is not billed. No SLA.",
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 66
+      },
+      "rate_limits": "10 req/min, 4M input / 100K output TPM"
+    },
+    {
+      "id": "qwen3-6-35b-a3b",
+      "name": "Qwen3.6 35B A3B",
+      "family": "Qwen 3.6",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 66
+      },
+      "rate_limits": "10 req/min, 4M input / 100K output TPM"
+    }
+  ]
+}

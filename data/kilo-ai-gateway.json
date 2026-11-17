@@ -1,0 +1,70 @@
+{
+  "id": "kilo-ai-gateway",
+  "name": "Kilo AI Gateway",
+  "website": "https://kilo.ai",
+  "docs": "https://kilocode.ai/docs",
+  "signup": "https://app.kilo.ai/profile",
+  "description": "Universal OpenAI-compatible gateway whose free model routes need no key or card.",
+  "overview": "The Kilo AI Gateway is a universal OpenAI-compatible gateway from the Kilo Code team, now part of Anaconda. A subset of routes is free and can be called anonymously or with a key, limited per IP. The free list rotates regularly while paid routes bill pay-as-you-go.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free gateway routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check gateway terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ai-gateway.kilo.ai/api/v1",
+      "https://free-llm.com/provider/kilo-gateway"
+    ]
+  },
+  "free_access": [
+    "Free model routes with no account required",
+    "About 200 requests/hour per IP",
+    "No credit card required",
+    "380+ models on the gateway"
+  ],
+  "api_endpoint": "https://ai-gateway.kilo.ai/api/v1",
+  "notes": "Free routes rotate and are capped at roughly 200 requests per hour per IP.",
+  "models": [
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 400,
+        "intelligence": 60
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "nemotron-3-nano-omni-reasoning",
+      "name": "Nemotron 3 Nano Omni Reasoning",
+      "family": "Nemotron",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 58
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "lfm2-5-2-6b",
+      "name": "LFM2.5 2.6B",
+      "family": "LFM",
+      "context_window": 32768,
+      "metrics": {
+        "tps": 300,
+        "intelligence": 45
+      },
+      "rate_limits": "200 requests/hour per IP"
+    }
+  ]
+}

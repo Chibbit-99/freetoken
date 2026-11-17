@@ -1,0 +1,47 @@
+{
+  "id": "arli-ai",
+  "name": "Arli AI",
+  "website": "https://arli.ai",
+  "docs": "https://arli.ai",
+  "signup": "https://arli.ai",
+  "description": "Open-model and fine-tune host whose $0 plan covers a single derestricted Qwen model.",
+  "overview": "Arli AI serves open models and community fine-tunes on flat monthly plans. The $0 Free plan is deliberately narrow: one derestricted Qwen model, one request at a time, with a 12K context cap. It suits light roleplay and testing rather than production workloads.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free plan",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://arli.ai",
+      "https://free-llm.com/provider/arli-ai"
+    ]
+  },
+  "free_access": [
+    "$0 Free plan with no card",
+    "One model included (Qwen3.5 27B Derestricted)",
+    "One request at a time",
+    "12K context maximum"
+  ],
+  "notes": "Free plan covers a single model with one concurrent request and a 12K context ceiling.",
+  "models": [
+    {
+      "id": "qwen3-5-27b-derestricted",
+      "name": "Qwen3.5 27B Derestricted",
+      "family": "Qwen 3.5",
+      "context_window": 12288,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 60
+      },
+      "rate_limits": "1 concurrent request, 12K context"
+    }
+  ]
+}

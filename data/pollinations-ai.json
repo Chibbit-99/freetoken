@@ -1,0 +1,81 @@
+{
+  "id": "pollinations-ai",
+  "name": "Pollinations.ai",
+  "website": "https://pollinations.ai",
+  "docs": "https://github.com/pollinations/pollinations",
+  "signup": "https://enter.pollinations.ai",
+  "description": "Open-source generative platform with a free key and an OpenAI-compatible text endpoint.",
+  "overview": "Pollinations is an open-source platform for text, image and audio generation. Anonymous access was removed, so you now need a free secret key from the dashboard; free usage is then drawn from Quest Pollen earned there. The OpenAI-compatible endpoint serves a rotating mix of open models.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free key + Pollen",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://github.com/pollinations/pollinations",
+      "https://free-llm.com/provider/pollinations-ai"
+    ]
+  },
+  "free_access": [
+    "Free secret key, no card required",
+    "Free usage paid from earned Quest Pollen",
+    "About 1 request/15s without extra credit",
+    "Text, image and audio endpoints"
+  ],
+  "api_endpoint": "https://gen.pollinations.ai/v1",
+  "notes": "Pollen balances are earned in the dashboard and can be exhausted; throughput is modest.",
+  "models": [
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 56
+      },
+      "rate_limits": "~1 request/15s; higher with free key"
+    },
+    {
+      "id": "mistral-large-3",
+      "name": "Mistral Large 3",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 65
+      },
+      "rate_limits": "~1 request/15s; higher with free key"
+    },
+    {
+      "id": "kimi-k2-6",
+      "name": "Kimi K2.6",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 74
+      },
+      "rate_limits": "~1 request/15s; higher with free key"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 70
+      },
+      "rate_limits": "~1 request/15s; higher with free key"
+    }
+  ]
+}
