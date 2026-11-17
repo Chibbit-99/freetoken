@@ -203,11 +203,6 @@ PROVIDER_MODELS = {
         "qwen3-8b",
         "deepseek-r1-0528",
     ],
-    "vlm-run": [
-        "qwen3-8-27b",
-        "llama-4-scout",
-        "gemma-3-27b",
-    ],
     "iflytek-spark": [
         "gpt-oss-20b",
         "qwen3-8b",
@@ -374,14 +369,5 @@ PROVIDER_MODELS = {
         "glm-4-6",
         "deepseek-r1-0528",
         "qwen3-32b",
-    ],
-    "jina-ai": [
-        "jina-embeddings-v5",
-        "jina-reranker-v3",
-    ],
-    "voyage-ai": [
-        "voyage-4-large",
-        "voyage-4-lite",
-        "voyage-rerank-3",
     ],
 }

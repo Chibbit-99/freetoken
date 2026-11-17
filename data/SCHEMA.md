@@ -8,8 +8,15 @@ the fields below.
 
 ## Scope
 
-The catalogue lists **hosted providers with verified free access**: services you
-call over the internet with an API key. Self-hosted and local runtimes (Ollama,
+The catalogue lists **hosted text-LLM providers with verified free access**:
+services you call over the internet with an API key to generate text.
+
+Speech (TTS/STT), image, video and embedding-only services are **out of scope**,
+even when they are free and hosted — the catalogue previously carried ElevenLabs,
+Cartesia, Deepgram, AssemblyAI, Speechmatics, Palabra, Async Voice, Paxa Labs,
+Lelapa, Viggle, Stability AI, WaveSpeed, Inferon, Clarifai, Voyage AI, Jina AI,
+Qdrant and MongoDB Atlas, and all of them were pruned on 2026-11-17. A provider
+stays in scope only if it serves at least one text-generation model. Self-hosted and local runtimes (Ollama,
 LM Studio, llama.cpp, Jan, KoboldCpp, GPT4All, TextGen WebUI, vLLM, BentoML,
 llamafile, …) are **out of scope** and must not be added — the catalogue answers
 "who will run a model for me for free", not "what can I run on my own GPU".

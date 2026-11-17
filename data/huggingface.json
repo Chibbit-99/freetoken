@@ -1,0 +1,75 @@
+{
+  "id": "huggingface",
+  "name": "Hugging Face Inference Providers",
+  "website": "https://huggingface.co/docs/inference-providers",
+  "docs": "https://huggingface.co/docs/inference-providers",
+  "signup": "https://huggingface.co/docs/inference-providers",
+  "description": "One key that routes to many serverless inference providers, with free monthly credits.",
+  "overview": "Hugging Face's Inference Providers unify dozens of serverless backends behind one router and one HF token, with an OpenAI-compatible endpoint. Free accounts get a small monthly credit (about $0.10, larger on PRO) that is shared across every provider the router can reach, so the practical allowance depends on which routes you pick.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "Free monthly credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Provider-dependent routing"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://huggingface.co/docs/inference-providers",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Small free monthly credit on every HF account",
+    "One token routes to dozens of providers",
+    "OpenAI-compatible router endpoint",
+    "No card required"
+  ],
+  "notes": "The free credit is tiny — good for testing a model, not for sustained use.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    }
+  ]
+}

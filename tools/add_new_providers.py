@@ -16,6 +16,7 @@ from speed import tps_for  # noqa: E402
 from new_providers_a import PART_A  # noqa: E402
 from new_providers_b import PART_B  # noqa: E402
 from new_providers_c import PART_C  # noqa: E402
+from new_providers_d import PART_D  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -31,6 +32,15 @@ OFFER = {
 PRIVACY = {"pv": "private", "pp": "partial", "nn": "none", None: "none"}
 
 # Providers whose free offer is not text-model specific still need a model row.
+# Providers removed from the catalogue because they are not text-LLM APIs
+# (speech, image/video, embeddings) or because the free offer did not hold up.
+SKIP = {
+    "elevenlabs", "cartesia", "deepgram", "assemblyai", "speechmatics", "palabra",
+    "async-voice", "paxa-labs", "lelapa", "viggle", "stability-ai", "wavespeed",
+    "inferon", "clarifai", "voyage-ai", "jina-ai", "qdrant-cloud", "mongodb-atlas",
+    "vlm-run",
+}
+
 MODEL_EXTRA = {
     "inception": {
         "mercury-2": {"token_allowance": 100000000},
@@ -79,9 +89,11 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C:
+    for row in PART_A + PART_B + PART_C + PART_D:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
+        if pid in SKIP:
+            continue
         models = build_models(MODEL_FIX.get(pid, mids), pid)
         if pid == "inception":
             for m in models:
