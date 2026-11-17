@@ -39,7 +39,7 @@
       "family": "Mistral",
       "context_window": 1048576,
       "metrics": {
-        "tps": 90,
+        "tps": 55,
         "intelligence": 26
       },
       "rate_limits": "1 request/s (Free mode)"
@@ -50,7 +50,7 @@
       "family": "Mistral",
       "context_window": 262144,
       "metrics": {
-        "tps": 110,
+        "tps": 65,
         "intelligence": 5
       },
       "rate_limits": "1 request/s (Free mode)"
@@ -61,7 +61,7 @@
       "family": "Mistral",
       "context_window": 262144,
       "metrics": {
-        "tps": 180,
+        "tps": 110,
         "intelligence": 4
       },
       "rate_limits": "1 request/s (Free mode)"
@@ -72,7 +72,7 @@
       "family": "Magistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 90
+        "tps": 55
       },
       "rate_limits": "1 request/s (Free mode)"
     },
@@ -82,7 +82,7 @@
       "family": "Codestral",
       "context_window": 262144,
       "metrics": {
-        "tps": 160
+        "tps": 95
       },
       "rate_limits": "1 request/s (Free mode)"
     },
@@ -92,7 +92,7 @@
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 110
+        "tps": 65
       },
       "rate_limits": "1 request/s (Free mode)"
     },
@@ -102,7 +102,7 @@
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 70
       },
       "rate_limits": "1 request/s (Free mode)"
     }

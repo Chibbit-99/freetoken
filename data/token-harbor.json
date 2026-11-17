@@ -39,7 +39,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 80,
         "intelligence": 33
       },
       "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
@@ -50,7 +50,7 @@
       "family": "MiMo",
       "context_window": 1048576,
       "metrics": {
-        "tps": 160,
+        "tps": 130,
         "intelligence": 27
       },
       "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
@@ -61,7 +61,7 @@
       "family": "Ling",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 175,
         "intelligence": 30
       },
       "rate_limits": "60 RPM, 1,800/hour; weekly allowance"

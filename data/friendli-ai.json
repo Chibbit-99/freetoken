@@ -39,7 +39,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
+        "tps": 170,
         "intelligence": 32
       },
       "rate_limits": "Trial credits; adaptive limits"
@@ -50,7 +50,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 210,
         "intelligence": 28
       },
       "rate_limits": "Trial credits; adaptive limits"
@@ -61,7 +61,7 @@
       "family": "GLM 5.2",
       "context_window": 1048576,
       "metrics": {
-        "tps": 170
+        "tps": 160
       },
       "rate_limits": "Trial credits; adaptive limits"
     },
@@ -71,7 +71,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 125,
         "intelligence": 4
       },
       "rate_limits": "Trial credits; adaptive limits"

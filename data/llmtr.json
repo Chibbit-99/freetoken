@@ -39,7 +39,7 @@
       "family": "Nemotron",
       "context_window": 262144,
       "metrics": {
-        "tps": 110,
+        "tps": 80,
         "intelligence": 12
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
@@ -50,7 +50,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 130,
         "intelligence": 20
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
@@ -61,7 +61,7 @@
       "family": "Agnes",
       "context_window": 1048576,
       "metrics": {
-        "tps": 120,
+        "tps": 90,
         "intelligence": 24
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
@@ -72,7 +72,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 700
+        "tps": 525
       },
       "rate_limits": "Zero-balance free; daily allowance varies"
     }

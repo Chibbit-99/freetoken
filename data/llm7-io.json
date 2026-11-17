@@ -39,7 +39,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300
+        "tps": 155
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     },
@@ -49,7 +49,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 115,
         "intelligence": 28
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
@@ -60,7 +60,7 @@
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 110
+        "tps": 55
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     },
@@ -70,7 +70,7 @@
       "family": "Codestral",
       "context_window": 262144,
       "metrics": {
-        "tps": 160
+        "tps": 85
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     },
@@ -80,7 +80,7 @@
       "family": "MiniMax",
       "context_window": 262144,
       "metrics": {
-        "tps": 90
+        "tps": 45
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     },
@@ -90,7 +90,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 780
+        "tps": 405
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     },
@@ -100,7 +100,7 @@
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 95
+        "tps": 50
       },
       "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
     }

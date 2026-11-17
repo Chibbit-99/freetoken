@@ -48,8 +48,8 @@
                     </div>
                     <nav class="hidden md:flex items-center gap-5 text-xs font-semibold tracking-wider text-slate-500 font-mono h-full">
                         <a href="#" class="text-slate-900 border-b-2 border-slate-950 h-full flex items-center px-1">Providers</a>
-                        <a href="#" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Models</a>
-                        <a href="#" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Uptime</a>
+                        <a href="#/leaderboard/intelligence" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Models</a>
+                        <a href="#/leaderboard/speed" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Speed</a>
                         <a href="#" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Docs</a>
                     </nav>
                 </div>
@@ -142,8 +142,8 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
-                    <a href="#" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
-                        View throughput telemetry &rarr;
+                    <a href="#/leaderboard/speed" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
+                        Full speed leaderboard &rarr;
                     </a>
                 </div>
             </div>
@@ -166,8 +166,8 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
-                    <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
-                        Artificial Analysis leaderboard &rarr;
+                    <a href="#/leaderboard/intelligence" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
+                        Full intelligence leaderboard &rarr;
                     </a>
                 </div>
             </div>
@@ -190,8 +190,8 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
-                    <a href="#" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
-                        View complete rate matrix &rarr;
+                    <a href="#/leaderboard/allowance" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
+                        Full allowance leaderboard &rarr;
                     </a>
 
                 </div>
@@ -283,6 +283,9 @@
 
       <!-- Provider detail view (rendered from the same /data JSON files) -->
       <div id="provider-detail" class="hidden"></div>
+
+      <!-- Full leaderboard pages (/ #/leaderboard/<metric>) -->
+      <div id="leaderboard-view" class="hidden"></div>
     </section>
 
     <!-- Enhanced Minimalistic Site Footer -->
@@ -678,7 +681,13 @@
                                 '<h2 class="text-2xl font-bold tracking-tight text-slate-950">' + esc(p.name) + '</h2>' +
                                 '<p class="mt-1 text-sm text-slate-600 max-w-2xl leading-relaxed">' + esc(p.description) + '</p>' +
                             '</div>' +
-                            '<div class="flex flex-wrap items-center gap-1.5">' + chips + '</div>' +
+                            '<div class="flex flex-col items-start sm:items-end gap-2">' +
+                                '<div class="flex flex-wrap items-center gap-1.5">' + chips + '</div>' +
+                                '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded border border-slate-950 bg-slate-950 px-3 py-1.5 text-[11px] font-semibold text-white hover:bg-slate-800 transition-colors">' +
+                                    'Visit ' + esc((p.website || '').replace(/^https?:\/\//, '').replace(/\/$/, '')) +
+                                    '<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>' +
+                                '</a>' +
+                            '</div>' +
                         '</div>' +
                     '</div>' +
 
@@ -744,27 +753,172 @@
                 '</div>';
         }
 
+        // ---------------------------------------------------------- leaderboards
+
+        function hashLeaderboardId() {
+            var m = /^#\/?leaderboards?\/([a-z-]+)$/.exec(window.location.hash || '');
+            return m ? m[1] : null;
+        }
+
+        var LEADERBOARDS = {
+            intelligence: {
+                title: 'Intelligence leaderboard',
+                blurb: 'Every free-tier model with a published Artificial Analysis Intelligence Index v5.0.1 score, highest first. One row per model — the small grey number counts the other free providers serving it. Artificial Analysis does not score every model, so unscored models are absent rather than estimated.',
+                column: 'AA Intelligence Index',
+                unit: 'scored models',
+                source: 'https://artificialanalysis.ai/leaderboards/models',
+                dedupe: true,
+                pick: function (m) {
+                    return m.metrics && typeof m.metrics.intelligence === 'number' ? m.metrics.intelligence : null;
+                },
+                format: function (v) { return String(v); }
+            },
+            speed: {
+                title: 'Speed leaderboard',
+                blurb: 'Generation speed in tokens per second for each free-tier model. Throughput is measured per provider, so the same model appears with a different figure on every host that serves it.',
+                column: 'Tokens / second',
+                unit: 'models with a throughput figure',
+                source: null,
+                pick: function (m) {
+                    return m.metrics && typeof m.metrics.tps === 'number' ? m.metrics.tps : null;
+                },
+                format: function (v) { return v + ' TPS'; }
+            },
+            allowance: {
+                title: 'Token allowance leaderboard',
+                blurb: 'Free tokens per day granted per model. A blank allowance means unlimited tokens with the request caps shown in the last column.',
+                column: 'Free tokens / day',
+                unit: 'models with a free allowance',
+                source: null,
+                pick: function (m) {
+                    return typeof m.token_allowance === 'number' ? m.token_allowance : Infinity;
+                },
+                format: function (v) { return isFinite(v) ? compactTokens(v) + ' / day' : 'Unlimited'; }
+            }
+        };
+
+        function leaderboardRows(cfg) {
+            var rows = [];
+            state.providers.forEach(function (p) {
+                (p.models || []).forEach(function (m) {
+                    var v = cfg.pick(m);
+                    if (v === null || v === undefined) return;
+                    rows.push({ value: v, model: m, provider: p });
+                });
+            });
+            rows.sort(function (a, b) {
+                if (b.value !== a.value) return b.value - a.value;
+                return String(a.provider.name).localeCompare(String(b.provider.name));
+            });
+            if (cfg.dedupe) {
+                // Intelligence is a property of the model, not of the host, so show one
+                // row per model and count how many free providers serve it.
+                var seen = {};
+                var unique = [];
+                rows.forEach(function (r) {
+                    if (seen[r.model.name]) { seen[r.model.name].providers += 1; return; }
+                    r.providers = 1;
+                    seen[r.model.name] = r;
+                    unique.push(r);
+                });
+                rows = unique;
+            }
+            return rows;
+        }
+
+        function renderLeaderboard(id) {
+            var box = $('leaderboard-view');
+            if (!box) return;
+            var cfg = LEADERBOARDS[id];
+            if (!cfg) { box.innerHTML = ''; return; }
+            var rows = leaderboardRows(cfg).slice(0, 100);
+            var body = rows.map(function (r, i) {
+                return '' +
+                    '<tr class="border-t border-slate-100 hover:bg-slate-50 cursor-pointer" data-provider="' + esc(r.provider.id) + '" tabindex="0">' +
+                        '<td class="px-3 py-2 font-mono text-slate-400 text-right w-10">' + (i + 1) + '</td>' +
+                        '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(r.model.name) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-sans whitespace-nowrap">' + esc(r.provider.name) +
+                            (r.providers > 1 ? ' <span class="text-slate-400 font-mono text-[10px]">+' + (r.providers - 1) + '</span>' : '') + '</td>' +
+                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(cfg.format(r.value)) + '</td>' +
+                        '<td class="px-3 py-2 font-mono text-slate-500 text-right whitespace-nowrap">' + (r.model.context_window ? compactTokens(r.model.context_window) : '&mdash;') + '</td>' +
+                        '<td class="px-3 py-2 text-slate-500 font-sans">' + esc(r.model.rate_limits || '') + '</td>' +
+                    '</tr>';
+            }).join('');
+
+            box.innerHTML = '' +
+                '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
+                    '<a href="#/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
+                        '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
+                        'Back to all providers' +
+                    '</a>' +
+                    '<div class="flex flex-wrap items-center gap-1.5 text-[11px] font-mono">' +
+                        Object.keys(LEADERBOARDS).map(function (k) {
+                            var on = k === id;
+                            return '<a href="#/leaderboard/' + k + '" class="px-2.5 py-1 rounded border ' + (on ? 'border-slate-900 bg-slate-900 text-white' : 'border-slate-200 text-slate-600 hover:border-slate-400') + '">' + esc(LEADERBOARDS[k].title.replace(' leaderboard', '')) + '</a>';
+                        }).join('') +
+                    '</div>' +
+                '</div>' +
+
+                '<h2 class="text-2xl font-bold tracking-tight text-slate-950">' + esc(cfg.title) + '</h2>' +
+                '<p class="mt-1 mb-4 max-w-3xl text-sm text-slate-600 leading-relaxed">' + esc(cfg.blurb) +
+                    (cfg.source ? ' <a href="' + esc(cfg.source) + '" target="_blank" rel="noopener" class="font-semibold text-slate-900 underline">Source</a>.' : '') +
+                '</p>' +
+
+                '<div class="overflow-x-auto border border-slate-200 rounded-xl bg-white">' +
+                    '<table class="w-full text-xs">' +
+                        '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
+                            '<tr>' +
+                                '<th class="px-3 py-2 text-right font-semibold">#</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Model</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Provider</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">' + esc(cfg.column) + '</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">Context</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Free limits</th>' +
+                            '</tr>' +
+                        '</thead>' +
+                        '<tbody>' + body + '</tbody>' +
+                    '</table>' +
+                '</div>' +
+                (rowCountNote(rows.length, cfg));
+        }
+
+        function rowCountNote(shown, cfg) {
+            var total = leaderboardRows(cfg).length;
+            var unit = cfg.unit || 'models';
+            if (shown >= total) return '<p class="mt-3 text-[11px] font-mono text-slate-400">' + total + ' ' + esc(unit) + '</p>';
+            return '<p class="mt-3 text-[11px] font-mono text-slate-400">Showing the top ' + shown + ' of ' + total + ' ' + esc(unit) + '</p>';
+        }
+
         function renderView() {
             var p = findProvider(hashProviderId() || '');
+            var lb = hashLeaderboardId();
             var listView = $('catalogue-list-view');
             var detail = $('provider-detail');
-            // Home-only blocks (hero, leaderboards) are hidden on a provider page.
-            var homeOnly = ['hero-section', 'dashboard-main'];
-            homeOnly.forEach(function (id) {
+            var board = $('leaderboard-view');
+            var sub = !!p || !!lb;
+            // The hero, the leaderboard cards and the catalogue belong to the index.
+            ['hero-section', 'dashboard-main'].forEach(function (id) {
                 var el = $(id);
-                if (el) el.classList.toggle('hidden', !!p);
+                if (el) el.classList.toggle('hidden', sub);
             });
+            if (listView) listView.classList.toggle('hidden', sub);
+            if (detail) {
+                detail.classList.toggle('hidden', !p);
+                if (!p) detail.innerHTML = '';
+            }
+            if (board) {
+                board.classList.toggle('hidden', !lb);
+                if (!lb) board.innerHTML = '';
+            }
             if (p) {
-                if (listView) listView.classList.add('hidden');
-                if (detail) {
-                    detail.classList.remove('hidden');
-                    renderDetail(p);
-                }
+                renderDetail(p);
                 document.title = p.name + ' — FreeToken';
                 window.scrollTo(0, 0);
+            } else if (lb && LEADERBOARDS[lb]) {
+                renderLeaderboard(lb);
+                document.title = LEADERBOARDS[lb].title + ' — FreeToken';
+                window.scrollTo(0, 0);
             } else {
-                if (detail) { detail.classList.add('hidden'); detail.innerHTML = ''; }
-                if (listView) listView.classList.remove('hidden');
                 document.title = 'FreeToken — Free Text LLM API Index';
             }
         }
@@ -781,6 +935,21 @@
                     if (row) openProvider(row.getAttribute('data-provider'));
                 });
                 rows.addEventListener('keydown', function (e) {
+                    if (e.key !== 'Enter' && e.key !== ' ') return;
+                    var row = e.target.closest ? e.target.closest('[data-provider]') : null;
+                    if (!row) return;
+                    e.preventDefault();
+                    openProvider(row.getAttribute('data-provider'));
+                });
+            }
+
+            var board = $('leaderboard-view');
+            if (board) {
+                board.addEventListener('click', function (e) {
+                    var row = e.target.closest ? e.target.closest('[data-provider]') : null;
+                    if (row) openProvider(row.getAttribute('data-provider'));
+                });
+                board.addEventListener('keydown', function (e) {
                     if (e.key !== 'Enter' && e.key !== ' ') return;
                     var row = e.target.closest ? e.target.closest('[data-provider]') : null;
                     if (!row) return;

@@ -39,7 +39,7 @@
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
-        "tps": 60,
+        "tps": 50,
         "intelligence": 18
       },
       "rate_limits": "1 concurrent model, light usage"
@@ -50,7 +50,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 415,
         "intelligence": 4
       },
       "rate_limits": "1 concurrent model, light usage"
@@ -61,7 +61,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 780
+        "tps": 625
       },
       "rate_limits": "1 concurrent model, light usage"
     },
@@ -71,7 +71,7 @@
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 95
+        "tps": 75
       },
       "rate_limits": "1 concurrent model, light usage"
     },
@@ -81,7 +81,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 135,
         "intelligence": 20
       },
       "rate_limits": "1 concurrent model, light usage"
@@ -92,7 +92,7 @@
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 90
+        "tps": 70
       },
       "rate_limits": "1 concurrent model, light usage"
     },
@@ -102,7 +102,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 160
       },
       "rate_limits": "1 concurrent model, light usage"
     }

@@ -16,18 +16,20 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from models import MODELS  # noqa: E402
 from provider_models import PROVIDER_MODELS  # noqa: E402
+from speed import tps_for  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 
-def build_model(mid, rate_limits=None):
+def build_model(mid, rate_limits=None, provider_id=None):
     src = MODELS[mid]
     m = {"id": src["id"], "name": src["name"], "family": src["family"]}
     if src.get("context_window"):
         m["context_window"] = src["context_window"]
     metrics = {}
-    if src.get("tps") is not None:
-        metrics["tps"] = src["tps"]
+    tps = tps_for(provider_id, mid, src.get("tps"))
+    if tps is not None:
+        metrics["tps"] = tps
     if src.get("intelligence") is not None:
         metrics["intelligence"] = src["intelligence"]
     if metrics:
@@ -59,7 +61,7 @@ def main():
             if mid not in MODELS:
                 unknown.append("%s: unknown model id %s" % (pid, mid))
                 continue
-            models.append(build_model(mid, old_limits.get(mid) or default_limit))
+            models.append(build_model(mid, old_limits.get(mid) or default_limit, pid))
         # preserve account-wide token allowance only when every model shares it
         allowances = {m.get("token_allowance") for m in d.get("models", [])}
         if len(allowances) == 1:

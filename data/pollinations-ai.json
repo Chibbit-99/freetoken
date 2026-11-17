@@ -39,7 +39,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 780
+        "tps": 310
       },
       "rate_limits": "~1 request/15s; higher with free key"
     },
@@ -49,7 +49,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 240
+        "tps": 95
       },
       "rate_limits": "~1 request/15s; higher with free key"
     },
@@ -59,7 +59,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 260
+        "tps": 105
       },
       "rate_limits": "~1 request/15s; higher with free key"
     },
@@ -69,7 +69,7 @@
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 50
       },
       "rate_limits": "~1 request/15s; higher with free key"
     }

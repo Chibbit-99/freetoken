@@ -38,7 +38,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 70
       },
       "rate_limits": "10 req/min, 4M input / 100K output TPM"
     },
@@ -48,7 +48,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 200
+        "tps": 115
       },
       "rate_limits": "10 req/min, 4M input / 100K output TPM"
     }

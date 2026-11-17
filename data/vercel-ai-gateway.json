@@ -39,7 +39,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 400,
+        "tps": 320,
         "intelligence": 6
       },
       "rate_limits": "Free model, lower tier rate limits"
@@ -50,7 +50,7 @@
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
-        "tps": 60,
+        "tps": 50,
         "intelligence": 18
       },
       "rate_limits": "Free model, lower tier rate limits"
@@ -61,7 +61,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 160
       },
       "rate_limits": "Covered by $5 monthly credit"
     },
@@ -71,7 +71,7 @@
       "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300
+        "tps": 240
       },
       "rate_limits": "Free model, lower tier rate limits"
     },
@@ -81,7 +81,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 415,
         "intelligence": 4
       },
       "rate_limits": "Covered by $5 monthly credit"
@@ -92,7 +92,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 220,
+        "tps": 175,
         "intelligence": 29
       },
       "rate_limits": "Free model, lower tier rate limits"

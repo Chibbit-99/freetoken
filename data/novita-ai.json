@@ -39,7 +39,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
+        "tps": 140,
         "intelligence": 32
       },
       "rate_limits": "60 RPM, trial credits"
@@ -50,7 +50,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 80,
         "intelligence": 33
       },
       "rate_limits": "60 RPM, trial credits"
@@ -61,7 +61,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 135,
         "intelligence": 20
       },
       "rate_limits": "60 RPM, trial credits"
@@ -72,7 +72,7 @@
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 90
+        "tps": 70
       },
       "rate_limits": "60 RPM, trial credits"
     },
@@ -82,7 +82,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 80,
+        "tps": 60,
         "intelligence": 19
       },
       "rate_limits": "60 RPM, trial credits"

@@ -12,6 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 from models import MODELS  # noqa: E402
+from speed import tps_for  # noqa: E402
 from new_providers_a import PART_A  # noqa: E402
 from new_providers_b import PART_B  # noqa: E402
 
@@ -37,7 +38,7 @@ MODEL_FIX = {
 }
 
 
-def build_models(ids):
+def build_models(ids, provider_id=None):
     out = []
     for mid in ids:
         if isinstance(mid, dict):
@@ -53,8 +54,9 @@ def build_models(ids):
         if src.get("context_window"):
             m["context_window"] = src["context_window"]
         metrics = {}
-        if src.get("tps") is not None:
-            metrics["tps"] = src["tps"]
+        tps = tps_for(provider_id, mid, src.get("tps"))
+        if tps is not None:
+            metrics["tps"] = tps
         if src.get("intelligence") is not None:
             metrics["intelligence"] = src["intelligence"]
         if metrics:
@@ -72,7 +74,7 @@ def main():
     for row in PART_A + PART_B:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
-        models = build_models(MODEL_FIX.get(pid, mids))
+        models = build_models(MODEL_FIX.get(pid, mids), pid)
         if not models:
             raise SystemExit("no models for " + pid)
         offer_type, tone = OFFER[offer_code]

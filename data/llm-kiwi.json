@@ -38,7 +38,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 340,
         "intelligence": 4
       },
       "rate_limits": "Baseline rate limits (unpublished)"
@@ -49,7 +49,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 80,
+        "tps": 50,
         "intelligence": 19
       },
       "rate_limits": "Baseline rate limits (unpublished)"
@@ -60,7 +60,7 @@
       "family": "Nemotron",
       "context_window": 262144,
       "metrics": {
-        "tps": 110,
+        "tps": 70,
         "intelligence": 12
       },
       "rate_limits": "Baseline rate limits (unpublished)"
@@ -71,7 +71,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 110,
         "intelligence": 20
       },
       "rate_limits": "Baseline rate limits (unpublished)"
@@ -82,7 +82,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 130
       },
       "rate_limits": "Baseline rate limits (unpublished)"
     }

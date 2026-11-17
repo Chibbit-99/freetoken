@@ -39,7 +39,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 375,
         "intelligence": 4
       },
       "rate_limits": "100 managed requests/day"
@@ -50,7 +50,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 70,
         "intelligence": 33
       },
       "rate_limits": "100 managed requests/day"
@@ -61,7 +61,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 95,
         "intelligence": 4
       },
       "rate_limits": "100 managed requests/day"
@@ -72,7 +72,7 @@
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 90
+        "tps": 65
       },
       "rate_limits": "100 managed requests/day"
     },
@@ -82,7 +82,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 145
       },
       "rate_limits": "100 managed requests/day"
     }

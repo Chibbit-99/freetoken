@@ -39,7 +39,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 200
+        "tps": 150
       },
       "rate_limits": "Fixed limits for free models (login to view)"
     },
@@ -49,7 +49,7 @@
       "family": "GLM 4.6",
       "context_window": 200000,
       "metrics": {
-        "tps": 130
+        "tps": 100
       },
       "rate_limits": "Fixed limits for free models (login to view)"
     },
@@ -59,7 +59,7 @@
       "family": "DeepSeek R1",
       "context_window": 131072,
       "metrics": {
-        "tps": 45
+        "tps": 35
       },
       "rate_limits": "Fixed limits for free models (login to view)"
     },
@@ -69,7 +69,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 90
       },
       "rate_limits": "Fixed limits for free models (login to view)"
     }

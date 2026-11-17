@@ -38,7 +38,7 @@
       "family": "Granite",
       "context_window": 131072,
       "metrics": {
-        "tps": 200,
+        "tps": 120,
         "intelligence": 5
       },
       "rate_limits": "300K tokens/month (Lite)",
@@ -50,7 +50,7 @@
       "family": "Granite",
       "context_window": 131072,
       "metrics": {
-        "tps": 110
+        "tps": 65
       },
       "rate_limits": "300K tokens/month (Lite)",
       "token_allowance": 10000

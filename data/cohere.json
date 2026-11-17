@@ -39,7 +39,7 @@
       "family": "Command",
       "context_window": 192000,
       "metrics": {
-        "tps": 90,
+        "tps": 55,
         "intelligence": 6
       },
       "rate_limits": "20 RPM, 1,000 calls/month"
@@ -50,7 +50,7 @@
       "family": "Command",
       "context_window": 256000,
       "metrics": {
-        "tps": 85
+        "tps": 50
       },
       "rate_limits": "20 RPM, 1,000 calls/month"
     },
@@ -60,7 +60,7 @@
       "family": "Command",
       "context_window": 128000,
       "metrics": {
-        "tps": 60
+        "tps": 35
       },
       "rate_limits": "20 RPM, 1,000 calls/month"
     },
@@ -70,7 +70,7 @@
       "family": "North",
       "context_window": 256000,
       "metrics": {
-        "tps": 200,
+        "tps": 120,
         "intelligence": 3
       },
       "rate_limits": "20 RPM, 1,000 calls/month"

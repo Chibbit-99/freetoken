@@ -39,7 +39,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 80
       },
       "rate_limits": "5 RPM, 50 RPD"
     },
@@ -49,7 +49,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 240
+        "tps": 95
       },
       "rate_limits": "5 RPM, 50 RPD"
     },
@@ -59,7 +59,7 @@
       "family": "SEA-LION",
       "context_window": 131072,
       "metrics": {
-        "tps": 150
+        "tps": 60
       },
       "rate_limits": "5 RPM, 50 RPD"
     },
@@ -69,7 +69,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 220
+        "tps": 90
       },
       "rate_limits": "5 RPM, 50 RPD"
     }

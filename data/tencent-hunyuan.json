@@ -38,7 +38,7 @@
       "family": "Hunyuan",
       "context_window": 1048576,
       "metrics": {
-        "tps": 110,
+        "tps": 60,
         "intelligence": 35
       }
     }

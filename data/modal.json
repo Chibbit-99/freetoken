@@ -38,7 +38,7 @@
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 90
+        "tps": 50
       }
     },
     {
@@ -47,7 +47,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
+        "tps": 100,
         "intelligence": 32
       }
     },
@@ -57,7 +57,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 55,
         "intelligence": 33
       }
     },
@@ -67,7 +67,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 95,
         "intelligence": 20
       }
     }

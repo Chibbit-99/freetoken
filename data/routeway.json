@@ -39,7 +39,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 70,
         "intelligence": 33
       },
       "rate_limits": "5 RPM, 200 RPD"
@@ -50,7 +50,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 150,
+        "tps": 100,
         "intelligence": 29
       },
       "rate_limits": "5 RPM, 200 RPD"
@@ -61,7 +61,7 @@
       "family": "Muse",
       "context_window": 131072,
       "metrics": {
-        "tps": 160,
+        "tps": 110,
         "intelligence": 6
       },
       "rate_limits": "5 RPM, 200 RPD"
@@ -72,7 +72,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 90,
         "intelligence": 4
       },
       "rate_limits": "5 RPM, 200 RPD"

@@ -39,7 +39,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 165,
         "intelligence": 28
       },
       "rate_limits": "Daily allowance (unpublished)"
@@ -50,7 +50,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 75,
         "intelligence": 33
       },
       "rate_limits": "Daily allowance (unpublished)"

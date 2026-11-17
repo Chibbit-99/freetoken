@@ -39,7 +39,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 95,
         "intelligence": 20
       },
       "rate_limits": "10/min, 30/hr per IP anonymous"
@@ -50,7 +50,7 @@
       "family": "Llama 4",
       "context_window": 10000000,
       "metrics": {
-        "tps": 150
+        "tps": 80
       },
       "rate_limits": "10/min, 30/hr per IP anonymous"
     },
@@ -60,7 +60,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 65
       },
       "rate_limits": "10/min, 30/hr per IP anonymous"
     }

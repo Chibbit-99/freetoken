@@ -38,7 +38,7 @@
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
-        "tps": 60,
+        "tps": 50,
         "intelligence": 18
       },
       "rate_limits": "Not published"
@@ -49,7 +49,7 @@
       "family": "Hermes",
       "context_window": 131072,
       "metrics": {
-        "tps": 70
+        "tps": 55
       },
       "rate_limits": "Not published"
     },
@@ -59,7 +59,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 40
+        "tps": 30
       },
       "rate_limits": "Not published"
     },
@@ -69,7 +69,7 @@
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 95
+        "tps": 75
       },
       "rate_limits": "Not published"
     },
@@ -79,7 +79,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 135,
         "intelligence": 20
       },
       "rate_limits": "Not published"
@@ -90,7 +90,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 160
       },
       "rate_limits": "Not published"
     }

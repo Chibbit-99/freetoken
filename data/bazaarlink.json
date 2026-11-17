@@ -39,7 +39,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 220,
+        "tps": 145,
         "intelligence": 29
       },
       "rate_limits": "10 RPM, 60 units/day"
@@ -50,7 +50,7 @@
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
-        "tps": 60,
+        "tps": 40,
         "intelligence": 18
       },
       "rate_limits": "10 RPM, 60 units/day"
@@ -61,7 +61,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 400,
+        "tps": 260,
         "intelligence": 6
       },
       "rate_limits": "10 RPM, 60 units/day"
@@ -72,7 +72,7 @@
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 95
+        "tps": 60
       },
       "rate_limits": "10 RPM, 60 units/day"
     }

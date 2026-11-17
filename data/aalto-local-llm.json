@@ -38,7 +38,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 65
       }
     }
   ]

@@ -39,7 +39,7 @@
       "family": "Gemini 3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 120
+        "tps": 110
       },
       "rate_limits": "Dynamic Gemini 3 limits"
     },
@@ -49,7 +49,7 @@
       "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300
+        "tps": 270
       },
       "rate_limits": "Dynamic Gemini 3 limits"
     },
@@ -59,7 +59,7 @@
       "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 420,
+        "tps": 380,
         "intelligence": 12
       },
       "rate_limits": "Dynamic Gemini 3 limits"

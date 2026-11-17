@@ -38,7 +38,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 70,
         "intelligence": 33
       }
     },
@@ -48,7 +48,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 160,
         "intelligence": 28
       }
     },
@@ -58,7 +58,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 145
       }
     }
   ]

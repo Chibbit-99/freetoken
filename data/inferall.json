@@ -38,7 +38,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 70,
         "intelligence": 4
       }
     },
@@ -48,7 +48,7 @@
       "family": "Llama 4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 130
+        "tps": 70
       }
     },
     {
@@ -57,7 +57,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 285,
         "intelligence": 4
       }
     }

@@ -38,7 +38,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 440,
         "intelligence": 4
       },
       "rate_limits": "~15 RPM (unpublished)"
@@ -49,7 +49,7 @@
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 95
+        "tps": 80
       },
       "rate_limits": "~15 RPM (unpublished)"
     },
@@ -59,7 +59,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 220,
+        "tps": 185,
         "intelligence": 29
       },
       "rate_limits": "~15 RPM (unpublished)"

@@ -39,7 +39,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 400,
+        "tps": 270,
         "intelligence": 6
       },
       "rate_limits": "200 requests/hour per IP"
@@ -50,7 +50,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 150,
         "intelligence": 28
       },
       "rate_limits": "200 requests/hour per IP"
@@ -61,7 +61,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 70,
         "intelligence": 33
       },
       "rate_limits": "200 requests/hour per IP"
@@ -72,7 +72,7 @@
       "family": "Ling",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 150,
         "intelligence": 30
       },
       "rate_limits": "200 requests/hour per IP"
@@ -83,7 +83,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 150,
+        "tps": 100,
         "intelligence": 29
       },
       "rate_limits": "200 requests/hour per IP"
@@ -94,7 +94,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 220,
+        "tps": 150,
         "intelligence": 29
       },
       "rate_limits": "200 requests/hour per IP"
@@ -105,7 +105,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 355,
         "intelligence": 4
       },
       "rate_limits": "200 requests/hour per IP"

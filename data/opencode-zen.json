@@ -38,7 +38,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 55,
         "intelligence": 33
       }
     },
@@ -48,7 +48,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 400,
+        "tps": 220,
         "intelligence": 6
       }
     },
@@ -58,7 +58,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 120,
         "intelligence": 28
       }
     },
@@ -68,7 +68,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 80,
+        "tps": 45,
         "intelligence": 19
       }
     }

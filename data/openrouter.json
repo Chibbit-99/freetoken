@@ -39,7 +39,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 95,
         "intelligence": 4
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -50,7 +50,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 400,
+        "tps": 270,
         "intelligence": 6
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -61,7 +61,7 @@
       "family": "Reflection Beam",
       "context_window": 1048576,
       "metrics": {
-        "tps": 60,
+        "tps": 40,
         "intelligence": 18
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -72,7 +72,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 135
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -82,7 +82,7 @@
       "family": "Ling",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 150,
         "intelligence": 30
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -93,7 +93,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 150,
+        "tps": 100,
         "intelligence": 29
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -104,7 +104,7 @@
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 95
+        "tps": 65
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -114,7 +114,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 220,
+        "tps": 150,
         "intelligence": 29
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -125,7 +125,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 355,
         "intelligence": 4
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -136,7 +136,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 780
+        "tps": 480
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -146,7 +146,7 @@
       "family": "Llama 4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 130
+        "tps": 90
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -156,7 +156,7 @@
       "family": "Mistral",
       "context_window": 262144,
       "metrics": {
-        "tps": 180,
+        "tps": 120,
         "intelligence": 4
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -167,7 +167,7 @@
       "family": "Muse",
       "context_window": 131072,
       "metrics": {
-        "tps": 160,
+        "tps": 110,
         "intelligence": 6
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
@@ -178,7 +178,7 @@
       "family": "Kimi",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220
+        "tps": 150
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -188,7 +188,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300
+        "tps": 205
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -198,7 +198,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 80
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -208,7 +208,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 240
+        "tps": 165
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     },
@@ -218,7 +218,7 @@
       "family": "Phi",
       "context_window": 131072,
       "metrics": {
-        "tps": 140
+        "tps": 95
       },
       "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
     }

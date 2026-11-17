@@ -39,7 +39,7 @@
       "family": "Nemotron",
       "context_window": 262144,
       "metrics": {
-        "tps": 110,
+        "tps": 55,
         "intelligence": 12
       },
       "rate_limits": "~40 RPM (not published)"
@@ -50,7 +50,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 150,
+        "tps": 90,
         "intelligence": 14
       },
       "rate_limits": "~40 RPM (not published)"
@@ -61,7 +61,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 400,
+        "tps": 520,
         "intelligence": 6
       },
       "rate_limits": "~40 RPM (not published)"
@@ -72,7 +72,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300
+        "tps": 180
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -82,7 +82,7 @@
       "family": "Nemotron",
       "context_window": 131072,
       "metrics": {
-        "tps": 380
+        "tps": 230
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -92,7 +92,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 40
+        "tps": 25
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -102,7 +102,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 80
+        "tps": 50
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -112,7 +112,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 220
+        "tps": 130
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -122,7 +122,7 @@
       "family": "Llama 4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 130
+        "tps": 80
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -132,7 +132,7 @@
       "family": "Llama 4",
       "context_window": 10000000,
       "metrics": {
-        "tps": 150
+        "tps": 90
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -142,7 +142,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 70,
+        "tps": 40,
         "intelligence": 23
       },
       "rate_limits": "~40 RPM (not published)"
@@ -153,7 +153,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 60,
         "intelligence": 33
       },
       "rate_limits": "~40 RPM (not published)"
@@ -164,7 +164,7 @@
       "family": "DeepSeek R1",
       "context_window": 131072,
       "metrics": {
-        "tps": 45
+        "tps": 25
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -174,7 +174,7 @@
       "family": "Qwen 3.5",
       "context_window": 262144,
       "metrics": {
-        "tps": 80
+        "tps": 50
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -184,7 +184,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 100,
         "intelligence": 20
       },
       "rate_limits": "~40 RPM (not published)"
@@ -195,7 +195,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 70
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -205,7 +205,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 200
+        "tps": 120
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -215,7 +215,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
+        "tps": 110,
         "intelligence": 32
       },
       "rate_limits": "~40 RPM (not published)"
@@ -226,7 +226,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 120
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -236,7 +236,7 @@
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 90
+        "tps": 55
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -246,7 +246,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 80,
+        "tps": 50,
         "intelligence": 19
       },
       "rate_limits": "~40 RPM (not published)"
@@ -257,7 +257,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 310,
         "intelligence": 4
       },
       "rate_limits": "~40 RPM (not published)"
@@ -268,7 +268,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 780
+        "tps": 470
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -278,7 +278,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 80,
         "intelligence": 4
       },
       "rate_limits": "~40 RPM (not published)"
@@ -289,7 +289,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 70
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -299,7 +299,7 @@
       "family": "Mistral",
       "context_window": 1048576,
       "metrics": {
-        "tps": 90,
+        "tps": 55,
         "intelligence": 26
       },
       "rate_limits": "~40 RPM (not published)"
@@ -310,7 +310,7 @@
       "family": "Mistral",
       "context_window": 262144,
       "metrics": {
-        "tps": 110,
+        "tps": 65,
         "intelligence": 5
       },
       "rate_limits": "~40 RPM (not published)"
@@ -321,7 +321,7 @@
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 110
+        "tps": 65
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -331,7 +331,7 @@
       "family": "Phi",
       "context_window": 131072,
       "metrics": {
-        "tps": 140
+        "tps": 85
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -341,7 +341,7 @@
       "family": "Command",
       "context_window": 256000,
       "metrics": {
-        "tps": 85
+        "tps": 50
       },
       "rate_limits": "~40 RPM (not published)"
     },
@@ -351,7 +351,7 @@
       "family": "Solar",
       "context_window": 524288,
       "metrics": {
-        "tps": 110,
+        "tps": 65,
         "intelligence": 14
       },
       "rate_limits": "~40 RPM (not published)"
@@ -362,7 +362,7 @@
       "family": "Granite",
       "context_window": 131072,
       "metrics": {
-        "tps": 200,
+        "tps": 120,
         "intelligence": 5
       },
       "rate_limits": "~40 RPM (not published)"
@@ -373,7 +373,7 @@
       "family": "OLMo",
       "context_window": 66000,
       "metrics": {
-        "tps": 90
+        "tps": 55
       },
       "rate_limits": "~40 RPM (not published)"
     }

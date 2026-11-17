@@ -38,7 +38,7 @@
       "family": "Command",
       "context_window": 128000,
       "metrics": {
-        "tps": 60
+        "tps": 35
       }
     },
     {
@@ -47,7 +47,7 @@
       "family": "Llama 4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 130
+        "tps": 70
       }
     },
     {

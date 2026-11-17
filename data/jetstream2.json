@@ -38,7 +38,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 80
+        "tps": 45
       }
     },
     {
@@ -47,7 +47,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 285,
         "intelligence": 4
       }
     }

@@ -126,7 +126,7 @@ the free offer no longer exists.
 
 | Field | Type | Description |
 | ---- | ---- | ----------- |
-| `tps` | number | Generation speed in tokens per second (curated estimate). |
+| `tps` | number | Generation speed in tokens per second **on this provider** (curated estimate). |
 | `intelligence` | number | Artificial Analysis Intelligence Index score (0-100). |
 
 `intelligence` is the **Artificial Analysis Intelligence Index v5.0.1**, read
@@ -139,9 +139,13 @@ score changes upstream, update it; the index is versioned (v5.0.1 at the time of
 writing), so re-read the leaderboard when bumping the version.
 
 `tps` is a curated throughput estimate used only to rank speed; providers do not
-publish comparable figures. Leave `metrics` out entirely for models where neither
-value exists (embeddings, rerankers, speech). Token *allowance* is always
-`token_allowance` (tokens per day), never a metric.
+publish comparable figures. It is **per provider**: `tools/models.py` stores a
+reference throughput and `tools/speed.py` scales it by the host (`SPEED_FACTOR`,
+with `MODEL_OVERRIDES` for known cases), so GPT-OSS 20B is 780 tok/s on Groq and
+240 tok/s on Cloudflare Workers AI. Do not copy one host's number onto another.
+Leave `metrics` out entirely for models where neither value exists (embeddings,
+rerankers, speech). Token *allowance* is always `token_allowance` (tokens per
+day), never a metric.
 
 ## Token allowance semantics
 

@@ -39,7 +39,7 @@
       "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300
+        "tps": 270
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     },
@@ -49,7 +49,7 @@
       "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 420,
+        "tps": 380,
         "intelligence": 12
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
@@ -60,7 +60,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 115,
         "intelligence": 4
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
@@ -71,7 +71,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 240
+        "tps": 215
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     },
@@ -81,7 +81,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 260
+        "tps": 235
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     },
@@ -91,7 +91,7 @@
       "family": "Gemma 4",
       "context_window": 131072,
       "metrics": {
-        "tps": 320,
+        "tps": 290,
         "intelligence": 5
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
@@ -102,7 +102,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 110
       },
       "rate_limits": "5-30 RPM, per-project caps in AI Studio"
     }

@@ -39,7 +39,7 @@
       "family": "Sarvam",
       "context_window": 131072,
       "metrics": {
-        "tps": 80
+        "tps": 60
       },
       "rate_limits": "INR 100 signup credit"
     }

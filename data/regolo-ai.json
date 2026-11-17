@@ -39,7 +39,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 300,
         "intelligence": 4
       },
       "rate_limits": "30-day trial, 1M tokens/day",
@@ -51,7 +51,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 100,
         "intelligence": 20
       },
       "rate_limits": "30-day trial, 1M tokens/day",
@@ -63,7 +63,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 75,
         "intelligence": 4
       },
       "rate_limits": "30-day trial, 1M tokens/day",
@@ -75,7 +75,7 @@
       "family": "Apertus",
       "context_window": 131072,
       "metrics": {
-        "tps": 70
+        "tps": 40
       },
       "rate_limits": "30-day trial, 1M tokens/day",
       "token_allowance": 1000000
@@ -86,7 +86,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 80
+        "tps": 45
       },
       "rate_limits": "30-day trial, 1M tokens/day",
       "token_allowance": 1000000

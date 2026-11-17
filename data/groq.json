@@ -85,7 +85,7 @@
       "family": "Llama 4",
       "context_window": 10000000,
       "metrics": {
-        "tps": 150
+        "tps": 580
       },
       "rate_limits": "30 RPM, 1K RPD, 8K TPM, 200K TPD",
       "token_allowance": 200000

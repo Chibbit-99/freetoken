@@ -38,7 +38,7 @@
       "family": "Gemini 3.5",
       "context_window": 1048576,
       "metrics": {
-        "tps": 300
+        "tps": 165
       }
     },
     {
@@ -47,7 +47,7 @@
       "family": "Gemma 4",
       "context_window": 262144,
       "metrics": {
-        "tps": 130,
+        "tps": 70,
         "intelligence": 4
       }
     },
@@ -57,7 +57,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 95,
         "intelligence": 20
       }
     }

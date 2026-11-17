@@ -38,7 +38,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 80
+        "tps": 45
       },
       "rate_limits": "1 concurrent request, 12K context"
     },
@@ -48,7 +48,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 220
+        "tps": 130
       },
       "rate_limits": "1 concurrent request, 12K context"
     },
@@ -58,7 +58,7 @@
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 110
+        "tps": 65
       },
       "rate_limits": "1 concurrent request, 12K context"
     },
@@ -68,7 +68,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 70
       },
       "rate_limits": "1 concurrent request, 12K context"
     },
@@ -78,7 +78,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 200
+        "tps": 115
       },
       "rate_limits": "1 concurrent request, 12K context"
     },
@@ -88,7 +88,7 @@
       "family": "DeepSeek R1",
       "context_window": 131072,
       "metrics": {
-        "tps": 45
+        "tps": 25
       },
       "rate_limits": "1 concurrent request, 12K context"
     }

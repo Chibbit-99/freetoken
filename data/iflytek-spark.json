@@ -39,7 +39,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 780
+        "tps": 585
       },
       "rate_limits": "Not published"
     },
@@ -49,7 +49,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 200
+        "tps": 150
       },
       "rate_limits": "Not published"
     }

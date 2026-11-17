@@ -39,7 +39,7 @@
       "family": "Gemma 4",
       "context_window": 131072,
       "metrics": {
-        "tps": 320,
+        "tps": 25,
         "intelligence": 5
       },
       "rate_limits": "Queue priority via kudos"
@@ -50,7 +50,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 240
+        "tps": 40
       },
       "rate_limits": "Queue priority via kudos"
     },
@@ -60,7 +60,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 220
+        "tps": 60
       },
       "rate_limits": "Queue priority via kudos"
     },
@@ -70,7 +70,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 260
+        "tps": 50
       },
       "rate_limits": "Queue priority via kudos"
     }

@@ -39,7 +39,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 160,
         "intelligence": 28
       },
       "rate_limits": "Not published; 429 when throttled"
@@ -50,7 +50,7 @@
       "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 95
+        "tps": 70
       },
       "rate_limits": "Not published; 429 when throttled"
     },
@@ -60,7 +60,7 @@
       "family": "MiniMax",
       "context_window": 1048576,
       "metrics": {
-        "tps": 80,
+        "tps": 60,
         "intelligence": 19
       },
       "rate_limits": "Not published; 429 when throttled"
@@ -71,7 +71,7 @@
       "family": "Qwen 3.5",
       "context_window": 262144,
       "metrics": {
-        "tps": 230
+        "tps": 165
       },
       "rate_limits": "Not published; 429 when throttled"
     },

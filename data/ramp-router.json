@@ -38,7 +38,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 285,
         "intelligence": 4
       }
     },
@@ -48,7 +48,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 95,
         "intelligence": 20
       }
     },
@@ -58,7 +58,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 120,
         "intelligence": 28
       }
     }

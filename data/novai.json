@@ -38,7 +38,7 @@
       "family": "GLM 4.7",
       "context_window": 200000,
       "metrics": {
-        "tps": 200
+        "tps": 100
       },
       "rate_limits": "5 RPM before first top-up"
     },
@@ -48,7 +48,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 220,
+        "tps": 110,
         "intelligence": 28
       },
       "rate_limits": "5 RPM before first top-up"

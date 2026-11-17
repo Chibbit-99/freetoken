@@ -39,7 +39,7 @@
       "family": "Solar",
       "context_window": 524288,
       "metrics": {
-        "tps": 110,
+        "tps": 80,
         "intelligence": 14
       },
       "rate_limits": "$10 one-time credit"
@@ -50,7 +50,7 @@
       "family": "Solar",
       "context_window": 524288,
       "metrics": {
-        "tps": 200
+        "tps": 150
       },
       "rate_limits": "$10 one-time credit"
     }

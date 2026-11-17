@@ -39,7 +39,7 @@
       "family": "Mistral",
       "context_window": 131072,
       "metrics": {
-        "tps": 120
+        "tps": 60
       },
       "rate_limits": "20-200 RPM, 50-500 RPD"
     },
@@ -49,7 +49,7 @@
       "family": "Llama 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 220
+        "tps": 110
       },
       "rate_limits": "20-200 RPM, 50-500 RPD"
     },
@@ -59,7 +59,7 @@
       "family": "Gemma 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 180
+        "tps": 90
       },
       "rate_limits": "20-200 RPM, 50-500 RPD"
     },
@@ -69,7 +69,7 @@
       "family": "Qwen 3",
       "context_window": 131072,
       "metrics": {
-        "tps": 200
+        "tps": 100
       },
       "rate_limits": "20-200 RPM, 50-500 RPD"
     }

@@ -39,7 +39,7 @@
       "family": "Nemotron",
       "context_window": 1048576,
       "metrics": {
-        "tps": 400,
+        "tps": 380,
         "intelligence": 6
       },
       "rate_limits": "10 RPM without payment method"
@@ -50,7 +50,7 @@
       "family": "GLM 5.3",
       "context_window": 1048576,
       "metrics": {
-        "tps": 180,
+        "tps": 170,
         "intelligence": 32
       },
       "rate_limits": "10 RPM without payment method"
@@ -61,7 +61,7 @@
       "family": "DeepSeek V4",
       "context_window": 1048576,
       "metrics": {
-        "tps": 100,
+        "tps": 95,
         "intelligence": 33
       },
       "rate_limits": "10 RPM without payment method"
@@ -72,7 +72,7 @@
       "family": "Kimi",
       "context_window": 262144,
       "metrics": {
-        "tps": 90
+        "tps": 85
       },
       "rate_limits": "10 RPM without payment method"
     },
@@ -82,7 +82,7 @@
       "family": "GPT-OSS",
       "context_window": 131072,
       "metrics": {
-        "tps": 520,
+        "tps": 495,
         "intelligence": 4
       },
       "rate_limits": "10 RPM without payment method"
@@ -93,7 +93,7 @@
       "family": "Qwen 3.8",
       "context_window": 262144,
       "metrics": {
-        "tps": 170,
+        "tps": 160,
         "intelligence": 20
       },
       "rate_limits": "10 RPM without payment method"
