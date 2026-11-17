@@ -1,67 +1,48 @@
 {
   "id": "sea-lion",
-  "name": "SEA-LION API",
-  "website": "https://aisingapore.org",
-  "docs": "https://docs.sea-lion.ai",
-  "signup": "https://playground.sea-lion.ai",
-  "description": "AI Singapore's hosted API for Southeast Asian language models, free with a trial key.",
-  "overview": "SEA-LION is AI Singapore's family of models tuned for Southeast Asian languages, served through a hosted OpenAI-compatible API. You sign in to the playground with Google and create a trial key at no cost. It is a research showcase aimed at regional language work.",
+  "name": "SEA-LION (AI Singapore)",
+  "website": "https://sea-lion.ai",
+  "docs": "https://sea-lion.ai",
+  "signup": "https://sea-lion.ai",
+  "description": "AI Singapore's own Southeast Asian language models behind a free API.",
+  "overview": "SEA-LION is AI Singapore's open model family for Southeast Asian languages, served first-party through an OpenAI-compatible API. The free trial key is explicitly meant for prototyping and testing, capped at 10 calls per minute per account, with no published token budget or expiry; production use is directed to AI Singapore's cloud partners. Keys come from the playground key manager after signup, and the model list needs a key to read.",
   "offer": {
-    "type": "research",
-    "label": "Free research access",
-    "tone": "sky"
+    "type": "always-free",
+    "label": "Free prototype API",
+    "tone": "emerald"
   },
   "privacy": {
     "type": "partial",
-    "label": "Research preview terms"
+    "label": "Check provider policy"
   },
   "requires_payment_card": false,
   "last_updated": "2026-11-17",
   "verified": {
     "checked": "2026-11-17",
     "sources": [
-      "https://docs.sea-lion.ai",
-      "https://free-llm.com/provider/sea-lion"
+      "https://sea-lion.ai/try-sea-lion/",
+      "https://docs.sea-lion.ai/guides/inferencing/api"
     ]
   },
   "free_access": [
-    "Free trial API key via Google sign-in",
-    "10 requests/minute per user",
-    "No credit card required",
-    "Southeast Asian language models"
+    "Free trial key for prototyping",
+    "10 calls/minute per account",
+    "OpenAI-compatible endpoint",
+    "No card required"
   ],
-  "api_endpoint": "https://api.sea-lion.ai/v1",
-  "notes": "10 requests/minute per user by default; increases available on request.",
+  "notes": "Prototyping only per AI Singapore's terms; no published token budget.",
   "models": [
     {
-      "id": "qwen-sea-lion-v4-5-27b-instruct",
-      "name": "Qwen SEA-LION v4.5 27B Instruct",
+      "id": "aisingapore/Llama-SEA-LION-v3.5-70B-R",
+      "name": "Llama SEA-LION v3.5 70B",
       "family": "SEA-LION",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 150
-      },
-      "rate_limits": "10 RPM per user"
+      "context_window": 131072
     },
     {
-      "id": "llama-sea-lion-v3-5-70b-reasoning",
-      "name": "Llama SEA-LION v3.5 70B Reasoning",
+      "id": "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
+      "name": "Qwen SEA-LION v4.5 27B",
       "family": "SEA-LION",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 65
-      },
-      "rate_limits": "10 RPM per user"
-    },
-    {
-      "id": "sea-guard",
-      "name": "SEA-Guard",
-      "family": "SEA-LION",
-      "context_window": 131072,
-      "metrics": {
-        "tps": 200
-      },
-      "rate_limits": "10 RPM per user"
+      "context_window": 131072
     }
   ]
 }

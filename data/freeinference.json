@@ -1,37 +1,36 @@
 {
   "id": "freeinference",
-  "name": "FreeInference",
+  "name": "FreeInference (Harvard SEAS)",
   "website": "https://freeinference.org",
   "docs": "https://freeinference.org",
   "signup": "https://freeinference.org",
-  "description": "Harvard MadSys Lab's free API for open-source, research and education use.",
-  "overview": "FreeInference is a free, OpenAI- and Anthropic-compatible LLM API run by the MadSys Lab at Harvard SEAS for open-source, research and education use. Email sign-up needs no card, and free accounts can use several large open models with 1M-token context plus bge-m3 embeddings. The quota is described as generous but is not published, and requests may be logged for research.",
+  "description": "Harvard SEAS's MadSys Lab serving frontier open models free to every account.",
+  "overview": "FreeInference is run by the MadSys Lab at Harvard SEAS as an experimental research service: every registered account gets free access to frontier open models behind both OpenAI-shaped (`/v1`) and Anthropic-shaped (`/anthropic`) endpoints, with a documented Claude Code setup. Only models marked Free accept a Free key. Capacity-dependent limits are not published, and prompts and responses may be logged and sanitised excerpts published for research.",
   "offer": {
     "type": "research",
-    "label": "Free research access",
+    "label": "Free research endpoint",
     "tone": "sky"
   },
   "privacy": {
     "type": "none",
-    "label": "Requests may be logged for research"
+    "label": "Prompts logged for research"
   },
   "requires_payment_card": false,
   "last_updated": "2026-11-17",
   "verified": {
     "checked": "2026-11-17",
     "sources": [
-      "https://freeinference.org",
-      "https://free-llm.com/provider/freeinference"
+      "https://doc.freeinference.org/models",
+      "https://freeinference.org/terms"
     ]
   },
   "free_access": [
-    "Free for research, open-source and education use",
-    "No published daily cap ('generous quota')",
-    "No credit card required",
-    "1M-token context on the larger models"
+    "Free keys reach models marked Free",
+    "OpenAI- and Anthropic-shaped endpoints",
+    "No card required",
+    "Claude Code setup documented"
   ],
-  "api_endpoint": "https://freeinference.org/v1",
-  "notes": "A native Anthropic endpoint at /anthropic works with Claude Code; some models are Pro-only.",
+  "notes": "Research service: allowances vary with capacity and prompts may be published in sanitised form.",
   "models": [
     {
       "id": "glm-5-3-flash",
@@ -41,18 +40,7 @@
       "metrics": {
         "tps": 160,
         "intelligence": 28
-      },
-      "rate_limits": "Not published; 429 when throttled"
-    },
-    {
-      "id": "deepseek-v4-flash",
-      "name": "DeepSeek V4 Flash",
-      "family": "DeepSeek V4",
-      "context_window": 262144,
-      "metrics": {
-        "tps": 70
-      },
-      "rate_limits": "Not published; 429 when throttled"
+      }
     },
     {
       "id": "minimax-m3",
@@ -62,25 +50,22 @@
       "metrics": {
         "tps": 60,
         "intelligence": 19
-      },
-      "rate_limits": "Not published; 429 when throttled"
+      }
     },
     {
-      "id": "qwen3-5-35b-a3b",
-      "name": "Qwen3.5 35B A3B",
-      "family": "Qwen 3.5",
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
       "context_window": 262144,
       "metrics": {
-        "tps": 165
-      },
-      "rate_limits": "Not published; 429 when throttled"
+        "tps": 70
+      }
     },
     {
-      "id": "bge-m3",
-      "name": "BGE-M3 Embeddings",
-      "family": "BGE",
-      "context_window": 8192,
-      "rate_limits": "Not published; 429 when throttled"
+      "id": "qwen3-6-35b",
+      "name": "Qwen3.6 35B",
+      "family": "Qwen 3.6",
+      "context_window": 262144
     }
   ]
 }

@@ -802,7 +802,7 @@
             },
             allowance: {
                 title: 'Token allowance leaderboard',
-                blurb: 'Free tokens per day summed across each provider\'s free models, so a host that gives 200K/day on six models outranks one that gives 200K/day on a single model. Providers that are only request-capped (no token quota) are listed in the catalogue instead. One-time signup balances are flagged, not counted as recurring capacity.',
+                blurb: 'Free tokens each provider hands out, ranked by provider rather than by model. A shared account-wide pool — IteraCompute\'s 30M/month, Inception\'s 100M signup balance — is shown once with scope account-wide; otherwise the per-model quotas are summed and the scope column says how many models carry one. Request-capped providers with no token quota stay in the catalogue instead.',
                 column: 'Free tokens',
                 unit: 'providers with a token quota',
                 source: null,
@@ -811,6 +811,11 @@
         };
 
         function recurrenceOf(p) {
+            // An explicit allowance period describes the pool better than the offer type:
+            // a trial can hand out a monthly quota and a recurring tier can be one-shot.
+            if (p.allowance_period === 'one-time') return 'One-time';
+            if (p.allowance_period === 'month') return 'Monthly';
+            if (p.allowance_period === 'day') return 'Recurring';
             var t = (p.offer && p.offer.type) || '';
             if (t === 'trials') return 'One-time';
             if (t === 'monthly-credits') return 'Monthly';
@@ -1156,10 +1161,6 @@
             var clear = $('nav-search-clear');
             if (clear) clear.addEventListener('click', function () {
                 input.value = '';
-                state.q = '';
-                var cat = $('catalogue-search');
-                if (cat) cat.value = '';
-                renderCatalogue();
                 renderNavResults();
                 input.focus();
             });
@@ -1272,9 +1273,8 @@
             var search = $('catalogue-search');
             if (search) {
                 search.addEventListener('input', function (e) {
+                    // The catalogue filter is independent of the navbar search.
                     state.q = e.target.value.trim().toLowerCase();
-                    var nav = $('nav-search');
-                    if (nav) { nav.value = e.target.value; renderNavResults(); }
                     renderCatalogue();
                 });
             }

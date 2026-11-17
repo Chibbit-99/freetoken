@@ -17,6 +17,7 @@ from new_providers_a import PART_A  # noqa: E402
 from new_providers_b import PART_B  # noqa: E402
 from new_providers_c import PART_C  # noqa: E402
 from new_providers_d import PART_D  # noqa: E402
+from new_providers_e import PART_E  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -39,10 +40,25 @@ SKIP = {
     "async-voice", "paxa-labs", "lelapa", "viggle", "stability-ai", "wavespeed",
     "inferon", "clarifai", "voyage-ai", "jina-ai", "qdrant-cloud", "mongodb-atlas",
     "vlm-run",
+    # ":free" routes need a retained $5 prepaid balance, so the tier is not free in practice.
+    "infron",
+}
+
+# First-party pages read for each added provider, used for verified.sources.
+SOURCES = {
+    "merkium": ["https://www.merkium.nl", "https://mvalentsev.github.io/awesome-free-ai-coding/providers/merkium/"],
+    "iteracompute": ["https://iteracompute.com/free/", "https://mvalentsev.github.io/awesome-free-ai-coding/providers/iteracompute/"],
+    "miapi": ["https://miapi.uk", "https://mvalentsev.github.io/awesome-free-ai-coding/providers/miapi/"],
+    "sambanova": ["https://docs.sambanova.ai/docs/en/models/rate-limits", "https://cloud.sambanova.ai"],
+    "freeinference": ["https://doc.freeinference.org/models", "https://freeinference.org/terms"],
+    "sea-lion": ["https://sea-lion.ai/try-sea-lion/", "https://docs.sea-lion.ai/guides/inferencing/api"],
+    "opentyphoon": ["https://docs.opentyphoon.ai/en/rate-limits/", "https://docs.opentyphoon.ai/en/faq/"],
+    "agnes-ai": ["https://wiki.agnes-ai.com/en/docs/pricing", "https://wiki.agnes-ai.com/en/docs/faqs"],
 }
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
 PROVIDER_EXTRA = {
+    "iteracompute": {"free_token_allowance": 30000000, "allowance_period": "month"},
     "inception": {"free_token_allowance": 100000000, "allowance_period": "one-time"},
     "amd-radeon-cloud": {"catalog_size": 9},
     "logfare": {"catalog_size": 22},
@@ -67,13 +83,22 @@ PROVIDER_EXTRA = {
     "moark": {"catalog_size": 200},
 }
 
+SB_LIMITS = "Free tier: 20 requests/minute, 20 requests/day, 200K tokens/day (no card)"
+MERCURY_LIMITS = "100M one-time signup balance shared across Mercury 2/2.5/3; 100 RPM, 100K input TPM, 10K output TPM"
+
 MODEL_EXTRA = {
     "inception": {
         "mercury-2": {"token_allowance": 100000000},
     },
+    # SambaNova's Free tier is metered per model, not per account.
+    "sambanova": {
+        "deepseek-v3-1": {"token_allowance": 200000, "rate_limits": SB_LIMITS},
+        "llama-3-3-70b": {"token_allowance": 200000, "rate_limits": SB_LIMITS},
+        "gpt-oss-120b": {"token_allowance": 200000, "rate_limits": SB_LIMITS},
+        "deepseek-v3-2": {"token_allowance": 200000, "rate_limits": SB_LIMITS},
+        "gemma-4-31b": {"token_allowance": 200000, "rate_limits": SB_LIMITS},
+    },
 }
-MERCURY_LIMITS = "100M one-time signup balance shared across Mercury 2/2.5/3; 100 RPM, 100K input TPM, 10K output TPM"
-
 MODEL_FIX = {
     "oracle-oci": ["command-r-plus", "llama-4-maverick", "cohere-embed"],
     "aws-bedrock": ["llama-4-maverick", "mistral-large-4", "command-r-plus"],
@@ -115,7 +140,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:
@@ -124,8 +149,8 @@ def main():
         if pid == "inception":
             for m in models:
                 m["rate_limits"] = MERCURY_LIMITS
-                if m["id"] == "mercury-2":
-                    m["token_allowance"] = 100000000
+        for m in models:
+            m.update(MODEL_EXTRA.get(pid, {}).get(m["id"], {}))
         if not models:
             raise SystemExit("no models for " + pid)
         offer_type, tone = OFFER[offer_code]
@@ -141,7 +166,7 @@ def main():
             "privacy": {"type": PRIVACY[priv_code]},
             "requires_payment_card": card,
             "last_updated": CHECKED,
-            "verified": {"checked": CHECKED, "sources": [site, SOURCE_SNAPSHOT]},
+            "verified": {"checked": CHECKED, "sources": SOURCES.get(pid, [site, SOURCE_SNAPSHOT])},
             "free_access": bullets,
         }
         if priv_label:

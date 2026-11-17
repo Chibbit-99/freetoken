@@ -120,6 +120,10 @@
     "tencent-tokenhub.json",
     "amd-radeon-cloud.json",
     "huggingface.json",
-    "longcat.json"
+    "longcat.json",
+    "merkium.json",
+    "iteracompute.json",
+    "miapi.json",
+    "sambanova.json"
   ]
 }

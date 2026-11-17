@@ -1,0 +1,55 @@
+{
+  "id": "iteracompute",
+  "name": "IteraCompute",
+  "website": "https://iteracompute.com/free/",
+  "docs": "https://iteracompute.com/free/",
+  "signup": "https://iteracompute.com/free/",
+  "description": "Open-model host with a large monthly free token allowance and an Auto router.",
+  "overview": "IteraCompute serves self-hosted open models through an OpenAI-compatible API and gives every verified account 30,000,000 free tokens per month, shared across qwen/qwen3.8-27b and the Auto routing pool. There is no card, RPM or daily cap — but only one request at a time on the free slot, an 8,192-token output ceiling and no rollover. Prompts are not used to train foundation models without explicit authorisation; the no-recharge promotion currently runs to 2026-11-24.",
+  "offer": {
+    "type": "trials",
+    "label": "30M free tokens/month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training without consent"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://iteracompute.com/free/",
+      "https://mvalentsev.github.io/awesome-free-ai-coding/providers/iteracompute/"
+    ]
+  },
+  "free_access": [
+    "30,000,000 free tokens per month, reset on the 1st",
+    "No card and no recharge required",
+    "One concurrent free request, 8,192 output tokens",
+    "Prompts are not used for training without consent"
+  ],
+  "notes": "Free window currently ends 2026-11-24; optional $10/$50 top-ups raise the allowance.",
+  "free_token_allowance": 30000000,
+  "allowance_period": "month",
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "itera-automatic",
+      "name": "Itera Auto",
+      "family": "Itera",
+      "context_window": 131072,
+      "rate_limits": "Router picks the model; shares the monthly allowance"
+    }
+  ]
+}

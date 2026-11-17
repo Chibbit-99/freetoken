@@ -1,0 +1,66 @@
+{
+  "id": "merkium",
+  "name": "Merkium",
+  "website": "https://www.merkium.nl",
+  "docs": "https://www.merkium.nl",
+  "signup": "https://www.merkium.nl",
+  "description": "Dutch model lab serving its own Ceres, Ganymede and Pluto models free of charge.",
+  "overview": "Merkium is an independent Dutch model developer whose current API models carry no per-token or per-request charge: Ceres 1.0, Ganymede 1.1 and the Pluto 1.2 family, served through an OpenAI-compatible endpoint. The catalogue calls the models \"free to use through the API, permanently\" with no card or billing account, at 30 requests/minute per key, and states that conversations are never used to train, fine-tune or evaluate Merkium models.",
+  "offer": {
+    "type": "always-free",
+    "label": "Permanently free models",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "Never used for training"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.merkium.nl",
+      "https://mvalentsev.github.io/awesome-free-ai-coding/providers/merkium/"
+    ]
+  },
+  "free_access": [
+    "Current models are permanently free",
+    "30 requests/minute per key",
+    "No card or billing account",
+    "Prompts are never used for training"
+  ],
+  "notes": "Small independent lab: space requests at least two seconds apart and honour Retry-After.",
+  "models": [
+    {
+      "id": "ceres_1_0",
+      "name": "Ceres 1.0",
+      "family": "Ceres",
+      "context_window": 131072
+    },
+    {
+      "id": "ceres_1_0_pro",
+      "name": "Ceres 1.0 Pro",
+      "family": "Ceres",
+      "context_window": 131072
+    },
+    {
+      "id": "ganymede_1_1",
+      "name": "Ganymede 1.1",
+      "family": "Ganymede",
+      "context_window": 131072
+    },
+    {
+      "id": "pluto_1_2_flash",
+      "name": "Pluto 1.2 Flash",
+      "family": "Pluto",
+      "context_window": 131072
+    },
+    {
+      "id": "pluto_1_2_pro",
+      "name": "Pluto 1.2 Pro",
+      "family": "Pluto",
+      "context_window": 131072
+    }
+  ]
+}
