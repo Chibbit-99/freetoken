@@ -3,6 +3,29 @@
   "intro": "Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.",
   "items": [
     {
+      "id": "2026-11-17-five-leads-verified-and-added-subaxis-confirmed-",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Five leads verified and added; Subaxis confirmed dead",
+      "summary": "Nexusify, UnoRouter, onomeo, StudioLM and DGrid passed first-party checks. TokenReply, Coarena and ValorGPT are held because their free model lists only render inside an account.",
+      "providers": [
+        "nexusify",
+        "unorouter",
+        "onomeo",
+        "studiolm",
+        "dgrid"
+      ],
+      "details": [
+        "Nexusify renews $25 of credit every Monday with no card, 130 rpm, across 99 text models.",
+        "UnoRouter marks 159 of its 294 routes free with a :free suffix on one key.",
+        "onomeo gives free models a per-window call quota",
+        "StudioLM's chat route has a free daily allowance",
+        "DGrid publishes a $0/M router model.",
+        "Subaxis is closed — its homepage is a shutdown notice. CoderPlan, A4F and pool'edAI publish no free tier.",
+        "data/LEAD_VERIFICATION.md records the verdict for every lead."
+      ]
+    },
+    {
       "id": "2026-11-17-updates-page",
       "date": "2026-11-17",
       "kind": "update",

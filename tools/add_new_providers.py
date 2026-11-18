@@ -22,6 +22,7 @@ from new_providers_f import PART_F  # noqa: E402
 from new_providers_g import PART_G  # noqa: E402
 from new_providers_h import PART_H  # noqa: E402
 from new_providers_i import PART_I  # noqa: E402
+from new_providers_j import PART_J  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -77,6 +78,11 @@ SOURCES = {
     "cheapllm-shop": ["https://cheapllm.shop/docs", "https://cheapllm.shop"],
     "electronhub": ["https://www.electronhub.ai/pricing", "https://www.electronhub.ai/models.html#access=free"],
     "anyapi": ["https://anyapi.ai/pricing", "https://anyapi.ai/ai-models"],
+    "nexusify": ["https://docs.nexusify.co/", "https://nexusify.co"],
+    "unorouter": ["https://unorouter.com/en", "https://unorouter.com/en/models"],
+    "onomeo": ["https://onomeo.com/integrations", "https://onomeo.com/models"],
+    "studiolm": ["https://studiolm.dev/", "https://docs.studiolm.dev/getting-started/quickstart/"],
+    "dgrid": ["https://dgrid.ai/models/dgridai/free/", "https://dgrid.ai"],
 }
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
@@ -87,6 +93,10 @@ PROVIDER_EXTRA = {
     "cheapllm-shop": {"free_token_allowance": 144000, "allowance_period": "day", "catalog_size": 1},
     "anyapi": {"free_token_allowance": 100000, "allowance_period": "day", "catalog_size": 400},
     "electronhub": {"catalog_size": 600},
+    "nexusify": {"catalog_size": 99},
+    "unorouter": {"catalog_size": 294},
+    "onomeo": {"catalog_size": 40},
+    "dgrid": {"catalog_size": 1},
     "navy-ai": {"free_token_allowance": 150000, "allowance_period": "day"},
     "ant-ling": {"free_token_allowance": 500000, "allowance_period": "day"},
     "baichuan": {"free_token_allowance": 5000000, "allowance_period": "one-time"},
@@ -171,7 +181,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

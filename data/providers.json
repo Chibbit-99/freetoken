@@ -143,6 +143,11 @@
     "xkiro.json",
     "cheapllm-shop.json",
     "electronhub.json",
-    "anyapi.json"
+    "anyapi.json",
+    "nexusify.json",
+    "unorouter.json",
+    "onomeo.json",
+    "studiolm.json",
+    "dgrid.json"
   ]
 }

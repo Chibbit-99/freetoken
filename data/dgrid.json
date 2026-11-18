@@ -1,0 +1,44 @@
+{
+  "id": "dgrid",
+  "name": "DGrid",
+  "website": "https://dgrid.ai",
+  "docs": "https://dgrid.ai",
+  "signup": "https://dgrid.ai",
+  "description": "Free router model that schedules across free compute and bills $0 per token.",
+  "overview": "DGrid publishes a single router model, dgridai/free, priced at $0 per million input and output tokens. It schedules across whatever free capacity it has — general chat, reasoning, coding help, multilingual writing — so you call one model ID through POST /v1/chat/completions at https://api.dgrid.ai/v1 and get whichever upstream is healthy, rather than choosing a model yourself. A free API key is all that is needed.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free Models Router at $0/M",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Aggregated free compute, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://dgrid.ai/models/dgridai/free/",
+      "https://dgrid.ai"
+    ]
+  },
+  "free_access": [
+    "$0/M input and output tokens",
+    "OpenAI-compatible /v1/chat/completions",
+    "Free API key, no card",
+    "Upstream model varies per request"
+  ],
+  "notes": "The backing model is chosen at request time, so throughput and capability vary.",
+  "catalog_size": 1,
+  "models": [
+    {
+      "id": "dgridai/free",
+      "name": "Free Models Router",
+      "family": "DGrid",
+      "context_window": 131072,
+      "rate_limits": "Free router; capacity shared across free upstreams"
+    }
+  ]
+}
