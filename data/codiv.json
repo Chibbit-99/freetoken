@@ -1,0 +1,41 @@
+{
+  "id": "codiv",
+  "name": "Codiv",
+  "website": "https://codiv.ai/",
+  "docs": "https://codiv.ai/",
+  "signup": "https://codiv.ai/",
+  "description": "Codiv offers a finite text-generation allowance during its public experiment.",
+  "overview": "Codiv offers 10 million text-generation tokens per account and a separate 100 million System One token allowance during its free public experiment, with no card required and 60 requests per minute per key. The text-generation allowance is a finite per-account grant, not a recurring quota. The service and experiment may change.",
+  "offer": {
+    "type": "trials",
+    "label": "10M text-generation tokens per account",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://codiv.ai/",
+      "https://codiv.ai/docs/models"
+    ]
+  },
+  "free_access": [
+    "10M text-generation tokens per account",
+    "Separate 100M System One tokens",
+    "60 requests/minute per key",
+    "No card; finite public experiment"
+  ],
+  "notes": "Use diffusiongemma-26b on /v1/chat/completions. The 10M allowance is not described as renewing.",
+  "models": [
+    {
+      "id": "diffusiongemma-26b",
+      "name": "DiffusionGemma 26B",
+      "family": "Gemma"
+    }
+  ]
+}

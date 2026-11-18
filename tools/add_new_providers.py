@@ -29,6 +29,7 @@ from new_providers_m import PART_M  # noqa: E402
 from new_providers_n import PART_N  # noqa: E402
 from new_providers_o import PART_O  # noqa: E402
 from new_providers_p import PART_P  # noqa: E402
+from new_providers_q import PART_Q  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -57,6 +58,16 @@ SKIP = {
 
 # First-party pages read for each added provider, used for verified.sources.
 SOURCES = {
+    "synap": ["https://synap402.com/ai/account.html", "https://synap402.com/ai/docs.html"],
+    "chatanywhere": ["https://github.com/chatanywhere/GPT_API_free", "https://chatanywhere.tech/"],
+    "modelbridge": ["https://aibridge-api.com/pricing.html", "https://aibridge-api.com/docs.html"],
+    "mindshub": ["https://mindshub.ai/unified-inference", "https://mindshub.ai/"],
+    "y-api": ["https://y-api.bestvirtualgoods.com/", "https://y-api.bestvirtualgoods.com/models"],
+    "eden-ai": ["https://www.edenai.co/post/top-free-text-generation-tools-apis-and-open-source-models", "https://www.edenai.co/post/top-free-llm-tools-apis-and-open-source-models"],
+    "maritaca": ["https://docs.maritaca.ai/en/overview", "https://docs.maritaca.ai/en/s5-quick-start"],
+    "krafton-raon": ["https://raon-mini.krafton.ai/en", "https://raon-mini.krafton.ai/en/terms"],
+    "codiv": ["https://codiv.ai/", "https://codiv.ai/docs/models"],
+    "callmissed": ["https://www.callmissed.com/pricing", "https://www.callmissed.com/blog/how-to-get-a-free-api-key-for-llm-models-from-callmissed-features-models-and-usa"],
     "plugsky": ["https://plugsky.com/docs", "https://plugsky.com/articles/ai-api-for-law-firms-use-cases-security-and-deployment-options"],
     "septor-labs": ["https://septorlabs.com/", "https://septorlabs.com/models/hermes-3-llama-3.1-405b-free"],
     "clod": ["https://clod.io/free-cheap-ai", "https://app.clod.io/auth/models", "https://clod.io/docs"],
@@ -246,7 +257,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P + PART_Q:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

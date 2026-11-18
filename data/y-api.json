@@ -1,0 +1,41 @@
+{
+  "id": "y-api",
+  "name": "Y-API",
+  "website": "https://y-api.bestvirtualgoods.com/",
+  "docs": "https://y-api.bestvirtualgoods.com/",
+  "signup": "https://y-api.bestvirtualgoods.com/",
+  "description": "Y-API lists selected zero-cost models and a daily request cap.",
+  "overview": "Y-API lists selected models as free with no credit deducted, alongside a one-time $1 signup credit. Trial accounts have 100 requests per day shared across all models; daily check-in raises that day to 200. No card is needed at signup. Its upstream can withdraw a free flag and calls then start billing at listed prices without a code change.",
+  "offer": {
+    "type": "free-models",
+    "label": "100 requests/day on trial accounts",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://y-api.bestvirtualgoods.com/",
+      "https://y-api.bestvirtualgoods.com/models"
+    ]
+  },
+  "free_access": [
+    "100 requests/day shared across models",
+    "Daily check-in raises that day to 200",
+    "No card at signup",
+    "Free model flags can change to paid without code changes"
+  ],
+  "notes": "Use deepseek/deepseek-v4-flash and check the live price before calling; the provider warns free routes may become paid.",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek"
+    }
+  ]
+}

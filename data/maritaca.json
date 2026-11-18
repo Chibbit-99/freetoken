@@ -1,0 +1,41 @@
+{
+  "id": "maritaca",
+  "name": "Maritaca AI",
+  "website": "https://maritaca.ai/",
+  "docs": "https://maritaca.ai/",
+  "signup": "https://maritaca.ai/",
+  "description": "Maritaca offers S5-free as a temporary API promotion.",
+  "overview": "Maritaca documents S5-free as a text-only API model with no token charge for a limited time. The promotion has no published end date and is not a permanent free tier; Batch, Flex, built-in tools, PDF and image input are excluded. The vendor recommends the paid S5 for ongoing or production use.",
+  "offer": {
+    "type": "trials",
+    "label": "S5-free promotion, limited time",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.maritaca.ai/en/overview",
+      "https://docs.maritaca.ai/en/s5-quick-start"
+    ]
+  },
+  "free_access": [
+    "S5-free text model at no cost for a limited time",
+    "No end date published",
+    "No built-in tools, Batch or Flex",
+    "Card requirement not confirmed"
+  ],
+  "notes": "Use S5-free, not the paid S5 alias; check the current promotion before calling.",
+  "models": [
+    {
+      "id": "s5-free",
+      "name": "S5 Free",
+      "family": "Sabiá"
+    }
+  ]
+}

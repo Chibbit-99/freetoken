@@ -1,0 +1,41 @@
+{
+  "id": "krafton-raon",
+  "name": "KRAFTON Raon",
+  "website": "https://raon-mini.krafton.ai/en",
+  "docs": "https://raon-mini.krafton.ai/en",
+  "signup": "https://raon-mini.krafton.ai/en",
+  "description": "KRAFTON offers Raon-1 mini API access free during its preview.",
+  "overview": "KRAFTON says the Raon-1 mini preview API is free for a limited time, with per-user token and request limits that may apply. Apply with name, email, affiliation, role and intended use to receive a console invitation and API key. Hosted beta terms restrict use to evaluation and development. Future charges will be announced separately; no end date or card requirement is specified.",
+  "offer": {
+    "type": "trials",
+    "label": "Raon API free for a limited time",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://raon-mini.krafton.ai/en",
+      "https://raon-mini.krafton.ai/en/terms"
+    ]
+  },
+  "free_access": [
+    "Limited-time free preview",
+    "Per-user token and request limits may apply",
+    "Application and console invitation required",
+    "Evaluation and development only; card status unknown"
+  ],
+  "notes": "The API preview is temporary; model weights licensing does not establish the API terms.",
+  "models": [
+    {
+      "id": "raon-1-mini-preview",
+      "name": "Raon-1 Mini Preview",
+      "family": "Raon"
+    }
+  ]
+}

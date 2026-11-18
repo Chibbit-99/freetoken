@@ -1,0 +1,41 @@
+{
+  "id": "callmissed",
+  "name": "CallMissed",
+  "website": "https://www.callmissed.com/",
+  "docs": "https://www.callmissed.com/",
+  "signup": "https://www.callmissed.com/",
+  "description": "CallMissed provides signup credits for its model API, not a recurring credit grant.",
+  "overview": "CallMissed advertises 1,000 signup credits on its free plan, with 100 LLM calls per month and 60 requests per minute. Its pricing page states that usage spends credits and that the free plan has no monthly credit grant, so the monthly call cap is not a recurring free balance. The vendor says signup does not require a card.",
+  "offer": {
+    "type": "trials",
+    "label": "1,000 one-time signup credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.callmissed.com/pricing",
+      "https://www.callmissed.com/blog/how-to-get-a-free-api-key-for-llm-models-from-callmissed-features-models-and-usa"
+    ]
+  },
+  "free_access": [
+    "1,000 one-time signup credits",
+    "Free plan capped at 100 LLM calls/month",
+    "60 requests/minute",
+    "Usage spends credits; no monthly credit grant"
+  ],
+  "notes": "Trial credits are finite. Check the live model catalog and prices before use.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT OSS 120B",
+      "family": "GPT OSS"
+    }
+  ]
+}

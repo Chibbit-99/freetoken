@@ -111,3 +111,25 @@ requests were made.
 
 All sources checked 2026-11-17. Router9 and Free.ai remain leads rather than
 confirmed usable no-payment text APIs.
+
+## Iteration 16 — 2026-11-17
+
+Discovery included the [freetokens tracker](https://github.com/luongnv89/freetokens), the [free inference index](https://freeinference.dev/), [GitHub community lists and discussions](https://github.com/mnfst/awesome-free-llm-apis), and a [YouTube video](https://www.youtube.com/watch?v=QADqE9mlOdo). These were leads, not proof of current eligibility. No authenticated API calls or billing tests were performed.
+
+| Lead | Decision and first-party evidence |
+| --- | --- |
+| Synap | Added recurring: [account](https://synap402.com/ai/account.html) and [docs](https://synap402.com/ai/docs.html) specify 100K/50 daily first 7 days, then 50K/10; no card. A second account-page section still has the old limit. |
+| ChatAnywhere | Added recurring: [README](https://github.com/chatanywhere/GPT_API_free) says 50K points/week, 100 requests/day/key, GitHub binding, non-commercial only; [homepage](https://chatanywhere.tech/) confirms free key. Card status unknown. |
+| ModelBridge | Added recurring: [pricing](https://aibridge-api.com/pricing.html) says 500K tokens/month and no card; 500K bonus is one-time. |
+| MindsHub | Added recurring: [inference](https://mindshub.ai/unified-inference) and [home](https://mindshub.ai/) offer Air within daily fair use, no card, for non-coding work; published absolute allowance absent. |
+| Y-API | Added free models: [homepage](https://y-api.bestvirtualgoods.com/) and [catalog](https://y-api.bestvirtualgoods.com/models) say no card, 100 requests/day and selected models deduct no credit; free flag can be withdrawn and calls automatically become paid. |
+| Eden AI | Added free models: [vendor article](https://www.edenai.co/post/top-free-text-generation-tools-apis-and-open-source-models) lists tested $0 routes; [another](https://www.edenai.co/post/top-free-llm-tools-apis-and-open-source-models) conflicts on region. Quota, billing activation and residency require checking. |
+| Maritaca | Added temporary preview, not recurring: [docs](https://docs.maritaca.ai/en/s5-quick-start) state S5-free is limited-time and text-only. |
+| KRAFTON Raon | Added temporary preview, not recurring: [launch](https://raon-mini.krafton.ai/en) and [hosted terms](https://raon-mini.krafton.ai/en/terms) specify evaluation/development beta, limits and application. |
+| Codiv | Added finite trial: [site](https://codiv.ai/) and [model docs](https://codiv.ai/docs/models) identify 10M text-generation tokens per account, separate from System One; no card, no renewal stated. |
+| CallMissed | Added finite trial: [pricing](https://www.callmissed.com/pricing) specifies 1,000 signup credits, 100 LLM calls/month and no monthly credit grant; calls spend credits. [Vendor blog](https://www.callmissed.com/blog/how-to-get-a-free-api-key-for-llm-models-from-callmissed-features-models-and-usa) says signup needs no card. |
+| Reka | Not added: [old index claim](https://freellmapi.co/state-of-free-llm-apis-2026) of $10/month lacks current vendor corroboration; [maintainer report](https://github.com/tashfeenahmed/freellmapi/issues/1559) says prepaid credits required. No current first-party free tier verified. |
+| FreeTheAI | Not added: [operator](https://freetheai.org/blog/free-tier-closing) closed free tier for most accounts on Nov 10, despite old indexes/search results. |
+| APInex | Excluded: [operator](https://apinex.bond/) requires initial top-up for free aliases. |
+| Unisound | Not added: [U2-Decision](https://maas.unisound.com/model-hub/u2-decision) is a temporary decision API, not text generation; [U2-Flash](https://maas.unisound.com/model-hub/u2-flash) is priced. |
+| VModel | Not added: [pricing](https://vmodel.ai/docs/api/pricing.html) claims $10 credits valid for text but no specific available text-generation model verified. |

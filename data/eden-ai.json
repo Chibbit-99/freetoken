@@ -1,0 +1,42 @@
+{
+  "id": "eden-ai",
+  "name": "Eden AI",
+  "website": "https://www.edenai.co/",
+  "docs": "https://www.edenai.co/",
+  "signup": "https://www.edenai.co/",
+  "description": "Eden AI lists selected text-generation models at zero cost.",
+  "overview": "Eden AI documents seven text-generation routes billed at $0, including google/gemma-4-31b-it. Its article reports testing them on 27 October 2026. Its own pages conflict on whether free Gemma runs in the EU or global region; consult the current model catalog for residency and availability. A numeric ongoing quota and payment requirement for these routes were not independently confirmed.",
+  "offer": {
+    "type": "free-models",
+    "label": "Selected $0 text-generation models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.edenai.co/post/top-free-text-generation-tools-apis-and-open-source-models",
+      "https://www.edenai.co/post/top-free-llm-tools-apis-and-open-source-models"
+    ]
+  },
+  "free_access": [
+    "Selected models billed $0",
+    "OpenAI-compatible API",
+    "Data residency claims conflict; verify before use",
+    "Quota and payment requirements unconfirmed"
+  ],
+  "notes": "Use google/gemma-4-31b-it at https://api.edenai.run/v3. Check the live catalog and billing before use.",
+  "models": [
+    {
+      "id": "gemma-4-31b-it",
+      "name": "Gemma 4 31B IT",
+      "family": "Gemma",
+      "context_window": 262144
+    }
+  ]
+}

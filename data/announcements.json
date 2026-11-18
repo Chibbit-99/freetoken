@@ -32,6 +32,32 @@
       ]
     },
     {
+      "id": "2026-11-17-ten-provider-additions-free-tiers-and-trials",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "Ten provider additions: free tiers and trials",
+      "summary": "Added six recurring or free-model providers and four clearly labeled trials or previews.",
+      "providers": [
+        "synap",
+        "chatanywhere",
+        "modelbridge",
+        "mindshub",
+        "y-api",
+        "eden-ai",
+        "maritaca",
+        "krafton-raon",
+        "codiv",
+        "callmissed"
+      ],
+      "details": [
+        "Synap reduces its daily quota after seven days",
+        "ChatAnywhere restricts its free key to non-commercial use",
+        "Y-API free routes can become paid without code changes",
+        "Raon and S5 are temporary previews",
+        "Codiv and CallMissed have finite credits."
+      ]
+    },
+    {
       "id": "2026-11-17-five-more-recurring-free-api-providers",
       "date": "2026-11-17",
       "kind": "added",

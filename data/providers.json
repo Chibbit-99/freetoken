@@ -182,6 +182,16 @@
     "septor-labs.json",
     "clod.json",
     "dreamprompting.json",
-    "gizmo.json"
+    "gizmo.json",
+    "synap.json",
+    "chatanywhere.json",
+    "modelbridge.json",
+    "mindshub.json",
+    "y-api.json",
+    "eden-ai.json",
+    "maritaca.json",
+    "krafton-raon.json",
+    "codiv.json",
+    "callmissed.json"
   ]
 }
