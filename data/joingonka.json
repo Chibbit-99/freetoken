@@ -1,0 +1,57 @@
+{
+  "id": "joingonka",
+  "name": "JoinGonka Gateway",
+  "website": "https://gate.joingonka.ai",
+  "docs": "https://gate.joingonka.ai",
+  "signup": "https://gate.joingonka.ai",
+  "description": "Gateway to Gonka-served GLM, DeepSeek and MiniMax with 3M tokens free.",
+  "overview": "JoinGonka Gateway serves the Gonka network's open models through one OpenAI- and Anthropic-compatible key at gate.joingonka.ai/v1, and new accounts get 3,000,000 free tokens on registration. It advertises GLM-5.3-Flash at $0.0058 per million tokens against $0.15 on OpenRouter, charges a 10% usage fee over network cost, and bundles web search, JSON healing and PDF parsing as request plugins. Registration takes about thirty seconds and no card or KYC is required.",
+  "offer": {
+    "type": "trials",
+    "label": "3M free tokens on signup",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Gonka network gateway, no KYC"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://gate.joingonka.ai/",
+      "https://joingonka.ai/"
+    ]
+  },
+  "free_access": [
+    "3M free tokens on registration",
+    "No card, no KYC; key in about 30 seconds",
+    "OpenAI and Anthropic compatible, works with Claude Code and Codex CLI",
+    "Web search, JSON healing and PDF parsing as request plugins"
+  ],
+  "notes": "One of several independent Gonka resellers, each with its own signup and its own grant — see Dahl, Gonka24 and GonkaRouter. Prices track a decentralised network, so availability moves.",
+  "free_token_allowance": 3000000,
+  "allowance_period": "one-time",
+  "catalog_size": 3,
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 262144
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 204800
+    }
+  ]
+}

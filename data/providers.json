@@ -164,6 +164,14 @@
     "nlp-cloud.json",
     "liquid-ai.json",
     "qiniu.json",
-    "blockrun.json"
+    "blockrun.json",
+    "dahl.json",
+    "mingles.json",
+    "intern-inkstone.json",
+    "openthai.json",
+    "joingonka.json",
+    "gonka24.json",
+    "typhoon.json",
+    "sarvam.json"
   ]
 }

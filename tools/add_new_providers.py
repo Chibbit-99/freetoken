@@ -26,6 +26,7 @@ from new_providers_j import PART_J  # noqa: E402
 from new_providers_k import PART_K  # noqa: E402
 from new_providers_l import PART_L  # noqa: E402
 from new_providers_m import PART_M  # noqa: E402
+from new_providers_n import PART_N  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -102,6 +103,15 @@ SOURCES = {
     "liquid-ai": ["https://www.liquid.ai/pricing", "https://console.liquid.ai/docs/getting-started"],
     "qiniu": ["https://www.qiniu.com/ai", "https://developer.qiniu.com/ai"],
     "blockrun": ["https://blockrun.ai/models?filter=free", "https://blockrun.ai/docs"],
+    "dahl": ["https://inference.dahl.global/", "https://gonka.ai/docs/developer/quickstart/"],
+    "zro": ["https://zro.moonmath.ai/pricing", "https://zro.moonmath.ai/"],
+    "mingles": ["https://router.mingles.ai/", "https://github.com/MinglesAI/gonka-proxy"],
+    "intern-inkstone": ["https://discovery.intern-ai.org.cn/token-plan/home", "https://www.shlab.org.cn/"],
+    "openthai": ["https://openthai.aieat.or.th/", "https://openthai.ai/en/previous-versions-and-resources/openthaigpt-1.5"],
+    "joingonka": ["https://gate.joingonka.ai/", "https://joingonka.ai/"],
+    "gonka24": ["https://gonka24.com/", "https://gonka24.com/docs"],
+    "typhoon": ["https://opentyphoon.ai/", "https://docs.opentyphoon.ai/en/"],
+    "sarvam": ["https://www.sarvam.ai/api-pricing", "https://docs.sarvam.ai/api/getting-started/models"],
 }
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
@@ -129,6 +139,14 @@ PROVIDER_EXTRA = {
     "vectoree": {"catalog_size": 36},
     "qiniu": {"free_token_allowance": 3000000, "allowance_period": "one-time", "catalog_size": 70},
     "blockrun": {"catalog_size": 124},
+    "dahl": {"free_token_allowance": 100000000, "allowance_period": "one-time", "catalog_size": 4},
+    "zro": {"catalog_size": 2},
+    "mingles": {"free_token_allowance": 4000000, "allowance_period": "week"},
+    "intern-inkstone": {"catalog_size": 10},
+    "joingonka": {"free_token_allowance": 3000000, "allowance_period": "one-time", "catalog_size": 3},
+    "gonka24": {"catalog_size": 4},
+    "typhoon": {"catalog_size": 12},
+    "sarvam": {"catalog_size": 14},
     "navy-ai": {"free_token_allowance": 150000, "allowance_period": "day"},
     "ant-ling": {"free_token_allowance": 500000, "allowance_period": "day"},
     "baichuan": {"free_token_allowance": 5000000, "allowance_period": "one-time"},
@@ -213,7 +231,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

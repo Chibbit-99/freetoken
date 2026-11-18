@@ -1,7 +1,36 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "intro": "Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.",
   "items": [
+    {
+      "id": "2026-11-18-eight-new-providers-dahl-inkstone-openthai-joing",
+      "date": "2026-11-18",
+      "kind": "added",
+      "title": "Eight new providers: Dahl, InkStone, OpenThai, JoinGonka, Gonka24, Mingles, Typhoon, Sarvam",
+      "summary": "The catalogue grows to 169 providers. Six independent Gonka brokers each carry their own free grant, alongside Shanghai AI Lab's InkStone trial, Thailand's free Typhoon research API and India's Sarvam with Rs 100 of never-expiring credits. Onomeo's entry was refreshed: its free ids are gone, replaced by a site-wide call pool.",
+      "providers": [
+        "dahl",
+        "intern-inkstone",
+        "openthai",
+        "joingonka",
+        "gonka24",
+        "mingles",
+        "typhoon",
+        "sarvam",
+        "onomeo"
+      ],
+      "details": [
+        "Dahl Inference: first 100M tokens free, no card",
+        "Intern InkStone: 10 ink dots/month in trial, three models at 0 dots",
+        "OpenThai: free Thai endpoint, dummy bearer token only",
+        "JoinGonka: 3M tokens on registration",
+        "Gonka24: $1 credit after email verification",
+        "Mingles Router: up to 4M tokens/week, key in 30 seconds",
+        "Typhoon: free research API, 5 req/s, 131K context",
+        "Sarvam: Rs 100 credits that never expire",
+        "Onomeo refreshed: site-wide free-call pool, refreshed every 5 hours"
+      ]
+    },
     {
       "id": "2026-11-17-nine-providers-from-non-english-sweeps-including",
       "date": "2026-11-17",

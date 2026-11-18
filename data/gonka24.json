@@ -1,0 +1,55 @@
+{
+  "id": "gonka24",
+  "name": "Gonka24",
+  "website": "https://gonka24.com",
+  "docs": "https://gonka24.com",
+  "signup": "https://gonka24.com",
+  "description": "Broker front-end for Gonka inference with $1 of credit after verification.",
+  "overview": "Gonka24 is an independent broker for Gonka-network inference, exposing Kimi K2.6, MiniMax M2.7, DeepSeek V4 Flash and GLM-5.3 Flash at router.gonka24-style prices through api.gonka24.com/v1. New accounts get $1 of free credit after email and a human check, with no card required to start, and the dashboard tracks requests, token volume and balance. At its listed rates that $1 buys roughly 70 million GLM-5.3-Flash input tokens, so it is a small but usable test budget.",
+  "offer": {
+    "type": "trials",
+    "label": "$1 free credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Gonka broker, independent operator"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://gonka24.com/",
+      "https://gonka24.com/docs"
+    ]
+  },
+  "free_access": [
+    "$1 free credit after email and human verification",
+    "No card required to start",
+    "OpenAI-compatible at api.gonka24.com/v1",
+    "Usage and balance visible in the dashboard"
+  ],
+  "notes": "Smallest grant in the Gonka family, kept because the per-token rates are low enough that $1 still buys tens of millions of tokens. Independent broker, not affiliated with the network itself.",
+  "catalog_size": 4,
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 262144
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 204800
+    }
+  ]
+}

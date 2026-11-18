@@ -1,0 +1,61 @@
+{
+  "id": "intern-inkstone",
+  "name": "Intern InkStone",
+  "website": "https://discovery.intern-ai.org.cn/token-plan/home",
+  "docs": "https://discovery.intern-ai.org.cn/token-plan/home",
+  "signup": "https://discovery.intern-ai.org.cn/token-plan/home",
+  "description": "Shanghai AI Lab's Shusheng platform hands out 10 free ink dots a month.",
+  "overview": "Intern InkStone (书生·端砚) is Shanghai AI Laboratory's model platform, and its ink-dot plan gives every user 10 free ink dots each month during the trial period — renewed monthly rather than granted once. Dots are spent by model and by token class: 1 dot per million uncached input tokens and 4 per million output tokens, so 10 dots is up to 10M input tokens, or far more when the cache is warm. Three of the lab's own models — Shusheng S2, Atria Dawn Preview and Agents A1 — are marked at zero dots, so they cost nothing at all. The endpoint speaks both OpenAI and Anthropic shapes at discovery-api.intern-ai.org.cn/v1, and sign-in is by WeChat QR code.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "10 ink dots per month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Shanghai AI Lab research platform"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://discovery.intern-ai.org.cn/token-plan/home",
+      "https://www.shlab.org.cn/"
+    ]
+  },
+  "free_access": [
+    "10 ink dots every month, renewed during the trial period",
+    "Three lab models cost 0 dots — effectively free",
+    "OpenAI and Anthropic compatible at discovery-api.intern-ai.org.cn/v1",
+    "No card; sign in with WeChat"
+  ],
+  "notes": "Dots are capped at 10 per five hours and 50 per seven days, so the monthly pool is not spendable at once. Chinese-language platform, WeChat sign-in, and the trial terms can change without notice.",
+  "catalog_size": 10,
+  "models": [
+    {
+      "id": "shusheng-s2",
+      "name": "Shusheng S2",
+      "family": "Shusheng",
+      "context_window": 1048576
+    },
+    {
+      "id": "atria-dawn-preview",
+      "name": "Atria Dawn Preview",
+      "family": "Atria",
+      "context_window": 262144
+    },
+    {
+      "id": "agents-a1",
+      "name": "Agents A1",
+      "family": "Agents A1",
+      "context_window": 262144
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    }
+  ]
+}

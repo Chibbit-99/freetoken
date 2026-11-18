@@ -1,0 +1,63 @@
+{
+  "id": "dahl",
+  "name": "Dahl Inference",
+  "website": "https://inference.dahl.global",
+  "docs": "https://inference.dahl.global",
+  "signup": "https://inference.dahl.global",
+  "description": "Estonian-run Gonka reseller giving every new account 100M tokens free.",
+  "overview": "Dahl Inference resells capacity from the Gonka decentralised GPU network through an OpenAI-compatible endpoint at inference.dahl.global/v1, and its homepage states the offer plainly: \"First 100 million tokens free\". It is a one-time promotional grant rather than a monthly reset, and the terms let Dahl withdraw free access at any time. The catalogue is the Gonka set — MiniMax M2.7, DeepSeek V4 Flash, GLM-5.3 Flash and Qwen3.8 Flash — with no per-request cap published; the operator is FROMZERO OÜ in Estonia.",
+  "offer": {
+    "type": "trials",
+    "label": "100M free tokens on signup",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Decentralised Gonka capacity, reseller terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://inference.dahl.global/",
+      "https://gonka.ai/docs/developer/quickstart/"
+    ]
+  },
+  "free_access": [
+    "100M free tokens on signup — the largest one-time grant found",
+    "No card needed to claim the key",
+    "OpenAI-compatible at inference.dahl.global/v1",
+    "Runs on decentralised Gonka GPU capacity"
+  ],
+  "notes": "One-time grant, no reset, and the terms reserve the right to end it. Claims a 99% saving against corporate per-token averages, which is a pricing comparison rather than a quality claim.",
+  "free_token_allowance": 100000000,
+  "allowance_period": "one-time",
+  "catalog_size": 4,
+  "models": [
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 204800
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 262144
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 524288
+    }
+  ]
+}
