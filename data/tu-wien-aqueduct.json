@@ -1,0 +1,66 @@
+{
+  "id": "tu-wien-aqueduct",
+  "name": "TU Wien Aqueduct",
+  "website": "https://aqueduct.ai",
+  "docs": "https://aqueduct.ai",
+  "signup": "https://aqueduct.ai",
+  "description": "Vienna University of Technology's LLM gateway for teaching and research.",
+  "overview": "Aqueduct is TU Wien's AI gateway, giving students and researchers access to Qwen, DeepSeek and GLM models. No Aqueduct-specific public policy resolves payload retention, training, operator access or deletion, so only the institutional baseline applies.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free academic gateway",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No published policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aqueduct.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for TU Wien members",
+    "8 open models behind one API",
+    "No card required",
+    "OpenAI-compatible endpoints"
+  ],
+  "notes": "Access is tied to a university account.",
+  "catalog_size": 8,
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 28
+      }
+    }
+  ]
+}

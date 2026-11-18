@@ -1,0 +1,67 @@
+{
+  "id": "westai",
+  "name": "WestAI / KI:Inferenz.nrw",
+  "website": "https://westai.de",
+  "docs": "https://westai.de",
+  "signup": "https://westai.de",
+  "description": "German state-funded AI service centre hosting open models.",
+  "overview": "WestAI is the AI service centre for North Rhine-Westphalia and Baden-Württemberg, offering hosted Qwen, Mistral and GPT-OSS endpoints to researchers. Prompts are processed in real time without being saved or logged, though explicit training and deletion terms are incomplete.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Real-time processing only"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://westai.de",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for German researchers",
+    "Prompts are not saved or logged",
+    "7 open models",
+    "No card required"
+  ],
+  "notes": "Research access is granted per project.",
+  "catalog_size": 7,
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    }
+  ]
+}

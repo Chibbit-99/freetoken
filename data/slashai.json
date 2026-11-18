@@ -1,0 +1,43 @@
+{
+  "id": "slashai",
+  "name": "SlashAI",
+  "website": "https://slashai.my.id",
+  "docs": "https://slashai.my.id",
+  "signup": "https://slashai.my.id",
+  "description": "Indonesian gateway with an hour-long, 2M-token free trial across its catalogue.",
+  "overview": "SlashAI is an Indonesian OpenAI-compatible gateway reselling 100-plus models in rupiah, including a free-tier alias (`mimo-auto-free`, 256K context) alongside Claude, GPT and Gemini routes. The signup offer is a single one-hour window of 2,000,000 tokens at 15 requests per minute with no card, so it is a way to benchmark many models quickly rather than a standing allowance.",
+  "offer": {
+    "type": "trials",
+    "label": "2M tokens for one hour",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://slashai.my.id",
+      "https://slashai.my.id/docs"
+    ]
+  },
+  "free_access": [
+    "2,000,000 tokens in a one-hour window",
+    "15 requests/minute",
+    "No card",
+    "OpenAI-compatible aliases across 100+ models"
+  ],
+  "notes": "One trial per account; the free alias is separate from the one-hour window.",
+  "models": [
+    {
+      "id": "mimo-auto-free",
+      "name": "MiMo Auto Free",
+      "family": "MiMo",
+      "context_window": 262144,
+      "rate_limits": "Free trial: 2M tokens in one hour, 15 RPM"
+    }
+  ]
+}

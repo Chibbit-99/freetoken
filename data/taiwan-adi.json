@@ -1,0 +1,66 @@
+{
+  "id": "taiwan-adi",
+  "name": "Taiwan ADI Computing Power Program",
+  "website": "https://www.taiwanai.tw",
+  "docs": "https://www.taiwanai.tw",
+  "signup": "https://www.taiwanai.tw",
+  "description": "Taiwanese national programme granting compute for open-model inference.",
+  "overview": "Taiwan's ADI computing-power programme awards free GPU capacity that can be used to run inference on 48 open models including Gemma, Llama and Mistral. No award-specific policy resolves retention, training, operator access or deletion.",
+  "offer": {
+    "type": "trials",
+    "label": "Free compute award",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No award-specific policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.taiwanai.tw",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free compute awards for eligible teams",
+    "48 open models available",
+    "No card required",
+    "Applications reviewed periodically"
+  ],
+  "notes": "Award-based: you must apply and be accepted.",
+  "catalog_size": 48,
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 4
+      }
+    }
+  ]
+}

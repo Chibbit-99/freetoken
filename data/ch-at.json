@@ -1,0 +1,42 @@
+{
+  "id": "ch-at",
+  "name": "ch.at",
+  "website": "https://ch.at",
+  "docs": "https://ch.at",
+  "signup": "https://ch.at",
+  "description": "Free community-funded chat endpoint with an API.",
+  "overview": "ch.at is a community-funded chat service that exposes a small API for text generation. It claims not to log requests, but the upstream model and its data handling are not fully documented, and capacity depends on donated compute.",
+  "offer": {
+    "type": "always-free",
+    "label": "Community capacity",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Claims no logs"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ch.at",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free with no account",
+    "Claims no request logging",
+    "Small text-generation API",
+    "No card required"
+  ],
+  "notes": "Community capacity: throughput is not guaranteed and the upstream model can change.",
+  "models": [
+    {
+      "id": "ch-at-chat",
+      "name": "ch.at chat model",
+      "family": "ch.at",
+      "context_window": 32768
+    }
+  ]
+}

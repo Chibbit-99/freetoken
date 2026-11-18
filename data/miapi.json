@@ -1,0 +1,42 @@
+{
+  "id": "miapi",
+  "name": "MIAPI",
+  "website": "https://miapi.uk",
+  "docs": "https://miapi.uk",
+  "signup": "https://miapi.uk",
+  "description": "Grounded-answer API that returns citations, with a monthly free query allowance.",
+  "overview": "MIAPI answers questions with web grounding and inline citations through a single `miapi-grounded` model. The Free plan covers every endpoint with 100 queries per month per account and 60 requests/minute; questions are capped at 2,000 characters and answers at 50–2,000 output tokens. Usage logs are retained for up to 90 days, and no card is required.",
+  "offer": {
+    "type": "always-free",
+    "label": "100 free queries/month",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Usage logs kept up to 90 days"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://miapi.uk",
+      "https://mvalentsev.github.io/awesome-free-ai-coding/providers/miapi/"
+    ]
+  },
+  "free_access": [
+    "100 free queries per month",
+    "60 requests/minute",
+    "Answers include citations",
+    "No card required"
+  ],
+  "notes": "Grounded search answers only — not a general chat endpoint.",
+  "models": [
+    {
+      "id": "miapi-grounded",
+      "name": "MIAPI Grounded",
+      "family": "MIAPI",
+      "rate_limits": "100 queries/month; 60 RPM; max 2,000 output tokens"
+    }
+  ]
+}

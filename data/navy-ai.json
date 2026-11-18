@@ -1,0 +1,66 @@
+{
+  "id": "navy-ai",
+  "name": "NavyAI",
+  "website": "https://api.navy",
+  "docs": "https://api.navy",
+  "signup": "https://api.navy",
+  "description": "One key across a broad model catalogue, with a permanent daily token allowance.",
+  "overview": "NavyAI is a unified OpenAI-compatible gateway whose Free plan publishes 150,000 tokens per day and 20 requests per minute with no charge and no card. Sign-in is through Discord, models are discovered through /v1/models, and the free pool covers a rotating selection of open models — Llama 3.3 70B, Gemma 4 31B and DeepSeek V4 Flash among them — while newer paid routes stay restricted to higher plans.",
+  "offer": {
+    "type": "always-free",
+    "label": "150K tokens/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Discord sign-in, no published policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://api.navy",
+      "https://nejib1.github.io/Free-LLM/"
+    ]
+  },
+  "free_access": [
+    "150,000 free tokens/day",
+    "20 requests/minute",
+    "OpenAI-compatible /v1 endpoint",
+    "Discord account, no card"
+  ],
+  "notes": "Free pool rotates with the catalogue; paid routes are gated behind higher plans.",
+  "free_token_allowance": 150000,
+  "allowance_period": "day",
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    }
+  ]
+}

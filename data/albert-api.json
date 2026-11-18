@@ -1,0 +1,75 @@
+{
+  "id": "albert-api",
+  "name": "Albert API",
+  "website": "https://albert.api.etalab.gouv.fr",
+  "docs": "https://albert.api.etalab.gouv.fr",
+  "signup": "https://albert.api.etalab.gouv.fr",
+  "description": "French state LLM API for public administration and research, free of charge.",
+  "overview": "Albert API is the French government's sovereign LLM gateway, hosted on national infrastructure. Conversation traces are not retained, request data is not forwarded to model vendors, and content is not used for vendor training. Access is free for administrations, researchers and developers building public-interest services.",
+  "offer": {
+    "type": "research",
+    "label": "Free public-sector API",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No retention, no vendor training"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://albert.api.etalab.gouv.fr",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free access for public-interest projects",
+    "No conversation retention",
+    "No data sent to model vendors",
+    "Qwen, DeepSeek and Mistral models"
+  ],
+  "notes": "Requires a French public-interest justification or research affiliation.",
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    }
+  ]
+}

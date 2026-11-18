@@ -1,0 +1,112 @@
+{
+  "id": "requesty",
+  "name": "Requesty",
+  "website": "https://requesty.ai",
+  "docs": "https://requesty.ai",
+  "signup": "https://requesty.ai",
+  "description": "AI router with automatic fallback, caching and a no-card free tier on selected models.",
+  "overview": "Requesty is an AI gateway and router that spreads requests across providers with automatic fallback, caching and load balancing. Its free tier covers a set of open models at 200 requests per day without a card. It can also route your own provider keys.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free routed models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Provider-dependent"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://requesty.ai",
+      "https://free-llm.com/provider/requesty"
+    ]
+  },
+  "free_access": [
+    "200 requests/day on free models",
+    "No credit card required",
+    "Automatic provider fallback and caching",
+    "Free models include Nemotron, Gemma and Ling"
+  ],
+  "api_endpoint": "https://router.requesty.ai/v1",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 4
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 290,
+        "intelligence": 6
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "nemotron-3-ultra-550b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "family": "Nemotron",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 80,
+        "intelligence": 12
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 30
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "muse-glimmer",
+      "name": "Muse Glimmer 30B",
+      "family": "Muse",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 115,
+        "intelligence": 6
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 375,
+        "intelligence": 4
+      },
+      "rate_limits": "200 requests/day on free models"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 145
+      },
+      "rate_limits": "200 requests/day on free models"
+    }
+  ]
+}

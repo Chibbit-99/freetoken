@@ -1,0 +1,76 @@
+{
+  "id": "fastrouter",
+  "name": "FastRouter",
+  "website": "https://fastrouter.ai",
+  "docs": "https://fastrouter.ai",
+  "signup": "https://fastrouter.ai",
+  "description": "Low-latency router with free routes on Gemini, Gemma and GPT-OSS.",
+  "overview": "FastRouter is a latency-focused OpenAI-compatible router exposing Gemini, Gemma and GPT-OSS routes. Its terms grant broad perpetual rights to store and use inputs and outputs for debugging and service improvement.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free model routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Broad perpetual content licence"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://fastrouter.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free model routes",
+    "20 models behind one key",
+    "No card required",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "Terms allow perpetual storage and reuse of prompts and outputs.",
+  "catalog_size": 20,
+  "models": [
+    {
+      "id": "gemini-3-5-flash",
+      "name": "Gemini 3.5 Flash",
+      "family": "Gemini 3.5",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 165
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 29
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "simplellm",
+  "name": "SimpleLLM",
+  "website": "https://simplellm.eu",
+  "docs": "https://simplellm.eu",
+  "signup": "https://simplellm.eu",
+  "description": "EU-hosted OpenAI-compatible chat API with models that work at zero credit.",
+  "overview": "SimpleLLM is a European OpenAI-compatible chat API whose zero-price models work without any credit balance. Its rate-limit endpoint reports free-model hourly and daily request and token counters separately from the general per-minute bucket, which makes the free quota easy to automate against.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free tier models",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://simplellm.eu",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free models usable with no credit",
+    "Separate hourly and daily free counters",
+    "No card required",
+    "EU-hosted inference"
+  ],
+  "notes": "Only the models flagged free are zero-priced; others need credit.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 29
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    }
+  ]
+}

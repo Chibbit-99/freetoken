@@ -1,0 +1,52 @@
+{
+  "id": "nara-router",
+  "name": "NaraRouter",
+  "website": "https://router.bynara.id",
+  "docs": "https://router.bynara.id",
+  "signup": "https://router.bynara.id",
+  "description": "Indonesian router with a permanent free plan: 7M tokens a day, no card.",
+  "overview": "NaraRouter is an OpenAI-compatible gateway run by PT. NARA PEMECUT DIGITAL that fronts 40-plus aliases from Anthropic, DeepSeek, GLM, OpenAI, Moonshot, MiniMax and Qwen. Its plan endpoint publishes a Free tier that is explicitly permanent — \"start free, forever\" — with a 7,000,000-token daily cap, 15 requests/minute and no payment method. The same base URL also speaks the Anthropic Messages and OpenAI Responses formats, and paid plans raise the daily cap rather than replacing the free one.",
+  "offer": {
+    "type": "always-free",
+    "label": "7M tokens/day free plan",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Third-party upstream routing"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://router.bynara.id/api/plans",
+      "https://router.bynara.id/docs"
+    ]
+  },
+  "free_access": [
+    "Free plan: 7,000,000 tokens/day, 15 RPM",
+    "No card required",
+    "Chat, Messages and Responses endpoints",
+    "Paid tiers only raise the daily cap"
+  ],
+  "notes": "The Free plan's model list is resolved per key from /v1/models; prices and limits are set in IDR.",
+  "free_token_allowance": 7000000,
+  "allowance_period": "day",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "rate_limits": "Free plan: 7M tokens/day, 15 RPM"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "rate_limits": "Free plan: 7M tokens/day, 15 RPM"
+    }
+  ]
+}

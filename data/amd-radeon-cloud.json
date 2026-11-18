@@ -1,0 +1,96 @@
+{
+  "id": "amd-radeon-cloud",
+  "name": "AMD Radeon Cloud",
+  "website": "https://www.amd.com/en/developer.html",
+  "docs": "https://www.amd.com/en/developer.html",
+  "signup": "https://www.amd.com/en/developer.html",
+  "description": "AMD's free public model API for development, evaluation and hackathons.",
+  "overview": "AMD Radeon Cloud exposes a free model API for development, evaluation, demos, hackathons and open-source work: DeepSeek V4 Flash and V4.1 Flash, Qwen3.8 Flash/27B, GLM-5.3 Flash, MiMo-V2.6 Flash, MiniCPM5 and MinerU. Prompts and outputs roll off after two days and are never used for training, but content is logged in ordinary operation, and a rolling 24-hour spend ceiling (unpublished) gates heavy use.",
+  "offer": {
+    "type": "research",
+    "label": "Free public model API",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Two-day content retention, no training"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.amd.com/en/developer.html",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free route for development, evaluation and open-source work",
+    "9 models including DeepSeek V4.1 Flash, Qwen3.8 and GLM-5.3 Flash",
+    "30 RPM per key, 120 RPM per IP, 8 concurrent requests",
+    "No card required; automatic API key on registration"
+  ],
+  "notes": "A rolling 24-hour spend cap (value unpublished) limits heavy usage; prompts are kept for two days.",
+  "catalog_size": 9,
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 29
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 28
+      }
+    },
+    {
+      "id": "mimo-v2-6-flash",
+      "name": "MiMo V2.6 Flash",
+      "family": "MiMo",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 27
+      }
+    }
+  ]
+}

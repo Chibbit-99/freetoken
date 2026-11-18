@@ -1,0 +1,66 @@
+{
+  "id": "virginia-tech-arc",
+  "name": "Virginia Tech ARC",
+  "website": "https://arc.vt.edu",
+  "docs": "https://arc.vt.edu",
+  "signup": "https://arc.vt.edu",
+  "description": "University gateway offering open-model chat and API access with no cost to users.",
+  "overview": "Virginia Tech's Advanced Research Computing group runs an LLM gateway for its community, exposing Qwen, DeepSeek and GPT-OSS models through an OpenAI-compatible API. The service states that all interactions are logged and preserved, so it suits coursework, not confidential data.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free campus gateway",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Interactions are logged"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://arc.vt.edu",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for VT affiliates and collaborators",
+    "OpenAI-compatible API",
+    "10 open models",
+    "No card required"
+  ],
+  "notes": "All interactions are logged and preserved without a published retention cap.",
+  "catalog_size": 10,
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    }
+  ]
+}

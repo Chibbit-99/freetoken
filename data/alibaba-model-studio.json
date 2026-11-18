@@ -1,0 +1,91 @@
+{
+  "id": "alibaba-model-studio",
+  "name": "Alibaba Cloud Model Studio",
+  "website": "https://www.alibabacloud.com/en/product/modelstudio",
+  "docs": "https://www.alibabacloud.com/help/en/model-studio/new-free-quota",
+  "signup": "https://bailian.console.alibabacloud.com/?apiKey=1",
+  "description": "Alibaba's Qwen platform, with a one-time free quota of about 1M tokens per model.",
+  "overview": "Model Studio is Alibaba Cloud's platform for the Qwen family, with an OpenAI-compatible endpoint. New users in the Singapore region get a one-time free quota of about 1M tokens per model, valid for 90 days, and newer Qwen releases still qualify. Older models lost the free quota in October 2026.",
+  "offer": {
+    "type": "trials",
+    "label": "1M free tokens per model",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on API data"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.alibabacloud.com/help/en/model-studio/new-free-quota",
+      "https://free-llm.com/provider/qwen-alibaba"
+    ]
+  },
+  "free_access": [
+    "~1M free tokens per model, valid 90 days",
+    "Newer Qwen models qualify; older ones do not",
+    "No credit card required to claim",
+    "OpenAI-compatible endpoint"
+  ],
+  "api_endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "notes": "Enable Free Quota Only in the console to stop automatically being billed when the grant runs out.",
+  "models": [
+    {
+      "id": "qwen3-8-max",
+      "name": "Qwen3.8 Max",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 75
+      },
+      "rate_limits": "1M free tokens (90 days)"
+    },
+    {
+      "id": "qwen3-8-plus",
+      "name": "Qwen3.8 Plus",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "1M free tokens (90 days)"
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 185,
+        "intelligence": 29
+      },
+      "rate_limits": "1M free tokens (90 days)"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 145,
+        "intelligence": 20
+      },
+      "rate_limits": "1M free tokens (90 days)"
+    },
+    {
+      "id": "qwen3-5-397b-a17b",
+      "name": "Qwen3.5 397B A17B",
+      "family": "Qwen 3.5",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70
+      },
+      "rate_limits": "1M free tokens (90 days)"
+    }
+  ],
+  "free_token_allowance": 3000000,
+  "allowance_period": "one-time"
+}

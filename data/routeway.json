@@ -1,0 +1,81 @@
+{
+  "id": "routeway",
+  "name": "Routeway",
+  "website": "https://routeway.ai",
+  "docs": "https://routeway.ai",
+  "signup": "https://routeway.ai",
+  "description": "Unified API to 100+ models whose :free routes allow 200 requests a day.",
+  "overview": "Routeway is a unified OpenAI-compatible API covering 100+ models. Routes ending in :free are capped at five requests per minute and 200 per day, and in November 2026 included DeepSeek V4.1 Flash, MiniMax M3.1 Flash and Muse Glimmer 30B plus community Gemma fine-tunes. Paid plans start at $6.99 per two weeks.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free (:free) routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check gateway terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://routeway.ai",
+      "https://free-llm.com/provider/routeway"
+    ]
+  },
+  "free_access": [
+    "200 requests/day on :free models",
+    "5 requests/minute on :free models",
+    "No credit card required",
+    "Free models rotate"
+  ],
+  "api_endpoint": "https://api.routeway.ai/v1",
+  "notes": "Free capacity is shared and the free list can change; listings are partly community-sourced.",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 33
+      },
+      "rate_limits": "5 RPM, 200 RPD"
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 29
+      },
+      "rate_limits": "5 RPM, 200 RPD"
+    },
+    {
+      "id": "muse-glimmer",
+      "name": "Muse Glimmer 30B",
+      "family": "Muse",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 6
+      },
+      "rate_limits": "5 RPM, 200 RPD"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 4
+      },
+      "rate_limits": "5 RPM, 200 RPD"
+    }
+  ]
+}

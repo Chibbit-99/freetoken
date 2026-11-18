@@ -1,0 +1,226 @@
+{
+  "id": "openrouter",
+  "name": "OpenRouter",
+  "website": "https://openrouter.ai",
+  "docs": "https://openrouter.ai/docs/api-reference/limits",
+  "signup": "https://openrouter.ai/keys",
+  "description": "One OpenAI-compatible key for hundreds of models, with a rotating roster of free models.",
+  "overview": "OpenRouter is a single OpenAI-compatible API in front of hundreds of models from many providers. Models whose id ends in :free cost nothing, subject to platform-wide request caps, and the free roster rotates often. Prompt handling depends on whichever provider serves the free model.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models (:free)",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Provider-dependent"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://openrouter.ai/docs/api-reference/limits",
+      "https://free-llm.com/provider/openrouter"
+    ]
+  },
+  "free_access": [
+    "20 requests/minute platform-wide",
+    "50 requests/day on free models (1,000/day after $10 lifetime credit)",
+    "No credit card required",
+    "Training policy depends on the serving provider"
+  ],
+  "api_endpoint": "https://openrouter.ai/api/v1",
+  "notes": "50 requests/day rises to 1,000/day after $10 of lifetime credit purchases; opting out of training-only providers is available in settings.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 4
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 270,
+        "intelligence": 6
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "beam-1-0",
+      "name": "Beam 1.0",
+      "family": "Reflection Beam",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 40,
+        "intelligence": 18
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 135
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 30
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 29
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 65
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 29
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 355,
+        "intelligence": 4
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 480
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 90
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 4
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "muse-glimmer",
+      "name": "Muse Glimmer 30B",
+      "family": "Muse",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 6
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "kimi-linear-48b",
+      "name": "Kimi Linear 48B A3B",
+      "family": "Kimi",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 150
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "nemotron-3-nano-30b",
+      "name": "Nemotron 3 Nano 30B A3B",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 205
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "gemma-3-27b",
+      "name": "Gemma 3 27B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 80
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "qwen3-4b",
+      "name": "Qwen3 4B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 165
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    },
+    {
+      "id": "phi-4-multimodal",
+      "name": "Phi-4 Multimodal",
+      "family": "Phi",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 95
+      },
+      "rate_limits": "20 RPM, 50 RPD (1,000 after $10 credit)"
+    }
+  ]
+}

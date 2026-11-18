@@ -1,0 +1,92 @@
+{
+  "id": "regolo-ai",
+  "name": "Regolo.ai",
+  "website": "https://regolo.ai",
+  "docs": "https://regolo.ai/docs",
+  "signup": "https://regolo.ai",
+  "description": "Italian EU-hosted inference with a 30-day trial at up to 1M tokens per day and zero retention.",
+  "overview": "Regolo.ai is an Italian, EU-hosted inference platform with zero data retention. New accounts get a 30-day free trial with no card, covering all core models at up to 1M tokens per day. After the trial you choose a subscription or pay-as-you-go.",
+  "offer": {
+    "type": "trials",
+    "label": "30-day free trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "EU-hosted, zero retention"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://regolo.ai/docs",
+      "https://free-llm.com/provider/regolo-ai"
+    ]
+  },
+  "free_access": [
+    "30-day free trial",
+    "Up to 1M tokens/day during the trial",
+    "No credit card required",
+    "EU-hosted with zero retention"
+  ],
+  "api_endpoint": "https://api.regolo.ai/v1",
+  "notes": "Trial is time-limited to 30 days; the exact model list may change.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 300,
+        "intelligence": 4
+      },
+      "rate_limits": "30-day trial, 1M tokens/day"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 20
+      },
+      "rate_limits": "30-day trial, 1M tokens/day"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 75,
+        "intelligence": 4
+      },
+      "rate_limits": "30-day trial, 1M tokens/day"
+    },
+    {
+      "id": "apertus-70b",
+      "name": "Apertus 70B",
+      "family": "Apertus",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 40
+      },
+      "rate_limits": "30-day trial, 1M tokens/day"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      },
+      "rate_limits": "30-day trial, 1M tokens/day"
+    }
+  ],
+  "free_token_allowance": 1000000,
+  "allowance_period": "day"
+}

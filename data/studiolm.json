@@ -1,0 +1,43 @@
+{
+  "id": "studiolm",
+  "name": "StudioLM",
+  "website": "https://studiolm.dev",
+  "docs": "https://studiolm.dev",
+  "signup": "https://studiolm.dev",
+  "description": "Image-generation site whose API also serves chat with a free daily token allowance.",
+  "overview": "StudioLM is a browser image generator with a developer API at api.studiolm.dev. Images cost a cent each from prepaid credit, but the API's chat completions route carries a free daily token allowance on the small open model it serves, gemma-3-12b-it-qat, so text generation works without adding funds. Routes follow the OpenAI layout and there is a Python SDK called studiolm.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free daily chat allowance",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://studiolm.dev/",
+      "https://docs.studiolm.dev/getting-started/quickstart/"
+    ]
+  },
+  "free_access": [
+    "Free daily token allowance on the chat route",
+    "OpenAI-shaped /v1 routes and a Python SDK",
+    "No card needed for chat",
+    "Image generation is paid ($0.01 per image)"
+  ],
+  "notes": "The free allowance covers chat only; images always draw on prepaid credit.",
+  "models": [
+    {
+      "id": "gemma-3-12b-it-qat",
+      "name": "Gemma 3 12B IT QAT",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "rate_limits": "Free daily token allowance, amount not published"
+    }
+  ]
+}

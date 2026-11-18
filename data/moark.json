@@ -1,0 +1,74 @@
+{
+  "id": "moark",
+  "name": "Moark (Gitee AI)",
+  "website": "https://moark.com",
+  "docs": "https://moark.com",
+  "signup": "https://moark.com",
+  "description": "Gitee's model platform with 200+ open models and a daily free call allowance.",
+  "overview": "Moark (formerly Gitee AI) serves more than 200 open models through OpenAI- and Anthropic-compatible APIs. Its official FAQ says a free experience access token grants 100 free calls per user per day, which is enough for prototyping and small scheduled jobs.",
+  "offer": {
+    "type": "always-free",
+    "label": "100 free calls/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://moark.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "100 free calls per user per day",
+    "200+ open models",
+    "OpenAI- and Anthropic-compatible APIs",
+    "No card required"
+  ],
+  "notes": "The free allowance is call-counted, not token-counted.",
+  "catalog_size": 200,
+  "models": [
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 29
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 110
+      }
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      }
+    }
+  ]
+}

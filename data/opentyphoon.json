@@ -1,0 +1,43 @@
+{
+  "id": "opentyphoon",
+  "name": "OpenTyphoon",
+  "website": "https://opentyphoon.ai",
+  "docs": "https://opentyphoon.ai",
+  "signup": "https://opentyphoon.ai",
+  "description": "SCB 10X's Thai-tuned open models, free as a research showcase.",
+  "overview": "OpenTyphoon is the Thai-tuned open-model family from SCB 10X, the venture arm of Siam Commercial Bank. Its FAQ calls the API a research showcase that is free to use: typhoon-v2.5-30b-a3b-instruct (a Thai fine-tune of Qwen3-30B-A3B) allows 5 requests/second and 200 requests/minute per account per model, and higher limits are available by email. Usage data is collected to improve the model and API, and production traffic is directed to Together AI.",
+  "offer": {
+    "type": "research",
+    "label": "Free research showcase",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Usage data used to improve the model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.opentyphoon.ai/en/rate-limits/",
+      "https://docs.opentyphoon.ai/en/faq/"
+    ]
+  },
+  "free_access": [
+    "Free to use as a research showcase",
+    "5 requests/second, 200 requests/minute",
+    "Thai-tuned 30B model with 128K context",
+    "No card required"
+  ],
+  "notes": "Trains on what you send; Thai-language focus. OCR and speech routes are excluded from this catalogue.",
+  "models": [
+    {
+      "id": "typhoon-v2.5-30b-a3b-instruct",
+      "name": "Typhoon v2.5 30B A3B",
+      "family": "Typhoon",
+      "context_window": 131072,
+      "rate_limits": "5 requests/second; 200 requests/minute per account per model"
+    }
+  ]
+}

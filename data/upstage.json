@@ -1,0 +1,59 @@
+{
+  "id": "upstage",
+  "name": "Upstage Solar",
+  "website": "https://www.upstage.ai",
+  "docs": "https://console.upstage.ai/docs",
+  "signup": "https://console.upstage.ai",
+  "description": "Korean LLM platform whose Solar Pro 4 models start with $10 of free credit.",
+  "overview": "Upstage builds the Solar family of Korean-optimised LLMs and serves them through an OpenAI-compatible chat API. New accounts get $10 of credit, enough for a few million tokens on Solar Pro 4 or Solar Mini 4, which both carry 512K context. Older Solar Pro 2 and Mini models are end-of-life at the end of October 2026.",
+  "offer": {
+    "type": "trials",
+    "label": "$10 signup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://console.upstage.ai/docs",
+      "https://free-llm.com/provider/upstage"
+    ]
+  },
+  "free_access": [
+    "$10 one-time signup credit",
+    "Solar Pro 4 and Mini 4 at 512K context",
+    "No credit card required",
+    "Document parsing and embeddings use the same credit"
+  ],
+  "api_endpoint": "https://api.upstage.ai/v1/solar",
+  "notes": "One-time signup credit; the free tier no longer resets monthly.",
+  "models": [
+    {
+      "id": "solar-pro-4",
+      "name": "Solar Pro 4",
+      "family": "Solar",
+      "context_window": 524288,
+      "metrics": {
+        "tps": 80,
+        "intelligence": 14
+      },
+      "rate_limits": "$10 one-time credit"
+    },
+    {
+      "id": "solar-mini-4",
+      "name": "Solar Mini 4",
+      "family": "Solar",
+      "context_window": 524288,
+      "metrics": {
+        "tps": 150
+      },
+      "rate_limits": "$10 one-time credit"
+    }
+  ],
+  "catalog_size": 4
+}

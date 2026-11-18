@@ -1,0 +1,49 @@
+{
+  "id": "plamo",
+  "name": "PLaMo API (Preferred Networks)",
+  "website": "https://plamo.preferredai.jp",
+  "docs": "https://plamo.preferredai.jp",
+  "signup": "https://plamo.preferredai.jp",
+  "description": "Preferred Networks' Japanese flagship models with a free API plan.",
+  "overview": "PLaMo is Preferred Networks' scratch-built Japanese foundation model family, served from api.platform.preferredai.jp with an OpenAI-compatible chat endpoint. PLaMo API has a Free plan that needs no card — PLaMo Chat runs on the same account — and plamo-3.0-fin-beta, the financial trial model, carries no token charge on any plan but is capped at 50 requests per 24 hours. The Free plan reserves prompts and completions for training; the paid Standard and Provider plans do not.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free plan with daily caps",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Free plan trains on your prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.plamo.preferredai.jp/en/api",
+      "https://plamo.preferredai.jp/"
+    ]
+  },
+  "free_access": [
+    "Free plan on PLaMo API and Chat",
+    "plamo-3.0-fin-beta is untokenised on every plan",
+    "262K context, 20,480 output tokens",
+    "No card required"
+  ],
+  "notes": "The Free plan's caps are unpublished and only visible in the console; it trains on what you send.",
+  "models": [
+    {
+      "id": "plamo-3.1-prime",
+      "name": "PLaMo 3.1 Prime",
+      "family": "PLaMo",
+      "context_window": 262144
+    },
+    {
+      "id": "plamo-3.0-fin-beta",
+      "name": "PLaMo 3.0 Fin Beta",
+      "family": "PLaMo",
+      "context_window": 256000,
+      "rate_limits": "Free on every plan: 50 requests per 24 hours"
+    }
+  ]
+}

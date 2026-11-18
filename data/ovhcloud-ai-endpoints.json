@@ -1,0 +1,78 @@
+{
+  "id": "ovhcloud-ai-endpoints",
+  "name": "OVHcloud AI Endpoints",
+  "website": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/",
+  "docs": "https://help.ovhcloud.com/csm/en-public-cloud-ai-endpoints",
+  "signup": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/",
+  "description": "European-hosted, OpenAI-compatible endpoints in open beta with free per-minute quotas.",
+  "overview": "OVHcloud AI Endpoints is a European inference service in open beta, hosting open models on OVH infrastructure in France. It is OpenAI-compatible and includes text, embedding, speech and image models. Anonymous calls get a small quota; an authenticated key raises it substantially.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free beta quotas",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "EU-hosted, no retention"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://help.ovhcloud.com/csm/en-public-cloud-ai-endpoints",
+      "https://free-llm.com/provider/ovh-ai"
+    ]
+  },
+  "free_access": [
+    "2 requests/minute anonymously, about 400 RPM authenticated",
+    "No per-day token charge during the beta",
+    "No credit card required",
+    "Models hosted in Europe"
+  ],
+  "api_endpoint": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
+  "notes": "Beta service with no SLA; quotas are per minute rather than per day.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 300,
+        "intelligence": 4
+      },
+      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 70
+      },
+      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      },
+      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo 12B",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 65
+      },
+      "rate_limits": "2 RPM anonymous / 400 RPM authenticated"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "ai-horde",
+  "name": "AI Horde",
+  "website": "https://aihorde.net",
+  "docs": "https://aihorde.net/api",
+  "signup": "https://aihorde.net/register",
+  "description": "Crowdsourced, volunteer-run inference network with an OpenAI-compatible front end.",
+  "overview": "AI Horde is a free, open-source crowdsourced inference network where volunteers donate GPU time. Requests are queued rather than served instantly, and anonymous callers get the lowest priority. Registered users earn kudos, which raise their queue priority, and an OpenAI-compatible front end is available.",
+  "offer": {
+    "type": "always-free",
+    "label": "Volunteer network",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Volunteer workers see prompts"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aihorde.net/api",
+      "https://free-llm.com/provider/ai-horde"
+    ]
+  },
+  "free_access": [
+    "Completely free, no payment details",
+    "Anonymous use with the shared 0000000000 key",
+    "Kudos raise queue priority",
+    "Community-operated text and image workers"
+  ],
+  "api_endpoint": "https://oai.aihorde.net/v1",
+  "notes": "Queue-based, so latency is unpredictable; anonymous requests use the lowest priority.",
+  "models": [
+    {
+      "id": "gemma-4-e4b",
+      "name": "Gemma 4 E4B",
+      "family": "Gemma 4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 25,
+        "intelligence": 5
+      },
+      "rate_limits": "Queue priority via kudos"
+    },
+    {
+      "id": "qwen3-4b",
+      "name": "Qwen3 4B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 40
+      },
+      "rate_limits": "Queue priority via kudos"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 60
+      },
+      "rate_limits": "Queue priority via kudos"
+    },
+    {
+      "id": "gemma-3-4b",
+      "name": "Gemma 3 4B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 50
+      },
+      "rate_limits": "Queue priority via kudos"
+    }
+  ]
+}

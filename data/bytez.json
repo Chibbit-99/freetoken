@@ -1,0 +1,73 @@
+{
+  "id": "bytez",
+  "name": "Bytez",
+  "website": "https://bytez.com",
+  "docs": "https://bytez.com",
+  "signup": "https://bytez.com",
+  "description": "Serverless API over tens of thousands of open models with a recurring credit.",
+  "overview": "Bytez exposes tens of thousands of open models (plus closed providers) behind one API and one credit currency. The Free plan grants $1 of credit every 4 weeks with billing set to none, and runs open models up to 7B parameters one request at a time.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "$1 credit every 4 weeks",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://bytez.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$1 of free credit every 4 weeks",
+    "Open models up to 7B",
+    "No billing details required",
+    "One concurrent request on the free plan"
+  ],
+  "notes": "Small models only on the free plan; one request at a time.",
+  "models": [
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 110
+      }
+    },
+    {
+      "id": "gemma-3-4b",
+      "name": "Gemma 3 4B",
+      "family": "Gemma 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 145
+      }
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      }
+    },
+    {
+      "id": "gemma-4-e4b",
+      "name": "Gemma 4 E4B",
+      "family": "Gemma 4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 175,
+        "intelligence": 5
+      }
+    }
+  ]
+}

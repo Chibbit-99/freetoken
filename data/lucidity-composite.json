@@ -1,0 +1,56 @@
+{
+  "id": "lucidity-composite",
+  "name": "Lucidity Composite",
+  "website": "https://lucidity.ai",
+  "docs": "https://lucidity.ai",
+  "signup": "https://lucidity.ai",
+  "description": "Free model router that collects prompts for training.",
+  "overview": "Lucidity Composite is a free router in front of Gemma and Nemotron models that collects prompts and responses for model training by default. Flagged and separately logged content is retained without a fixed deletion schedule, and traffic is routed through OpenRouter or custom providers.",
+  "offer": {
+    "type": "always-free",
+    "label": "Always-free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Trains on prompts by default"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://lucidity.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free access to composite models",
+    "No card required",
+    "Gemma and Nemotron routes",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "Prompts are used for training by default — do not send private data.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 6
+      }
+    }
+  ]
+}

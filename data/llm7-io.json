@@ -1,0 +1,108 @@
+{
+  "id": "llm7-io",
+  "name": "LLM7.io",
+  "website": "https://llm7.io",
+  "docs": "https://llm7.io",
+  "signup": "https://token.llm7.io/",
+  "description": "Zero-friction OpenAI-compatible API that works without signup and speeds up with a free token.",
+  "overview": "LLM7.io is a free OpenAI-compatible endpoint that can be called with no signup at a low base rate, or with a free email token for 1 request/second, 60/minute and 250/hour plus a 100,000-token daily cap. The catalog mixes open models such as Nemotron 3 Nano, GLM 5.3 Flash, Mistral Nemo and DeepSeek V4 Flash.",
+  "offer": {
+    "type": "always-free",
+    "label": "No-signup free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://llm7.io",
+      "https://free-llm.com/provider/llm7-io"
+    ]
+  },
+  "free_access": [
+    "No signup needed: call the API with a placeholder key at ~30 RPM",
+    "A free email token raises limits to 1 req/s, 60/min and 250/hour",
+    "100,000 tokens per 24 hours on the free token",
+    "No credit card required"
+  ],
+  "api_endpoint": "https://api.llm7.io/v1",
+  "notes": "Anonymous use is throttled hardest (about 30 RPM); the token tier's daily cap can be reduced without notice.",
+  "models": [
+    {
+      "id": "nemotron-3-nano-30b",
+      "name": "Nemotron 3 Nano 30B A3B",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 155
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 115,
+        "intelligence": 28
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "mistral-nemo",
+      "name": "Mistral Nemo 12B",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 55
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "codestral",
+      "name": "Codestral",
+      "family": "Codestral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 85
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 45
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 405
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      },
+      "rate_limits": "1 req/s, 60/min, 250/hour; 100K tokens/day (account-wide)"
+    }
+  ]
+}

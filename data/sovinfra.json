@@ -1,0 +1,65 @@
+{
+  "id": "sovinfra",
+  "name": "SovInfra / SovAPI",
+  "website": "https://sovinfra.com",
+  "docs": "https://sovinfra.com",
+  "signup": "https://sovinfra.com",
+  "description": "Sovereign European inference host with prepaid trial credit.",
+  "overview": "SovInfra runs Gemma and Qwen models on European infrastructure and gives new accounts prepaid credit worth up to about $380. API content is excluded from persistent retention and secondary model use, apart from volatile prefix caching and content-free billing records.",
+  "offer": {
+    "type": "trials",
+    "label": "Up to $380 trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No persistent retention"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://sovinfra.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Up to $380 one-time prepaid credit",
+    "European-hosted Gemma and Qwen",
+    "No persistent retention",
+    "No card required to start"
+  ],
+  "notes": "Credit is prepaid and one-time.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 65
+      }
+    }
+  ]
+}

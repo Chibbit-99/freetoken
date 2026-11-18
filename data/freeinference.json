@@ -1,0 +1,71 @@
+{
+  "id": "freeinference",
+  "name": "FreeInference (Harvard SEAS)",
+  "website": "https://freeinference.org",
+  "docs": "https://freeinference.org",
+  "signup": "https://freeinference.org",
+  "description": "Harvard SEAS's MadSys Lab serving frontier open models free to every account.",
+  "overview": "FreeInference is run by the MadSys Lab at Harvard SEAS as an experimental research service: every registered account gets free access to frontier open models behind both OpenAI-shaped (`/v1`) and Anthropic-shaped (`/anthropic`) endpoints, with a documented Claude Code setup. Only models marked Free accept a Free key. Capacity-dependent limits are not published, and prompts and responses may be logged and sanitised excerpts published for research.",
+  "offer": {
+    "type": "research",
+    "label": "Free research endpoint",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Prompts logged for research"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://doc.freeinference.org/models",
+      "https://freeinference.org/terms"
+    ]
+  },
+  "free_access": [
+    "Free keys reach models marked Free",
+    "OpenAI- and Anthropic-shaped endpoints",
+    "No card required",
+    "Claude Code setup documented"
+  ],
+  "notes": "Research service: allowances vary with capacity and prompts may be published in sanitised form.",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 28
+      }
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 19
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70
+      }
+    },
+    {
+      "id": "qwen3-6-35b",
+      "name": "Qwen3.6 35B",
+      "family": "Qwen 3.6",
+      "context_window": 262144
+    }
+  ]
+}

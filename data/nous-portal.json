@@ -1,0 +1,98 @@
+{
+  "id": "nous-portal",
+  "name": "Nous Research Portal",
+  "website": "https://portal.nousresearch.com",
+  "docs": "https://portal.nousresearch.com",
+  "signup": "https://portal.nousresearch.com",
+  "description": "Nous Research's official portal for Hermes models, with a standing free tier and no card.",
+  "overview": "The Nous Portal is Nous Research's official API for their open-weight Hermes family, and it also serves a rotating catalog of partner models. It has a standing $0/month free tier with no card required, though the exact rate limits are not published. It is aimed at open-weight and research use.",
+  "offer": {
+    "type": "always-free",
+    "label": "Standing free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check portal terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://portal.nousresearch.com",
+      "https://free-llm.com/provider/nous-portal"
+    ]
+  },
+  "free_access": [
+    "$0/month standing free tier",
+    "Rotating free-model catalog",
+    "No credit card required",
+    "Limits not published"
+  ],
+  "notes": "Free catalog rotates and limits are not published; verify current numbers on the portal.",
+  "models": [
+    {
+      "id": "beam-1-0",
+      "name": "Beam 1.0",
+      "family": "Reflection Beam",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 50,
+        "intelligence": 18
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "hermes-4-70b",
+      "name": "Hermes 4 70B",
+      "family": "Hermes",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 55
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "llama-3-1-405b",
+      "name": "Llama 3.1 405B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 30
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 75
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 135,
+        "intelligence": 20
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 160
+      },
+      "rate_limits": "Not published"
+    }
+  ]
+}

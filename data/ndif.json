@@ -1,0 +1,66 @@
+{
+  "id": "ndif",
+  "name": "NSF National Deep Inference Fabric",
+  "website": "https://ndif.us",
+  "docs": "https://ndif.us",
+  "signup": "https://ndif.us",
+  "description": "National infrastructure for interpretability research on open models.",
+  "overview": "NDIF gives researchers remote access to open models for interpretability and neuroscience-of-AI work, covering 113 models including Gemma, Llama and Qwen. No endpoint-wide retention, training or operator-access policy is published.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No published policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ndif.us",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for approved research",
+    "113 open models",
+    "Interpretability tooling included",
+    "No card required"
+  ],
+  "notes": "Requires an approved research account.",
+  "catalog_size": 113,
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    }
+  ]
+}

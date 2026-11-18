@@ -1,0 +1,65 @@
+{
+  "id": "azure-ai-foundry",
+  "name": "Microsoft Foundry",
+  "website": "https://ai.azure.com",
+  "docs": "https://ai.azure.com",
+  "signup": "https://ai.azure.com",
+  "description": "Azure's model catalog with an Azure free-account credit.",
+  "overview": "Microsoft Foundry Models (formerly Azure AI Foundry) serves OpenAI and open models through Azure. New accounts get $200 of credit for 30 days. Base inference is stateless and not trained on, but abuse review and stateful features can retain content.",
+  "offer": {
+    "type": "trials",
+    "label": "$200 trial credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Stateless base inference"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ai.azure.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$200 one-time trial credit",
+    "30-day trial window",
+    "OpenAI and open-model routes",
+    "Card required"
+  ],
+  "notes": "Stateful features such as assistants retain content.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 4
+      }
+    }
+  ]
+}

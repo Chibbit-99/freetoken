@@ -1,0 +1,55 @@
+{
+  "id": "ilmu",
+  "name": "ILMU API",
+  "website": "https://ilmu.ai",
+  "docs": "https://ilmu.ai",
+  "signup": "https://ilmu.ai",
+  "description": "Malaysian AI platform (YTL) with a small free trial.",
+  "overview": "ILMU is YTL's Malaysian AI platform. The API page promises memory-only processing, no training and no third parties, while YTL's broader policy says AI prompts may be collected to train AI services — the two statements conflict.",
+  "offer": {
+    "type": "trials",
+    "label": "MYR 20 trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Memory-only processing"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ilmu.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "MYR 20 one-time trial",
+    "GLM models on the free plan",
+    "No card required to start",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "The API page and the corporate policy disagree about training.",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 28
+      }
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 110
+      }
+    }
+  ]
+}

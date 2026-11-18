@@ -1,0 +1,75 @@
+{
+  "id": "swiss-ai",
+  "name": "Swiss AI Research Platform",
+  "website": "https://swissai.svc.cscs.ch",
+  "docs": "https://swissai.svc.cscs.ch",
+  "signup": "https://swissai.svc.cscs.ch",
+  "description": "Swiss national research platform serving 30+ open models on Alps infrastructure.",
+  "overview": "The Swiss AI Research Platform hosts a large catalog of open models on the Alps supercomputer for Swiss and international researchers. API prompts and outputs are not stored or used for training, though usage metadata may be retained. Sensitive data is prohibited by the terms of use.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free research quota",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on API content"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://swissai.svc.cscs.ch",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for research use",
+    "Prompts and outputs are not stored",
+    "34 open models including Apertus and Gemma 4",
+    "No card required"
+  ],
+  "notes": "Usage metadata may be retained indefinitely; sensitive data is not allowed.",
+  "catalog_size": 34,
+  "models": [
+    {
+      "id": "apertus-70b",
+      "name": "Apertus 70B",
+      "family": "Apertus",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 40
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    }
+  ]
+}

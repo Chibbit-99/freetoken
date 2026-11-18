@@ -1,0 +1,55 @@
+{
+  "id": "jetstream2",
+  "name": "Jetstream2 LLM Service",
+  "website": "https://jetstream-cloud.org",
+  "docs": "https://jetstream-cloud.org",
+  "signup": "https://jetstream-cloud.org",
+  "description": "NSF-funded cloud with a small open-model inference service.",
+  "overview": "Jetstream2, the NSF-funded research cloud, runs a small LLM inference service for Llama and GPT-OSS models. The terms exclude AI training and data mining on user data, but chat history exists and administrators may inspect interactions for acceptable-use enforcement.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Chat history retained"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://jetstream-cloud.org",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for US research and education",
+    "Llama and GPT-OSS models",
+    "No card required",
+    "Training and data mining excluded"
+  ],
+  "notes": "Administrators can inspect interactions for acceptable-use enforcement.",
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    }
+  ]
+}

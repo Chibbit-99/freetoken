@@ -1,0 +1,87 @@
+{
+  "id": "sambanova",
+  "name": "SambaNova Cloud",
+  "website": "https://cloud.sambanova.ai",
+  "docs": "https://cloud.sambanova.ai",
+  "signup": "https://cloud.sambanova.ai",
+  "description": "Open models on SambaNova's own RDU silicon, with a card-free rate-limited tier.",
+  "overview": "SambaNova Cloud runs open weights on SambaNova's RDU chips behind an OpenAI-compatible API. The Free tier applies whenever no payment method is linked: every model gets 20 requests/minute, 20 requests/day and 200,000 tokens/day of its own, and no card is needed. Production models are DeepSeek V3.1, Llama 3.3 70B and gpt-oss-120b; DeepSeek V3.2 and Gemma 4 31B are evaluation-only previews. Linking a card moves the account to the metered Developer tier instead.",
+  "offer": {
+    "type": "always-free",
+    "label": "Forever-free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "Not used for training"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.sambanova.ai/docs/en/models/rate-limits",
+      "https://cloud.sambanova.ai"
+    ]
+  },
+  "free_access": [
+    "20 requests/minute, 20 requests/day per model",
+    "200,000 tokens/day per model",
+    "No card required for the Free tier",
+    "Production and preview models both included"
+  ],
+  "notes": "The binding limit is 20 requests/day per model; preview models can be withdrawn at short notice.",
+  "models": [
+    {
+      "id": "deepseek-v3-1",
+      "name": "DeepSeek V3.1",
+      "family": "DeepSeek V3",
+      "context_window": 131072,
+      "token_allowance": 200000,
+      "rate_limits": "Free tier: 20 requests/minute, 20 requests/day, 200K tokens/day (no card)"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      },
+      "token_allowance": 200000,
+      "rate_limits": "Free tier: 20 requests/minute, 20 requests/day, 200K tokens/day (no card)"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      },
+      "token_allowance": 200000,
+      "rate_limits": "Free tier: 20 requests/minute, 20 requests/day, 200K tokens/day (no card)"
+    },
+    {
+      "id": "deepseek-v3-2",
+      "name": "DeepSeek V3.2",
+      "family": "DeepSeek V3",
+      "context_window": 131072,
+      "token_allowance": 200000,
+      "rate_limits": "Free tier: 20 requests/minute, 20 requests/day, 200K tokens/day (no card)"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      },
+      "token_allowance": 200000,
+      "rate_limits": "Free tier: 20 requests/minute, 20 requests/day, 200K tokens/day (no card)"
+    }
+  ]
+}

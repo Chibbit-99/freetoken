@@ -1,0 +1,73 @@
+{
+  "id": "unorouter",
+  "name": "UnoRouter",
+  "website": "https://unorouter.com",
+  "docs": "https://unorouter.com",
+  "signup": "https://unorouter.com",
+  "description": "Router with 294 models behind one key, 159 of them marked free.",
+  "overview": "UnoRouter fronts 294 models from 52+ upstreams through a single OpenAI-compatible key. Its own count marks 159 of them free — the `:free` suffix marks the route — including Gemini 3.5 Flash Lite, Gemma 4 12B, Codestral, Mistral Small, Cohere North Mini Code, Upstage Syn Pro and Nemotron 3 Nano Omni. It is aimed at coding agents and character-chat clients, with setup guides for Claude Code, Cline, Roo Code, SillyTavern and Open WebUI; paid routes share the same key.",
+  "offer": {
+    "type": "free-models",
+    "label": "159 free models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://unorouter.com/en",
+      "https://unorouter.com/en/models"
+    ]
+  },
+  "free_access": [
+    "294 models, 159 marked free",
+    "One OpenAI-compatible key for every route",
+    "Setup guides for coding agents and chat clients",
+    "Free routes carry a `:free` suffix"
+  ],
+  "notes": "Free routes rotate with upstream capacity; check the model page's own limit before depending on one.",
+  "catalog_size": 294,
+  "models": [
+    {
+      "id": "google/gemini-3.5-flash-lite:free",
+      "name": "Gemini 3.5 Flash Lite",
+      "family": "Gemini",
+      "context_window": 1048576
+    },
+    {
+      "id": "google/gemma-4-12b:free",
+      "name": "Gemma 4 12B",
+      "family": "Gemma 4",
+      "context_window": 131072
+    },
+    {
+      "id": "mistral/codestral-latest:free",
+      "name": "Codestral",
+      "family": "Codestral",
+      "context_window": 262144
+    },
+    {
+      "id": "mistral/mistral-small:free",
+      "name": "Mistral Small",
+      "family": "Mistral",
+      "context_window": 131072
+    },
+    {
+      "id": "cohere/north-mini-code:free",
+      "name": "North Mini Code",
+      "family": "Cohere",
+      "context_window": 262144
+    },
+    {
+      "id": "upstage/syn-pro:free",
+      "name": "Syn Pro",
+      "family": "Upstage",
+      "context_window": 131072
+    }
+  ]
+}

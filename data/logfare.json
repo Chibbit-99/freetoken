@@ -1,0 +1,76 @@
+{
+  "id": "logfare",
+  "name": "Logfare",
+  "website": "https://logfare.ai",
+  "docs": "https://logfare.ai",
+  "signup": "https://logfare.ai",
+  "description": "Free inference platform funded by evaluation data collection.",
+  "overview": "Logfare offers free access to Gemma, Qwen and DeepSeek models while logging every request body; scrubbed content may feed internal evaluation datasets, and premium access can require a training opt-in. It is a large catalog with 22 models but no privacy.",
+  "offer": {
+    "type": "always-free",
+    "label": "Always-free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Every request body is logged"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://logfare.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free access with no card",
+    "22 models including Gemma 4 and Qwen3.8",
+    "OpenAI-compatible endpoint",
+    "No published rate limit"
+  ],
+  "notes": "Every request body is logged and may be used in internal evaluations.",
+  "catalog_size": 22,
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 28
+      }
+    }
+  ]
+}

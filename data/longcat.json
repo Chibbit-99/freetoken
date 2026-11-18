@@ -1,0 +1,54 @@
+{
+  "id": "longcat",
+  "name": "LongCat API Platform",
+  "website": "https://longcat.chat",
+  "docs": "https://longcat.chat",
+  "signup": "https://longcat.chat",
+  "description": "Meituan's LongCat models with an OpenAI-compatible platform API.",
+  "overview": "Meituan's LongCat family (including LongCat 2.0, a 1M-context MoE) is served through an OpenAI-compatible platform API. New accounts receive a trial credit on registration; after that the platform is pay-per-token.",
+  "offer": {
+    "type": "trials",
+    "label": "Free trial credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://longcat.chat",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free trial credits on signup",
+    "LongCat 2.0 with 1M context",
+    "OpenAI-compatible API",
+    "No card required to register"
+  ],
+  "notes": "Community-index sourcing — confirm the trial is still active before relying on it.",
+  "models": [
+    {
+      "id": "longcat-2-0",
+      "name": "LongCat 2.0",
+      "family": "LongCat",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 90
+      }
+    },
+    {
+      "id": "longcat-flash",
+      "name": "LongCat Flash",
+      "family": "LongCat",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 160
+      }
+    }
+  ]
+}

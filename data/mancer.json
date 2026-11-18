@@ -1,0 +1,42 @@
+{
+  "id": "mancer",
+  "name": "Mancer",
+  "website": "https://mancer.tech",
+  "docs": "https://mancer.tech",
+  "signup": "https://mancer.tech",
+  "description": "Community roleplay host with a free route and broad content reuse.",
+  "overview": "Mancer hosts community fine-tunes for roleplay and creative writing. Its default terms permit retention, third-party disclosure, model training and service improvement unless the user opts out.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free model routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Trains on prompts unless opted out"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://mancer.tech",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free model route",
+    "No card required",
+    "OpenAI-compatible endpoint",
+    "Community fine-tunes"
+  ],
+  "notes": "Prompts may be retained and used for training unless you opt out.",
+  "models": [
+    {
+      "id": "mancer-weaver",
+      "name": "Mancer Weaver",
+      "family": "Mancer",
+      "context_window": 16384
+    }
+  ]
+}

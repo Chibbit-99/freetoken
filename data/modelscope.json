@@ -1,0 +1,108 @@
+{
+  "id": "modelscope",
+  "name": "ModelScope",
+  "website": "https://modelscope.cn",
+  "docs": "https://modelscope.cn/docs",
+  "signup": "https://modelscope.cn/my/myaccesstoken",
+  "description": "Alibaba's model hub with free daily inference calls and early access to new Qwen releases.",
+  "overview": "ModelScope is Alibaba's open model hub, distinct from Qwen/DashScope, and offers a free inference API for hosted models. Each user gets a daily pool of calls split across models, with early access to new Qwen releases. A real-name Alibaba Cloud account is required.",
+  "offer": {
+    "type": "always-free",
+    "label": "2,000 free calls/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Alibaba account terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://modelscope.cn/docs",
+      "https://free-llm.com/provider/modelscope"
+    ]
+  },
+  "free_access": [
+    "2,000 free API requests/day in total",
+    "500 requests/day per model",
+    "No credit card required",
+    "Early access to new Qwen releases"
+  ],
+  "api_endpoint": "https://api-inference.modelscope.cn/v1",
+  "notes": "Phone/real-name verification with an Alibaba Cloud account is required, which is real friction outside China.",
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      },
+      "rate_limits": "500 RPD per model, 2,000 RPD total"
+    },
+    {
+      "id": "qwen3-5-35b-a3b",
+      "name": "Qwen3.5 35B A3B",
+      "family": "Qwen 3.5",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 125
+      },
+      "rate_limits": "500 RPD per model, 2,000 RPD total"
+    },
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 65
+      },
+      "rate_limits": "500 RPD per model, 2,000 RPD total"
+    },
+    {
+      "id": "deepseek-r1-0528",
+      "name": "DeepSeek R1 0528",
+      "family": "DeepSeek R1",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 25
+      },
+      "rate_limits": "500 RPD per model, 2,000 RPD total"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 110
+      },
+      "rate_limits": "500 RPD per model, 2,000 RPD total"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      },
+      "rate_limits": "500 RPD per model, 2,000 RPD total"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 120
+      },
+      "rate_limits": "500 RPD per model, 2,000 RPD total"
+    }
+  ]
+}

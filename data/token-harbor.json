@@ -1,0 +1,70 @@
+{
+  "id": "token-harbor",
+  "name": "Token Harbor",
+  "website": "https://tokenharbor.ai",
+  "docs": "https://tokenharbor.ai",
+  "signup": "https://tokenharbor.ai",
+  "description": "OpenAI/Anthropic-compatible gateway with a $0 plan and a rolling free allowance.",
+  "overview": "Token Harbor is a unified OpenAI- and Anthropic-compatible gateway with one key and pay-as-you-go pricing. The $0 Free plan needs no card and includes an allowance that resets on a rolling seven-day period plus a rotating lineup of free models. Free models must be enabled in the dashboard, and while enabled prompts may be retained.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free plan",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Free-model prompts may be retained"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://tokenharbor.ai",
+      "https://free-llm.com/provider/token-harbor"
+    ]
+  },
+  "free_access": [
+    "$0 Free plan with no card",
+    "Allowance resets on a rolling 7-day period",
+    "60 requests/minute, 1,800/hour per account",
+    "Rotating free-model lineup"
+  ],
+  "api_endpoint": "https://tokenharbor.ai/v1",
+  "notes": "The allowance size is not published; free models must be switched on in the dashboard.",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 80,
+        "intelligence": 33
+      },
+      "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
+    },
+    {
+      "id": "mimo-v2-6-flash",
+      "name": "MiMo V2.6 Flash",
+      "family": "MiMo",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 27
+      },
+      "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
+    },
+    {
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 175,
+        "intelligence": 30
+      },
+      "rate_limits": "60 RPM, 1,800/hour; weekly allowance"
+    }
+  ]
+}

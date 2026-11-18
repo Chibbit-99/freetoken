@@ -1,0 +1,48 @@
+{
+  "id": "agnes-ai",
+  "name": "Agnes AI",
+  "website": "https://agnes-ai.com",
+  "docs": "https://agnes-ai.com",
+  "signup": "https://agnes-ai.com",
+  "description": "Agnes AI's own Flash models, currently priced at zero, behind a standard API.",
+  "overview": "Agnes AI serves its own models through an OpenAI-compatible endpoint at apihub.agnes-ai.com, and the two Flash text models — agnes-2.5-flash and agnes-3.0-flash — have input, cached-input and output all currently priced at zero. Pro models stay metered and the zero pricing is promotional, ending on a date the platform announces. Per-minute request allowances for the default user class are dynamic, so limit values only appear in the console; image generation is billable on separate rates.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free Flash models (promo)",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Opt out of training available"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://wiki.agnes-ai.com/en/docs/pricing",
+      "https://wiki.agnes-ai.com/en/docs/faqs"
+    ]
+  },
+  "free_access": [
+    "agnes-2.5-flash and agnes-3.0-flash at zero price",
+    "OpenAI-compatible endpoint",
+    "Prompt opt-out available",
+    "No card required"
+  ],
+  "notes": "Zero pricing is promotional and can end without notice; the China station bills in CNY.",
+  "models": [
+    {
+      "id": "agnes-2.5-flash",
+      "name": "Agnes 2.5 Flash",
+      "family": "Agnes",
+      "context_window": 262144
+    },
+    {
+      "id": "agnes-3.0-flash",
+      "name": "Agnes 3.0 Flash",
+      "family": "Agnes",
+      "context_window": 262144
+    }
+  ]
+}

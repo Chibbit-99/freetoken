@@ -1,0 +1,48 @@
+{
+  "id": "byteplus",
+  "name": "BytePlus ModelArk",
+  "website": "https://www.byteplus.com/en/product/modelark",
+  "docs": "https://www.byteplus.com/en/product/modelark",
+  "signup": "https://www.byteplus.com/en/product/modelark",
+  "description": "ByteDance's overseas model platform, with a free-token campaign.",
+  "overview": "BytePlus ModelArk serves ByteDance's Doubao models plus open models through an OpenAI-compatible API. A signup campaign grants free tokens worth a few dollars; campaign terms do not resolve content TTL, training or model-specific routing.",
+  "offer": {
+    "type": "trials",
+    "label": "Free token campaign",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Campaign terms only"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.byteplus.com/en/product/modelark",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free tokens from a signup campaign",
+    "Doubao and open models",
+    "No card required to start",
+    "OpenAI-compatible API"
+  ],
+  "notes": "Campaign terms do not settle retention or training.",
+  "models": [
+    {
+      "id": "doubao-seed-code",
+      "name": "Doubao Seed Code",
+      "family": "Doubao",
+      "context_window": 262144
+    },
+    {
+      "id": "doubao-2-0-pro",
+      "name": "Doubao 2.0 Pro",
+      "family": "Doubao",
+      "context_window": 262144
+    }
+  ]
+}

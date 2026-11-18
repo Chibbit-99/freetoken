@@ -1,0 +1,77 @@
+{
+  "id": "kiosapi",
+  "name": "Kiosapi.id",
+  "website": "https://kiosapi.id",
+  "docs": "https://kiosapi.id/pricing",
+  "signup": "https://kiosapi.id/dashboard/keys",
+  "description": "Indonesian gateway with 50 free requests a day on selected open models, email only.",
+  "overview": "Kiosapi.id is an Indonesian OpenAI-compatible gateway with a daily free allowance separate from its prepaid models. Free inference is resold Cloudflare Workers AI capacity, so free requests never spend prepaid credit. Signup needs only a verified email, and the daily quota resets at 07:00 WIB.",
+  "offer": {
+    "type": "always-free",
+    "label": "Daily free allowance",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check gateway terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://kiosapi.id/pricing",
+      "https://free-llm.com/provider/kiosapi"
+    ]
+  },
+  "free_access": [
+    "50 free requests/day shared across free models",
+    "5 requests/minute",
+    "Email-only signup, no card",
+    "Free requests never spend prepaid credit"
+  ],
+  "api_endpoint": "https://api.kiosapi.id/v1",
+  "notes": "Free tier is capped at about 24K input characters and 2,048 output tokens per request.",
+  "models": [
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 80
+      },
+      "rate_limits": "5 RPM, 50 RPD"
+    },
+    {
+      "id": "gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
+      },
+      "rate_limits": "5 RPM, 50 RPD"
+    },
+    {
+      "id": "sea-lion-27b",
+      "name": "SEA-LION 27B",
+      "family": "SEA-LION",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 60
+      },
+      "rate_limits": "5 RPM, 50 RPD"
+    },
+    {
+      "id": "llama-3-1-8b",
+      "name": "Llama 3.1 8B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 90
+      },
+      "rate_limits": "5 RPM, 50 RPD"
+    }
+  ]
+}

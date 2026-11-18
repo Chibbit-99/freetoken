@@ -1,0 +1,75 @@
+{
+  "id": "helmholtz-blablador",
+  "name": "Helmholtz Blablador",
+  "website": "https://helmholtz.cloud",
+  "docs": "https://helmholtz.cloud",
+  "signup": "https://helmholtz.cloud",
+  "description": "Helmholtz's self-hosted open-model service for German research communities.",
+  "overview": "Blablador is the Helmholtz association's hosted LLM service for research. It runs open Qwen, DeepSeek and GPT-OSS models on institutional hardware, so no commercial provider sees the request. No service-specific public policy resolves payload retention or operator access, so privacy is classified partial.",
+  "offer": {
+    "type": "research",
+    "label": "Free research access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Institutional policy only"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://helmholtz.cloud",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for Helmholtz and partner researchers",
+    "Self-hosted, never routed to commercial vendors",
+    "15 open models",
+    "No card required"
+  ],
+  "notes": "Retention and operator-access rules are set by institutional policy, not a public DPA.",
+  "catalog_size": 15,
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    }
+  ]
+}

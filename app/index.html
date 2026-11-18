@@ -47,21 +47,25 @@
                         </div>
                     </div>
                     <nav class="hidden md:flex items-center gap-5 text-xs font-semibold tracking-wider text-slate-500 font-mono h-full">
-                        <a href="#" class="text-slate-900 border-b-2 border-slate-950 h-full flex items-center px-1">Providers</a>
-                        <a href="#" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Models</a>
-                        <a href="#" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Uptime</a>
-                        <a href="#" class="hover:text-slate-900 h-full flex items-center px-1 transition-colors">Docs</a>
+                        <a href="#/" data-nav="home" class="nav-link h-full flex items-center px-1 transition-colors">Providers</a>
+                        <a href="#/leaderboard/intelligence" data-nav="intelligence" class="nav-link h-full flex items-center px-1 transition-colors">Models</a>
+                        <a href="#/leaderboard/speed" data-nav="speed" class="nav-link h-full flex items-center px-1 transition-colors">Speed</a>
+                        <a href="#/leaderboard/allowance" data-nav="allowance" class="nav-link h-full flex items-center px-1 transition-colors">Allowance</a>
+                        <a href="#/updates" data-nav="updates" class="nav-link h-full flex items-center px-1 transition-colors">Updates</a>
                     </nav>
                 </div>
 
                 <!-- Action Controls -->
                 <div class="flex items-center gap-3">
                     <div class="relative hidden sm:block">
-
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </span>
-                        <input type="text" placeholder="Search index... (⌘K)" class="w-48 bg-slate-100 border border-slate-200 text-xs rounded-lg pl-9 pr-3 py-1.5 focus:outline-none focus:bg-white focus:border-slate-400 transition-all">
+                        <input id="nav-search" type="text" autocomplete="off" placeholder="Search providers & models  ⌘K" class="w-56 bg-slate-100 border border-slate-200 text-xs rounded-lg pl-9 pr-3 py-1.5 focus:outline-none focus:bg-white focus:border-slate-400 transition-all">
+                        <button id="nav-search-clear" type="button" class="hidden absolute inset-y-0 right-0 flex items-center pr-2.5 text-slate-400 hover:text-slate-700" aria-label="Clear search">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                        <div id="nav-results" class="hidden absolute right-0 mt-1.5 w-80 max-h-96 overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-lg z-50"></div>
                     </div>
                     <a href="#" class="bg-slate-950 text-white font-medium text-xs px-3.5 py-1.5 rounded border border-slate-950 hover:bg-slate-800 transition-colors">Submit an API</a>
                 </div>
@@ -70,7 +74,7 @@
     </header>
 
     <!-- Hero Section / Independent Layout Pattern -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 border-b border-slate-100">
+    <section id="hero-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 border-b border-slate-100">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             <div class="lg:col-span-2">
                 <!-- Controlled Line Breaking Layout to keep phrases unbroken while allowing standard word-wrap -->
@@ -80,7 +84,7 @@
 
                 </h1>
                 <p class="text-sm sm:text-base text-slate-600 max-w-xl font-normal leading-relaxed mb-6">
-                    Free hosted LLM endpoints, legitimately verified for your next project.
+                    Free hosted LLM endpoints, verified against provider docs. Scores from the Artificial Analysis Intelligence Index.
                 </p>
                 <!-- CTA Button and Updated Purple Text Metric -->
                 <div class="flex flex-wrap items-center gap-5">
@@ -93,36 +97,21 @@
                 </div>
             </div>
 
-            <!-- Announcements / Updates Feed Area -->
+            <!-- Announcements / Updates Feed Area (two newest entries from data/announcements.json) -->
             <div class="border-t border-slate-200 lg:border-t-0 lg:border-l lg:pl-6 space-y-4">
-                <div class="text-xs font-bold tracking-tight text-slate-400">Latest index updates</div>
-
-                <div class="space-y-1 group relative">
-                    <div class="flex items-center justify-between text-xs">
-                        <h4 class="text-xs font-bold text-slate-900">API Performance Benchmarking v3</h4>
-                        <a href="#" class="text-slate-400 group-hover:text-slate-900 transition-colors">
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
-                        </a>
-                    </div>
-                    <p class="text-[11px] text-slate-500 leading-normal">Time per task is now our headline performance metric, with agentic token streams added.</p>
+                <div class="flex items-center justify-between">
+                    <div class="text-xs font-bold tracking-tight text-slate-400">Latest index updates</div>
+                    <a href="#/updates" class="text-[10px] font-mono uppercase tracking-wider text-slate-400 hover:text-slate-900 transition-colors">All updates</a>
                 </div>
-
-                <div class="space-y-1 group relative pt-2 border-t border-slate-100">
-                    <div class="flex items-center justify-between text-xs">
-                        <h4 class="text-xs font-bold text-slate-900">Decision Index v2.1</h4>
-                        <a href="#" class="text-slate-400 group-hover:text-slate-900 transition-colors">
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
-                        </a>
-                    </div>
-                    <p class="text-[11px] text-slate-500 leading-normal">New private instruction metrics and formatting scores that evaluate system prompt adherence limits.</p>
+                <div id="hero-updates" class="space-y-1">
+                    <p class="text-[11px] text-slate-400 font-sans">Loading updates&hellip;</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Data Dashboard Grid -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <main id="dashboard-main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- Card Column 1: Speed (TPS) -->
@@ -142,8 +131,8 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
-                    <a href="#" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
-                        View throughput telemetry &rarr;
+                    <a href="#/leaderboard/speed" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
+                        Full speed leaderboard &rarr;
                     </a>
                 </div>
             </div>
@@ -157,7 +146,7 @@
                         <h3 class="text-sm font-bold text-slate-900 tracking-tight">Intelligence</h3>
                     </div>
                     <p class="text-[11px] text-slate-400 border-b border-slate-100 pb-3 mb-4">
-                        Standardized validation benchmarking mapping reasoning and text output density — Higher is better.
+                        Artificial Analysis Intelligence Index (v5.0.1) — Higher is better. Unscored models are omitted.
                     </p>
 
                     <!-- Data Bars Representation (rendered from /data JSON) -->
@@ -166,8 +155,8 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
-                    <a href="#" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
-                        View intelligence leaderboard &rarr;
+                    <a href="#/leaderboard/intelligence" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
+                        Full intelligence leaderboard &rarr;
                     </a>
                 </div>
             </div>
@@ -190,8 +179,8 @@
                     </div>
                 </div>
                 <div class="mt-6 pt-3 border-t border-slate-100 text-center">
-                    <a href="#" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
-                        View complete rate matrix &rarr;
+                    <a href="#/leaderboard/allowance" class="text-xs font-semibold text-slate-900 hover:underline inline-flex items-center gap-1">
+                        Full allowance leaderboard &rarr;
                     </a>
 
                 </div>
@@ -202,6 +191,9 @@
 
     <!-- Catalogue Container Section -->
     <section id="catalogue" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16 scroll-mt-20">
+
+      <!-- List view: filters + rows. Hidden while a provider detail is open. -->
+      <div id="catalogue-list-view">
 
         <!-- Interactive Catalogue Filtering Sub-System Component -->
         <div class="mb-6 space-y-4">
@@ -246,7 +238,6 @@
                     <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="monthly-credits">Monthly credits</button>
                     <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="research">Research</button>
                     <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="trials">Trials</button>
-                    <button class="offer-tab px-3 py-1 rounded transition-colors hover:bg-slate-100 text-slate-700" data-offer="community">Community</button>
                 </div>
 
                 <!-- Hard Parameter Requirement Checkboxes -->
@@ -268,14 +259,25 @@
         </div>
 
         <!-- Catalogue Header Grouping Context Bar -->
-        <div class="bg-slate-50 border border-slate-200 border-b-0 px-4 py-2 text-xs font-semibold text-slate-500 font-mono mt-8">
-            Provider
+        <div class="bg-slate-50 border border-slate-200 border-b-0 px-4 py-2 mt-8 flex items-center justify-between gap-3 text-xs font-semibold text-slate-500 font-mono">
+            <span>Provider</span>
+            <span class="text-[10px] font-normal text-slate-400">Click a row for free-tier details</span>
         </div>
 
         <!-- High-density Data Table Layout (rows rendered from /data JSON) -->
         <div id="catalogue-rows" class="border border-slate-200 bg-white divide-y divide-slate-200 text-sm">
             <div class="p-8 text-center text-xs text-slate-400 font-sans">Loading provider data&hellip;</div>
         </div>
+      </div>
+
+      <!-- Provider detail view (rendered from the same /data JSON files) -->
+      <div id="provider-detail" class="hidden"></div>
+
+      <!-- Full leaderboard pages (/ #/leaderboard/<metric>) -->
+      <div id="leaderboard-view" class="hidden"></div>
+
+      <!-- Product changelog (/#/updates), rendered from data/announcements.json -->
+      <div id="updates-view" class="hidden"></div>
     </section>
 
     <!-- Enhanced Minimalistic Site Footer -->
@@ -380,7 +382,9 @@
             family: 'any',
             noCard: false,
             privatePrompts: false,
-            providers: []
+            providers: [],
+            announcements: [],
+            announcementsUpdated: ''
         };
 
         function $(id) { return document.getElementById(id); }
@@ -492,21 +496,17 @@
                 valueClasses: ['text-slate-900', 'text-slate-900', 'text-slate-900']
             });
 
-            var allowanceRows = topByMetric(function (m) {
-                // blank token_allowance means unlimited
-                return typeof m.token_allowance === 'number' ? m.token_allowance : Infinity;
-            }, 3);
-            var maxFinite = 0;
-            allowanceRows.forEach(function (r) {
-                if (isFinite(r.v) && r.v > maxFinite) maxFinite = r.v;
-            });
+            // Token allowance is ranked per provider: the free tokens/day summed
+            // across the models that carry a numeric quota.
+            var allowanceRows = providerAllowanceRows().slice(0, 3);
+            var maxAllowance = allowanceRows.length ? allowanceRows[0].monthly : 0;
             renderBars('allowance-bars', allowanceRows.map(function (r) {
                 return {
                     primary: r.provider.name,
-                    secondary: r.model.name + (r.model.rate_limits ? ' \u00b7 ' + r.model.rate_limits : ''),
-                    value: isFinite(r.v) ? compactTokens(r.v) + ' tokens/day' : 'Unlimited',
-                    v: r.v,
-                    width: isFinite(r.v) ? Math.min(100, Math.max(6, Math.round(r.v / (maxFinite || 1) * 100))) : 100
+                    secondary: recurrenceOf(r.provider) + ' \u00b7 ' + (r.shared ? 'shared pool' : 'per-model quotas'),
+                    value: formatAllowance(r.value, r.period),
+                    v: r.monthly,
+                    width: Math.min(100, Math.max(6, Math.round(r.monthly / (maxAllowance || 1) * 100)))
                 };
             }), {
                 scale: 'relative',
@@ -537,6 +537,15 @@
             return true;
         }
 
+        // ---------------------------------------------------------------- list
+
+        function modelCountLabel(p) {
+            var n = (p.models || []).length;
+            var total = typeof p.catalog_size === 'number' && p.catalog_size > n ? p.catalog_size : null;
+            if (total) return n + ' of ' + total + ' models';
+            return n + ' model' + (n === 1 ? '' : 's');
+        }
+
         function renderCatalogue() {
             var box = $('catalogue-rows');
             if (!box) return;
@@ -550,20 +559,785 @@
                 var priv = PRIVACY[(p.privacy && p.privacy.type) || 'none'] || PRIVACY.none;
                 var models = p.models || [];
                 return '' +
-                    '<div class="p-4 hover:bg-slate-50/50 transition-colors">' +
-                        '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" title="' + esc(p.description || '') + '" class="font-bold text-slate-900 tracking-tight mb-1 text-base hover:underline inline-block">' + esc(p.name) + '</a>' +
-                        '<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono">' +
-                            '<span class="' + tone + ' font-medium font-sans">' + esc(p.offer && p.offer.label) + '</span>' +
-                            '<span class="text-slate-300">&middot;</span>' +
-                            '<span class="' + priv + ' font-medium font-sans">' + esc(p.privacy && p.privacy.label) + '</span>' +
-                            modelFamilies(p).map(function (f) {
-                                return '<span class="text-slate-600 font-medium">' + esc(f) + '</span>';
-                            }).join('') +
-                            '<span class="text-slate-300">&middot;</span>' +
-                            '<span class="text-slate-500 font-sans">' + models.length + ' model' + (models.length === 1 ? '' : 's') + '</span>' +
+                    '<div class="p-4 hover:bg-slate-50 transition-colors cursor-pointer group" data-provider="' + esc(p.id) + '" role="button" tabindex="0" aria-label="Open details for ' + esc(p.name) + '">' +
+                        '<div class="flex items-start justify-between gap-3">' +
+                            '<div class="min-w-0">' +
+                                '<div class="flex items-center gap-1.5">' +
+                                    '<span class="font-bold text-slate-900 tracking-tight text-base group-hover:underline">' + esc(p.name) + '</span>' +
+                                    '<svg class="w-3.5 h-3.5 text-slate-300 group-hover:text-slate-600 transition-colors" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>' +
+                                '</div>' +
+                                '<p class="text-xs text-slate-500 mt-0.5 font-sans leading-snug">' + esc(p.description) + '</p>' +
+                                '<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono mt-1.5">' +
+                                    '<span class="' + tone + ' font-medium font-sans">' + esc(p.offer && p.offer.label) + '</span>' +
+                                    '<span class="text-slate-300">&middot;</span>' +
+                                    '<span class="' + priv + ' font-medium font-sans">' + esc(p.privacy && p.privacy.label) + '</span>' +
+                                    '<span class="text-slate-300">&middot;</span>' +
+                                    '<span class="text-slate-500 font-sans">' + modelCountLabel(p) + '</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" data-external="1" title="Open ' + esc(p.name) + ' in a new tab" class="shrink-0 text-[11px] font-semibold text-slate-400 hover:text-slate-900 transition-colors">Site &nearr;</a>' +
                         '</div>' +
                     '</div>';
             }).join('');
+        }
+
+        // -------------------------------------------------------------- detail
+
+        function hashProviderId() {
+            // Detail routes look like /#/providers/groq (the older #provider/groq form
+            // is still accepted so existing links keep working).
+            var m = /^#\/?(?:providers?|p)(?:\/|=)([^/?#]+)$/.exec(window.location.hash || '');
+            return m ? decodeURIComponent(m[1]) : null;
+        }
+
+        function findProvider(id) {
+            var found = null;
+            state.providers.forEach(function (p) { if (p.id === id) found = p; });
+            return found;
+        }
+
+        function openProvider(id) {
+            window.location.hash = '/providers/' + encodeURIComponent(id);
+        }
+
+        function ctxText(v) {
+            return typeof v === 'number' ? compactTokens(v) : '&mdash;';
+        }
+
+        function metricText(m, key, suffix) {
+            var v = m.metrics && m.metrics[key];
+            return typeof v === 'number' ? esc(String(v) + (suffix || '')) : '<span class="text-slate-300">&mdash;</span>';
+        }
+
+        function allowanceText(m, p) {
+            if (p && typeof p.free_token_allowance === 'number') {
+                return '<span class="text-slate-600">Shared ' + esc(formatAllowance(p.free_token_allowance, p.allowance_period || 'day')) + '</span>';
+            }
+            if (typeof m.token_allowance === 'number') return esc(compactTokens(m.token_allowance) + ' / day');
+            return '<span class="text-slate-400">Request-capped</span>';
+        }
+
+        function linkRow(label, url) {
+            if (!url) return '';
+            return '' +
+                '<a href="' + esc(url) + '" target="_blank" rel="noopener" class="flex items-center justify-between gap-2 rounded border border-slate-200 bg-white px-2.5 py-1.5 hover:border-slate-400 transition-colors">' +
+                    '<span class="font-semibold text-slate-700">' + esc(label) + '</span>' +
+                    '<svg class="w-3 h-3 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>' +
+                '</a>';
+        }
+
+        function renderDetail(p) {
+            var box = $('provider-detail');
+            if (!box) return;
+            var tone = TONE[(p.offer && p.offer.tone) || 'slate'] || TONE.slate;
+            var priv = PRIVACY[(p.privacy && p.privacy.type) || 'none'] || PRIVACY.none;
+            var models = p.models || [];
+            var bullets = (p.free_access || []);
+            var verified = p.verified || {};
+            var sources = verified.sources || [];
+
+            var chips = '' +
+                '<span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold font-sans ' + tone + '">' + esc(p.offer && p.offer.label) + '</span>' +
+                '<span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold font-sans ' + priv + '">' + esc(p.privacy && p.privacy.label) + '</span>' +
+                '<span class="inline-flex items-center rounded-full border ' + (p.requires_payment_card ? 'border-amber-200 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-600') + ' px-2.5 py-1 text-[11px] font-semibold font-sans">' + (p.requires_payment_card ? 'Card required' : 'No card needed') + '</span>';
+
+            var rows = models.map(function (m) {
+                return '' +
+                    '<tr class="border-t border-slate-100 align-top">' +
+                        '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(m.name) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-500 font-mono whitespace-nowrap">' + esc(m.family) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + ctxText(m.context_window) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + metricText(m, 'tps', '') + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + metricText(m, 'intelligence', '') + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-mono text-right whitespace-nowrap">' + allowanceText(m, p) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-500 font-sans">' + esc(m.rate_limits || '') + '</td>' +
+                    '</tr>';
+            }).join('');
+
+            var endpoint = p.api_endpoint
+                ? '<div>' +
+                        '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">API endpoint</h3>' +
+                        '<div class="flex items-center gap-2">' +
+                            '<code class="flex-1 min-w-0 truncate rounded border border-slate-200 bg-white px-2 py-1.5 font-mono text-[11px] text-slate-700" title="' + esc(p.api_endpoint) + '">' + esc(p.api_endpoint) + '</code>' +
+                            '<button type="button" data-copy="' + esc(p.api_endpoint) + '" class="shrink-0 rounded border border-slate-200 bg-white px-2 py-1.5 text-[11px] font-semibold text-slate-600 hover:border-slate-400 transition-colors">Copy</button>' +
+                        '</div>' +
+                        '<p class="mt-1.5 text-[10px] text-slate-400 font-sans leading-snug">OpenAI-compatible base URL, where the provider offers one.</p>' +
+                    '</div>'
+                : '';
+
+            box.innerHTML = '' +
+                '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
+                    '<a href="#/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
+                        '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
+                        'Back to all providers' +
+                    '</a>' +
+                    '<span class="text-[11px] font-mono text-slate-400">checked ' + esc(verified.checked || p.last_updated || '') + '</span>' +
+                '</div>' +
+
+                '<div class="border border-slate-200 rounded-xl bg-white shadow-sm overflow-hidden">' +
+                    '<div class="p-6 border-b border-slate-100">' +
+                        '<div class="flex flex-wrap items-start justify-between gap-4">' +
+                            '<div class="min-w-0">' +
+                                '<h2 class="text-2xl font-bold tracking-tight text-slate-950">' + esc(p.name) + '</h2>' +
+                                '<p class="mt-1 text-sm text-slate-600 max-w-2xl leading-relaxed">' + esc(p.description) + '</p>' +
+                            '</div>' +
+                            '<div class="flex flex-col items-start sm:items-end gap-2">' +
+                                '<div class="flex flex-wrap items-center gap-1.5">' + chips + '</div>' +
+                                '<a href="' + esc(p.website || '#') + '" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded border border-slate-950 bg-slate-950 px-3 py-1.5 text-[11px] font-semibold text-white hover:bg-slate-800 transition-colors">' +
+                                    'Visit ' + esc((p.website || '').replace(/^https?:\/\//, '').replace(/\/$/, '')) +
+                                    '<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>' +
+                                '</a>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+
+                    '<div class="grid grid-cols-1 lg:grid-cols-3">' +
+                        '<div class="lg:col-span-2 p-6 lg:border-r border-slate-100">' +
+                            '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Overview</h3>' +
+                            '<p class="text-sm text-slate-700 leading-relaxed">' + esc(p.overview || '') + '</p>' +
+
+                            (bullets.length ? (
+                                '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mt-6 mb-2">What is free</h3>' +
+                                '<ul class="space-y-2">' + bullets.map(function (b) {
+                                    return '<li class="flex items-start gap-2 text-sm text-slate-700 font-sans">' +
+                                        '<svg class="w-3.5 h-3.5 mt-0.5 shrink-0 text-emerald-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path></svg>' +
+                                        '<span>' + esc(b) + '</span>' +
+                                    '</li>';
+                                }).join('') + '</ul>'
+                            ) : '') +
+
+                            '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mt-8 mb-2">Free models (' +
+                                (typeof p.catalog_size === 'number' && p.catalog_size > models.length
+                                    ? models.length + ' of ' + p.catalog_size + ' listed'
+                                    : models.length) + ')</h3>' +
+                            '<div class="overflow-x-auto border border-slate-200 rounded-lg">' +
+                                '<table class="w-full text-xs">' +
+                                    '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
+                                        '<tr>' +
+                                            '<th class="px-3 py-2 text-left font-semibold">Model</th>' +
+                                            '<th class="px-3 py-2 text-left font-semibold">Family</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">Context</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">TPS</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">Quality</th>' +
+                                            '<th class="px-3 py-2 text-right font-semibold">Free tokens</th>' +
+                                            '<th class="px-3 py-2 text-left font-semibold">Free limits</th>' +
+                                        '</tr>' +
+                                    '</thead>' +
+                                    '<tbody>' + rows + '</tbody>' +
+                                '</table>' +
+                            '</div>' +
+                            (typeof p.catalog_size === 'number' && p.catalog_size > models.length
+                                ? '<p class="mt-2 text-[11px] text-slate-500 font-sans">The free tier carries ' + p.catalog_size +
+                                  ' models; the most useful ' + models.length + ' are listed here with limits and scores.</p>'
+                                : '') +
+                        '</div>' +
+
+                        '<aside class="p-6 space-y-6 bg-slate-50/50 text-xs">' +
+                            endpoint +
+                            '<div>' +
+                                '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Links</h3>' +
+                                '<div class="space-y-1.5">' +
+                                    linkRow('Website', p.website) +
+                                    linkRow('API docs', p.docs) +
+                                    linkRow('Get an API key', p.signup) +
+                                '</div>' +
+                            '</div>' +
+                            '<div>' +
+                                '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Verified</h3>' +
+                                '<p class="text-slate-600 font-sans leading-relaxed mb-1.5">Free access checked on <span class="font-semibold text-slate-900">' + esc(verified.checked || p.last_updated || '') + '</span>.</p>' +
+                                '<ul class="space-y-1">' + sources.map(function (u) {
+                                    return '<li><a href="' + esc(u) + '" target="_blank" rel="noopener" class="font-mono text-[10px] text-sky-700 hover:underline break-all">' + esc(String(u).replace(/^https?:\/\//, '')) + '</a></li>';
+                                }).join('') + '</ul>' +
+                            '</div>' +
+                            (p.notes ? (
+                                '<div>' +
+                                    '<h3 class="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono mb-2">Watch out</h3>' +
+                                    '<p class="text-slate-600 font-sans leading-relaxed">' + esc(p.notes) + '</p>' +
+                                '</div>'
+                            ) : '') +
+                        '</aside>' +
+                    '</div>' +
+                '</div>';
+        }
+
+        // ---------------------------------------------------------- leaderboards
+
+        function hashUpdates() {
+            return /^#\/?updates?\/?$/i.test(window.location.hash || '');
+        }
+
+        function hashLeaderboardId() {
+            var m = /^#\/?leaderboards?\/([a-z-]+)$/.exec(window.location.hash || '');
+            return m ? m[1] : null;
+        }
+
+        var LEADERBOARDS = {
+            intelligence: {
+                title: 'Intelligence leaderboard',
+                blurb: 'Every free-tier model with a published Artificial Analysis Intelligence Index v5.0.1 score, highest first. One row per model — the small grey number counts the other free providers serving it. Artificial Analysis does not score every model, so unscored models are absent rather than estimated.',
+                column: 'AA Intelligence Index',
+                unit: 'scored models',
+                source: 'https://artificialanalysis.ai/leaderboards/models',
+                dedupe: true,
+                pick: function (m) {
+                    return m.metrics && typeof m.metrics.intelligence === 'number' ? m.metrics.intelligence : null;
+                },
+                format: function (v) { return String(v); }
+            },
+            speed: {
+                title: 'Speed leaderboard',
+                blurb: 'Generation speed in tokens per second for each free-tier model. Throughput is measured per provider, so the same model appears with a different figure on every host that serves it.',
+                column: 'Tokens / second',
+                unit: 'models with a throughput figure',
+                source: null,
+                pick: function (m) {
+                    return m.metrics && typeof m.metrics.tps === 'number' ? m.metrics.tps : null;
+                },
+                format: function (v) { return v + ' TPS'; }
+            },
+            allowance: {
+                title: 'Token allowance leaderboard',
+                blurb: 'Free tokens each provider hands out, ranked by provider rather than by model. A shared account-wide pool — IteraCompute\'s 30M/month, Inception\'s 100M signup balance — is shown once with scope account-wide; otherwise the per-model quotas are summed and the scope column says how many models carry one. Request-capped providers with no token quota stay in the catalogue instead. Ranks compare a 30-day equivalent — a daily cap times 30 — while each row shows the period the provider actually publishes.',
+                column: 'Free tokens',
+                unit: 'providers with a token quota',
+                source: null,
+                byProvider: true
+            }
+        };
+
+        function recurrenceOf(p) {
+            // An explicit allowance period describes the pool better than the offer type:
+            // a trial can hand out a monthly quota and a recurring tier can be one-shot.
+            if (p.allowance_period === 'one-time') return 'One-time';
+            if (p.allowance_period === 'month') return 'Monthly';
+            if (p.allowance_period === 'day') return 'Recurring';
+            var t = (p.offer && p.offer.type) || '';
+            if (t === 'trials') return 'One-time';
+            if (t === 'monthly-credits') return 'Monthly';
+            return 'Recurring';
+        }
+
+        function periodLabel(period) {
+            if (period === 'one-time') return 'one-time';
+            if (period === 'month') return '/ month';
+            return '/ day';
+        }
+
+        function formatAllowance(value, period) {
+            return compactTokens(value) + ' ' + periodLabel(period);
+        }
+
+        function providerAllowanceRows() {
+            var rows = [];
+            state.providers.forEach(function (p) {
+                var modelCount = (p.models || []).length;
+                // An account-wide pool shared by every model beats summing per-model quotas.
+                if (typeof p.free_token_allowance === 'number') {
+                    rows.push({
+                        provider: p,
+                        value: p.free_token_allowance,
+                        period: p.allowance_period || 'day',
+                        shared: true,
+                        counted: modelCount,
+                        modelCount: modelCount
+                    });
+                    return;
+                }
+                var total = 0;
+                var counted = 0;
+                (p.models || []).forEach(function (m) {
+                    if (typeof m.token_allowance === 'number') {
+                        total += m.token_allowance;
+                        counted += 1;
+                    }
+                });
+                if (!counted) return;
+                rows.push({
+                    provider: p, value: total, period: 'day', shared: false,
+                    counted: counted, modelCount: modelCount
+                });
+            });
+            // Periods are not comparable as raw numbers: 7M/day is far more than
+            // 30M/month. Rank on a 30-day equivalent while still showing the
+            // published period, and treat a one-time balance as a single lump.
+            rows.forEach(function (r) {
+                r.monthly = r.period === 'day' ? r.value * 30 : r.value;
+            });
+            rows.sort(function (a, b) {
+                if (b.monthly !== a.monthly) return b.monthly - a.monthly;
+                if (b.value !== a.value) return b.value - a.value;
+                return String(a.provider.name).localeCompare(String(b.provider.name));
+            });
+            return rows;
+        }
+
+        function leaderboardRows(cfg) {
+            var rows = [];
+            state.providers.forEach(function (p) {
+                (p.models || []).forEach(function (m) {
+                    var v = cfg.pick(m);
+                    if (v === null || v === undefined) return;
+                    rows.push({ value: v, model: m, provider: p });
+                });
+            });
+            rows.sort(function (a, b) {
+                if (b.value !== a.value) return b.value - a.value;
+                return String(a.provider.name).localeCompare(String(b.provider.name));
+            });
+            if (cfg.dedupe) {
+                // Intelligence is a property of the model, not of the host, so show one
+                // row per model and count how many free providers serve it.
+                var seen = {};
+                var unique = [];
+                rows.forEach(function (r) {
+                    if (seen[r.model.name]) { seen[r.model.name].providers += 1; return; }
+                    r.providers = 1;
+                    seen[r.model.name] = r;
+                    unique.push(r);
+                });
+                rows = unique;
+            }
+            return rows;
+        }
+
+        function renderLeaderboard(id) {
+            var box = $('leaderboard-view');
+            if (!box) return;
+            var cfg = LEADERBOARDS[id];
+            if (!cfg) { box.innerHTML = ''; return; }
+            if (cfg.byProvider) {
+                renderProviderBoard(box, cfg);
+                return;
+            }
+            var rows = leaderboardRows(cfg).slice(0, 100);
+            var body = rows.map(function (r, i) {
+                return '' +
+                    '<tr class="border-t border-slate-100 hover:bg-slate-50 cursor-pointer" data-provider="' + esc(r.provider.id) + '" tabindex="0">' +
+                        '<td class="px-3 py-2 font-mono text-slate-400 text-right w-10">' + (i + 1) + '</td>' +
+                        '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(r.model.name) + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-sans whitespace-nowrap">' + esc(r.provider.name) +
+                            (r.providers > 1 ? ' <span class="text-slate-400 font-mono text-[10px]">+' + (r.providers - 1) + '</span>' : '') + '</td>' +
+                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(cfg.format(r.value)) + '</td>' +
+                        '<td class="px-3 py-2 font-mono text-slate-500 text-right whitespace-nowrap">' + (r.model.context_window ? compactTokens(r.model.context_window) : '&mdash;') + '</td>' +
+                        '<td class="px-3 py-2 text-slate-500 font-sans">' + esc(r.model.rate_limits || '') + '</td>' +
+                    '</tr>';
+            }).join('');
+
+            box.innerHTML = boardHeader(id, cfg) +
+                '<div class="overflow-x-auto border border-slate-200 rounded-xl bg-white">' +
+                    '<table class="w-full text-xs">' +
+                        '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
+                            '<tr>' +
+                                '<th class="px-3 py-2 text-right font-semibold">#</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Model</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Provider</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">' + esc(cfg.column) + '</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">Context</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Free limits</th>' +
+                            '</tr>' +
+                        '</thead>' +
+                        '<tbody>' + body + '</tbody>' +
+                    '</table>' +
+                '</div>' +
+                (rowCountNote(rows.length, cfg));
+        }
+
+        function boardTabs(id) {
+            return '<div class="flex flex-wrap items-center gap-1.5 text-[11px] font-mono">' +
+                Object.keys(LEADERBOARDS).map(function (k) {
+                    var on = k === id;
+                    return '<a href="#/leaderboard/' + k + '" class="px-2.5 py-1 rounded border ' + (on ? 'border-slate-900 bg-slate-900 text-white' : 'border-slate-200 text-slate-600 hover:border-slate-400') + '">' + esc(LEADERBOARDS[k].title.replace(' leaderboard', '')) + '</a>';
+                }).join('') +
+            '</div>';
+        }
+
+        function boardHeader(id, cfg) {
+            return '' +
+                '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
+                    '<a href="#/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
+                        '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
+                        'Back to all providers' +
+                    '</a>' + boardTabs(id) +
+                '</div>' +
+                '<h2 class="text-2xl font-bold tracking-tight text-slate-950">' + esc(cfg.title) + '</h2>' +
+                '<p class="mt-1 mb-4 max-w-3xl text-sm text-slate-600 leading-relaxed">' + esc(cfg.blurb) +
+                    (cfg.source ? ' <a href="' + esc(cfg.source) + '" target="_blank" rel="noopener" class="font-semibold text-slate-900 underline">Source</a>.' : '') +
+                '</p>';
+        }
+
+        function renderProviderBoard(box, cfg) {
+            var rows = providerAllowanceRows().slice(0, 100);
+            var body = rows.map(function (r, i) {
+                var kind = recurrenceOf(r.provider);
+                var kindClass = kind === 'One-time' ? 'text-amber-600' : 'text-slate-500';
+                return '' +
+                    '<tr class="border-t border-slate-100 hover:bg-slate-50 cursor-pointer" data-provider="' + esc(r.provider.id) + '" tabindex="0">' +
+                        '<td class="px-3 py-2 font-mono text-slate-400 text-right w-10">' + (i + 1) + '</td>' +
+                        '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(r.provider.name) + '</td>' +
+                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(formatAllowance(r.value, r.period)) + '</td>' +
+                        '<td class="px-3 py-2 font-mono text-slate-500 text-right whitespace-nowrap">' + (r.shared ? 'account-wide' : r.counted + ' of ' + r.modelCount) + '</td>' +
+                        '<td class="px-3 py-2 font-sans whitespace-nowrap ' + kindClass + '">' + kind + '</td>' +
+                        '<td class="px-3 py-2 text-slate-600 font-sans">' + esc((r.provider.offer && r.provider.offer.label) || '') + '</td>' +
+                    '</tr>';
+            }).join('');
+
+            box.innerHTML = boardHeader('allowance', cfg) +
+                '<div class="overflow-x-auto border border-slate-200 rounded-xl bg-white">' +
+                    '<table class="w-full text-xs">' +
+                        '<thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-slate-500 font-mono">' +
+                            '<tr>' +
+                                '<th class="px-3 py-2 text-right font-semibold">#</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Provider</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">' + esc(cfg.column) + '</th>' +
+                                '<th class="px-3 py-2 text-right font-semibold">Scope</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Recurrence</th>' +
+                                '<th class="px-3 py-2 text-left font-semibold">Free offer</th>' +
+                            '</tr>' +
+                        '</thead>' +
+                        '<tbody>' + body + '</tbody>' +
+                    '</table>' +
+                '</div>' +
+                '<p class="mt-3 text-[11px] font-mono text-slate-400">' + providerAllowanceRows().length +
+                    ' providers with a token quota · ' + state.providers.length + ' providers tracked in total</p>';
+        }
+
+        function rowCountNote(shown, cfg) {
+            var total = leaderboardRows(cfg).length;
+            var unit = cfg.unit || 'models';
+            if (shown >= total) return '<p class="mt-3 text-[11px] font-mono text-slate-400">' + total + ' ' + esc(unit) + '</p>';
+            return '<p class="mt-3 text-[11px] font-mono text-slate-400">Showing the top ' + shown + ' of ' + total + ' ' + esc(unit) + '</p>';
+        }
+
+        function navKey(p, lb) {
+            // A provider page still belongs to the Providers section.
+            if (lb) return lb;
+            if (hashUpdates()) return 'updates';
+            return 'home';
+        }
+
+        function updateNav(p, lb) {
+            var key = navKey(p, lb);
+            Array.prototype.forEach.call(document.querySelectorAll('.nav-link'), function (a) {
+                var on = a.getAttribute('data-nav') === key;
+                a.className = 'nav-link h-full flex items-center px-1 transition-colors ' +
+                    (on ? 'text-slate-900 border-b-2 border-slate-950' : 'hover:text-slate-900');
+                if (on) { a.setAttribute('aria-current', 'page'); } else { a.removeAttribute('aria-current'); }
+            });
+        }
+
+
+        // ------------------------------------------------------------- updates
+
+        var UPDATE_KINDS = {
+            added: ['Added', 'bg-emerald-50 text-emerald-700 border-emerald-200'],
+            pruned: ['Pruned', 'bg-rose-50 text-rose-700 border-rose-200'],
+            corrected: ['Corrected', 'bg-amber-50 text-amber-700 border-amber-200'],
+            audit: ['Audit', 'bg-sky-50 text-sky-700 border-sky-200'],
+            changed: ['Changed', 'bg-slate-100 text-slate-700 border-slate-200'],
+            update: ['Update', 'bg-indigo-50 text-indigo-700 border-indigo-200']
+        };
+
+        function updateKind(kind) {
+            var k = UPDATE_KINDS[kind] || UPDATE_KINDS.update;
+            return '<span class="inline-block px-2 py-0.5 rounded border text-[10px] font-mono uppercase tracking-wider ' +
+                k[1] + '">' + k[0] + '</span>';
+        }
+
+        function updateProviderChips(ids) {
+            if (!ids || !ids.length) return '';
+            return '<div class="mt-3 flex flex-wrap gap-1.5">' + ids.map(function (id) {
+                var p = findProvider(id);
+                var label = p ? p.name : id;
+                if (!p) return '<span class="px-2 py-0.5 rounded border border-slate-200 text-[10px] font-mono text-slate-400">' + esc(label) + '</span>';
+                return '<a href="#/providers/' + encodeURIComponent(p.id) + '" class="px-2 py-0.5 rounded border border-slate-200 text-[10px] font-mono text-slate-600 hover:border-slate-400 hover:text-slate-900 transition-colors">' + esc(label) + '</a>';
+            }).join('') + '</div>';
+        }
+
+        function renderUpdatesView() {
+            var box = $('updates-view');
+            if (!box) return;
+            var items = state.announcements || [];
+            var intro = 'Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.';
+            var rows = items.map(function (it) {
+                var details = (it.details || []).map(function (d) {
+                    return '<li class="flex gap-2"><span class="text-slate-300 select-none">-</span><span>' + esc(d) + '</span></li>';
+                }).join('');
+                return '' +
+                    '<article class="border border-slate-200 rounded-xl bg-white p-5 mb-4">' +
+                        '<div class="flex flex-wrap items-center gap-2 mb-2">' +
+                            updateKind(it.kind) +
+                            '<span class="text-[10px] font-mono uppercase tracking-wider text-slate-400">' + esc(it.date) + '</span>' +
+                        '</div>' +
+                        '<h3 class="text-base font-bold text-slate-900 tracking-tight">' + esc(it.title) + '</h3>' +
+                        '<p class="mt-1 text-sm text-slate-600 leading-relaxed">' + esc(it.summary) + '</p>' +
+                        (details ? '<ul class="mt-3 space-y-1.5 text-[12px] text-slate-500 leading-relaxed font-sans">' + details + '</ul>' : '') +
+                        updateProviderChips(it.providers) +
+                    '</article>';
+            }).join('');
+            if (!items.length) rows = '<p class="text-sm text-slate-500">No updates recorded yet.</p>';
+            box.innerHTML = '' +
+                '<div class="mb-5 flex flex-wrap items-center justify-between gap-3">' +
+                    '<a href="#/" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">' +
+                        '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>' +
+                        'Back to all providers' +
+                    '</a>' +
+                    '<span class="text-[10px] font-mono uppercase tracking-wider text-slate-400">updated ' + esc(state.announcementsUpdated || '') + '</span>' +
+                '</div>' +
+                '<h2 class="text-2xl font-bold tracking-tight text-slate-950">Updates</h2>' +
+                '<p class="mt-1 mb-6 max-w-3xl text-sm text-slate-600 leading-relaxed">' + esc(intro) + '</p>' +
+                rows;
+        }
+
+        function renderHeroUpdates() {
+            var box = $('hero-updates');
+            if (!box) return;
+            var items = (state.announcements || []).slice(0, 2);
+            if (!items.length) {
+                box.innerHTML = '<p class="text-[11px] text-slate-400 font-sans">No updates recorded yet.</p>';
+                return;
+            }
+            box.innerHTML = items.map(function (it, i) {
+                return '' +
+                    '<div class="group relative ' + (i ? 'pt-3 mt-3 border-t border-slate-100' : '') + '">' +
+                        '<div class="flex items-start justify-between gap-2">' +
+                            '<a href="#/updates" class="text-xs font-bold text-slate-900 hover:underline leading-snug">' + esc(it.title) + '</a>' +
+                            '<a href="#/updates" aria-label="Open updates" class="mt-0.5 text-slate-400 group-hover:text-slate-900 transition-colors shrink-0">' +
+                                '<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>' +
+                            '</a>' +
+                        '</div>' +
+                        '<p class="mt-1 text-[11px] text-slate-500 leading-normal">' + esc(it.summary) + '</p>' +
+                        '<div class="mt-1 text-[10px] font-mono uppercase tracking-wider text-slate-400">' + esc(it.date) + '</div>' +
+                    '</div>';
+            }).join('');
+        }
+
+        function loadAnnouncements() {
+            return fetchFirst(DATA_BASES.map(function (b) { return b + 'announcements.json'; }))
+                .then(function (res) {
+                    state.announcements = (res.data && res.data.items) || [];
+                    state.announcementsUpdated = (res.data && res.data.updated) || '';
+                })
+                .catch(function () {
+                    state.announcements = [];
+                    state.announcementsUpdated = '';
+                });
+        }
+
+        function renderView() {
+            var p = findProvider(hashProviderId() || '');
+            var lb = hashLeaderboardId();
+            var up = hashUpdates();
+            updateNav(p, lb);
+            var listView = $('catalogue-list-view');
+            var detail = $('provider-detail');
+            var board = $('leaderboard-view');
+            var updates = $('updates-view');
+            var sub = !!p || !!lb || up;
+            // The hero, the leaderboard cards and the catalogue belong to the index.
+            ['hero-section', 'dashboard-main'].forEach(function (id) {
+                var el = $(id);
+                if (el) el.classList.toggle('hidden', sub);
+            });
+            if (listView) listView.classList.toggle('hidden', sub);
+            if (detail) {
+                detail.classList.toggle('hidden', !p);
+                if (!p) detail.innerHTML = '';
+            }
+            if (board) {
+                board.classList.toggle('hidden', !lb);
+                if (!lb) board.innerHTML = '';
+            }
+            if (updates) {
+                updates.classList.toggle('hidden', !up);
+                if (up) renderUpdatesView(); else updates.innerHTML = '';
+            }
+            if (p) {
+                renderDetail(p);
+                document.title = p.name + ' — FreeToken';
+                window.scrollTo(0, 0);
+            } else if (up) {
+                document.title = 'Updates \u2014 FreeToken';
+                window.scrollTo(0, 0);
+            } else if (lb && LEADERBOARDS[lb]) {
+                renderLeaderboard(lb);
+                document.title = LEADERBOARDS[lb].title + ' — FreeToken';
+                window.scrollTo(0, 0);
+            } else {
+                document.title = 'FreeToken — Free Text LLM API Index';
+            }
+        }
+
+        // ------------------------------------------------------ navbar search
+
+        var navResults = [];
+        var navIndex = -1;
+
+        function searchIndex(q) {
+            var out = [];
+            if (q.length < 2) return out;
+            state.providers.forEach(function (p) {
+                var hay = [p.name, p.description, (p.offer && p.offer.label) || ''].join(' ').toLowerCase();
+                if (hay.indexOf(q) !== -1) out.push({ kind: 'provider', provider: p, label: p.name, sub: (p.offer && p.offer.label) || '' });
+            });
+            var seen = {};
+            state.providers.forEach(function (p) {
+                (p.models || []).forEach(function (m) {
+                    if (seen[m.name]) return;
+                    if (m.name.toLowerCase().indexOf(q) === -1) return;
+                    seen[m.name] = true;
+                    out.push({ kind: 'model', provider: p, model: m, label: m.name, sub: m.family + ' \u00b7 ' + p.name });
+                });
+            });
+            return out.slice(0, 8);
+        }
+
+        function hideNavResults() {
+            var box = $('nav-results');
+            if (box) { box.classList.add('hidden'); box.innerHTML = ''; }
+            navIndex = -1;
+        }
+
+        function renderNavResults() {
+            var box = $('nav-results');
+            var input = $('nav-search');
+            if (!box || !input) return;
+            var q = input.value.trim().toLowerCase();
+            navResults = searchIndex(q);
+            $('nav-search-clear').classList.toggle('hidden', !q);
+            if (!q) { hideNavResults(); return; }
+            if (!navResults.length) {
+                box.innerHTML = '<div class="px-3 py-3 text-xs text-slate-400 font-sans">No providers or models match \u201c' + esc(q) + '\u201d.</div>';
+                box.classList.remove('hidden');
+                return;
+            }
+            box.innerHTML = navResults.map(function (r, i) {
+                return '<button type="button" data-nav-result="' + i + '" class="w-full text-left px-3 py-2 border-b border-slate-100 last:border-0 hover:bg-slate-50 flex items-start justify-between gap-2">' +
+                    '<span class="min-w-0">' +
+                        '<span class="block text-xs font-semibold text-slate-900 truncate">' + esc(r.label) + '</span>' +
+                        '<span class="block text-[10px] text-slate-500 truncate">' + esc(r.sub) + '</span>' +
+                    '</span>' +
+                    '<span class="shrink-0 text-[9px] uppercase tracking-wider font-mono text-slate-400">' + r.kind + '</span>' +
+                '</button>';
+            }).join('');
+            box.classList.remove('hidden');
+            navIndex = -1;
+        }
+
+        function openNavResult(i) {
+            var r = navResults[i];
+            if (!r) return;
+            var input = $('nav-search');
+            if (input) input.blur();
+            hideNavResults();
+            if (r.kind === 'provider') {
+                openProvider(r.provider.id);
+            } else {
+                // a model hit: filter the catalogue by it and go home
+                if (input) input.value = r.model.name;
+                state.q = r.model.name.toLowerCase();
+                var cat = $('catalogue-search');
+                if (cat) cat.value = r.model.name;
+                if (hashProviderId() || hashLeaderboardId()) window.location.hash = '#/';
+                renderCatalogue();
+                var box = $('catalogue');
+                if (box) box.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function wireNavSearch() {
+            var input = $('nav-search');
+            if (!input) return;
+            input.addEventListener('input', renderNavResults);
+            input.addEventListener('focus', function () { if (input.value.trim()) renderNavResults(); });
+            input.addEventListener('keydown', function (e) {
+                var box = $('nav-results');
+                if (e.key === 'Escape') { hideNavResults(); input.blur(); return; }
+                if (!navResults.length) return;
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    navIndex += (e.key === 'ArrowDown' ? 1 : -1);
+                    if (navIndex < 0) navIndex = navResults.length - 1;
+                    if (navIndex >= navResults.length) navIndex = 0;
+                    Array.prototype.forEach.call(box.querySelectorAll('[data-nav-result]'), function (b, i) {
+                        b.classList.toggle('bg-slate-100', i === navIndex);
+                    });
+                    return;
+                }
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    openNavResult(navIndex >= 0 ? navIndex : 0);
+                }
+            });
+            var clear = $('nav-search-clear');
+            if (clear) clear.addEventListener('click', function () {
+                input.value = '';
+                renderNavResults();
+                input.focus();
+            });
+            var box = $('nav-results');
+            if (box) box.addEventListener('click', function (e) {
+                var b = e.target.closest ? e.target.closest('[data-nav-result]') : null;
+                if (b) openNavResult(Number(b.getAttribute('data-nav-result')));
+            });
+            document.addEventListener('click', function (e) {
+                var wrap = input.parentElement;
+                if (wrap && !wrap.contains(e.target)) hideNavResults();
+            });
+            document.addEventListener('keydown', function (e) {
+                if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
+                    e.preventDefault();
+                    input.focus();
+                    input.select();
+                }
+            });
+        }
+
+        function wireDetailRouting() {
+            window.addEventListener('hashchange', renderView);
+
+            var rows = $('catalogue-rows');
+            if (rows) {
+                rows.addEventListener('click', function (e) {
+                    var target = e.target;
+                    if (target.closest && target.closest('[data-external]')) return;
+                    var row = target.closest ? target.closest('[data-provider]') : null;
+                    if (row) openProvider(row.getAttribute('data-provider'));
+                });
+                rows.addEventListener('keydown', function (e) {
+                    if (e.key !== 'Enter' && e.key !== ' ') return;
+                    var row = e.target.closest ? e.target.closest('[data-provider]') : null;
+                    if (!row) return;
+                    e.preventDefault();
+                    openProvider(row.getAttribute('data-provider'));
+                });
+            }
+
+            var board = $('leaderboard-view');
+            if (board) {
+                board.addEventListener('click', function (e) {
+                    var row = e.target.closest ? e.target.closest('[data-provider]') : null;
+                    if (row) openProvider(row.getAttribute('data-provider'));
+                });
+                board.addEventListener('keydown', function (e) {
+                    if (e.key !== 'Enter' && e.key !== ' ') return;
+                    var row = e.target.closest ? e.target.closest('[data-provider]') : null;
+                    if (!row) return;
+                    e.preventDefault();
+                    openProvider(row.getAttribute('data-provider'));
+                });
+            }
+
+            var detail = $('provider-detail');
+            if (detail) {
+                detail.addEventListener('click', function (e) {
+                    var btn = e.target.closest ? e.target.closest('[data-copy]') : null;
+                    if (!btn || !navigator.clipboard) return;
+                    navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function () {
+                        btn.textContent = 'Copied';
+                        setTimeout(function () { btn.textContent = 'Copy'; }, 1200);
+                    });
+                });
+            }
         }
 
         function populateFamilyFilter() {
@@ -609,6 +1383,7 @@
             var search = $('catalogue-search');
             if (search) {
                 search.addEventListener('input', function (e) {
+                    // The catalogue filter is independent of the navbar search.
                     state.q = e.target.value.trim().toLowerCase();
                     renderCatalogue();
                 });
@@ -648,6 +1423,8 @@
 
         function init() {
             wireFilters();
+            wireNavSearch();
+            wireDetailRouting();
             fetchFirst(DATA_BASES.map(function (b) { return b + 'providers.json'; })).then(function (res) {
                 var base = res.url.replace(/providers\.json$/, '');
                 var files = res.data.providers || [];
@@ -661,6 +1438,11 @@
                 populateFamilyFilter();
                 renderDashboard();
                 renderCatalogue();
+                renderView();
+                return loadAnnouncements();
+            }).then(function () {
+                renderHeroUpdates();
+                if (hashUpdates()) renderUpdatesView();
             }).catch(showError);
         }
 

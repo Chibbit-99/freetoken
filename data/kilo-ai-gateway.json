@@ -1,0 +1,114 @@
+{
+  "id": "kilo-ai-gateway",
+  "name": "Kilo AI Gateway",
+  "website": "https://kilo.ai",
+  "docs": "https://kilocode.ai/docs",
+  "signup": "https://app.kilo.ai/profile",
+  "description": "Universal OpenAI-compatible gateway whose free model routes need no key or card.",
+  "overview": "The Kilo AI Gateway is a universal OpenAI-compatible gateway from the Kilo Code team, now part of Anaconda. A subset of routes is free and can be called anonymously or with a key, limited per IP. The free list rotates regularly while paid routes bill pay-as-you-go.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free gateway routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check gateway terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ai-gateway.kilo.ai/api/v1",
+      "https://free-llm.com/provider/kilo-gateway"
+    ]
+  },
+  "free_access": [
+    "Free model routes with no account required",
+    "About 200 requests/hour per IP",
+    "No credit card required",
+    "380+ models on the gateway"
+  ],
+  "api_endpoint": "https://ai-gateway.kilo.ai/api/v1",
+  "notes": "Free routes rotate and are capped at roughly 200 requests per hour per IP.",
+  "models": [
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 270,
+        "intelligence": 6
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 28
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 33
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 30
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 29
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 150,
+        "intelligence": 29
+      },
+      "rate_limits": "200 requests/hour per IP"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 355,
+        "intelligence": 4
+      },
+      "rate_limits": "200 requests/hour per IP"
+    }
+  ]
+}

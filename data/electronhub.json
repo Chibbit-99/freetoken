@@ -1,0 +1,127 @@
+{
+  "id": "electronhub",
+  "name": "Electron Hub",
+  "website": "https://www.electronhub.ai",
+  "docs": "https://www.electronhub.ai",
+  "signup": "https://www.electronhub.ai",
+  "description": "Gateway with a permanent free plan: 200 free-model requests a day plus $0.25 weekly credit.",
+  "overview": "Electron Hub routes 600+ models through an OpenAI- and Anthropic-compatible endpoint and keeps 24 of them on a `:free` suffix — GPT-OSS 20B and 120B, Gemma 4 26B/31B, DeepSeek V3.2 and V4.1 Flash, Qwen 3.6/3.8, MiniMax M2.7, GLM 4.6 through 5.1, Nemotron 3.5 Lightning and the Aion 3.0 pair. The Free plan needs no card and allows 200 free-model requests a day at 5 requests a minute, funded by ads on the dashboard; paying tiers switch the ads off and add weekly credit that refills every Sunday at 21:00 UTC.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free plan with 24 free models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Free-model requests served by ad-supported upstreams"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.electronhub.ai/pricing",
+      "https://www.electronhub.ai/models.html#access=free"
+    ]
+  },
+  "free_access": [
+    "24 models with a :free suffix",
+    "200 free-model requests/day, 5 per minute",
+    "No card; $0.25 weekly credit on top",
+    "OpenAI- and Anthropic-compatible endpoints"
+  ],
+  "notes": "Free requests are ad-supported and capped daily; heavy use belongs on a paid tier.",
+  "catalog_size": 600,
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 430
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "deepseek-v3-2",
+      "name": "DeepSeek V3.2",
+      "family": "DeepSeek",
+      "context_window": 40960,
+      "rate_limits": "200 free-model requests/day on the Free plan"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "ministral-3-8b",
+      "name": "Ministral 3 8B Instruct",
+      "family": "Ministral",
+      "context_window": 65536,
+      "rate_limits": "200 free-model requests/day on the Free plan"
+    },
+    {
+      "id": "mistral-small-3-2",
+      "name": "Mistral Small 3.2 24B",
+      "family": "Mistral",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 65
+      }
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 110
+      }
+    }
+  ]
+}

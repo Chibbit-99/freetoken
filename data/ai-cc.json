@@ -1,0 +1,56 @@
+{
+  "id": "ai-cc",
+  "name": "AI.cc / AICC",
+  "website": "https://ai.cc",
+  "docs": "https://ai.cc",
+  "signup": "https://ai.cc",
+  "description": "Aggregator with trial credits across text and image models.",
+  "overview": "AI.cc resells text-generation and image models through one API and grants new accounts a small trial credit. Public terms and privacy pages give no API-specific promise about retention, training or upstream handling.",
+  "offer": {
+    "type": "trials",
+    "label": "Trial credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No API-specific policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ai.cc",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "One-time trial credits",
+    "Text and image models",
+    "No card required to start",
+    "OpenAI-compatible API"
+  ],
+  "notes": "No API-specific privacy commitment.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    }
+  ]
+}

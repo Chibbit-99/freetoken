@@ -1,0 +1,227 @@
+{
+  "updated": "2026-11-17",
+  "intro": "Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.",
+  "items": [
+    {
+      "id": "2026-11-17-sibling-domains-get-their-own-entries",
+      "date": "2026-11-17",
+      "kind": "corrected",
+      "title": "Sibling domains get their own entries",
+      "summary": "Clean APIs, Radox AI and Oxion AI run one catalogue but each signup carries its own 500K-token monthly allowance, so all three are catalogued instead of being folded into one card.",
+      "providers": [
+        "cleanapis",
+        "radoxai",
+        "oxionai",
+        "freemodel"
+      ],
+      "details": [
+        "Separate signup means separate allowance: three accounts now show as three 500K/month lines on the allowance board.",
+        "FreeModel keeps its larger 1M/month allowance on its own card.",
+        "codecraftapi.com runs the same product with no free tier and stays out.",
+        "SCHEMA.md now records the rule."
+      ]
+    },
+    {
+      "id": "2026-11-17-ten-leads-added-from-account-level-checks-five-n",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Ten leads added from account-level checks; five new domains triaged",
+      "summary": "TokenReply, Coarena and ValorGPT free model lists arrived from logged-in catalogues and are now rows. FreeModel and Clean APIs were checked from a direct report and publish 1M and 0.5M monthly free allowances.",
+      "providers": [
+        "tokenreply",
+        "coarena",
+        "valorgpt",
+        "freemodel",
+        "cleanapis"
+      ],
+      "details": [
+        "TokenReply: 22 free-tagged IDs, 40 requests/day to Models of the week, daily reward.",
+        "Coarena: 3 free models, 30 rpm, 2 concurrent",
+        "ValorGPT: 15 free text models of 523, image model excluded.",
+        "FreeModel and Clean APIs publish monthly token allowances with no card",
+        "radoxai and oxionai are the same product and are covered by the Clean APIs card.",
+        "codecraftapi.com is the same product without any free tier — rejected."
+      ]
+    },
+    {
+      "id": "2026-11-17-five-leads-verified-and-added-subaxis-confirmed-",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Five leads verified and added; Subaxis confirmed dead",
+      "summary": "Nexusify, UnoRouter, onomeo, StudioLM and DGrid passed first-party checks. TokenReply, Coarena and ValorGPT are held because their free model lists only render inside an account.",
+      "providers": [
+        "nexusify",
+        "unorouter",
+        "onomeo",
+        "studiolm",
+        "dgrid"
+      ],
+      "details": [
+        "Nexusify renews $25 of credit every Monday with no card, 130 rpm, across 99 text models.",
+        "UnoRouter marks 159 of its 294 routes free with a :free suffix on one key.",
+        "onomeo gives free models a per-window call quota",
+        "StudioLM's chat route has a free daily allowance",
+        "DGrid publishes a $0/M router model.",
+        "Subaxis is closed — its homepage is a shutdown notice. CoderPlan, A4F and pool'edAI publish no free tier.",
+        "data/LEAD_VERIFICATION.md records the verdict for every lead."
+      ]
+    },
+    {
+      "id": "2026-11-17-updates-page",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "An Updates page, and the Pollinations catalogue rebuilt",
+      "summary": "FreeToken now keeps a dated changelog in data/announcements.json, rendered at #/updates. This entry also rewrites Pollinations against its live catalogue and adds Electron Hub and AnyAPI.",
+      "providers": [
+        "pollinations-ai",
+        "electronhub",
+        "anyapi"
+      ],
+      "details": [
+        "Pollinations: the four 2024-era rows (Qwen3 4B, Gemma 3 4B, Mistral Small 3.2, GPT-OSS 20B) were replaced with the current catalogue — six vendor models on Quest pollen and six zero-Pollen community or stealth models.",
+        "Electron Hub: Free plan, 24 models behind a `:free` suffix, 200 free-model requests a day at 5 requests a minute, no card.",
+        "AnyAPI: Free plan, 100K ANY tokens a day, 400+ models behind one key, no card.",
+        "New `tools/add_announcement.py` prepends a dated entry and validates the file, so future passes land in the same place."
+      ]
+    },
+    {
+      "id": "2026-11-17-xkiro-cheapllm",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "xKiro and cheapllm.shop added; nine non-text rows pruned",
+      "summary": "xKiro keeps 26 of its 69 models at zero price with 500K tokens a day, doubled after Telegram verification. cheapllm.shop publishes a permanent hourly free floor.",
+      "providers": [
+        "xkiro",
+        "cheapllm-shop",
+        "groq",
+        "scaleway",
+        "cloudflare-workers-ai",
+        "ovhcloud-ai-endpoints",
+        "replicate",
+        "oracle-oci"
+      ],
+      "details": [
+        "xKiro: all Cohere models, eight Mistral models including Large 3/Medium 3.5/Codestral, SenseNova 6.8 Flash-Lite and one stealth model are free.",
+        "cheapllm.shop: 5K input + 1K output tokens per hour forever, no card, one model.",
+        "Whisper and embedding rows removed from Groq, Cloudflare, OVHcloud, Scaleway, Replicate and OCI — the index is text-LLM only.",
+        "Groq's allowance figure moved from 1.2M to 1.0M tokens/day as a result."
+      ]
+    },
+    {
+      "id": "2026-11-17-aa-audit",
+      "date": "2026-11-17",
+      "kind": "audit",
+      "title": "Every provider on the Artificial Analysis leaderboard given a verdict",
+      "summary": "40 providers read from the AA price/performance leaderboard and tested against the free-access rule; data/AA_PROVIDERS_AUDIT.md records each one.",
+      "providers": [
+        "gmi-cloud"
+      ],
+      "details": [
+        "19 were already catalogued, 1 was added from the same list (GMI Cloud), the rest are GPU clouds, per-token hosts or model owners with no free API.",
+        "Together AI is the one disputed case: third-party posts claim signup credits and free models, its own pricing page lists per-token rates only."
+      ]
+    },
+    {
+      "id": "2026-11-17-ledger-audit",
+      "date": "2026-11-17",
+      "kind": "audit",
+      "title": "All 128 ledger records re-verified, twelve providers added",
+      "summary": "The July research ledger was checked record by record; data/LEDGER_AUDIT.md carries a verdict for every row.",
+      "providers": [
+        "nara-router",
+        "navy-ai",
+        "ant-ling",
+        "sakura-ai-engine",
+        "mlvoca",
+        "volcengine-ark",
+        "xiaomi-mimo",
+        "stepfun",
+        "baichuan",
+        "ppio",
+        "slashai",
+        "nscale"
+      ],
+      "details": [
+        "Covered 44 · added 13 · rejected 63 · dead 4 · proxy 3 · out of scope 1.",
+        "Rejected rows included GitHub Models (retired 2026-07-30), kluster.ai (sunset 2026-06-09), Chutes (paid-only) and Infini-AI (no trial quota)."
+      ]
+    },
+    {
+      "id": "2026-11-17-ledger-pass-one",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Period-aware allowance ranking and three providers from the ledger",
+      "summary": "Ranks now compare a 30-day equivalent, so a daily cap is not beaten by a smaller monthly one. NaraRouter, PLaMo and ApiFreeLLM joined.",
+      "providers": [
+        "nara-router",
+        "plamo",
+        "api-free-llm"
+      ],
+      "details": [
+        "7M tokens/day outranks 30M/month once both are expressed per 30 days.",
+        "Rows still show the period the provider actually publishes."
+      ]
+    },
+    {
+      "id": "2026-11-17-independent-search",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Five more providers from an independent catalogue sweep",
+      "summary": "A sweep of free-inference directories and community lists added providers the earlier sources had missed.",
+      "providers": [
+        "inferall",
+        "nara-router"
+      ],
+      "details": [
+        "One correction came out of it: an 'inferall' free tier that does not exist was removed rather than kept."
+      ]
+    },
+    {
+      "id": "2026-11-17-honest-allowances",
+      "date": "2026-11-17",
+      "kind": "corrected",
+      "title": "Unpublished allowances are no longer invented",
+      "summary": "Where a provider does not publish a token allowance, the card and the leaderboards now say so instead of showing an estimate.",
+      "providers": [],
+      "details": [
+        "Catalogue size is reported separately from the number of models the index lists.",
+        "Requirement-only offers stop borrowing a model row."
+      ]
+    },
+    {
+      "id": "2026-11-17-scope-and-search",
+      "date": "2026-11-17",
+      "kind": "changed",
+      "title": "Text-LLM scope enforced, navbar search wired",
+      "summary": "Hosted text-LLM providers only, a working navbar search and a provider-level allowance board.",
+      "providers": [],
+      "details": [
+        "Cerebras left the index when its no-card free tier ended in August 2026.",
+        "Self-hosted runtimes stay out of scope."
+      ]
+    },
+    {
+      "id": "2026-11-17-provider-pages",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Standalone provider pages and Artificial Analysis scores",
+      "summary": "Each provider got its own URL, with AA v5.0.1 intelligence and curated throughput shown per model.",
+      "providers": [],
+      "details": [
+        "Detail routes look like #/providers/<id>.",
+        "Full leaderboard pages replaced the dashboard-only charts."
+      ]
+    },
+    {
+      "id": "2026-11-15-launch",
+      "date": "2026-11-15",
+      "kind": "update",
+      "title": "Catalogue rebuilt around hosted providers",
+      "summary": "The first shape of FreeToken: a JSON catalogue of hosted free LLM APIs with a static browser over it.",
+      "providers": [],
+      "details": [
+        "Self-hosted entries were removed and the data moved to one file per provider."
+      ]
+    }
+  ]
+}

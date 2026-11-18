@@ -1,0 +1,47 @@
+{
+  "id": "sarvam-ai",
+  "name": "Sarvam AI",
+  "website": "https://sarvam.ai",
+  "docs": "https://docs.sarvam.ai",
+  "signup": "https://dashboard.sarvam.ai",
+  "description": "Indian platform for Indic-language chat, speech and translation with signup credits.",
+  "overview": "Sarvam AI's API platform covers Indic-language chat, speech and translation. New accounts get INR 100 of free credit at signup, which buys several million tokens at Sarvam 105B pricing. Phone verification is required and the service is tuned for Indian languages.",
+  "offer": {
+    "type": "trials",
+    "label": "Free signup credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.sarvam.ai",
+      "https://free-llm.com/provider/sarvam-ai"
+    ]
+  },
+  "free_access": [
+    "INR 100 one-time signup credit",
+    "Roughly several million Sarvam 105B tokens",
+    "No credit card required (phone verification)",
+    "Indic-language chat, speech and translation"
+  ],
+  "api_endpoint": "https://api.sarvam.ai/v1",
+  "notes": "INR 100 is a one-time signup credit; phone verification required.",
+  "models": [
+    {
+      "id": "sarvam-105b",
+      "name": "Sarvam 105B",
+      "family": "Sarvam",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 60
+      },
+      "rate_limits": "INR 100 signup credit"
+    }
+  ]
+}

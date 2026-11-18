@@ -1,0 +1,44 @@
+{
+  "id": "onomeo",
+  "name": "onomeo",
+  "website": "https://onomeo.com",
+  "docs": "https://onomeo.com",
+  "signup": "https://onomeo.com",
+  "description": "Chat front-end with an OpenAI-compatible endpoint and a free-model call quota.",
+  "overview": "onomeo runs a chat site and exposes the same models through https://onomeo.com/v1, OpenAI-compatible. Free models cost nothing and are limited by call quotas per window — the API returns account_quota (403) once your window is spent and network_quota or site_busy (429) when the shared pool is under load — while paid models such as Claude and GPT need a top-up. A key comes from the site login, and the documented default model is gemma-4-31b.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models, no top-up",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Free calls logged upstream"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://onomeo.com/integrations",
+      "https://onomeo.com/models"
+    ]
+  },
+  "free_access": [
+    "Free models cost nothing, no top-up",
+    "Call quotas per window, shared across the free pool",
+    "OpenAI-compatible https://onomeo.com/v1",
+    "Paid models only if you add balance"
+  ],
+  "notes": "No published number for the free-call window; the error body states what would cover a request.",
+  "catalog_size": 40,
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "rate_limits": "Free-model call quota per window; 403 account_quota when spent"
+    }
+  ]
+}

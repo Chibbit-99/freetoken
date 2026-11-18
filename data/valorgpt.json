@@ -1,0 +1,127 @@
+{
+  "id": "valorgpt",
+  "name": "ValorGPT",
+  "website": "https://www.valorgpt.com",
+  "docs": "https://www.valorgpt.com",
+  "signup": "https://www.valorgpt.com",
+  "description": "523-model catalogue with sixteen models marked free, including a house router.",
+  "overview": "ValorGPT aggregates 523 models from OpenAI, Anthropic, Google, Nvidia, Cohere, Baidu, Thinking Machines and others. Sixteen carry a free tag, from Nemotron 3 Ultra and Gemma 4 31B down to its own ValorGPT Free router, and the catalogue exposes context size and capability per model. Paid routes are billed per token; the free set needs an account but no payment.",
+  "offer": {
+    "type": "free-models",
+    "label": "16 free models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.valorgpt.com/models",
+      "https://www.valorgpt.com"
+    ]
+  },
+  "free_access": [
+    "16 models tagged free",
+    "ValorGPT Free router at 200K context",
+    "523-model catalogue with per-model context",
+    "Account required, no card"
+  ],
+  "notes": "The free list is shown after sign-up; these are the models it tags free. Image model Recraft V4.1 Flash is excluded as non-text.",
+  "catalog_size": 523,
+  "models": [
+    {
+      "id": "dots-3-note-preview",
+      "name": "Dots3-Note Preview",
+      "family": "Dots",
+      "context_window": 524288
+    },
+    {
+      "id": "ernie-5.5-flash-preview",
+      "name": "ERNIE 5.5 Flash Preview",
+      "family": "ERNIE",
+      "context_window": 1048576
+    },
+    {
+      "id": "flint",
+      "name": "Flint",
+      "family": "Recursive",
+      "context_window": 262144
+    },
+    {
+      "id": "gemma-4-26b-a4b-it",
+      "name": "Gemma 4 26B A4B IT",
+      "family": "Gemma 4",
+      "context_window": 262144
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144
+    },
+    {
+      "id": "ling-3-2-flash",
+      "name": "Ling 3.2 Flash",
+      "family": "Ling",
+      "context_window": 1048576
+    },
+    {
+      "id": "lfm3-1-7b",
+      "name": "LFM3 1.7B",
+      "family": "Liquid",
+      "context_window": 262144
+    },
+    {
+      "id": "nemotron-3-nano-omni",
+      "name": "Nemotron 3 Nano Omni",
+      "family": "Nemotron",
+      "context_window": 262144
+    },
+    {
+      "id": "nemotron-3-ultra",
+      "name": "Nemotron 3 Ultra",
+      "family": "Nemotron",
+      "context_window": 1048576
+    },
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 1048576
+    },
+    {
+      "id": "nemotron-3-5-super-vl",
+      "name": "Nemotron 3.5 Super VL",
+      "family": "Nemotron",
+      "context_window": 1048576
+    },
+    {
+      "id": "north-mini-code",
+      "name": "North Mini Code",
+      "family": "Cohere",
+      "context_window": 262144
+    },
+    {
+      "id": "particle-1",
+      "name": "Particle-1",
+      "family": "Particle",
+      "context_window": 1048576
+    },
+    {
+      "id": "inkling-2-small",
+      "name": "Inkling 2 Small",
+      "family": "Inkling",
+      "context_window": 1048576
+    },
+    {
+      "id": "valorgpt-free",
+      "name": "ValorGPT Free",
+      "family": "ValorGPT",
+      "context_window": 204800
+    }
+  ]
+}

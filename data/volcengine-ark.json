@@ -1,0 +1,53 @@
+{
+  "id": "volcengine-ark",
+  "name": "Volcengine Ark",
+  "website": "https://www.volcengine.com/product/ark",
+  "docs": "https://www.volcengine.com/product/ark",
+  "signup": "https://www.volcengine.com/product/ark",
+  "description": "ByteDance's model platform: a free token block for every model, for 30 days.",
+  "overview": "Volcengine Ark is ByteDance's model API platform, hosting the Doubao/Seed family plus third-party models such as DeepSeek and GLM behind an OpenAI-compatible SDK. Each model comes with its own 500,000-token free block for new accounts, valid 30 days, and a \"peace of mind\" mode that stops serving instead of billing once the block runs out. Registration needs real-name verification and a mainland payment method.",
+  "offer": {
+    "type": "trials",
+    "label": "500K tokens per model",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Real-name verification required"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.volcengine.com/product/ark",
+      "https://www.volcengine.com/docs/82379"
+    ]
+  },
+  "free_access": [
+    "500,000 free tokens per model",
+    "30-day validity per block",
+    "Peace-of-mind mode prevents overspend",
+    "Doubao, Seed and third-party models"
+  ],
+  "notes": "Requires real-name verification and a mainland payment method; blocks are per model.",
+  "models": [
+    {
+      "id": "doubao-seed-2-1",
+      "name": "Doubao Seed 2.1",
+      "family": "Doubao",
+      "context_window": 262144,
+      "rate_limits": "500K free tokens per model, 30 days"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    }
+  ]
+}

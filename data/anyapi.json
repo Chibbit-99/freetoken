@@ -1,0 +1,59 @@
+{
+  "id": "anyapi",
+  "name": "AnyAPI",
+  "website": "https://anyapi.ai",
+  "docs": "https://anyapi.ai",
+  "signup": "https://anyapi.ai",
+  "description": "400-model gateway whose free plan meters 100K ANY tokens a day with no card.",
+  "overview": "AnyAPI puts 400+ models — OpenAI, Anthropic, Gemini, Grok, Qwen, DeepSeek, Mistral, Cohere — behind one OpenAI-compatible key. The Free plan costs $0 a month, needs no credit card and meters 100,000 ANY tokens per day against the models its catalogue marks free; paid plans start at $20 of usage-based credit. Which model IDs are free is only visible in the logged-in catalogue, so the rows here are the free models its directory names publicly.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free: 100K ANY tokens/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Aggregated upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://anyapi.ai/pricing",
+      "https://anyapi.ai/ai-models"
+    ]
+  },
+  "free_access": [
+    "Free plan: 100K ANY tokens/day",
+    "No credit card required",
+    "400+ models behind one key",
+    "Free model set is visible only after login"
+  ],
+  "notes": "The ANY-token unit is not 1:1 with model tokens; the free model list rotates inside the dashboard.",
+  "free_token_allowance": 100000,
+  "allowance_period": "day",
+  "catalog_size": 400,
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 30
+      }
+    }
+  ]
+}

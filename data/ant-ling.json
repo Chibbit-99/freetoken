@@ -1,0 +1,52 @@
+{
+  "id": "ant-ling",
+  "name": "Ling Studio (Ant Group)",
+  "website": "https://ling.tbox.cn",
+  "docs": "https://ling.tbox.cn",
+  "signup": "https://ling.tbox.cn",
+  "description": "Ant Group's Ling models on a free daily quota, OpenAI-compatible.",
+  "overview": "Ling Studio is Ant Group's platform for the Ling, Ring and Ming model families. After registering at ling.tbox.cn/open and binding an Alipay account, developers get an API key with a 500,000-token daily allowance on an OpenAI-compatible endpoint at api.tbox.cn/api/llm/v1, with a 128K context window and no card. The chat playground works without an account; API access is what needs the Alipay step.",
+  "offer": {
+    "type": "always-free",
+    "label": "500K tokens/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Alipay binding required"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ling.tbox.cn",
+      "https://api.tbox.cn/api/llm/v1"
+    ]
+  },
+  "free_access": [
+    "500,000 free tokens/day",
+    "OpenAI-compatible endpoint",
+    "128K context",
+    "Alipay binding instead of a card"
+  ],
+  "notes": "Registration requires binding an Alipay account, so mainland identity tools help.",
+  "free_token_allowance": 500000,
+  "allowance_period": "day",
+  "models": [
+    {
+      "id": "ling-3.1-flash",
+      "name": "Ling-3.1 Flash",
+      "family": "Ling",
+      "context_window": 1048576,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "ling-1t",
+      "name": "Ling-1T",
+      "family": "Ling",
+      "context_window": 131072,
+      "rate_limits": "500K tokens/day on the free tier"
+    }
+  ]
+}

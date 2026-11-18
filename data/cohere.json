@@ -1,0 +1,79 @@
+{
+  "id": "cohere",
+  "name": "Cohere",
+  "website": "https://cohere.com",
+  "docs": "https://docs.cohere.com/docs/rate-limits",
+  "signup": "https://dashboard.cohere.com/api-keys",
+  "description": "Free evaluation keys for the Command family, capped at 1,000 API calls a month.",
+  "overview": "Cohere issues free trial (evaluation) keys alongside paid production keys. Trial keys reach every Command chat model, including the vision, reasoning and translation variants, with a shared monthly call budget. The same key also covers embeddings and rerank.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free evaluation keys",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Trial data terms unclear"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.cohere.com/docs/rate-limits",
+      "https://free-llm.com/provider/cohere"
+    ]
+  },
+  "free_access": [
+    "1,000 API calls/month across models",
+    "20 requests/minute on Command chat models",
+    "No credit card required",
+    "Embeddings and rerank included on the trial key"
+  ],
+  "api_endpoint": "https://api.cohere.com/v2",
+  "notes": "Trial keys are for evaluation and prototyping, not production traffic.",
+  "models": [
+    {
+      "id": "command-a-plus",
+      "name": "Command A+",
+      "family": "Command",
+      "context_window": 192000,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 6
+      },
+      "rate_limits": "20 RPM, 1,000 calls/month"
+    },
+    {
+      "id": "command-a",
+      "name": "Command A",
+      "family": "Command",
+      "context_window": 256000,
+      "metrics": {
+        "tps": 50
+      },
+      "rate_limits": "20 RPM, 1,000 calls/month"
+    },
+    {
+      "id": "command-r-plus",
+      "name": "Command R+",
+      "family": "Command",
+      "context_window": 128000,
+      "metrics": {
+        "tps": 35
+      },
+      "rate_limits": "20 RPM, 1,000 calls/month"
+    },
+    {
+      "id": "north-mini-code",
+      "name": "North Mini Code",
+      "family": "North",
+      "context_window": 256000,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 3
+      },
+      "rate_limits": "20 RPM, 1,000 calls/month"
+    }
+  ]
+}

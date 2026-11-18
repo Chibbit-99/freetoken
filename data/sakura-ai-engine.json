@@ -1,0 +1,53 @@
+{
+  "id": "sakura-ai-engine",
+  "name": "Sakura AI Engine",
+  "website": "https://cloud.sakura.ad.jp/aipf/ai-engine/",
+  "docs": "https://cloud.sakura.ad.jp/aipf/ai-engine/",
+  "signup": "https://cloud.sakura.ad.jp/aipf/ai-engine/",
+  "description": "Sakura Internet's domestic inference API with a free monthly request quota.",
+  "overview": "Sakura AI Engine is Sakura Internet's LLM inference platform, running entirely in Japanese data centres with no training on customer data. The free plan covers 3,000 Chat Completions requests a month — and, unlike most free tiers, exceeding it throttles rather than charging — and the endpoint speaks both OpenAI and Anthropic formats, so existing SDKs work by changing the base URL. gpt-oss-120b, Kimi K2.5 and Qwen models are on the catalogue.",
+  "offer": {
+    "type": "always-free",
+    "label": "3,000 requests/month",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "Data stays in Japan, not trained on"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cloud.sakura.ad.jp/aipf/ai-engine/",
+      "https://manual.sakura.ad.jp/cloud/ai-engine/"
+    ]
+  },
+  "free_access": [
+    "3,000 free Chat Completions requests/month",
+    "No automatic charges on the free plan",
+    "OpenAI- and Anthropic-compatible endpoints",
+    "Data processed in Japan, never trained on"
+  ],
+  "notes": "The quota is per request, not per token; audio and embeddings have their own free counts.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "kimi-k2-5",
+      "name": "Kimi K2.5",
+      "family": "Kimi",
+      "context_window": 262144,
+      "rate_limits": "3,000 requests/month on the free plan"
+    }
+  ]
+}

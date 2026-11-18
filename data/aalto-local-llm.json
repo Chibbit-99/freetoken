@@ -1,0 +1,45 @@
+{
+  "id": "aalto-local-llm",
+  "name": "Aalto Local LLM Gateway",
+  "website": "https://www.aalto.fi",
+  "docs": "https://www.aalto.fi",
+  "signup": "https://www.aalto.fi",
+  "description": "Aalto University's single-model gateway for teaching.",
+  "overview": "Aalto University runs a local LLM gateway for teaching and research, currently exposing Qwen3 32B. Prompts and responses are not logged and usage metadata is recorded, but no explicit no-training rule or metadata-retention period is published.",
+  "offer": {
+    "type": "research",
+    "label": "Free internal API",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Prompts not logged"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.aalto.fi",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for Aalto members",
+    "Prompts and responses are not logged",
+    "Qwen3 32B endpoint",
+    "No card required"
+  ],
+  "notes": "Only one model is exposed and access is campus-restricted.",
+  "models": [
+    {
+      "id": "qwen3-32b",
+      "name": "Qwen3 32B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 65
+      }
+    }
+  ]
+}

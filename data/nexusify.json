@@ -1,0 +1,85 @@
+{
+  "id": "nexusify",
+  "name": "Nexusify",
+  "website": "https://nexusify.co",
+  "docs": "https://nexusify.co",
+  "signup": "https://nexusify.co",
+  "description": "Router that credits $25 of usage every Monday with no card and a 130 rpm cap.",
+  "overview": "Nexusify exposes 99 text models — Gemini, GPT, Llama, Mistral, Grok, DeepSeek and more — through one OpenAI-compatible endpoint at api.nexusify.co/v1. Every account gets $25 in free credits that renew every Monday, with no card to start and a 130 requests-per-minute ceiling; paid credits only draw after the free ones run out and never expire. Sign-in is by Google, Discord or CAPTCHA. Image models sit on the same key at a flat per-request price.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "Weekly $25 credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.nexusify.co/",
+      "https://nexusify.co"
+    ]
+  },
+  "free_access": [
+    "$25 free credit renewed every Monday",
+    "130 requests/minute on the free credit",
+    "No card to start; Google, Discord or CAPTCHA login",
+    "99 text models on one OpenAI-compatible endpoint"
+  ],
+  "notes": "Credits are denominated in dollars, not tokens; $25/week buys far more on a small model than on a frontier one.",
+  "catalog_size": 99,
+  "models": [
+    {
+      "id": "gemini-2.5-flash",
+      "name": "Gemini 2.5 Flash",
+      "family": "Gemini",
+      "context_window": 1048576
+    },
+    {
+      "id": "gpt-4o-mini",
+      "name": "GPT-4o mini",
+      "family": "GPT-4o",
+      "context_window": 131072
+    },
+    {
+      "id": "deepseek-v3.2",
+      "name": "DeepSeek V3.2",
+      "family": "DeepSeek",
+      "context_window": 131072
+    },
+    {
+      "id": "qwen3-235b-a22b",
+      "name": "Qwen3 235B A22B",
+      "family": "Qwen 3",
+      "context_window": 262144
+    },
+    {
+      "id": "kimi-k2.5",
+      "name": "Kimi K2.5",
+      "family": "Kimi",
+      "context_window": 262144
+    },
+    {
+      "id": "mistral-large-3",
+      "name": "Mistral Large 3",
+      "family": "Mistral",
+      "context_window": 262144
+    },
+    {
+      "id": "llama-3.1-405b-instruct",
+      "name": "Llama 3.1 405B",
+      "family": "Llama 3.1",
+      "context_window": 131072
+    },
+    {
+      "id": "grok-3",
+      "name": "Grok 3",
+      "family": "Grok",
+      "context_window": 131072
+    }
+  ]
+}

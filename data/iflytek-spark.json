@@ -1,0 +1,57 @@
+{
+  "id": "iflytek-spark",
+  "name": "iFlytek Spark Lite",
+  "website": "https://www.xfyun.cn",
+  "docs": "https://www.xfyun.cn/doc/spark/HTTP%E8%B0%83%E7%94%A8%E6%96%87%E6%A1%A3.html",
+  "signup": "https://console.xfyun.cn",
+  "description": "Lightweight Chinese model whose official HTTP API is documented as free to use.",
+  "overview": "iFlytek's Spark Lite is a lightweight Chinese language model whose official HTTP API documentation describes it as free to use. The endpoint works with the OpenAI SDK, using the APIPassword from the console as the bearer key. It is most useful for Chinese-language applications.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free model",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.xfyun.cn/doc/spark/HTTP%E8%B0%83%E7%94%A8%E6%96%87%E6%A1%A3.html",
+      "https://free-llm.com/provider/iflytek-spark"
+    ]
+  },
+  "free_access": [
+    "Spark Lite is documented as free to use",
+    "OpenAI-compatible HTTP endpoint",
+    "No credit card required (phone verification)",
+    "Chinese-language model"
+  ],
+  "api_endpoint": "https://spark-api-open.xf-yun.com/v1",
+  "notes": "Phone verification required; documentation is primarily in Chinese.",
+  "models": [
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 585
+      },
+      "rate_limits": "Not published"
+    },
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3 8B",
+      "family": "Qwen 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 150
+      },
+      "rate_limits": "Not published"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "xkiro",
+  "name": "xKiro",
+  "website": "https://xkiro.com",
+  "docs": "https://xkiro.com",
+  "signup": "https://xkiro.com",
+  "description": "Router reselling 69 models, 26 of them permanently free with a daily token cap.",
+  "overview": "xKiro puts OpenAI, Anthropic, Google and open-model vendors behind one OpenAI- and Anthropic-compatible endpoint at api.xkiro.com/v1. Twenty-six catalogue entries are priced at zero rather than metered: the whole Cohere list, eight Mistral models including Large 3, Medium 3.5 and Codestral, SenseNova 6.8 Flash-Lite and one anonymous stealth model. Free keys need no card and cover 500,000 tokens a day, doubled to 1,000,000 once a Telegram account is linked. Paid routes are metered per token at list price.",
+  "offer": {
+    "type": "always-free",
+    "label": "Always-free tier",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed model catalog; each provider keeps its own policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://xkiro.com/models",
+      "https://docs.xkiro.com/guides/sdk-openai/"
+    ]
+  },
+  "free_access": [
+    "26 models priced at zero, no card",
+    "500K tokens/day, 1M after Telegram verification",
+    "OpenAI- and Anthropic-compatible endpoints",
+    "69-model catalogue behind one key"
+  ],
+  "notes": "A router in front of upstream providers, so the free list can rotate; the daily cap is per account, not per model.",
+  "free_token_allowance": 500000,
+  "allowance_period": "day",
+  "catalog_size": 69,
+  "models": [
+    {
+      "id": "cohere/command-a-plus",
+      "name": "Command A+",
+      "family": "Cohere",
+      "context_window": 446464,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "cohere/command-a",
+      "name": "Command A",
+      "family": "Cohere",
+      "context_window": 294912,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "cohere/command-r-plus-08-2024",
+      "name": "Command R+ (08-2024)",
+      "family": "Cohere",
+      "context_window": 131072,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "cohere/aya-expanse-32b",
+      "name": "Aya Expanse 32B",
+      "family": "Aya",
+      "context_window": 131072,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "mistralai/mistral-large-2512",
+      "name": "Mistral Large 3",
+      "family": "Mistral",
+      "context_window": 262144,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "mistralai/mistral-medium-3.5",
+      "name": "Mistral Medium 3.5",
+      "family": "Mistral",
+      "context_window": 262144,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "mistralai/mistral-small-2603",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "mistralai/codestral-2508",
+      "name": "Codestral 2508",
+      "family": "Codestral",
+      "context_window": 262144,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "mistralai/ministral-8b",
+      "name": "Ministral 3 8B",
+      "family": "Ministral",
+      "context_window": 262144,
+      "rate_limits": "500K tokens/day on the free tier"
+    },
+    {
+      "id": "sensenova/sensenova-6.8-flash-lite",
+      "name": "SenseNova 6.8 Flash-Lite",
+      "family": "SenseNova",
+      "context_window": 268288,
+      "rate_limits": "500K tokens/day on the free tier"
+    }
+  ]
+}

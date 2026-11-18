@@ -1,0 +1,66 @@
+{
+  "id": "api-airforce",
+  "name": "Api.Airforce",
+  "website": "https://api.airforce",
+  "docs": "https://api.airforce",
+  "signup": "https://api.airforce",
+  "description": "Large multi-model aggregator with free routes across 28 models.",
+  "overview": "Api.Airforce aggregates a wide catalog of open and proprietary models with free routes for 28 of them. Content can be retained for safety review without a fixed TTL, and upstream handling is not fully documented.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free model routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Safety retention, no fixed TTL"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://api.airforce",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free routes across 28 models",
+    "Gemma, Llama and Mistral available",
+    "No card required",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "Small, unaudited provider — verify uptime before relying on it.",
+  "catalog_size": 28,
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 4
+      }
+    }
+  ]
+}

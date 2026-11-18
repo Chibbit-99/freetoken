@@ -1,0 +1,68 @@
+{
+  "id": "aion-labs",
+  "name": "Aion Labs",
+  "website": "https://aionlabs.ai",
+  "docs": "https://aionlabs.ai/pricing",
+  "signup": "https://www.aionlabs.ai/app/api-keys/",
+  "description": "OpenAI-compatible access to the Aion model family with a $0 plan and a daily credit allowance.",
+  "overview": "Aion Labs serves its own Aion models through an OpenAI-compatible API and a browser chat. The $0 Free plan includes a daily credit allowance for agent jobs, API calls and chat, with no card required. The exact size of the allowance is not published.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free plan allowance",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aionlabs.ai/pricing",
+      "https://free-llm.com/provider/aion-labs"
+    ]
+  },
+  "free_access": [
+    "$0 Free plan with a daily credit allowance",
+    "No credit card required",
+    "API and chat included",
+    "Limits not officially published"
+  ],
+  "notes": "Daily allowance is unpublished; third-party reports suggest around 15 RPM and 20K tokens/day.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 440,
+        "intelligence": 4
+      },
+      "rate_limits": "~15 RPM (unpublished)"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 80
+      },
+      "rate_limits": "~15 RPM (unpublished)"
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 185,
+        "intelligence": 29
+      },
+      "rate_limits": "~15 RPM (unpublished)"
+    }
+  ]
+}

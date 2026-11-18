@@ -1,0 +1,104 @@
+{
+  "id": "scaleway",
+  "name": "Scaleway Generative APIs",
+  "website": "https://www.scaleway.com/en/generative-apis/",
+  "docs": "https://www.scaleway.com/en/docs/generative-apis/",
+  "signup": "https://console.scaleway.com/generative-api/models",
+  "description": "French sovereign cloud with OpenAI-compatible APIs and 1M free tokens per account.",
+  "overview": "Scaleway Generative APIs are managed, OpenAI-compatible endpoints hosted in France. Every account gets 1M free tokens plus 60 minutes of audio transcription across the serverless models, including GPT-OSS, DeepSeek, GLM, Gemma, Qwen and Mistral. Data stays in the EU and the service is GDPR-oriented.",
+  "offer": {
+    "type": "trials",
+    "label": "1M free tokens",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "EU-hosted, GDPR"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.scaleway.com/en/docs/generative-apis/",
+      "https://free-llm.com/provider/scaleway"
+    ]
+  },
+  "free_access": [
+    "1M free tokens per account",
+    "60 minutes of free audio transcription",
+    "60 requests/minute",
+    "No credit card required"
+  ],
+  "api_endpoint": "https://api.scaleway.ai/v1",
+  "notes": "The 1M-token grant is consumed across all serverless models; audio transcription is capped at 60 minutes.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 375,
+        "intelligence": 4
+      },
+      "rate_limits": "60 RPM, 1M free tokens"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 33
+      },
+      "rate_limits": "60 RPM, 1M free tokens"
+    },
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 32
+      },
+      "rate_limits": "60 RPM, 1M free tokens"
+    },
+    {
+      "id": "gemma-4-26b-a4b",
+      "name": "Gemma 4 26B A4B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 175
+      },
+      "rate_limits": "60 RPM, 1M free tokens"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 20
+      },
+      "rate_limits": "60 RPM, 1M free tokens"
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 130,
+        "intelligence": 4
+      },
+      "rate_limits": "60 RPM, 1M free tokens"
+    }
+  ],
+  "free_token_allowance": 1000000,
+  "allowance_period": "one-time"
+}

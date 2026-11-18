@@ -1,0 +1,76 @@
+{
+  "id": "gwdg-saia",
+  "name": "GWDG KISSKI / SAIA",
+  "website": "https://chat-ai.academiccloud.de",
+  "docs": "https://chat-ai.academiccloud.de",
+  "signup": "https://chat-ai.academiccloud.de",
+  "description": "German academic cloud offering open-model chat and API access to researchers.",
+  "overview": "GWDG's KISSKI Chat AI and SAIA endpoints give German academics and their partners access to Gemma, Llama and Qwen models hosted on academic infrastructure. Prompts and responses are not persistently stored or used for AI training, with metadata-only logging and narrow operational exceptions.",
+  "offer": {
+    "type": "research",
+    "label": "Free academic access",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No persistent storage"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://chat-ai.academiccloud.de",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free for qualifying academic use",
+    "Prompts are not persistently stored",
+    "15 open models via an OpenAI-compatible API",
+    "No card required"
+  ],
+  "notes": "Requires an academic or KISSKI partner affiliation.",
+  "catalog_size": 15,
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "mistral-ai",
+  "name": "Mistral AI",
+  "website": "https://mistral.ai",
+  "docs": "https://docs.mistral.ai",
+  "signup": "https://console.mistral.ai/api-keys",
+  "description": "European model lab whose default Free (Experiment) plan gives rate-limited API access.",
+  "overview": "Mistral's La Plateforme defaults new accounts to the Free (Experiment) plan, which serves the Mistral Small, Medium, Codestral and Ministral models at roughly one request per second with a per-model token-per-minute ceiling. Frontier entries in the same catalogue — Mistral Large 4 and the GLM routes — show up on the Limits page but are gated behind a paid plan. The plan uses your data for training unless you opt out in the admin panel, and signup needs phone verification.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free (Experiment) plan",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Trains unless opted out"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://help.mistral.ai/en/articles/698531-why-am-i-hitting-api-rate-limits-and-how-do-i-increase-them",
+      "https://docs.mistral.ai/getting-started/models",
+      "https://admin.mistral.ai/plateforme/limits"
+    ]
+  },
+  "free_access": [
+    "Free (Experiment) plan is the default for new accounts",
+    "Per-model caps: 20K TPM on Small and Medium, 40K TPM on Codestral and Ministral",
+    "No credit card required (phone verification)",
+    "Frontier models such as Mistral Large 4 are listed but not served on the free plan"
+  ],
+  "api_endpoint": "https://api.mistral.ai/v1",
+  "notes": "The console's Limits page lists every model with free-mode caps, including Mistral Large 4 and GLM 5.3, but those routes answer only on a paid plan — request access per model before relying on them. Opt out of training in the Admin panel.",
+  "models": [
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 4
+      },
+      "rate_limits": "20K TPM, 1 RPS (Free mode)"
+    },
+    {
+      "id": "mistral-medium-3-5",
+      "name": "Mistral Medium 3.5",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 65,
+        "intelligence": 5
+      },
+      "rate_limits": "20K TPM, 1 RPS (Free mode)"
+    },
+    {
+      "id": "codestral",
+      "name": "Codestral",
+      "family": "Codestral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95
+      },
+      "rate_limits": "40K TPM, 0.03 RPS (Free mode)"
+    },
+    {
+      "id": "ministral-3-14b",
+      "name": "Ministral 3 14B",
+      "family": "Ministral",
+      "context_window": 262144,
+      "rate_limits": "40K TPM, 0.03 RPS (Free mode)"
+    },
+    {
+      "id": "ministral-3-8b",
+      "name": "Ministral 3 8B",
+      "family": "Ministral",
+      "context_window": 262144,
+      "rate_limits": "40K TPM, 0.03 RPS (Free mode)"
+    },
+    {
+      "id": "ministral-3-3b",
+      "name": "Ministral 3 3B",
+      "family": "Ministral",
+      "context_window": 131072,
+      "rate_limits": "40K TPM, 0.03 RPS (Free mode)"
+    }
+  ]
+}

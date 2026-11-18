@@ -1,0 +1,90 @@
+{
+  "id": "inferbase",
+  "name": "Inferbase",
+  "website": "https://inferbase.ai",
+  "docs": "https://inferbase.ai",
+  "signup": "https://inferbase.ai",
+  "description": "OpenAI-compatible gateway with a permanent free plan and bring-your-own-key routing.",
+  "overview": "Inferbase is an OpenAI-compatible inference gateway that serves managed models and can also route your own provider keys. The Free plan has no time limit and needs no card: 5,000 requests per month, of which 100 managed requests and $0.50 of managed usage are covered per day. Managed coverage applies to models priced at or below $2 per million output tokens.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free plan",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check gateway terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://inferbase.ai",
+      "https://free-llm.com/provider/inferbase"
+    ]
+  },
+  "free_access": [
+    "5,000 requests/month with no time limit",
+    "100 managed requests/day",
+    "$0.50 of managed model usage per day",
+    "No credit card required"
+  ],
+  "api_endpoint": "https://api.inferbase.ai/v1",
+  "notes": "Managed usage is capped at $0.50/day on models up to $2/M output tokens.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 375,
+        "intelligence": 4
+      },
+      "rate_limits": "100 managed requests/day"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 33
+      },
+      "rate_limits": "100 managed requests/day"
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 4
+      },
+      "rate_limits": "100 managed requests/day"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 65
+      },
+      "rate_limits": "100 managed requests/day"
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 145
+      },
+      "rate_limits": "100 managed requests/day"
+    }
+  ]
+}

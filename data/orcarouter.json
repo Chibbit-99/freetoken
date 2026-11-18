@@ -1,0 +1,65 @@
+{
+  "id": "orcarouter",
+  "name": "OrcaRouter",
+  "website": "https://orcarouter.ai",
+  "docs": "https://orcarouter.ai",
+  "signup": "https://orcarouter.ai",
+  "description": "Router with free DeepSeek and GLM routes that claims no retention or training.",
+  "overview": "OrcaRouter says it does not retain or train on request content, but independently governed upstream providers still receive the requests. Free routes currently cover DeepSeek V4.1 Flash and GLM-5.3 Flash among others.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free model routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No training, upstream-dependent"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://orcarouter.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free model routes",
+    "No retention or training at the router",
+    "No card required",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "Upstream providers are governed by their own terms.",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 160,
+        "intelligence": 28
+      }
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 145
+      }
+    }
+  ]
+}

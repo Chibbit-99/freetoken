@@ -1,0 +1,52 @@
+{
+  "id": "gmi-cloud",
+  "name": "GMI Cloud",
+  "website": "https://www.gmicloud.ai",
+  "docs": "https://www.gmicloud.ai",
+  "signup": "https://www.gmicloud.ai",
+  "description": "H100/H200 inference host with two permanently free model endpoints.",
+  "overview": "GMI Cloud runs open models on H100 and H200 capacity behind an OpenAI-compatible API. Two endpoints are free with no card and no time limit — Llama 3.3 70B Instruct Turbo and DeepSeek R1 Distill Llama 70B — served on the same production infrastructure as paid traffic, with 30-plus other models metered. Adding a payment method also drops a $5 credit, but that is a separate offer from the free endpoints.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free model endpoints",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.gmicloud.ai/en/blog/best-free-gpu-cloud-options-for-ai-startups-and-researchers",
+      "https://www.gmicloud.ai"
+    ]
+  },
+  "free_access": [
+    "Two free endpoints, no card",
+    "Llama 3.3 70B Turbo and DeepSeek R1 Distill 70B",
+    "OpenAI-compatible API",
+    "Same H100/H200 infrastructure as paid traffic"
+  ],
+  "notes": "Free endpoint list comes from GMI's own blog; the console is the source of truth.",
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "deepseek-r1-distill-llama-70b",
+      "name": "DeepSeek R1 Distill Llama 70B",
+      "family": "DeepSeek R1",
+      "context_window": 131072,
+      "rate_limits": "Free endpoint, no card; no published RPM"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "hyperbolic",
+  "name": "Hyperbolic",
+  "website": "https://hyperbolic.ai",
+  "docs": "https://docs.hyperbolic.ai",
+  "signup": "https://app.hyperbolic.xyz/settings",
+  "description": "Decentralized GPU cloud whose serverless inference API is free after phone verification.",
+  "overview": "Hyperbolic is a GPU cloud that relaunched its serverless inference API in October 2026. Free Tier accounts can call the API after verifying a phone number, which also adds a one-time $1 credit, at up to 300 requests per minute per key. The API is OpenAI-compatible and hosted on a decentralized GPU network.",
+  "offer": {
+    "type": "trials",
+    "label": "Free tier + $1 credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Decentralized network"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.hyperbolic.ai",
+      "https://free-llm.com/provider/hyperbolic"
+    ]
+  },
+  "free_access": [
+    "Free tier after phone verification",
+    "One-time $1 credit",
+    "300 requests/minute per key",
+    "No credit card required"
+  ],
+  "api_endpoint": "https://api.hyperbolic.ai/inference/v1",
+  "notes": "Free access returned in November 2026; usage beyond the $1 credit is billed and the platform is in beta.",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 85
+      },
+      "rate_limits": "300 RPM, $1 one-time credit"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 90,
+        "intelligence": 33
+      },
+      "rate_limits": "300 RPM, $1 one-time credit"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 200,
+        "intelligence": 28
+      },
+      "rate_limits": "300 RPM, $1 one-time credit"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 155,
+        "intelligence": 20
+      },
+      "rate_limits": "300 RPM, $1 one-time credit"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 70
+      },
+      "rate_limits": "300 RPM, $1 one-time credit"
+    }
+  ]
+}

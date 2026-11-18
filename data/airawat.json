@@ -1,0 +1,66 @@
+{
+  "id": "airawat",
+  "name": "AIRAWAT Startup Credits",
+  "website": "https://airawat.in",
+  "docs": "https://airawat.in",
+  "signup": "https://airawat.in",
+  "description": "Indian national AI compute programme for startups and researchers.",
+  "overview": "AIRAWAT is India's shared AI compute facility, awarding GPU hours that can host Llama, Mistral and GPT-OSS inference for approved startups and researchers. No managed-inference policy resolves retention, training, operator access or deletion.",
+  "offer": {
+    "type": "trials",
+    "label": "Startup compute credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No managed-inference policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://airawat.in",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free GPU credits for approved applicants",
+    "Llama, Mistral and GPT-OSS",
+    "No card required",
+    "16 models supported"
+  ],
+  "notes": "Award-based: you must apply as a startup or research group.",
+  "catalog_size": 16,
+  "models": [
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 45
+      }
+    },
+    {
+      "id": "mistral-small-4",
+      "name": "Mistral Small 4",
+      "family": "Mistral",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 100,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    }
+  ]
+}

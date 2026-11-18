@@ -1,0 +1,65 @@
+{
+  "id": "inferall",
+  "name": "InferAll",
+  "website": "https://inferall.ai",
+  "docs": "https://inferall.ai",
+  "signup": "https://inferall.ai",
+  "description": "Gateway whose open NVIDIA NIM models stay free every day after a short trial.",
+  "overview": "InferAll fronts OpenAI, Anthropic, Google, NVIDIA NIM, Replicate and Runway behind one key. New accounts get 25 NIM-model calls up front, and after that the open NIM roster — Nemotron 3 Ultra, gpt-oss-20b and the rest — remains free at 25 calls a day, resetting at 00:00 UTC, with no card. A $5 starter pack raises the daily ceiling to 50 chat calls and becomes spendable balance. Non-retention is product intent rather than a contractual promise.",
+  "offer": {
+    "type": "always-free",
+    "label": "25 free NIM calls/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Non-retention unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://inferall.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "25 free NIM calls/day, no card",
+    "Open models at $0 in and $0 out",
+    "OpenAI- and Anthropic-compatible endpoints",
+    "$5 starter pack lifts the cap to 50 calls/day"
+  ],
+  "notes": "The free allowance covers NVIDIA-hosted open models only; premium providers are metered.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "family": "Llama 4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 70
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    }
+  ]
+}

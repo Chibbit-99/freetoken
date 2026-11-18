@@ -1,0 +1,54 @@
+{
+  "id": "coarena",
+  "name": "Coarena",
+  "website": "https://coarena.ai",
+  "docs": "https://coarena.ai",
+  "signup": "https://coarena.ai",
+  "description": "24-model API with a daily free allowance on its free models, no card.",
+  "overview": "Coarena keeps 24 frontier and open models behind one key that answers on both OpenAI and Anthropic base URLs, so Codex, Claude Code and LangChain work unchanged. The free tier covers the models marked free, with Coarena paying for the compute: 30 requests a minute, two in flight, plus a per-account daily request limit set by the operator. Credits unlock the rest of the catalogue, and the limits endpoint reports today's usage.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models, Coarena pays",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://coarena.ai/docs",
+      "https://coarena.ai/account/api"
+    ]
+  },
+  "free_access": [
+    "Free models paid for by Coarena",
+    "30 requests/minute, 2 concurrent",
+    "OpenAI and Anthropic base URLs on one key",
+    "No card for a free key"
+  ],
+  "notes": "The daily request limit is per account and shown in GET /api/v1/limits.",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "family": "DeepSeek",
+      "context_window": 131072
+    },
+    {
+      "id": "gemini-3-8-flash",
+      "name": "Gemini 3.8 Flash",
+      "family": "Gemini",
+      "context_window": 131072
+    },
+    {
+      "id": "gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "family": "GPT-6",
+      "context_window": 131072
+    }
+  ]
+}

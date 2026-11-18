@@ -1,0 +1,46 @@
+{
+  "id": "tencent-hunyuan",
+  "name": "Tencent Hunyuan",
+  "website": "https://cloud.tencent.com/product/hunyuan",
+  "docs": "https://cloud.tencent.com/product/hunyuan",
+  "signup": "https://cloud.tencent.com/product/hunyuan",
+  "description": "Tencent's Hunyuan models with international free trial quota.",
+  "overview": "Tencent Cloud offers the international HY Text Generation and Hunyuan Translation endpoints with a free trial quota worth up to about $77. No international plan-specific disclosure covers retention, training or human access.",
+  "offer": {
+    "type": "trials",
+    "label": "Free trial quota",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No plan-specific policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cloud.tencent.com/product/hunyuan",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Free trial quota on tencent-hunyuan",
+    "Translation endpoint included",
+    "OpenAI-compatible endpoint",
+    "No card required to start"
+  ],
+  "notes": "No published retention policy for the international endpoints.",
+  "models": [
+    {
+      "id": "tencent-hy4",
+      "name": "Tencent Hy4",
+      "family": "Hunyuan",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 35
+      }
+    }
+  ]
+}

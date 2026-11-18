@@ -1,0 +1,67 @@
+{
+  "id": "gonka-broker",
+  "name": "Gonka Broker",
+  "website": "https://gonkabroker.com",
+  "docs": "https://docs.gonkabroker.com",
+  "signup": "https://app.gonkabroker.com/signup",
+  "description": "OpenAI-compatible reseller on the decentralized Gonka network with a monthly free token grant.",
+  "overview": "Gonka Broker resells inference from the decentralized Gonka GPU network through an OpenAI- and Anthropic-compatible API. Accounts with a verified phone number receive a monthly grant of free tokens usable with any model, renewed at the start of each calendar month. Unused grant tokens expire.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "Monthly free grant",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Decentralized network"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.gonkabroker.com",
+      "https://free-llm.com/provider/gonka-broker"
+    ]
+  },
+  "free_access": [
+    "Monthly free token grant with phone verification",
+    "Usable across all catalog models",
+    "No credit card required",
+    "Unused tokens expire each month"
+  ],
+  "notes": "One grant per phone number; VoIP and landline numbers are refused.",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 180,
+        "intelligence": 28
+      },
+      "rate_limits": "Monthly token grant"
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "DeepSeek V4",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 95
+      },
+      "rate_limits": "Monthly token grant"
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 90
+      },
+      "rate_limits": "Monthly token grant"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "zro",
+  "name": "Zro (MoonMath)",
+  "website": "https://zro.moonmath.ai",
+  "docs": "https://zro.moonmath.ai",
+  "signup": "https://zro.moonmath.ai",
+  "description": "Coding-focused service with a daily free allowance on two Flash models and zero retention.",
+  "overview": "Zro is MoonMath's coding-focused inference service, built for agents such as Claude Code and Codex. The Free plan includes a daily allowance on GLM-5.3 Flash and DeepSeek V4.1 Flash that resets every day. The provider states zero request retention and no training on requests.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free daily allowance",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "Zero request retention"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://zro.moonmath.ai",
+      "https://free-llm.com/provider/zro"
+    ]
+  },
+  "free_access": [
+    "Daily free allowance on two Flash models",
+    "1M-token context",
+    "No credit card required",
+    "Zero retention, no training on requests"
+  ],
+  "api_endpoint": "https://zro.moonmath.ai/v1",
+  "notes": "Allowance size is not published and only the two Flash models are free.",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 165,
+        "intelligence": 28
+      },
+      "rate_limits": "Daily allowance (unpublished)"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 75,
+        "intelligence": 33
+      },
+      "rate_limits": "Daily allowance (unpublished)"
+    }
+  ]
+}

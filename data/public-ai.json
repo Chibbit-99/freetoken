@@ -1,0 +1,56 @@
+{
+  "id": "public-ai",
+  "name": "Public AI Inference Utility",
+  "website": "https://publicai.co",
+  "docs": "https://publicai.co",
+  "signup": "https://publicai.co",
+  "description": "Public-interest inference utility with a small free grant.",
+  "overview": "Public AI is a non-profit inference utility that gives everyone a small free allowance and routes to open models. Its default terms permit prompt and output retention, external routing, and disclosure of raw database material to vetted academic researchers unless you opt out.",
+  "offer": {
+    "type": "trials",
+    "label": "$2 free credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Retention by default"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://publicai.co",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "$2 of free credit on signup",
+    "Open models including Gemma and Qwen",
+    "No card required",
+    "OpenAI-compatible API"
+  ],
+  "notes": "Raw prompts can be shared with academic researchers unless you opt out.",
+  "models": [
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 95,
+        "intelligence": 20
+      }
+    }
+  ]
+}

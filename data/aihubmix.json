@@ -1,0 +1,84 @@
+{
+  "id": "aihubmix",
+  "name": "AIHubMix",
+  "website": "https://aihubmix.com",
+  "docs": "https://aihubmix.com",
+  "signup": "https://aihubmix.com",
+  "description": "OpenAI- and Anthropic-compatible gateway with about 35 zero-priced routes.",
+  "overview": "AIHubMix is a model gateway that keeps roughly 35 \"-free\" routes next to its paid catalog, each with per-account limits that are usually 5 requests/minute, 100 requests/day and 1M tokens/day. It also exposes an Anthropic-compatible endpoint, so Claude-style clients work without code changes.",
+  "offer": {
+    "type": "free-models",
+    "label": "35 free (-free) routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Free routes may be logged"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aihubmix.com",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "~35 zero-priced routes",
+    "Usually 5 RPM, 100 requests/day, 1M tokens/day per route",
+    "OpenAI- and Anthropic-compatible endpoints",
+    "No card required"
+  ],
+  "notes": "Limits are set per route in the description field, so check each model id.",
+  "models": [
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 110
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 29
+      }
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70,
+        "intelligence": 4
+      }
+    }
+  ]
+}

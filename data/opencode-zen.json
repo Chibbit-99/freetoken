@@ -1,0 +1,77 @@
+{
+  "id": "opencode-zen",
+  "name": "OpenCode Zen",
+  "website": "https://opencode.ai/zen",
+  "docs": "https://opencode.ai/zen",
+  "signup": "https://opencode.ai/zen",
+  "description": "Curated model gateway from the OpenCode coding agent.",
+  "overview": "OpenCode Zen provides a curated set of coding models to the OpenCode agent, with a handful of named free routes across DeepSeek, Nemotron and GLM. The named free routes may collect prompts and completions for improvement or training.",
+  "offer": {
+    "type": "trials",
+    "label": "Limited free routes",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Free routes may train"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://opencode.ai/zen",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Named free routes with no card",
+    "DeepSeek, Nemotron and GLM",
+    "OpenAI-compatible endpoint",
+    "10 models listed"
+  ],
+  "notes": "Free routes may collect prompts and completions for training.",
+  "catalog_size": 10,
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 220,
+        "intelligence": 6
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 28
+      }
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 45,
+        "intelligence": 19
+      }
+    }
+  ]
+}

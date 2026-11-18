@@ -1,0 +1,66 @@
+{
+  "id": "tencent-tokenhub",
+  "name": "Tencent Cloud TokenHub",
+  "website": "https://cloud.tencent.com/product/tokenhub",
+  "docs": "https://cloud.tencent.com/product/tokenhub",
+  "signup": "https://cloud.tencent.com/product/tokenhub",
+  "description": "Tencent's model marketplace with a 1M-token trial on each language model.",
+  "overview": "Tencent Cloud's TokenHub marketplace grants new international users a one-time trial of 1 million tokens on each language model, valid until 2026-12-31. The trial is claimed per model in the Model Gallery or automatically on the first API call, and a payment card is required on the international account.",
+  "offer": {
+    "type": "trials",
+    "label": "1M free tokens per model",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cloud.tencent.com/product/tokenhub",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "1M free tokens per language model",
+    "Trial valid until 2026-12-31",
+    "OpenAI-compatible endpoint",
+    "Card required on international accounts"
+  ],
+  "notes": "One-time per model and time-limited; the domestic console differs.",
+  "models": [
+    {
+      "id": "tencent-hy4",
+      "name": "Tencent Hy4",
+      "family": "Hunyuan",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 35
+      }
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 29
+      }
+    }
+  ]
+}

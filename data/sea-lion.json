@@ -1,0 +1,48 @@
+{
+  "id": "sea-lion",
+  "name": "SEA-LION (AI Singapore)",
+  "website": "https://sea-lion.ai",
+  "docs": "https://sea-lion.ai",
+  "signup": "https://sea-lion.ai",
+  "description": "AI Singapore's own Southeast Asian language models behind a free API.",
+  "overview": "SEA-LION is AI Singapore's open model family for Southeast Asian languages, served first-party through an OpenAI-compatible API. The free trial key is explicitly meant for prototyping and testing, capped at 10 calls per minute per account, with no published token budget or expiry; production use is directed to AI Singapore's cloud partners. Keys come from the playground key manager after signup, and the model list needs a key to read.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free prototype API",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://sea-lion.ai/try-sea-lion/",
+      "https://docs.sea-lion.ai/guides/inferencing/api"
+    ]
+  },
+  "free_access": [
+    "Free trial key for prototyping",
+    "10 calls/minute per account",
+    "OpenAI-compatible endpoint",
+    "No card required"
+  ],
+  "notes": "Prototyping only per AI Singapore's terms; no published token budget.",
+  "models": [
+    {
+      "id": "aisingapore/Llama-SEA-LION-v3.5-70B-R",
+      "name": "Llama SEA-LION v3.5 70B",
+      "family": "SEA-LION",
+      "context_window": 131072
+    },
+    {
+      "id": "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
+      "name": "Qwen SEA-LION v4.5 27B",
+      "family": "SEA-LION",
+      "context_window": 131072
+    }
+  ]
+}

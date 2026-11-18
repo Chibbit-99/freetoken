@@ -1,0 +1,58 @@
+{
+  "id": "novai",
+  "name": "NovAI",
+  "website": "https://aiapi-pro.com",
+  "docs": "https://aiapi-pro.com",
+  "signup": "https://aiapi-pro.com",
+  "description": "Small OpenAI-compatible gateway that resells provider prices and hosts GLM Flash models for free.",
+  "overview": "NovAI is an OpenAI-compatible gateway to roughly 110 models at provider prices with no platform fee. Zhipu's free Flash models are available at $0, limited to a few requests per minute until the first top-up, and new accounts get a small welcome credit. Terms are published in a machine-readable transparency file.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free GLM Flash routes",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check gateway terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aiapi-pro.com",
+      "https://free-llm.com/provider/novai"
+    ]
+  },
+  "free_access": [
+    "GLM-4.7 Flash and GLM-4.6V Flash at $0",
+    "5 requests/minute before top-up",
+    "No credit card required",
+    "$2 welcome credit"
+  ],
+  "notes": "Free routes are limited to 5 requests/minute until the first top-up.",
+  "models": [
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 200000,
+      "metrics": {
+        "tps": 100
+      },
+      "rate_limits": "5 RPM before first top-up"
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 110,
+        "intelligence": 28
+      },
+      "rate_limits": "5 RPM before first top-up"
+    }
+  ],
+  "catalog_size": 110
+}

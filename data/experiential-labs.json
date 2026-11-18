@@ -1,0 +1,66 @@
+{
+  "id": "experiential-labs",
+  "name": "Experiential Labs",
+  "website": "https://experientiallabs.ai",
+  "docs": "https://experientiallabs.ai",
+  "signup": "https://experientiallabs.ai",
+  "description": "Zero-markup gateway with a recurring free pool of GPT-6 Luna, DeepSeek and Clef.",
+  "overview": "Experiential Labs runs a 0%-markup AI gateway whose Free plan includes a recurring \"Free core\" pool covering GPT-6 Luna, DeepSeek V4.1 Flash and Clef. The pool allows 10 requests/minute, 250K tokens/minute and 1M tokens/day, but only unlocks after a temporary $1 card verification.",
+  "offer": {
+    "type": "trials",
+    "label": "Free core pool",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider policy"
+  },
+  "requires_payment_card": true,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://experientiallabs.ai",
+      "https://freeinferencing.com/"
+    ]
+  },
+  "free_access": [
+    "Recurring free pool, 1M tokens/day",
+    "10 RPM and 250K TPM",
+    "Covers GPT-6 Luna, DeepSeek V4.1 Flash and Clef",
+    "$1 card verification required (not charged)"
+  ],
+  "notes": "Card verification is required to unlock the free pool.",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 55,
+        "intelligence": 33
+      }
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 28
+      }
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 120,
+        "intelligence": 29
+      }
+    }
+  ]
+}

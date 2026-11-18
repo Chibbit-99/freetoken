@@ -1,0 +1,91 @@
+{
+  "id": "novita-ai",
+  "name": "Novita AI",
+  "website": "https://novita.ai",
+  "docs": "https://novita.ai/docs",
+  "signup": "https://novita.ai/settings/key-management",
+  "description": "Developer-focused open-model platform with trial credits and 60 RPM on new accounts.",
+  "overview": "Novita AI provides OpenAI-compatible inference for open models on a stable developer platform. New accounts receive a small trial credit and run at about 60 requests per minute. The catalog covers recent open releases including GLM, DeepSeek and Qwen.",
+  "offer": {
+    "type": "trials",
+    "label": "Trial credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check provider terms"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://novita.ai/docs",
+      "https://free-llm.com/provider/novita-ai"
+    ]
+  },
+  "free_access": [
+    "Small one-time trial credit",
+    "60 requests/minute",
+    "No credit card required",
+    "Open-model catalog"
+  ],
+  "api_endpoint": "https://api.novita.ai/v3/openai",
+  "notes": "Trial credit is finite; production use requires topping up.",
+  "models": [
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "family": "GLM 5.3",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 140,
+        "intelligence": 32
+      },
+      "rate_limits": "60 RPM, trial credits"
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 80,
+        "intelligence": 33
+      },
+      "rate_limits": "60 RPM, trial credits"
+    },
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 135,
+        "intelligence": 20
+      },
+      "rate_limits": "60 RPM, trial credits"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 70
+      },
+      "rate_limits": "60 RPM, trial credits"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax M3",
+      "family": "MiniMax",
+      "context_window": 1048576,
+      "metrics": {
+        "tps": 60,
+        "intelligence": 19
+      },
+      "rate_limits": "60 RPM, trial credits"
+    }
+  ]
+}
