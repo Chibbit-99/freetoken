@@ -1,0 +1,42 @@
+{
+  "id": "100milionseek",
+  "name": "100milionseek",
+  "website": "https://100milionseek.top/",
+  "docs": "https://100milionseek.top/",
+  "signup": "https://100milionseek.top/",
+  "description": "New DeepSeek API with a large daily allowance; currently unstable.",
+  "overview": "As of 17 November 2026 the operator reports infrastructure overload, failing requests and paused new signups. Monitor and recheck this very new service before relying on it. Its normal allowance is 100 million prompt and completion tokens per account per UTC day; a temporary 400 million/day promotion ends 20 November 2026 at 19:14 UTC. The operator claims prompts and responses are not stored; this has not been independently verified.",
+  "offer": {
+    "type": "always-free",
+    "label": "100M tokens/day; signup paused",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://100milionseek.top/docs",
+      "https://100milionseek.top/"
+    ]
+  },
+  "free_access": [
+    "Signups paused and requests failing; monitor closely",
+    "100M tokens/day normally; 400M/day promotion ends 20 Nov 2026 19:14 UTC",
+    "No card; five concurrent requests",
+    "Operator claims no prompt/response storage; unverified"
+  ],
+  "notes": "Use https://100milionseek.top/v1. No live inference or signup test was performed.",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash-free",
+      "name": "DeepSeek V4.1 Flash Free",
+      "family": "DeepSeek",
+      "context_window": 198000
+    }
+  ]
+}

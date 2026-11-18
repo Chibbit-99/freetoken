@@ -1,0 +1,42 @@
+{
+  "id": "devseek",
+  "name": "devseek",
+  "website": "https://devseek.space/",
+  "docs": "https://devseek.space/",
+  "signup": "https://devseek.space/",
+  "description": "Coding-oriented data pool associated with 100milionseek, using a separate key.",
+  "overview": "The separate devseek pool has no daily token cap and starts at three concurrent requests; capacity depends on coding usage. Access requires consent to store prompts, responses and tool calls, with raw records kept up to 30 days and de-identified datasets sold. Do not send sensitive information. The homepage currently labels its upstream a mock test double and shows an outage; do not assume real inference is operational. Recheck before use.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free for data; no daily token cap",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Prompts and responses stored and sold"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://devseek.space/",
+      "https://devseek.space/docs"
+    ]
+  },
+  "free_access": [
+    "No card or daily token cap; starts at 3 concurrent sessions",
+    "Raw data stored up to 30 days; de-identified data sold",
+    "Homepage reports mock upstream and outage; monitor",
+    "Separate endpoint and key from associated 100milionseek pool"
+  ],
+  "notes": "Use https://devseek.space/v1. No live inference or signup test was performed.",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash-free",
+      "name": "DeepSeek V4.1 Flash Free",
+      "family": "DeepSeek",
+      "context_window": 250000
+    }
+  ]
+}

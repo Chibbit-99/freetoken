@@ -1,0 +1,41 @@
+{
+  "id": "void-ai",
+  "name": "VoidAI",
+  "website": "https://voidai.app/",
+  "docs": "https://voidai.app/",
+  "signup": "https://voidai.app/",
+  "description": "VoidAI lists daily credits on its no-card free API plan.",
+  "overview": "The free plan includes 125,000 credits per day for eligible models. Credits are not tokens: input, output and base costs vary by model. Listings do not guarantee live service availability; Claude access requires approval. Check the model catalog and service status before relying on a route.",
+  "offer": {
+    "type": "always-free",
+    "label": "125,000 credits/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://voidai.app/pricing",
+      "https://voidai.app/models"
+    ]
+  },
+  "free_access": [
+    "125K credits/day; model costs vary",
+    "No card required",
+    "Free model list may change; live availability not guaranteed",
+    "Claude requires approval"
+  ],
+  "notes": "Use https://api.voidai.app/v1; review model credit costs and current status.",
+  "models": [
+    {
+      "id": "gpt-4o-mini",
+      "name": "GPT-4o Mini",
+      "family": "GPT"
+    }
+  ]
+}

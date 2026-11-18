@@ -1,0 +1,41 @@
+{
+  "id": "evolvex",
+  "name": "EvolveX",
+  "website": "https://www.evolvex.gg/",
+  "docs": "https://www.evolvex.gg/",
+  "signup": "https://www.evolvex.gg/",
+  "description": "EvolveX advertises a no-card community API tier.",
+  "overview": "The pricing page lists a free community tier with 5 requests per minute and GitHub sign-in. Its docs list open and proprietary models but do not clearly identify which specific models are included on Free; verify eligibility in the dashboard. Homepage also describes a keyless endpoint, while pricing and docs require a key.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free community tier: 5 RPM",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.evolvex.gg/pricing",
+      "https://www.evolvex.gg/docs"
+    ]
+  },
+  "free_access": [
+    "5 requests/minute on Free",
+    "GitHub sign-in; no card",
+    "Free-tier model eligibility needs confirmation",
+    "Documentation and homepage differ about API keys"
+  ],
+  "notes": "Documentation example only: free-tier eligibility not confirmed. Base URL https://api.evolvex.gg/v1.",
+  "models": [
+    {
+      "id": "qwen3-coder-max",
+      "name": "Qwen3 Coder Max",
+      "family": "Qwen"
+    }
+  ]
+}

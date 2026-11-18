@@ -1,0 +1,41 @@
+{
+  "id": "runcrate",
+  "name": "Runcrate",
+  "website": "https://www.runcrate.ai/inference/free",
+  "docs": "https://www.runcrate.ai/inference/free",
+  "signup": "https://www.runcrate.ai/inference/free",
+  "description": "Runcrate offers a weekly allowance for selected open models with an eligible GitHub account.",
+  "overview": "GitHub accounts at least 30 days old can use selected models with a shared workspace allowance resetting Monday; its size appears in the dashboard. No card is needed for GitHub signup. Google signup requires a card and automatic top-up. With a paid balance, requests can incur charges after the free allowance or when free capacity is busy. Third-party model providers handle prompts and outputs.",
+  "offer": {
+    "type": "always-free",
+    "label": "Weekly free usage with GitHub",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.runcrate.ai/inference/free",
+      "https://www.runcrate.ai/privacy"
+    ]
+  },
+  "free_access": [
+    "GitHub account at least 30 days old; no card",
+    "Shared weekly allowance; resets Monday",
+    "Paid balance may be used automatically on overage or overload",
+    "Google signup requires card and automatic top-up"
+  ],
+  "notes": "Check the dashboard allowance and billing settings before use; API base https://api.runcrate.ai/v1.",
+  "models": [
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "GPT OSS 120B",
+      "family": "GPT OSS"
+    }
+  ]
+}

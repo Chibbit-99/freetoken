@@ -133,3 +133,23 @@ Discovery included the [freetokens tracker](https://github.com/luongnv89/freetok
 | APInex | Excluded: [operator](https://apinex.bond/) requires initial top-up for free aliases. |
 | Unisound | Not added: [U2-Decision](https://maas.unisound.com/model-hub/u2-decision) is a temporary decision API, not text generation; [U2-Flash](https://maas.unisound.com/model-hub/u2-flash) is priced. |
 | VModel | Not added: [pricing](https://vmodel.ai/docs/api/pricing.html) claims $10 credits valid for text but no specific available text-generation model verified. |
+
+## Iteration 17 — 2026-11-17
+
+Added 100milionseek and ten additional services. All findings below are based on provider statements, not authenticated signup, paid-billing or live inference tests. Provider uptime, model identity and privacy claims are not independently verified.
+
+| Lead | Decision and evidence |
+| --- | --- |
+| 100milionseek | [Docs](https://100milionseek.top/docs): normal 100M tokens/day; 400M/day promotion until Nov 20 19:14 UTC. Banner reports overload, failed requests and paused signups. New, unstable: monitor. No-storage statement is operator claim. |
+| devseek | [Home](https://devseek.space/) and [docs](https://devseek.space/docs): separate key and data pool associated with 100milionseek, not an independent organization. No daily cap, no card; raw data stored 30 days and de-identified data sold. Homepage currently reports outage and labels upstream a mock test double. |
+| Runcrate | [Free inference](https://www.runcrate.ai/inference/free): weekly workspace allowance, eligible GitHub account no card; Google requires card and auto top-up, and paid balance may be spent on overage or during free capacity overload. Third-party providers handle data. |
+| KIE AI | [Model page](https://kie.ai/gpt-6-1-terra): 80 new-user credits for testing, calls consume credits. Finite trial, expiry and card status unknown. |
+| Bee by HEOSSI | [Pricing](https://bee.heossi.com/pricing) says free no-card Cell workspace has five-hour refilling window and 2M monthly ceiling, one API key; separately priced API track. [SDK](https://bee.heossi.com/docs/sdks) provides model ID and endpoint. |
+| EvolveX | [Pricing](https://www.evolvex.gg/pricing): 5 RPM, GitHub, no card. [Docs](https://www.evolvex.gg/docs) list models but do not identify specific Free models; homepage and pricing disagree on key requirement. |
+| HelixMind | [Pricing](https://helixmind.online/pricing): Seed 50 requests/rolling day, 3 RPM, 10K input, 4 models, no card. [Catalog](https://helixmind.online/models) marks auto-model free but Seed eligibility not established. |
+| kenari | [Homepage](https://kenari.id/) and [free model docs](https://kenari.id/docs/free-models): zero-balance new accounts get free-model access; homepage lists 50/day and 5 RPM, subject to model overrides. Higher limits require top-up but basic tier does not. |
+| VoidAI | [Pricing](https://voidai.app/pricing) and [catalog](https://voidai.app/models): 125K daily credits, different per-model credit rates, listed model access is not live availability; [home](https://voidai.app/) says no card. |
+| Zylo API | [Pricing](https://zyloai.net/) and [model page](https://zyloai.net/models/gpt-oss.html): no-card Basic, 200K tokens/day, 7,200 requests/day, 10 RPM, selected models including gpt-oss. Catalog prices apply to paid usage, not Basic allowance. |
+| APIShare | [Marketplace homepage](https://apishare.cc/) lists zero-cost promotional routes and one signup credit; promotion term and daily cap unpublished, Qwen RPM claim conflicts. Card status unknown. |
+| Zydit | Not added: [operator notice](https://zydit.in/) says service is permanently over, contrary to stale directories. |
+| APInex | Excluded: mandatory initial top-up, per user instruction. |

@@ -32,6 +32,32 @@
       ]
     },
     {
+      "id": "2026-11-17-eleven-new-api-listings-bring-the-index-to-200",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Eleven new API listings bring the index to 200",
+      "summary": "100milionseek and ten additional API services join the index, with outages, privacy, billing and trial caveats.",
+      "providers": [
+        "100milionseek",
+        "devseek",
+        "runcrate",
+        "kie-ai",
+        "bee-heossi",
+        "evolvex",
+        "helixmind",
+        "kenari",
+        "void-ai",
+        "zylo-api",
+        "apishare"
+      ],
+      "details": [
+        "100milionseek is new and unstable: signups paused and requests failing",
+        "Devseek stores and sells de-identified data and reports a mock upstream",
+        "KIE AI is a finite trial and APIShare promotions can end",
+        "Review paid fallback, model eligibility and billing before use"
+      ]
+    },
+    {
       "id": "2026-11-17-ten-provider-additions-free-tiers-and-trials",
       "date": "2026-11-17",
       "kind": "update",

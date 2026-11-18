@@ -29,6 +29,7 @@ from new_providers_m import PART_M  # noqa: E402
 from new_providers_n import PART_N  # noqa: E402
 from new_providers_o import PART_O  # noqa: E402
 from new_providers_p import PART_P  # noqa: E402
+from new_providers_r import PART_R  # noqa: E402
 from new_providers_q import PART_Q  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
@@ -58,6 +59,17 @@ SKIP = {
 
 # First-party pages read for each added provider, used for verified.sources.
 SOURCES = {
+    "100milionseek": ["https://100milionseek.top/docs", "https://100milionseek.top/"],
+    "devseek": ["https://devseek.space/", "https://devseek.space/docs"],
+    "runcrate": ["https://www.runcrate.ai/inference/free", "https://www.runcrate.ai/privacy"],
+    "kie-ai": ["https://kie.ai/gpt-6-1-terra", "https://kie.ai/"],
+    "bee-heossi": ["https://bee.heossi.com/pricing", "https://bee.heossi.com/docs/sdks"],
+    "evolvex": ["https://www.evolvex.gg/pricing", "https://www.evolvex.gg/docs"],
+    "helixmind": ["https://helixmind.online/pricing", "https://helixmind.online/models"],
+    "kenari": ["https://kenari.id/", "https://kenari.id/docs/free-models"],
+    "void-ai": ["https://voidai.app/pricing", "https://voidai.app/models"],
+    "zylo-api": ["https://zyloai.net/", "https://zyloai.net/models/gpt-oss.html"],
+    "apishare": ["https://apishare.cc/", "https://apishare.cc/market"],
     "synap": ["https://synap402.com/ai/account.html", "https://synap402.com/ai/docs.html"],
     "chatanywhere": ["https://github.com/chatanywhere/GPT_API_free", "https://chatanywhere.tech/"],
     "modelbridge": ["https://aibridge-api.com/pricing.html", "https://aibridge-api.com/docs.html"],
@@ -257,7 +269,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P + PART_Q:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P + PART_Q + PART_R:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:
