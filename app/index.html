@@ -188,33 +188,24 @@
 
         </div>
 
-        <section aria-labelledby="aggregate-heading" class="mt-8 rounded-xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6">
-            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-5">
-                <div>
-                    <h2 id="aggregate-heading" class="text-sm font-bold text-slate-900">The bigger picture</h2>
-                    <p class="text-xs text-slate-500 mt-1">Estimates from listed offers, not guaranteed totals.</p>
-                </div>
-            </div>
+        <section aria-label="Catalogue totals" class="mt-8 rounded-xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6">
             <dl class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
                 <div>
-                    <dt class="text-xs font-medium text-slate-500">One-time trial credits <span class="font-mono">USD</span></dt>
-                    <dd id="stat-credit" class="mt-1 text-2xl font-semibold tracking-tight text-slate-950 font-mono" aria-live="polite">&ndash;</dd>
-                    <p id="stat-credit-note" class="text-[11px] text-slate-500 mt-1 leading-relaxed">Loading documented USD grants&hellip;</p>
+                    <dt class="sr-only">Estimated one-time trial credits in USD</dt>
+                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-credit" class="font-mono" aria-live="polite">&ndash;</span> in trial credits</dd>
                 </div>
                 <div class="sm:border-l sm:border-slate-200 sm:pl-6">
-                    <dt class="text-xs font-medium text-slate-500">30-day token allowance</dt>
-                    <dd id="stat-tokens" class="mt-1 text-2xl font-semibold tracking-tight text-slate-950 font-mono" aria-live="polite">&ndash;</dd>
-                    <p id="stat-tokens-note" class="text-[11px] text-slate-500 mt-1 leading-relaxed">Loading listed token quotas&hellip;</p>
+                    <dt class="sr-only">Estimated 30-day token allowance, including one-time grants</dt>
+                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-tokens" class="font-mono" aria-live="polite">&ndash;</span> tokens per month</dd>
                 </div>
                 <div class="sm:border-l sm:border-slate-200 sm:pl-6">
-                    <dt class="text-xs font-medium text-slate-500">Combined listed RPM</dt>
-                    <dd id="stat-rpm" class="mt-1 text-2xl font-semibold tracking-tight text-slate-950 font-mono" aria-live="polite">&ndash;</dd>
-                    <p id="stat-rpm-note" class="text-[11px] text-slate-500 mt-1 leading-relaxed">Loading documented rate limits&hellip;</p>
+                    <dt class="sr-only">Combined listed requests per minute</dt>
+                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-rpm" class="font-mono" aria-live="polite">&ndash;</span> combined RPM</dd>
                 </div>
             </dl>
             <details class="mt-5 text-xs text-slate-500">
                 <summary class="cursor-pointer font-medium hover:text-slate-900">How these are calculated</summary>
-                <p class="mt-2 leading-relaxed">Credits include known one-time USD grants only; some require a card or eligibility. Tokens include known quotas normalized to 30 days and one-time grants counted once. RPM sums one listed limit per provider; limits differ in scope. Unknown amounts are excluded, and offers may overlap, expire or change.</p>
+                <p class="mt-2 leading-relaxed">Estimates, not guaranteed totals. Credits include known one-time grants converted to USD at <a class="underline" href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">ECB reference rates</a> from 17 November 2026; some require a card or eligibility. Tokens include known quotas normalized to 30 days and one-time grants counted once. RPM sums one listed limit per provider; limits differ in scope. Unknown amounts are excluded, and offers may overlap, expire or change.</p>
             </details>
         </section>
     </main>
@@ -553,14 +544,11 @@
             var tokens = pools.reduce(function (sum, row) { return sum + row.monthly; }, 0);
             $('stat-tokens').textContent = pools.length ? compactTokens(tokens) : 'Not available';
             $('stat-tokens').title = pools.length ? Math.round(tokens).toLocaleString('en-US') + ' estimated tokens' : '';
-            $('stat-tokens-note').textContent = pools.length + ' providers · includes one-time grants';
 
             var data = state.aggregates;
             if (!data) {
                 $('stat-credit').textContent = 'Unavailable';
                 $('stat-rpm').textContent = 'Unavailable';
-                $('stat-credit-note').textContent = 'Curated credit data could not be loaded.';
-                $('stat-rpm-note').textContent = 'Curated rate-limit data could not be loaded.';
                 return;
             }
             var ids = {};
@@ -573,11 +561,22 @@
                 }, { total: 0, count: 0 });
             }
             var credits = totalKnown(data.trial_credit_usd);
+            var foreign = data.trial_credit_foreign || {};
+            var fx = data.fx_reference && data.fx_reference.rates_per_eur || {};
+            Object.keys(foreign).forEach(function (id) {
+                var grant = foreign[id];
+                var rate = grant && fx[grant.currency];
+                if (ids[id] && grant && !Object.prototype.hasOwnProperty.call(data.trial_credit_usd || {}, id) &&
+                    typeof grant.amount === 'number' && isFinite(grant.amount) && grant.amount >= 0 &&
+                    typeof rate === 'number' && isFinite(rate) && rate > 0 &&
+                    typeof fx.USD === 'number' && isFinite(fx.USD) && fx.USD > 0) {
+                    credits.total += grant.amount / rate * fx.USD;
+                    credits.count++;
+                }
+            });
             var rpm = totalKnown(data.requests_per_minute);
             $('stat-credit').textContent = credits.count ? '$' + credits.total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : 'Not available';
-            $('stat-credit-note').textContent = credits.count + ' providers · USD grants only';
-            $('stat-rpm').textContent = rpm.count ? rpm.total.toLocaleString('en-US') + ' RPM' : 'Not available';
-            $('stat-rpm-note').textContent = rpm.count + ' providers · one limit each';
+            $('stat-rpm').textContent = rpm.count ? rpm.total.toLocaleString('en-US') : 'Not available';
         }
 
         function modelFamilies(p) {

@@ -26,6 +26,22 @@ class AggregateMetricsTest(unittest.TestCase):
                 if group == 'trial_credit_usd':
                     self.assertEqual(providers[provider_id]['offer']['type'], 'trials')
 
+    def test_foreign_credit_metadata_and_conversion(self):
+        data = json.loads((ROOT / 'data/aggregate_metrics.json').read_text())
+        ids = {f[:-5] for f in json.loads((ROOT / 'data/providers.json').read_text())['providers']}
+        fx = data['fx_reference']['rates_per_eur']
+        self.assertEqual(data['fx_reference']['date'], '2026-11-17')
+        self.assertGreater(fx['USD'], 0)
+        foreign_total = 0
+        for provider, grant in data['trial_credit_foreign'].items():
+            self.assertIn(provider, ids)
+            self.assertNotIn(provider, data['trial_credit_usd'])
+            self.assertGreater(grant['amount'], 0)
+            self.assertGreater(fx[grant['currency']], 0)
+            foreign_total += grant['amount'] / fx[grant['currency']] * fx['USD']
+        self.assertEqual(round(sum(data['trial_credit_usd'].values()) + foreign_total, 2), 1545.65)
+        self.assertFalse({'sarvam', 'sarvam-ai'} <= set(data['trial_credit_foreign']))
+
     def test_shared_weekly_and_one_time_pools(self):
         # Exercise the same function shipped in the browser; Node supplies the
         # minimal state so this test needs no npm dependencies or web server.

@@ -32,6 +32,19 @@
       ]
     },
     {
+      "id": "2026-11-17-trial-credit-totals-now-include-foreign-currenci",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "Trial credit totals now include foreign currencies",
+      "summary": "The dashboard converts listed trial grants to USD using dated ECB reference rates.",
+      "providers": [],
+      "details": [
+        "EUR, CNY, INR and MYR grants converted before rounding the total",
+        "Duplicate Sarvam signup credit counted once",
+        "Rates are a dated snapshot and eligibility varies"
+      ]
+    },
+    {
       "id": "2026-11-17-dashboard-adds-aggregate-offer-estimates",
       "date": "2026-11-17",
       "kind": "update",

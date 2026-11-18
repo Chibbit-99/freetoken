@@ -1,5 +1,5 @@
 {
-  "description": "Curated advertised values from catalogue records. One conservative RPM per provider; one-time USD credits only. Excludes unknowns, non-USD and recurring monetary credits.",
+  "description": "Curated trial amounts from catalogue records and one conservative RPM per provider. Non-USD amounts are converted using the dated ECB reference rates; recurring and unknown credits are excluded.",
   "trial_credit_usd": {
     "upstage": 10,
     "fireworks-ai": 1,
@@ -94,5 +94,48 @@
     "flonno": 60,
     "boundless-api": 10,
     "infercom": 20
+  },
+  "fx_reference": {
+    "date": "2026-11-17",
+    "source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+    "base": "EUR",
+    "rates_per_eur": {
+      "EUR": 1,
+      "USD": 1.0989,
+      "CNY": 7.3254,
+      "INR": 102.72,
+      "MYR": 4.4983
+    },
+    "note": "ECB reference rates are informational, not live conversion rates. Sarvam and Sarvam AI describe the same signup credit; count it once."
+  },
+  "trial_credit_foreign": {
+    "infercom": {
+      "amount": 5,
+      "currency": "EUR"
+    },
+    "baidu-qianfan": {
+      "amount": 20,
+      "currency": "CNY"
+    },
+    "ilmu": {
+      "amount": 20,
+      "currency": "MYR"
+    },
+    "xiaomi-mimo": {
+      "amount": 10,
+      "currency": "CNY"
+    },
+    "stepfun": {
+      "amount": 10,
+      "currency": "CNY"
+    },
+    "ppio": {
+      "amount": 5,
+      "currency": "CNY"
+    },
+    "sarvam-ai": {
+      "amount": 100,
+      "currency": "INR"
+    }
   }
 }

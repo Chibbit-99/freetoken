@@ -423,14 +423,16 @@ A free-model-only provider with no token-denominated quota:
 
 ### Dashboard aggregate metadata
 
-`data/aggregate_metrics.json` maps provider IDs to manually curated
-`trial_credit_usd` (one-time USD-denominated trial credits) and
-`requests_per_minute` (one documented free/trial RPM value per provider).
-Update these maps when provider terms change; do not parse unstructured prose,
-count recurring dollar credits as trials, convert currencies without a dated
-exchange rate, or count multiple models/keys as separate provider RPMs.
-The figures are partial estimates, not guaranteed usable together: rate limits
-may have different scopes and trials can require cards or eligibility. The
-30-day token figure is calculated from provider and model quota fields instead,
-counting shared pools once and one-time balances once. Unknown, request-only,
-credit-denominated, and unspecified/unlimited quotas are excluded.
+`data/aggregate_metrics.json` maps provider IDs to manually curated one-time
+`trial_credit_usd`, `trial_credit_foreign` (amount and ISO currency), and one
+`requests_per_minute` limit per provider. Foreign credits are converted to USD
+using the stored dated ECB reference rates, then the combined sum is rounded
+once to two decimal places. Rates are a snapshot, not live or transactional;
+update `fx_reference` and its source date when refreshing. Exclude duplicate
+provider accounts, recurring credits, unknown values and unsupported currencies.
+The current Sarvam and Sarvam AI entries represent the same signup credit and
+are counted once. Update the maps when offers change; do not parse prose or
+count multiple model/key RPMs as separate providers. Figures are estimates,
+not guaranteed usable together: trials can require cards or eligibility and
+rate limits have different scopes. The 30-day token figure uses quota fields,
+counting shared pools and one-time balances once; unknown quotas are excluded.
