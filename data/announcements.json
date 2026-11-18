@@ -32,6 +32,19 @@
       ]
     },
     {
+      "id": "2026-11-17-dashboard-adds-aggregate-offer-estimates",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "Dashboard adds aggregate offer estimates",
+      "summary": "New dashboard stats summarize documented one-time USD credits, 30-day token quotas and listed RPM limits.",
+      "providers": [],
+      "details": [
+        "Shared token pools counted once and weekly quotas converted to 30 days",
+        "Unknown amounts and non-USD trial credits excluded",
+        "Separate provider limits and eligibility prevent guaranteed combined throughput"
+      ]
+    },
+    {
       "id": "2026-11-17-flux-router-and-three-inference-trials",
       "date": "2026-11-17",
       "kind": "added",

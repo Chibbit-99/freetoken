@@ -170,7 +170,7 @@
                     </div>
                     <p class="text-[11px] text-slate-400 border-b border-slate-100 pb-3 mb-4">
 
-                        Free token allowance granted per model, measured in tokens per day &mdash; Higher is better. A blank allowance means unlimited.
+                        Published token quotas, ranked by 30-day equivalent. Shared pools are counted once; one-time grants are included.
                     </p>
 
                     <!-- Data Bars Representation (rendered from /data JSON) -->
@@ -187,6 +187,33 @@
             </div>
 
         </div>
+
+        <section aria-labelledby="aggregate-heading" class="mt-8 rounded-xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6">
+            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-5">
+                <div>
+                    <h2 id="aggregate-heading" class="text-sm font-bold text-slate-900">The bigger picture</h2>
+                    <p class="text-xs text-slate-500 mt-1">A snapshot of listed offers, not a guaranteed combined balance or throughput.</p>
+                </div>
+                <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Catalogue estimates</span>
+            </div>
+            <dl class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+                <div>
+                    <dt class="text-xs font-medium text-slate-500">One-time trial credits <span class="font-mono">USD</span></dt>
+                    <dd id="stat-credit" class="mt-1 text-2xl font-semibold tracking-tight text-slate-950 font-mono" aria-live="polite">&ndash;</dd>
+                    <p id="stat-credit-note" class="text-[11px] text-slate-500 mt-1 leading-relaxed">Loading documented USD grants&hellip;</p>
+                </div>
+                <div class="sm:border-l sm:border-slate-200 sm:pl-6">
+                    <dt class="text-xs font-medium text-slate-500">30-day token allowance</dt>
+                    <dd id="stat-tokens" class="mt-1 text-2xl font-semibold tracking-tight text-slate-950 font-mono" aria-live="polite">&ndash;</dd>
+                    <p id="stat-tokens-note" class="text-[11px] text-slate-500 mt-1 leading-relaxed">Loading listed token quotas&hellip;</p>
+                </div>
+                <div class="sm:border-l sm:border-slate-200 sm:pl-6">
+                    <dt class="text-xs font-medium text-slate-500">Combined listed RPM</dt>
+                    <dd id="stat-rpm" class="mt-1 text-2xl font-semibold tracking-tight text-slate-950 font-mono" aria-live="polite">&ndash;</dd>
+                    <p id="stat-rpm-note" class="text-[11px] text-slate-500 mt-1 leading-relaxed">Loading documented rate limits&hellip;</p>
+                </div>
+            </dl>
+        </section>
     </main>
 
     <!-- Catalogue Container Section -->
@@ -383,6 +410,7 @@
             noCard: false,
             privatePrompts: false,
             providers: [],
+            aggregates: null,
             announcements: [],
             announcementsUpdated: ''
         };
@@ -513,6 +541,40 @@
                 barClasses: ['bg-amber-500', 'bg-slate-700', 'bg-slate-400'],
                 valueClasses: ['text-slate-900', 'text-slate-900', 'text-slate-900']
             });
+        }
+
+        // Aggregate only explicitly curated amounts: never infer currency or RPM
+        // by parsing prose, where values can describe paid plans or model limits.
+        function renderAggregateStats() {
+            var pools = providerAllowanceRows();
+            var tokens = pools.reduce(function (sum, row) { return sum + row.monthly; }, 0);
+            $('stat-tokens').textContent = pools.length ? compactTokens(tokens) : 'Not available';
+            $('stat-tokens').title = pools.length ? Math.round(tokens).toLocaleString('en-US') + ' estimated tokens' : '';
+            $('stat-tokens-note').textContent = pools.length + ' providers with numeric quotas; daily × 30, weekly × 30/7, annual × 30/365, plus one-time grants once. Quotas may overlap or expire.';
+
+            var data = state.aggregates;
+            if (!data) {
+                $('stat-credit').textContent = 'Unavailable';
+                $('stat-rpm').textContent = 'Unavailable';
+                $('stat-credit-note').textContent = 'Curated credit data could not be loaded.';
+                $('stat-rpm-note').textContent = 'Curated rate-limit data could not be loaded.';
+                return;
+            }
+            var ids = {};
+            state.providers.forEach(function (p) { ids[p.id] = true; });
+            function totalKnown(values) {
+                return Object.keys(values || {}).reduce(function (r, id) {
+                    var v = values[id];
+                    if (ids[id] && typeof v === 'number' && isFinite(v) && v >= 0) { r.total += v; r.count++; }
+                    return r;
+                }, { total: 0, count: 0 });
+            }
+            var credits = totalKnown(data.trial_credit_usd);
+            var rpm = totalKnown(data.requests_per_minute);
+            $('stat-credit').textContent = credits.count ? '$' + credits.total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : 'Not available';
+            $('stat-credit-note').textContent = credits.count + ' providers with stated USD one-time credits; excludes recurring, unknown and non-USD amounts. Some require eligibility or a card.';
+            $('stat-rpm').textContent = rpm.count ? rpm.total.toLocaleString('en-US') + ' RPM' : 'Not available';
+            $('stat-rpm-note').textContent = rpm.count + ' providers with curated limits, counted once each. Per-key, per-model and shared limits differ; this is not guaranteed simultaneous throughput.';
         }
 
         function modelFamilies(p) {
@@ -810,6 +872,7 @@
             // a trial can hand out a monthly quota and a recurring tier can be one-shot.
             if (p.allowance_period === 'one-time') return 'One-time';
             if (p.allowance_period === 'month') return 'Monthly';
+            if (p.allowance_period === 'week') return 'Weekly';
             if (p.allowance_period === 'year') return 'Yearly';
             if (p.allowance_period === 'day') return 'Recurring';
             var t = (p.offer && p.offer.type) || '';
@@ -821,6 +884,7 @@
         function periodLabel(period) {
             if (period === 'one-time') return 'one-time';
             if (period === 'month') return '/ month';
+            if (period === 'week') return '/ week';
             if (period === 'year') return '/ year';
             return '/ day';
         }
@@ -864,6 +928,7 @@
             // published period, and treat a one-time balance as a single lump.
             rows.forEach(function (r) {
                 if (r.period === 'day') r.monthly = r.value * 30;
+                else if (r.period === 'week') r.monthly = r.value * 30 / 7;
                 else if (r.period === 'year') r.monthly = r.value * 30 / 365;
                 else r.monthly = r.value;
             });
@@ -1379,6 +1444,9 @@
                         '<span class="block mt-2 text-rose-400 font-mono text-[10px]">' + detail + '</span>' +
                     '</div>';
             }
+            ['stat-credit', 'stat-tokens', 'stat-rpm'].forEach(function (id) {
+                if ($(id)) $(id).textContent = 'Unavailable';
+            });
             var count = $('provider-count');
             if (count) count.textContent = '\u2013';
         }
@@ -1432,15 +1500,21 @@
             fetchFirst(DATA_BASES.map(function (b) { return b + 'providers.json'; })).then(function (res) {
                 var base = res.url.replace(/providers\.json$/, '');
                 var files = res.data.providers || [];
-                return Promise.all(files.map(function (f) {
-                    return fetchJSON(base + String(f).replace(/^\.?\//, ''));
-                }));
-            }).then(function (providers) {
+                return Promise.all([
+                    Promise.all(files.map(function (f) {
+                        return fetchJSON(base + String(f).replace(/^\.?\//, ''));
+                    })),
+                    fetchJSON(base + 'aggregate_metrics.json').catch(function () { return null; })
+                ]);
+            }).then(function (result) {
+                var providers = result[0];
                 state.providers = providers;
+                state.aggregates = result[1];
                 var count = $('provider-count');
                 if (count) count.textContent = String(providers.length);
                 populateFamilyFilter();
                 renderDashboard();
+                renderAggregateStats();
                 renderCatalogue();
                 renderView();
                 return loadAnnouncements();
