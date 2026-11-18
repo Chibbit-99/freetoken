@@ -1,0 +1,42 @@
+{
+  "id": "gizmo",
+  "name": "Gizmo",
+  "website": "https://gizmoplatforms.com/",
+  "docs": "https://gizmoplatforms.com/",
+  "signup": "https://gizmoplatforms.com/",
+  "description": "Gizmo offers a no-card monthly quota on zero-cost API models.",
+  "overview": "Gizmo's Free account permits 1,000 zero-cost-model API requests per calendar month, resetting on the first day in UTC, and 20 API requests per minute. The official Nemotron 3 Ultra :free model page lists both input and output at $0 and says these calls do not consume the separate weekly dollar allowance. Paid models and tools can incur charges and may require a payment method.",
+  "offer": {
+    "type": "free-models",
+    "label": "1,000 free-model API requests/month",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://gizmoplatforms.com/developers",
+      "https://gizmoplatforms.com/models/nvidia/nemotron-3-ultra-550b-a55b:free"
+    ]
+  },
+  "free_access": [
+    "1,000 free-model API requests per calendar month",
+    "20 API requests/minute on Free",
+    "No-card signup and API key",
+    "Zero-cost models do not consume weekly dollar allowance"
+  ],
+  "notes": "Use nvidia/nemotron-3-ultra-550b-a55b:free rather than its paid alias. Admitted requests count against the quota even if the upstream fails; paid models or tools are separate.",
+  "models": [
+    {
+      "id": "nemotron-3-ultra-550b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "family": "Nemotron",
+      "context_window": 1000000
+    }
+  ]
+}

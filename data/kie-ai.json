@@ -1,0 +1,41 @@
+{
+  "id": "kie-ai",
+  "name": "KIE AI",
+  "website": "https://kie.ai/",
+  "docs": "https://kie.ai/",
+  "signup": "https://kie.ai/",
+  "description": "KIE AI provides a finite signup credit grant for testing model APIs.",
+  "overview": "KIE AI says new users receive 80 credits for testing and requests consume credits. This is a finite trial, not a renewing allowance. The documented GPT-6.1 Terra endpoint uses the Responses API. Card requirements and credit expiry were not confirmed.",
+  "offer": {
+    "type": "trials",
+    "label": "80 one-time signup credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://kie.ai/gpt-6-1-terra",
+      "https://kie.ai/"
+    ]
+  },
+  "free_access": [
+    "80 signup credits for testing; not recurring",
+    "Requests consume credits",
+    "Card requirement and expiry unconfirmed",
+    "Check current model prices and availability"
+  ],
+  "notes": "See the provider documentation for the exact model identifier and Responses API; trial terms can change.",
+  "models": [
+    {
+      "id": "gpt-6-1-terra",
+      "name": "GPT-6.1 Terra",
+      "family": "GPT"
+    }
+  ]
+}

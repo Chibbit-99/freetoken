@@ -1,0 +1,61 @@
+{
+  "id": "vectoree",
+  "name": "Vectoree",
+  "website": "https://vectoree.ai",
+  "docs": "https://vectoree.ai",
+  "signup": "https://vectoree.ai",
+  "description": "Model gateway with $5 welcome credit after CLI login; 36+ models on one key.",
+  "overview": "Vectoree is a gateway over 36+ models including a vectoree/auto router, reachable at vectoree.ai/api/v1 in the OpenAI shape. New organisations receive a $5 welcome credit once the CLI is linked to a project, with no card required for that credit; after it is spent, calls draw from a prepaid wallet and an empty wallet stops the gateway. Auth, database and storage come bundled with the same account.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 welcome credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Check per upstream model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://vectoree.ai/pricing",
+      "https://vectoree.ai/product/model-plaza"
+    ]
+  },
+  "free_access": [
+    "$5 one-time welcome credit, no card",
+    "OpenAI-compatible gateway with a vectoree/auto router",
+    "36+ models on one key including DeepSeek, Kimi, GLM and Qwen",
+    "Hard stop when the wallet is empty — no automatic overage"
+  ],
+  "notes": "The credit is one-time and the pricing page does not quote a token amount; treat it as roughly $5 of list-price usage. Verifying the credit requires the CLI login flow.",
+  "catalog_size": 36,
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 1048576
+    },
+    {
+      "id": "glm-5-3",
+      "name": "GLM-5.3",
+      "family": "GLM 5.3",
+      "context_window": 1048576
+    },
+    {
+      "id": "qwen3-8-max",
+      "name": "Qwen3.8 Max",
+      "family": "Qwen 3.8",
+      "context_window": 1048576
+    }
+  ]
+}

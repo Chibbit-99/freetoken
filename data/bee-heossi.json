@@ -1,0 +1,42 @@
+{
+  "id": "bee-heossi",
+  "name": "Bee by HEOSSI",
+  "website": "https://bee.heossi.com/",
+  "docs": "https://bee.heossi.com/",
+  "signup": "https://bee.heossi.com/",
+  "description": "Bee Cell includes a no-card hosted API with a monthly cap.",
+  "overview": "The free Bee Cell workspace includes one API key, a five-hour refilling window and a 2 million token monthly ceiling. The API pricing track separately lists per-token prices; confirm the workspace entitlement and charges before using other tiers. Published capabilities and allowances may change.",
+  "offer": {
+    "type": "always-free",
+    "label": "2M tokens/month on Bee Cell",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://bee.heossi.com/pricing",
+      "https://bee.heossi.com/docs/sdks"
+    ]
+  },
+  "free_access": [
+    "Bee Cell: 2M pooled tokens/month ceiling",
+    "Five-hour refilling window; one API key",
+    "No card for free hosted access",
+    "Paid API track has separate per-token prices"
+  ],
+  "notes": "Use https://api.bee.heossi.com/bee with bee-cell; verify the free workspace entitlement.",
+  "models": [
+    {
+      "id": "bee-cell",
+      "name": "Bee Cell",
+      "family": "Bee",
+      "context_window": 131072
+    }
+  ]
+}

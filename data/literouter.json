@@ -1,0 +1,41 @@
+{
+  "id": "literouter",
+  "name": "LiteRouter",
+  "website": "https://literouter.com/",
+  "docs": "https://literouter.com/",
+  "signup": "https://literouter.com/",
+  "description": "LiteRouter's free Basic plan includes selected free models and daily premium requests.",
+  "overview": "LiteRouter's $0 Basic plan advertises unlimited requests per day for some free models and up to 50 premium model requests per day. Free calls have a seven-second cooldown and the plan allows one concurrent request, so unlimited does not mean unrestricted throughput. The official quickstart uses the OpenAI-compatible endpoint and deepseek-v3.2:free.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free Basic plan with daily usage",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://literouter.com/",
+      "https://docs.literouter.com/quickstart"
+    ]
+  },
+  "free_access": [
+    "$0 Basic plan with selected free models",
+    "Up to 50 premium model requests per day",
+    "One concurrent request and seven-second cooldown",
+    "OpenAI-compatible API with :free model aliases"
+  ],
+  "notes": "Card requirement at signup was not confirmed. The free model selection and premium quota are subject to provider limits; the Basic plan does not promise every free model is unlimited.",
+  "models": [
+    {
+      "id": "deepseek-v3-2",
+      "name": "DeepSeek V3.2",
+      "family": "DeepSeek"
+    }
+  ]
+}

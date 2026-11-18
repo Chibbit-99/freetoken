@@ -1,0 +1,42 @@
+{
+  "id": "zylo-api",
+  "name": "Zylo API",
+  "website": "https://zyloai.net/",
+  "docs": "https://zyloai.net/",
+  "signup": "https://zyloai.net/",
+  "description": "Zylo Basic provides daily access to selected models without a card.",
+  "overview": "The free Basic plan lists 200,000 daily tokens, 7,200 daily requests and 10 requests per minute for Basic-tier models. The model catalog also displays paid-plan token prices, which do not represent charges under the free Basic allowance. Premium models and prepaid usage are paid.",
+  "offer": {
+    "type": "always-free",
+    "label": "200K tokens/day on Basic",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://zyloai.net/",
+      "https://zyloai.net/models/gpt-oss.html"
+    ]
+  },
+  "free_access": [
+    "200K tokens/day and 7,200 requests/day",
+    "10 RPM; selected Basic models only",
+    "No card or credits required for Basic",
+    "Paid plans and prepaid usage cost extra"
+  ],
+  "notes": "Use gpt-oss at https://api.zyloai.net/v1 on the Basic plan.",
+  "models": [
+    {
+      "id": "gpt-oss",
+      "name": "GPT OSS 120B",
+      "family": "GPT OSS",
+      "context_window": 131000
+    }
+  ]
+}

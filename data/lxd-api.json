@@ -1,0 +1,55 @@
+{
+  "id": "lxd-api",
+  "name": "LXD API",
+  "website": "https://api.lxds.org/",
+  "docs": "https://api.lxds.org/",
+  "signup": "https://api.lxds.org/",
+  "description": "LXD's free API plan includes five Xen per day for text models.",
+  "overview": "LXD API's Arabic-language pricing page advertises a $0 daily plan with 5 Xen every day, access to all text models and 5 images per day. It provides an OpenAI SDK-compatible interface with models including GPT-OSS 120B and DeepSeek V4 Flash. Xen is the platform's own consumption unit; its conversion to model tokens is not specified on the plan page, so the daily token capacity cannot be inferred.",
+  "offer": {
+    "type": "always-free",
+    "label": "5 Xen daily and 5 images/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://api.lxds.org/",
+      "https://api.lxds.org/instructions"
+    ]
+  },
+  "free_access": [
+    "5 Xen per day on the free plan",
+    "All text models included in the plan",
+    "5 images per day also listed",
+    "OpenAI-compatible chat endpoint"
+  ],
+  "notes": "Card requirements for signup were not confirmed. The page does not specify how many tokens 5 Xen buys; model availability and quota can change.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek V4",
+      "context_window": 262144,
+      "metrics": {
+        "tps": 50
+      }
+    }
+  ]
+}

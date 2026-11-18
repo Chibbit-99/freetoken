@@ -1,0 +1,41 @@
+{
+  "id": "chatanywhere",
+  "name": "ChatAnywhere",
+  "website": "https://chatanywhere.tech/",
+  "docs": "https://chatanywhere.tech/",
+  "signup": "https://chatanywhere.tech/",
+  "description": "ChatAnywhere provides a free API key for non-commercial use.",
+  "overview": "ChatAnywhere describes a free OpenAI-compatible relay key with 50,000 points per week and 100 requests per day per key. Registration and GitHub binding are required. Its free tier supports GPT-4o and GPT-5 series and DeepSeek, but is restricted to personal, educational and nonprofit research use; commercial use is prohibited. Points are not equivalent to tokens.",
+  "offer": {
+    "type": "always-free",
+    "label": "50K points/week and 100 requests/day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://github.com/chatanywhere/GPT_API_free",
+      "https://chatanywhere.tech/"
+    ]
+  },
+  "free_access": [
+    "50K points/week and 100 requests/day/key",
+    "GitHub account binding required",
+    "Personal, educational and nonprofit research only",
+    "OpenAI-compatible relay; availability varies"
+  ],
+  "notes": "Verify the current free-key model list and region restrictions in the dashboard. Card requirement is not specified.",
+  "models": [
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "family": "GPT"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "synap",
+  "name": "Synap",
+  "website": "https://synap402.com/ai/",
+  "docs": "https://synap402.com/ai/",
+  "signup": "https://synap402.com/ai/",
+  "description": "Synap hosts a no-card Qwen coding model with a daily free allowance.",
+  "overview": "Synap offers qwen3-coder-30b free on its own GPUs without credits. New accounts receive 100,000 tokens and 50 requests per day for the first seven days; thereafter the account page specifies 50,000 tokens and 10 requests per day. Google or email signup; other models and overage use paid credits. Another section of the account page still shows the higher limit without the seven-day qualification.",
+  "offer": {
+    "type": "always-free",
+    "label": "50K tokens and 10 requests/day after day 7",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://synap402.com/ai/account.html",
+      "https://synap402.com/ai/docs.html"
+    ]
+  },
+  "free_access": [
+    "First 7 days: 100K tokens and 50 requests/day",
+    "After 7 days: 50K tokens and 10 requests/day",
+    "No card; Google or email signup",
+    "Free model hosted on Synap GPUs"
+  ],
+  "notes": "Use qwen3-coder-30b. Limits and availability may change; account page contains an older conflicting quota.",
+  "models": [
+    {
+      "id": "qwen3-coder-30b",
+      "name": "Qwen3 Coder 30B",
+      "family": "Qwen"
+    }
+  ]
+}

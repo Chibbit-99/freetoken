@@ -1,0 +1,42 @@
+{
+  "id": "naga-ai",
+  "name": "NagaAI",
+  "website": "https://naga.ac/",
+  "docs": "https://naga.ac/",
+  "signup": "https://naga.ac/",
+  "description": "NagaAI offers free model calls without a top-up, capped daily.",
+  "overview": "NagaAI's free Nemotron 3 Ultra endpoint is available to free accounts without topping up. Its published free-model limits are shared across all free models: 10 requests per minute and 100 per day. The service supports OpenAI-compatible calls at api.naga.ac/v1; the exact free model identifier shown in the provider's example ends in :free.",
+  "offer": {
+    "type": "free-models",
+    "label": "100 free requests/day shared",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://naga.ac/models/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "https://docs.naga.ac/api-reference/overview"
+    ]
+  },
+  "free_access": [
+    "100 requests/day shared across free models",
+    "10 requests/minute shared across free models",
+    "Free account can call without topping up",
+    "OpenAI-compatible endpoint and :free model IDs"
+  ],
+  "notes": "Use nvidia/nemotron-3-ultra-550b-a55b:free, not the paid alias. Signup card requirement is not explicitly documented on the cited model page.",
+  "models": [
+    {
+      "id": "nemotron-3-ultra-550b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "family": "Nemotron",
+      "context_window": 1000000
+    }
+  ]
+}

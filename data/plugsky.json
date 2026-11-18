@@ -1,0 +1,48 @@
+{
+  "id": "plugsky",
+  "name": "Plugsky",
+  "website": "https://plugsky.com/",
+  "docs": "https://plugsky.com/",
+  "signup": "https://plugsky.com/",
+  "description": "Plugsky's no-card Free plan includes two models with daily usage limits.",
+  "overview": "Plugsky provides an OpenAI-compatible chat API with a permanent $0 plan for plugsky-micro and plugsky-lite. Its published free allowance is 500 requests and 250,000 tokens per day, with 30 requests per minute and two concurrent requests. New accounts start with 100 requests, 50,000 tokens and one concurrent request for the first 24 hours. Paid features such as agents and tool connectors are not included.",
+  "offer": {
+    "type": "always-free",
+    "label": "250K tokens/day on free models",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://plugsky.com/docs",
+      "https://plugsky.com/articles/ai-api-for-law-firms-use-cases-security-and-deployment-options"
+    ]
+  },
+  "free_access": [
+    "500 requests and 250K tokens/day",
+    "First 24 hours: 100 requests and 50K tokens",
+    "30 RPM and two concurrent requests",
+    "No card; Micro and Lite chat models"
+  ],
+  "notes": "Published free-plan input/output caps are 32K/2K per request. Backing models may change; function calling is listed as a paid feature.",
+  "free_token_allowance": 250000,
+  "allowance_period": "day",
+  "models": [
+    {
+      "id": "plugsky-micro",
+      "name": "Plugsky Micro",
+      "family": "Plugsky"
+    },
+    {
+      "id": "plugsky-lite",
+      "name": "Plugsky Lite",
+      "family": "Plugsky"
+    }
+  ]
+}

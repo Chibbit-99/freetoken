@@ -1,0 +1,47 @@
+{
+  "id": "clod",
+  "name": "CLōD",
+  "website": "https://clod.io/",
+  "docs": "https://clod.io/",
+  "signup": "https://clod.io/",
+  "description": "CLōD's no-card gateway advertises 100 daily free requests.",
+  "overview": "CLōD is an OpenAI-compatible model router that advertises 100 free requests per day with no credit card. Its public catalogue marks selected models free, including GPT OSS 120B. It also sells access to other models, so check the Free selection and exact model ID in the live catalogue before sending requests.",
+  "offer": {
+    "type": "free-models",
+    "label": "100 free requests/day",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://clod.io/free-cheap-ai",
+      "https://app.clod.io/auth/models",
+      "https://clod.io/docs"
+    ]
+  },
+  "free_access": [
+    "100 free requests/day",
+    "Selected models include GPT OSS 120B",
+    "No credit card needed",
+    "OpenAI-compatible endpoint at api.clod.io/v1"
+  ],
+  "notes": "The public catalogue shows underlying token prices alongside Free badges, so verify the free route and current allowance in the dashboard before use.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    }
+  ]
+}

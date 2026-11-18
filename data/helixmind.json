@@ -1,0 +1,41 @@
+{
+  "id": "helixmind",
+  "name": "HelixMind",
+  "website": "https://helixmind.online/",
+  "docs": "https://helixmind.online/",
+  "signup": "https://helixmind.online/",
+  "description": "HelixMind lists a no-card free Seed API plan.",
+  "overview": "Helix Seed lists 50 requests per rolling 24 hours, 3 per minute, a 10,000-token input limit and four models. The public catalog does not clearly identify the four included models in its unfiltered view; confirm plan eligibility before calling. The auto-model route is listed as free, but its inclusion in Seed has not been verified.",
+  "offer": {
+    "type": "always-free",
+    "label": "50 requests/day on Seed",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://helixmind.online/pricing",
+      "https://helixmind.online/models"
+    ]
+  },
+  "free_access": [
+    "50 requests/rolling 24 hours; 3 RPM",
+    "10K maximum input tokens",
+    "Four included models; exact free-plan list unconfirmed",
+    "No card for Free"
+  ],
+  "notes": "Catalog lists auto-model as free; Seed eligibility unconfirmed. Base URL https://helixmind.online/v1.",
+  "models": [
+    {
+      "id": "auto-model",
+      "name": "Auto model",
+      "family": "HelixMind"
+    }
+  ]
+}

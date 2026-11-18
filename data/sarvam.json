@@ -1,0 +1,61 @@
+{
+  "id": "sarvam",
+  "name": "Sarvam AI",
+  "website": "https://www.sarvam.ai",
+  "docs": "https://www.sarvam.ai",
+  "signup": "https://www.sarvam.ai",
+  "description": "India's homegrown LLM stack with Rs 100 of credits that never expire.",
+  "overview": "Sarvam AI builds India's sovereign model stack, and every verified account starts with Rs 100 of free credits on the dashboard — roughly $1.15, usable on any API, and the credits never expire. The chat side runs on Token Factory: Sarvam 105B at 128K context plus open-weight GLM-5.3, GLM-5.3 Flash, Gemma 4 31B, DeepSeek V4.1 Flash and Kimi K3.1 Pro behind an OpenAI-compatible /v2 endpoint with native Indic language coverage across ten Indian languages plus English. Speech, translation and document models share the same key and balance.",
+  "offer": {
+    "type": "trials",
+    "label": "Rs 100 free credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Indian-language stack, credits never expire"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.sarvam.ai/api-pricing",
+      "https://docs.sarvam.ai/api/getting-started/models"
+    ]
+  },
+  "free_access": [
+    "Rs 100 free credits on signup, never expire",
+    "Sarvam 105B plus GLM, DeepSeek, Gemma and Kimi on /v2",
+    "Native coverage of 10 Indian languages and English",
+    "No card needed; 60 requests/minute on starter limits"
+  ],
+  "notes": "Credits are a one-off rupee balance, not a renewing quota; calls return 402 once it is spent. DeepSeek V4 Pro and Kimi K3.1 Pro need provisioned throughput.",
+  "catalog_size": 14,
+  "models": [
+    {
+      "id": "sarvam-105b",
+      "name": "Sarvam 105B",
+      "family": "Sarvam",
+      "context_window": 131072
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 1048576
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "gemma-4-31b",
+      "name": "Gemma 4 31B",
+      "family": "Gemma 4",
+      "context_window": 262144
+    }
+  ]
+}

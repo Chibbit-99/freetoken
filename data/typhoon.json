@@ -1,0 +1,43 @@
+{
+  "id": "typhoon",
+  "name": "Typhoon",
+  "website": "https://opentyphoon.ai",
+  "docs": "https://opentyphoon.ai",
+  "signup": "https://opentyphoon.ai",
+  "description": "SCB 10X's Thai lab runs a free, rate-limited research API for its open models.",
+  "overview": "Typhoon is SCB 10X's Thai-language research lab, and its OpenAI-compatible API is a research showcase rather than a paid product: every Typhoon text model is served at $0 with no card, at about 5 requests per second and 200 requests per minute for the text models. The current text flagship, Typhoon 2.5 30B A3B Instruct, carries a 131K context and handles Thai, English and code-mixed prompts, with tool calling and streaming available. In exchange the lab collects usage data to improve the models, so it is a research tier in the strict sense — great for Thai work, not somewhere to send confidential text.",
+  "offer": {
+    "type": "research",
+    "label": "Free research API, 5 req/s",
+    "tone": "sky"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Research showcase, usage logged"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://opentyphoon.ai/",
+      "https://docs.opentyphoon.ai/en/"
+    ]
+  },
+  "free_access": [
+    "Free research API for every Typhoon text model",
+    "5 requests/second, 200 requests/minute on text",
+    "Thai, English and code-mixed prompts at 131K context",
+    "No card, key from the playground account"
+  ],
+  "notes": "Usage data is collected to improve the models and there is no SLA. The OCR and speech models share the same key but are not LLMs.",
+  "catalog_size": 12,
+  "models": [
+    {
+      "id": "typhoon-v2-5-30b-a3b",
+      "name": "Typhoon 2.5 30B A3B",
+      "family": "Typhoon",
+      "context_window": 131072
+    }
+  ]
+}

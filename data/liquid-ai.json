@@ -1,0 +1,54 @@
+{
+  "id": "liquid-ai",
+  "name": "Liquid AI",
+  "website": "https://www.liquid.ai",
+  "docs": "https://www.liquid.ai",
+  "signup": "https://www.liquid.ai",
+  "description": "Liquid's hosted API starts every organisation with $2 of credit, no card.",
+  "overview": "Liquid AI hosts its own LFM models and d1 series behind an OpenAI-compatible API at console.liquid.ai. Every new organisation starts with $2 in free credit and no card, enough for a few million tokens on LFM3 1.7B at $0.08 per million input and $0.20 per million output. The same models are also served through OpenRouter and the Vercel AI Gateway, so the keys are interchangeable, and Liquid's open weights stay free to self-host below $10M revenue.",
+  "offer": {
+    "type": "trials",
+    "label": "$2 free credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "No training on customer data"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.liquid.ai/pricing",
+      "https://console.liquid.ai/docs/getting-started"
+    ]
+  },
+  "free_access": [
+    "$2 free credit per new organisation",
+    "No card for the credit; pay-per-token after it",
+    "OpenAI-compatible console at console.liquid.ai",
+    "Same models also reachable through OpenRouter and Vercel"
+  ],
+  "notes": "Small credit, small models — best for testing whether the LFM family suits an on-device or low-latency workload before licensing the weights.",
+  "models": [
+    {
+      "id": "lfm3-1-7b",
+      "name": "LFM3 1.7B",
+      "family": "LFM3",
+      "context_window": 32768
+    },
+    {
+      "id": "lfm2-5-24b-a2b",
+      "name": "LFM2.5 24B A2B",
+      "family": "LFM2.5",
+      "context_window": 32768
+    },
+    {
+      "id": "d1-2",
+      "name": "Liquid d1.2",
+      "family": "Liquid d1",
+      "context_window": 131072
+    }
+  ]
+}

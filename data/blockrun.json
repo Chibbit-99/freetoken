@@ -1,0 +1,79 @@
+{
+  "id": "blockrun",
+  "name": "BlockRun",
+  "website": "https://blockrun.ai",
+  "docs": "https://blockrun.ai",
+  "signup": "https://blockrun.ai",
+  "description": "Pay-per-call gateway that leaves nine open-weight models free and keyless.",
+  "overview": "BlockRun prices every call in dollars before it runs and settles in USDC on-chain, but nine open-weight models are listed at free in and free out with no payment header at all — no account, no key, no wallet. The free set is NVIDIA's Nemotron 3 Ultra 550B (1M context), Nemotron 3.5 Super 120B, Nemotron 3.5 Lightning and Bolt, Nemotron 3 Nano Omni, Cohere North Mini Code, Poolside Laguna XS 2.1, Meta's Muse Glimmer 30B and MiniMax M3.1 Flash. Everything else in the 124-model catalogue is billed per call.",
+  "offer": {
+    "type": "free-models",
+    "label": "9 keyless free models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Prompts leave your machine to BlockRun"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://blockrun.ai/models?filter=free",
+      "https://blockrun.ai/docs"
+    ]
+  },
+  "free_access": [
+    "Nine free models requiring no key, account or wallet",
+    "OpenAI-compatible at /v1/chat/completions",
+    "Includes Nemotron 3 Ultra 550B and MiniMax M3.1 Flash",
+    "Paid models settle per call in USDC over x402"
+  ],
+  "notes": "The free list rotates and is a loss-leader for the paid catalogue. Rate limits on free models are not published; treat them as best-effort.",
+  "catalog_size": 124,
+  "models": [
+    {
+      "id": "nemotron-3-ultra-550b",
+      "name": "Nemotron 3 Ultra 550B",
+      "family": "Nemotron 3",
+      "context_window": 1048576
+    },
+    {
+      "id": "nemotron-3-5-super-vl",
+      "name": "Nemotron 3.5 Super VL",
+      "family": "Nemotron 3.5",
+      "context_window": 131072
+    },
+    {
+      "id": "nemotron-3-5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "family": "Nemotron 3.5",
+      "context_window": 1048576
+    },
+    {
+      "id": "nemotron-3-nano-30b",
+      "name": "Nemotron 3 Nano 30B",
+      "family": "Nemotron 3",
+      "context_window": 262144
+    },
+    {
+      "id": "north-mini-code",
+      "name": "North Mini Code",
+      "family": "Cohere North",
+      "context_window": 262144
+    },
+    {
+      "id": "muse-glimmer",
+      "name": "Muse Glimmer 30B",
+      "family": "Muse",
+      "context_window": 131072
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "family": "MiniMax",
+      "context_window": 1048576
+    }
+  ]
+}

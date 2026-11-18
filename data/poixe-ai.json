@@ -1,0 +1,41 @@
+{
+  "id": "poixe-ai",
+  "name": "Poixe AI",
+  "website": "https://poixe.com/",
+  "docs": "https://poixe.com/",
+  "signup": "https://poixe.com/",
+  "description": "Poixe offers separate daily free-model quotas for unpaid accounts.",
+  "overview": "Poixe provides OpenAI-compatible :free model routes with separate quotas that refresh daily. For unpaid Level 0 accounts the high-performance group has 5 requests/day and 2/minute, while the lightweight group has 50/day and 20/minute. Its separate CLI2API resources list daily request and token ceilings for Claude Code and Codex protocols. The service describes these free resources as intended for testing and integration, not guaranteed production service.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models with daily quotas",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://poixe.com/products/free",
+      "https://poixe.com/"
+    ]
+  },
+  "free_access": [
+    "Unpaid accounts: 5 high-performance requests/day",
+    "Unpaid accounts: 50 lightweight requests/day",
+    "Separate CLI2API quotas for Codex and Claude Code",
+    "Daily reset; use model IDs ending in :free"
+  ],
+  "notes": "Provider's example is claude-3-5-haiku-20241022:free; check its current free model list and per-request token limits. Signup card requirement is not explicitly documented on the cited page.",
+  "models": [
+    {
+      "id": "claude-3-5-haiku",
+      "name": "Claude 3.5 Haiku",
+      "family": "Claude 3.5"
+    }
+  ]
+}

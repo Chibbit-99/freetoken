@@ -1,0 +1,50 @@
+{
+  "id": "mingles",
+  "name": "Mingles Router",
+  "website": "https://router.mingles.ai",
+  "docs": "https://router.mingles.ai",
+  "signup": "https://router.mingles.ai",
+  "description": "Open-source Gonka router with a free key in thirty seconds and a weekly cap.",
+  "overview": "Mingles Router is an open-source router (github.com/MinglesAI/gonka-proxy) in front of Gonka-served open models, at router.mingles.ai/v1 in the OpenAI shape. A free key is issued in about thirty seconds with no card and no KYC, and the free tier is reported at up to 4 million tokens per week — enough that the site's own users describe an evening of coding work without hitting it. Paid top-ups take card or crypto, and per-client keys with limits are available for agencies.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free tier, ~4M tokens/week",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Open-source router, no KYC"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://router.mingles.ai/",
+      "https://github.com/MinglesAI/gonka-proxy"
+    ]
+  },
+  "free_access": [
+    "Free key in 30 seconds, no card and no KYC",
+    "Up to 4M tokens per week on the free tier",
+    "OpenAI-compatible at router.mingles.ai/v1",
+    "Router source is published under a permissive licence"
+  ],
+  "notes": "The 4M/week figure comes from Gonka's own list of community brokers rather than the router's homepage, which says only that free-tier limits \"last surprisingly long\". Small operator.",
+  "free_token_allowance": 4000000,
+  "allowance_period": "week",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 204800
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "apishare",
+  "name": "APIShare",
+  "website": "https://apishare.cc/",
+  "docs": "https://apishare.cc/",
+  "signup": "https://apishare.cc/",
+  "description": "APIShare lists zero-cost promotional models in its marketplace.",
+  "overview": "APIShare lists selected zero-cost marketplace routes, including a promotional Qwen route, and one signup credit. The promotion duration and daily cap are not published and the displayed Qwen rate limit conflicts between 5 and 2 requests per minute. Do not treat the promotion as permanent; card requirement is unconfirmed. Marketplace routes and upstream terms may change.",
+  "offer": {
+    "type": "trials",
+    "label": "Selected free promotional models",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://apishare.cc/",
+      "https://apishare.cc/market"
+    ]
+  },
+  "free_access": [
+    "Selected zero-cost promotional routes",
+    "Promotion end and daily cap not published",
+    "Rate-limit descriptions conflict",
+    "Card requirement unconfirmed"
+  ],
+  "notes": "Confirm the live marketplace route, limits and cost before use; promotional access may end.",
+  "models": [
+    {
+      "id": "ApiShare/alibaba/qwen3.8-max:free",
+      "name": "Qwen 3.8 Max Free",
+      "family": "Qwen"
+    }
+  ]
+}

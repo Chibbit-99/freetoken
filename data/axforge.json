@@ -1,0 +1,63 @@
+{
+  "id": "axforge",
+  "name": "AxForge",
+  "website": "https://axforge.ai",
+  "docs": "https://axforge.ai",
+  "signup": "https://axforge.ai",
+  "description": "Irish-run, Stockholm-hosted API giving every account 3M free tokens every 30 days.",
+  "overview": "AxForge runs open models on hardware it owns in Stockholm and Málaga, behind an OpenAI-compatible endpoint at api.axforge.ai/v1. Every new account starts with 3,000,000 serverless tokens per 30-day cycle, and the cycle restarts rather than expiring — this is a recurring allowance, not trial credit, and no card is needed. The serverless catalogue is Qwen3.8 27B, Qwen3.8 Flash Next (500K context), GLM-5.3-Flash and MiMo-V2.6-Flash, each capped at 65,536 output tokens per answer. Paid overage draws from a prepaid balance at $0.13 per million input and $0.68 per million output tokens.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "3M free tokens every 30 days",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Zero prompt retention, EU-only"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://axforge.ai/pricing/",
+      "https://axforge.ai/serverless-models/"
+    ]
+  },
+  "free_access": [
+    "3M tokens every 30 days, renewed — not one-time trial credit",
+    "No credit card to sign up or to use the free allowance",
+    "OpenAI-compatible at api.axforge.ai/v1 with tools, vision on some models",
+    "Prompts and completions are not stored, logged or trained on; EU regions only"
+  ],
+  "notes": "The free allowance is shared across all serverless models. Qwen3.8 27B runs up to 16 concurrent sequences, then queues. GPU rental and dedicated endpoints are separate products and are not part of the free tier.",
+  "free_token_allowance": 3000000,
+  "allowance_period": "month",
+  "catalog_size": 4,
+  "models": [
+    {
+      "id": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144
+    },
+    {
+      "id": "qwen3-8-flash",
+      "name": "Qwen3.8 Flash",
+      "family": "Qwen 3.8",
+      "context_window": 524288
+    },
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 262144
+    },
+    {
+      "id": "mimo-v2-6-flash",
+      "name": "MiMo V2.6 Flash",
+      "family": "MiMo",
+      "context_window": 262144
+    }
+  ]
+}

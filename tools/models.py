@@ -155,3 +155,23 @@ C("voyage-4-lite", "Voyage 4 Lite", "Voyage", 32768, None, None)
 C("voyage-rerank-3", "Voyage Rerank 3", "Voyage Reranker", 32768, None, None)
 C("qdrant-bm25", "Qdrant BM25 (sparse)", "Qdrant Embeddings", None, None, None)
 C("qdrant-multilingual-e5", "Qdrant Multilingual E5 (dense)", "Qdrant Embeddings", 512, None, None)
+
+# ---------------------------------------------------------------- Sber / Liquid / NLP Cloud
+C("gigachat-2-lite", "GigaChat 2 Lite", "GigaChat", 32768, None, 90)
+C("gigachat-2-pro", "GigaChat 2 Pro", "GigaChat", 131072, None, 65)
+C("gigachat-2-max", "GigaChat 2 Max", "GigaChat", 131072, None, 45)
+C("gigachat-3-ultra", "GigaChat 3 Ultra", "GigaChat", 131072, None, 38)
+C("lfm3-1-7b", "LFM3 1.7B", "LFM3", 32768, None, 210)
+C("lfm2-5-24b-a2b", "LFM2.5 24B A2B", "LFM2.5", 32768, None, 140)
+C("d1-2", "Liquid d1.2", "Liquid d1", 131072, None, 150)
+C("chatdolphin", "ChatDolphin", "Dolphin", 8192, None, 55)
+C("yi-34b", "Yi 34B", "Yi", 4096, None, 40)
+C("mixtral-8x7b", "Mixtral 8x7B", "Mixtral", 32768, None, 60)
+
+# ---------------------------------------------------------------- Intern InkStone / OpenThai
+C("shusheng-s2", "Shusheng S2", "Shusheng", 1048576, None, 55)
+C("atria-dawn-preview", "Atria Dawn Preview", "Atria", 262144, None, 70)
+C("agents-a1", "Agents A1", "Agents A1", 262144, None, 90)
+C("openthaigpt-1-5-7b", "OpenThaiGPT 1.5 7B", "OpenThaiGPT", 131072, None, 120)
+C("typhoon-v2-5-30b-a3b", "Typhoon 2.5 30B A3B", "Typhoon", 131072, None, 85)
+C("sarvam-105b", "Sarvam 105B", "Sarvam", 131072, None, 70)

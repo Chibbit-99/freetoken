@@ -1,0 +1,42 @@
+{
+  "id": "openthai",
+  "name": "OpenThai",
+  "website": "https://openthai.aieat.or.th",
+  "docs": "https://openthai.aieat.or.th",
+  "signup": "https://openthai.aieat.or.th",
+  "description": "Thai open-model project running a free hosted API at api.aieat.or.th.",
+  "overview": "OpenThai (formerly OpenThaiGPT) is the Thai AI association's open-model project, and it runs a free hosted inference endpoint at api.aieat.or.th that needs no account and no payment — the published examples send a literal placeholder as the bearer token. The served model is OpenThaiGPT 1.5 7B, a Qwen 2.5 derivative tuned for Thai, also reachable through Float16.cloud's dedicated endpoint. It is a community research service: rate-limited, no SLA, and best treated as a Thai-language fallback rather than production capacity.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free hosted Thai API",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Public research endpoint"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://openthai.aieat.or.th/",
+      "https://openthai.ai/en/previous-versions-and-resources/openthaigpt-1.5"
+    ]
+  },
+  "free_access": [
+    "Free hosted endpoint with no signup and no card",
+    "Thai-tuned 7B model, 131K context",
+    "OpenAI-style chat completions at api.aieat.or.th",
+    "Run by a non-profit association, not a vendor"
+  ],
+  "notes": "Community-run and rate-limited with no published quota. The 72B and Legal 30B variants are weights-only; the hosted demo keys are shared placeholders, so expect contention.",
+  "models": [
+    {
+      "id": "openthaigpt-1-5-7b",
+      "name": "OpenThaiGPT 1.5 7B",
+      "family": "OpenThaiGPT",
+      "context_window": 131072
+    }
+  ]
+}

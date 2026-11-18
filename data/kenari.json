@@ -1,0 +1,41 @@
+{
+  "id": "kenari",
+  "name": "kenari",
+  "website": "https://kenari.id/",
+  "docs": "https://kenari.id/",
+  "signup": "https://kenari.id/",
+  "description": "kenari provides selected free routes with no initial top-up.",
+  "overview": "New accounts with zero balance can use :free models. The homepage lists 50 requests per day and 5 per minute without top-up; individual models can have different limits and the dashboard is authoritative. Higher limits require a qualifying top-up or subscription, but neither is required for the basic free tier. Free capacity is best effort.",
+  "offer": {
+    "type": "free-models",
+    "label": "50 free-model requests/day without top-up",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://kenari.id/",
+      "https://kenari.id/docs/free-models"
+    ]
+  },
+  "free_access": [
+    "50 requests/day and 5 RPM without top-up",
+    "Selected :free models; model-specific limits may differ",
+    "Higher limits require top-up or subscription",
+    "Best-effort availability"
+  ],
+  "notes": "Use https://kenari.id/v1; check the public models endpoint for the current free list.",
+  "models": [
+    {
+      "id": "step-3-7-flash:free",
+      "name": "Step 3.7 Flash Free",
+      "family": "Step"
+    }
+  ]
+}

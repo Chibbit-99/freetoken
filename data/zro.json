@@ -1,59 +1,49 @@
 {
   "id": "zro",
-  "name": "Zro (MoonMath)",
+  "name": "Zro",
   "website": "https://zro.moonmath.ai",
   "docs": "https://zro.moonmath.ai",
   "signup": "https://zro.moonmath.ai",
-  "description": "Coding-focused service with a daily free allowance on two Flash models and zero retention.",
-  "overview": "Zro is MoonMath's coding-focused inference service, built for agents such as Claude Code and Codex. The Free plan includes a daily allowance on GLM-5.3 Flash and DeepSeek V4.1 Flash that resets every day. The provider states zero request retention and no training on requests.",
+  "description": "MoonMath's coding-agent API with a free daily allowance that resets every day.",
+  "overview": "Zro is MoonMath's private inference service aimed at coding agents, and its Free plan costs $0 with \"included daily usage\" that resets every day. The free plan covers DeepSeek V4.1 Flash and GLM-5.3 Flash through an OpenAI-compatible endpoint at zro.moonmath.ai/v1, with zero request retention and no training on requests. The dollar amount behind the daily allowance is not published, which is the one thing to check in the console before depending on it. Paid plans start at $20/month for a $40 usage budget.",
   "offer": {
     "type": "free-models",
-    "label": "Free daily allowance",
+    "label": "Free daily usage on two Flash models",
     "tone": "blue"
   },
   "privacy": {
     "type": "private",
-    "label": "Zero request retention"
+    "label": "Zero retention, no training on requests"
   },
   "requires_payment_card": false,
   "last_updated": "2026-11-17",
   "verified": {
     "checked": "2026-11-17",
     "sources": [
-      "https://zro.moonmath.ai",
-      "https://free-llm.com/provider/zro"
+      "https://zro.moonmath.ai/pricing",
+      "https://zro.moonmath.ai/"
     ]
   },
   "free_access": [
-    "Daily free allowance on two Flash models",
-    "1M-token context",
-    "No credit card required",
-    "Zero retention, no training on requests"
+    "Free plan is $0 with daily usage that resets every day",
+    "No card needed; key issued from the account page",
+    "DeepSeek V4.1 Flash and GLM-5.3 Flash on the free plan",
+    "Zero request retention, no training on requests"
   ],
-  "api_endpoint": "https://zro.moonmath.ai/v1",
-  "notes": "Allowance size is not published and only the two Flash models are free.",
+  "notes": "The daily allowance is not quantified on the pricing page, so the practical ceiling has to be read from the rate-limit display. Larger models (GLM-5.3, Dolly 2, Abyss 1) need Pro.",
+  "catalog_size": 2,
   "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
     {
       "id": "glm-5-3-flash",
       "name": "GLM-5.3 Flash",
       "family": "GLM 5.3",
-      "context_window": 1048576,
-      "metrics": {
-        "tps": 165,
-        "intelligence": 28
-      },
-      "rate_limits": "Daily allowance (unpublished)"
-    },
-    {
-      "id": "deepseek-v4-1-flash",
-      "name": "DeepSeek V4.1 Flash",
-      "family": "DeepSeek V4",
-      "context_window": 1048576,
-      "metrics": {
-        "tps": 75,
-        "intelligence": 33
-      },
-      "rate_limits": "Daily allowance (unpublished)"
+      "context_window": 262144
     }
   ]
 }

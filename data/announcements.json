@@ -1,7 +1,154 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "intro": "Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.",
   "items": [
+    {
+      "id": "2026-11-18-eight-new-providers-dahl-inkstone-openthai-joing",
+      "date": "2026-11-18",
+      "kind": "added",
+      "title": "Eight new providers: Dahl, InkStone, OpenThai, JoinGonka, Gonka24, Mingles, Typhoon, Sarvam",
+      "summary": "The catalogue grows to 169 providers. Six independent Gonka brokers each carry their own free grant, alongside Shanghai AI Lab's InkStone trial, Thailand's free Typhoon research API and India's Sarvam with Rs 100 of never-expiring credits. Onomeo's entry was refreshed: its free ids are gone, replaced by a site-wide call pool.",
+      "providers": [
+        "dahl",
+        "intern-inkstone",
+        "openthai",
+        "joingonka",
+        "gonka24",
+        "mingles",
+        "typhoon",
+        "sarvam",
+        "onomeo"
+      ],
+      "details": [
+        "Dahl Inference: first 100M tokens free, no card",
+        "Intern InkStone: 10 ink dots/month in trial, three models at 0 dots",
+        "OpenThai: free Thai endpoint, dummy bearer token only",
+        "JoinGonka: 3M tokens on registration",
+        "Gonka24: $1 credit after email verification",
+        "Mingles Router: up to 4M tokens/week, key in 30 seconds",
+        "Typhoon: free research API, 5 req/s, 131K context",
+        "Sarvam: Rs 100 credits that never expire",
+        "Onomeo refreshed: site-wide free-call pool, refreshed every 5 hours"
+      ]
+    },
+    {
+      "id": "2026-11-17-eleven-new-api-listings-bring-the-index-to-200",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Eleven new API listings bring the index to 200",
+      "summary": "100milionseek and ten additional API services join the index, with outages, privacy, billing and trial caveats.",
+      "providers": [
+        "100milionseek",
+        "devseek",
+        "runcrate",
+        "kie-ai",
+        "bee-heossi",
+        "evolvex",
+        "helixmind",
+        "kenari",
+        "void-ai",
+        "zylo-api",
+        "apishare"
+      ],
+      "details": [
+        "100milionseek is new and unstable: signups paused and requests failing",
+        "Devseek stores and sells de-identified data and reports a mock upstream",
+        "KIE AI is a finite trial and APIShare promotions can end",
+        "Review paid fallback, model eligibility and billing before use"
+      ]
+    },
+    {
+      "id": "2026-11-17-ten-provider-additions-free-tiers-and-trials",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "Ten provider additions: free tiers and trials",
+      "summary": "Added six recurring or free-model providers and four clearly labeled trials or previews.",
+      "providers": [
+        "synap",
+        "chatanywhere",
+        "modelbridge",
+        "mindshub",
+        "y-api",
+        "eden-ai",
+        "maritaca",
+        "krafton-raon",
+        "codiv",
+        "callmissed"
+      ],
+      "details": [
+        "Synap reduces its daily quota after seven days",
+        "ChatAnywhere restricts its free key to non-commercial use",
+        "Y-API free routes can become paid without code changes",
+        "Raon and S5 are temporary previews",
+        "Codiv and CallMissed have finite credits."
+      ]
+    },
+    {
+      "id": "2026-11-17-five-more-recurring-free-api-providers",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Five more recurring free API providers",
+      "summary": "Added Plugsky, Septor Labs, CLōD, DreamPrompting and Gizmo with published recurring free usage.",
+      "providers": [
+        "plugsky",
+        "septor-labs",
+        "clod",
+        "dreamprompting",
+        "gizmo"
+      ],
+      "details": [
+        "Plugsky and Septor publish 250K tokens/day",
+        "DreamPrompting offers 500K tokens per rolling day from shared upstreams",
+        "Gizmo offers 1,000 free-model API calls per calendar month",
+        "Router9 remains unlisted pending a verified free-tier model route."
+      ]
+    },
+    {
+      "id": "2026-11-17-five-providers-with-recurring-free-api-access",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Five providers with recurring free API access",
+      "summary": "Added EXAONE, LXD API, NagaAI, Poixe AI and LiteRouter, with published daily usage limits and clear signup caveats.",
+      "providers": [
+        "exaone",
+        "lxd-api",
+        "naga-ai",
+        "poixe-ai",
+        "literouter"
+      ],
+      "details": [
+        "Daily quotas include 5 Xen at LXD and 100 shared requests at NagaAI",
+        "Poixe separates free model groups",
+        "LiteRouter applies a cooldown",
+        "EXAONE daily limits can increase with optional data consent",
+        "Card requirements remain unverified and are excluded from the no-card filter."
+      ]
+    },
+    {
+      "id": "2026-11-17-nine-providers-from-non-english-sweeps-including",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Nine providers from non-English sweeps, including a 365M-token yearly quota",
+      "summary": "Searching in Chinese, Russian, Japanese and German surfaced GigaChat (365M tokens a year, about 1M a day), plus AxForge, DeepSeek, GonkaRouter, Vectoree, NLP Cloud, Liquid AI, Qiniu and BlockRun.",
+      "providers": [
+        "gigachat",
+        "axforge",
+        "deepseek",
+        "gonkarouter",
+        "vectoree",
+        "nlp-cloud",
+        "liquid-ai",
+        "qiniu",
+        "blockrun"
+      ],
+      "details": [
+        "GigaChat's 365M tokens a year divides to about 1M a day — a big number, a mid-table allowance; the card says so.",
+        "AxForge renews 3M tokens every 30 days, the only recurring EU allowance found.",
+        "BlockRun leaves nine open-weight models free with no key, account or wallet.",
+        "The allowance board now understands yearly periods and ranks them on a 30-day equivalent.",
+        "Eight leads rejected and two confirmed dead, including ACLIDE's shutdown."
+      ]
+    },
     {
       "id": "2026-11-17-sibling-domains-get-their-own-entries",
       "date": "2026-11-17",

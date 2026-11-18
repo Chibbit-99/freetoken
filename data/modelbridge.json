@@ -1,0 +1,41 @@
+{
+  "id": "modelbridge",
+  "name": "ModelBridge",
+  "website": "https://aibridge-api.com/",
+  "docs": "https://aibridge-api.com/",
+  "signup": "https://aibridge-api.com/",
+  "description": "ModelBridge offers a monthly free allowance on its Chinese-model gateway.",
+  "overview": "ModelBridge advertises 500,000 tokens per month on its free plan plus a one-time 500,000 token welcome bonus. Its pricing page says all models are available and no card is required; its documentation lists 20 requests and 50,000 tokens per minute on Free. Calls beyond the allowance can incur charges, so check account limits and billing before use.",
+  "offer": {
+    "type": "always-free",
+    "label": "500K tokens/month",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aibridge-api.com/pricing.html",
+      "https://aibridge-api.com/docs.html"
+    ]
+  },
+  "free_access": [
+    "500K tokens/month plus 500K one-time bonus",
+    "20 RPM and 50K TPM on Free",
+    "No card required",
+    "OpenAI-compatible API"
+  ],
+  "notes": "Use deepseek-chat at https://aibridge-api.com/v1; pricing and live model availability may change.",
+  "models": [
+    {
+      "id": "deepseek-chat",
+      "name": "DeepSeek Chat",
+      "family": "DeepSeek"
+    }
+  ]
+}
