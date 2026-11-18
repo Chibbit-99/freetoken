@@ -526,7 +526,7 @@
         function providerMatches(p) {
             if (state.offer !== 'all' && (!p.offer || p.offer.type !== state.offer)) return false;
             if (state.family !== 'any' && !(p.models || []).some(function (m) { return m.family === state.family; })) return false;
-            if (state.noCard && p.requires_payment_card) return false;
+            if (state.noCard && p.requires_payment_card !== false) return false;
             if (state.privatePrompts && (!p.privacy || p.privacy.type !== 'private')) return false;
             if (state.q) {
                 var hay = [p.name, p.description, (p.models || []).map(function (m) {
@@ -639,7 +639,7 @@
             var chips = '' +
                 '<span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold font-sans ' + tone + '">' + esc(p.offer && p.offer.label) + '</span>' +
                 '<span class="inline-flex items-center rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold font-sans ' + priv + '">' + esc(p.privacy && p.privacy.label) + '</span>' +
-                '<span class="inline-flex items-center rounded-full border ' + (p.requires_payment_card ? 'border-amber-200 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-600') + ' px-2.5 py-1 text-[11px] font-semibold font-sans">' + (p.requires_payment_card ? 'Card required' : 'No card needed') + '</span>';
+                '<span class="inline-flex items-center rounded-full border ' + (p.requires_payment_card ? 'border-amber-200 bg-amber-50 text-amber-700' : 'border-slate-200 bg-white text-slate-600') + ' px-2.5 py-1 text-[11px] font-semibold font-sans">' + (p.requires_payment_card === null || p.requires_payment_card === undefined ? 'Card requirement unknown' : (p.requires_payment_card ? 'Card required' : 'No card needed')) + '</span>';
 
             var rows = models.map(function (m) {
                 return '' +

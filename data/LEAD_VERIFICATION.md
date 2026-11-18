@@ -69,3 +69,24 @@ open 2.
 Standing rule applied: a provider whose free path needs a card first is not
 catalogued, and a grant figure that appears only in a third-party list is
 not treated as evidence.
+
+# Lead verification — iteration 14 (2026-11-17)
+
+Five providers added with recurring free usage, rather than one-time grants.
+All five free offers are documented by the provider. Signup card requirements
+were not explicitly confirmed, so they are marked unknown, not no-card.
+
+| Lead | Verdict | Evidence |
+| --- | --- | --- |
+| EXAONE | added | [LG](https://www.lgresearch.ai/news/view?seq=755) offers K-EXAONE 2.5 free; [rate limits](https://docs.exaone.ai/en/docs/rate-limits) include a daily window, increased with optional data consent. Example figures are not a promised quota. |
+| LXD API | added | [Pricing](https://api.lxds.org/) lists $0 plan, 5 Xen daily, all text models and 5 images/day. Xen-to-token conversion and signup card requirement unconfirmed. |
+| NagaAI | added | [Model page](https://naga.ac/models/nvidia/nemotron-3-ultra-550b-a55b:free): no top-up needed, 10/min and 100/day shared across free models. |
+| Poixe AI | added | [Free-model page](https://poixe.com/products/free): unpaid tier has separate 5/day high-performance and 50/day lightweight groups, with separate CLI2API limits. |
+| LiteRouter | added | [Basic plan](https://literouter.com/) is $0, unlimited daily requests on some free models, up to 50 premium requests/day, one concurrent and seven-second cooldown. [Quickstart](https://docs.literouter.com/quickstart) gives a free model ID. |
+| KiosAPI, Aion Labs, xKiro, ElectronHub, Agnes AI, UnoRouter, Token Harbor | already catalogued | Manifest entries exist; do not duplicate. |
+| GitHub Models | rejected | [Retired July 30, 2026](https://docs.github.com/en/github-models). |
+| Cerebras | rejected | [Free trial requires a verified payment method](https://inference-docs.cerebras.ai/support/rate-limits). |
+| You.com, Fanar, Nineteen, EVREN, Pooled AI, OrcaRouter | open | Recurring allowance, eligibility, or public terms not sufficiently verified for addition. |
+
+The no-card filter excludes unknown card requirements; a $0 tier or lack of
+required top-up does not by itself prove card-free signup.

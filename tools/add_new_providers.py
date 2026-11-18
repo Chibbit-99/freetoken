@@ -27,6 +27,7 @@ from new_providers_k import PART_K  # noqa: E402
 from new_providers_l import PART_L  # noqa: E402
 from new_providers_m import PART_M  # noqa: E402
 from new_providers_n import PART_N  # noqa: E402
+from new_providers_o import PART_O  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -55,6 +56,11 @@ SKIP = {
 
 # First-party pages read for each added provider, used for verified.sources.
 SOURCES = {
+    "exaone": ["https://www.lgresearch.ai/news/view?seq=755", "https://docs.exaone.ai/en/docs/rate-limits"],
+    "lxd-api": ["https://api.lxds.org/", "https://api.lxds.org/instructions"],
+    "naga-ai": ["https://naga.ac/models/nvidia/nemotron-3-ultra-550b-a55b:free", "https://docs.naga.ac/api-reference/overview"],
+    "poixe-ai": ["https://poixe.com/products/free", "https://poixe.com/"],
+    "literouter": ["https://literouter.com/", "https://docs.literouter.com/quickstart"],
     "merkium": ["https://www.merkium.nl", "https://mvalentsev.github.io/awesome-free-ai-coding/providers/merkium/"],
     "iteracompute": ["https://iteracompute.com/free/", "https://mvalentsev.github.io/awesome-free-ai-coding/providers/iteracompute/"],
     "miapi": ["https://miapi.uk", "https://mvalentsev.github.io/awesome-free-ai-coding/providers/miapi/"],
@@ -231,7 +237,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

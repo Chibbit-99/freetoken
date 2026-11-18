@@ -66,7 +66,7 @@ The order of the `providers` array is the display order in the catalogue.
 | `overview` | string | yes | 2–4 sentence description of what the provider is, what its free offer covers and what limits apply. Rendered in the detail view. |
 | `offer` | object | yes | Free-access classification (see below). |
 | `privacy` | object | yes | Prompt-privacy classification (see below). |
-| `requires_payment_card` | boolean | yes | `true` if sign-up requires a payment card. Drives the "No card" filter. |
+| `requires_payment_card` | boolean or null | yes | `true` if signup requires a payment card, `false` if not required, `null` if unverified. Only `false` passes the "No card" filter. |
 | `last_updated` | string | yes | `YYYY-MM-DD` of the last data update. |
 | `verified` | object | yes | Where and when free access was checked (see below). |
 | `free_token_allowance` | integer | no | Account-wide free tokens shared by every model. Takes precedence over summing per-model `token_allowance` on the allowance leaderboard. |

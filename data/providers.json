@@ -172,6 +172,11 @@
     "joingonka.json",
     "gonka24.json",
     "typhoon.json",
-    "sarvam.json"
+    "sarvam.json",
+    "exaone.json",
+    "lxd-api.json",
+    "naga-ai.json",
+    "poixe-ai.json",
+    "literouter.json"
   ]
 }

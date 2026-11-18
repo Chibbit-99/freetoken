@@ -1,0 +1,42 @@
+{
+  "id": "exaone",
+  "name": "EXAONE API Platform",
+  "website": "https://docs.exaone.ai/",
+  "docs": "https://docs.exaone.ai/",
+  "signup": "https://docs.exaone.ai/",
+  "description": "LG AI Research offers its K-EXAONE 2.5 API free, with daily rate limits.",
+  "overview": "LG AI Research makes K-EXAONE 2.5 available at no cost for service development and research with an API key. The Korean and English text model is available through an OpenAI-compatible API. Limits apply per second, minute and day; the documentation's numeric headers are examples, not a promised quota. Optional consent to usage-data analysis for training and service improvement increases the daily limit, but is not required to use the service.",
+  "offer": {
+    "type": "always-free",
+    "label": "Free API with daily rate limits",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.lgresearch.ai/news/view?seq=755",
+      "https://docs.exaone.ai/en/docs/rate-limits"
+    ]
+  },
+  "free_access": [
+    "Free K-EXAONE 2.5 API with an API key",
+    "Daily, minute and second rate limits apply",
+    "Higher daily limit for optional data-analysis consent",
+    "OpenAI-compatible chat API; Korean and English"
+  ],
+  "notes": "Daily quota is not published as a fixed entitlement; inspect response headers. Data-analysis consent is optional. No end date is stated for the free access. Signup card requirement was not independently confirmed.",
+  "models": [
+    {
+      "id": "k-exaone-2-5",
+      "name": "K-EXAONE 2.5",
+      "family": "EXAONE",
+      "context_window": 524288
+    }
+  ]
+}

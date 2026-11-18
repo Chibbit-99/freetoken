@@ -32,6 +32,27 @@
       ]
     },
     {
+      "id": "2026-11-17-five-providers-with-recurring-free-api-access",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Five providers with recurring free API access",
+      "summary": "Added EXAONE, LXD API, NagaAI, Poixe AI and LiteRouter, with published daily usage limits and clear signup caveats.",
+      "providers": [
+        "exaone",
+        "lxd-api",
+        "naga-ai",
+        "poixe-ai",
+        "literouter"
+      ],
+      "details": [
+        "Daily quotas include 5 Xen at LXD and 100 shared requests at NagaAI",
+        "Poixe separates free model groups",
+        "LiteRouter applies a cooldown",
+        "EXAONE daily limits can increase with optional data consent",
+        "Card requirements remain unverified and are excluded from the no-card filter."
+      ]
+    },
+    {
       "id": "2026-11-17-nine-providers-from-non-english-sweeps-including",
       "date": "2026-11-17",
       "kind": "added",
