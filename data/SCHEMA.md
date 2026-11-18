@@ -404,6 +404,11 @@ A free-model-only provider with no token-denominated quota:
   at the time of the check.
 - Never present a card-gated one-time credit as a free tier: use `trials`,
   set `requires_payment_card`, and say so in `notes`.
+- A **separate signup means a separate entry**, even when two domains ship the
+  same product: Clean APIs, Radox AI and Oxion AI run one catalogue but each
+  grants its own 500K-token monthly allowance, so each is catalogued. Say in
+  `notes` that they are siblings, and leave out domains of the same product that
+  publish no free tier (`codecraftapi.com`).
 - Every pass that changes `data/` ends with an announcement entry, so the
   `#/updates` page explains the diff to anyone reading the site rather than the
   commit log.

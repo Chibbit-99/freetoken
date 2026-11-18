@@ -84,7 +84,7 @@ PART_K = [
       {"id": "kimi-k3", "name": "Kimi K3", "family": "Kimi", "context_window": 1048576},
       {"id": "gemini-3.1-pro", "name": "Gemini 3.1 Pro", "family": "Gemini", "context_window": 1048576},
       {"id": "grok-4.6", "name": "Grok 4.6", "family": "Grok", "context_window": 524288}],
-     "The same catalogue and dashboard ship on cleanapis.com, radoxai.com, oxionai.com and codecraftapi.com; this entry covers the family, the free allowances differ by domain (0.5M/month on three of them, 1M here)."),
+     "The same catalogue and dashboard also run on cleanapis.com, radoxai.com and oxionai.com; each needs its own signup and grants its own monthly allowance, so they are separate entries. codecraftapi.com runs it with no free tier."),
 
     ("cleanapis", "Clean APIs", "https://cleanapis.com", "mc", "0.5M free tokens/month", "pp",
      "Routed upstreams, check per model", False,
@@ -98,5 +98,5 @@ PART_K = [
       {"id": "qwen3.8-27b", "name": "Qwen3.8 27B", "family": "Qwen 3.8", "context_window": 262144},
       {"id": "seed-2.1-turbo", "name": "Seed 2.1 Turbo", "family": "Seed", "context_window": 262144},
       {"id": "gemma-2-2b", "name": "Gemma 2 2B", "family": "Gemma 2", "context_window": 8192}],
-     "Sibling domains radoxai.com and oxionai.com publish the same 0.5M/month allowance; codecraftapi.com is the same product without a free tier."),
+     "Radox AI and Oxion AI run the same catalogue on their own domains with their own 0.5M/month free allowance and their own signup; codecraftapi.com runs it with no free tier."),
 ]

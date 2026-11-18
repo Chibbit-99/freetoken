@@ -3,6 +3,25 @@
   "intro": "Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.",
   "items": [
     {
+      "id": "2026-11-17-sibling-domains-get-their-own-entries",
+      "date": "2026-11-17",
+      "kind": "corrected",
+      "title": "Sibling domains get their own entries",
+      "summary": "Clean APIs, Radox AI and Oxion AI run one catalogue but each signup carries its own 500K-token monthly allowance, so all three are catalogued instead of being folded into one card.",
+      "providers": [
+        "cleanapis",
+        "radoxai",
+        "oxionai",
+        "freemodel"
+      ],
+      "details": [
+        "Separate signup means separate allowance: three accounts now show as three 500K/month lines on the allowance board.",
+        "FreeModel keeps its larger 1M/month allowance on its own card.",
+        "codecraftapi.com runs the same product with no free tier and stays out.",
+        "SCHEMA.md now records the rule."
+      ]
+    },
+    {
       "id": "2026-11-17-ten-leads-added-from-account-level-checks-five-n",
       "date": "2026-11-17",
       "kind": "added",

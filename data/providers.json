@@ -153,6 +153,8 @@
     "coarena.json",
     "valorgpt.json",
     "freemodel.json",
-    "cleanapis.json"
+    "cleanapis.json",
+    "radoxai.json",
+    "oxionai.json"
   ]
 }

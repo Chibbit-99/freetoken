@@ -30,7 +30,7 @@
     "OpenAI and Anthropic API shapes",
     "UPI or USDT for paid tiers"
   ],
-  "notes": "The same catalogue and dashboard ship on cleanapis.com, radoxai.com, oxionai.com and codecraftapi.com; this entry covers the family, the free allowances differ by domain (0.5M/month on three of them, 1M here).",
+  "notes": "The same catalogue and dashboard also run on cleanapis.com, radoxai.com and oxionai.com; each needs its own signup and grants its own monthly allowance, so they are separate entries. codecraftapi.com runs it with no free tier.",
   "free_token_allowance": 1000000,
   "allowance_period": "month",
   "catalog_size": 29,

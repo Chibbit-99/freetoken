@@ -30,7 +30,7 @@
     "OpenAI-compatible with streaming, tools and vision",
     "Overage bills at list rates, HTTP 402 when empty"
   ],
-  "notes": "Sibling domains radoxai.com and oxionai.com publish the same 0.5M/month allowance; codecraftapi.com is the same product without a free tier.",
+  "notes": "Radox AI and Oxion AI run the same catalogue on their own domains with their own 0.5M/month free allowance and their own signup; codecraftapi.com runs it with no free tier.",
   "free_token_allowance": 500000,
   "allowance_period": "month",
   "catalog_size": 33,

@@ -1,0 +1,75 @@
+{
+  "id": "oxionai",
+  "name": "Oxion AI",
+  "website": "https://oxionai.com",
+  "docs": "https://oxionai.com",
+  "signup": "https://oxionai.com",
+  "description": "33 models with a 0.5M-token monthly free allowance and no card.",
+  "overview": "Oxion AI serves the same 33-model catalogue as its sibling domains through an OpenAI-compatible endpoint at oxionai.com/v1 — Claude, GPT, Gemini, Kimi, DeepSeek, Qwen, GLM and Seed among them. Signing up here means a third independent 500,000-token monthly free allowance with no card, and every model in the catalogue is reachable on the free plan. Paid plans start at $3.50 for 50M tokens, with overage billed against the balance at each model's list rate.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "0.5M free tokens/month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://oxionai.com/",
+      "https://oxionai.com/pricing"
+    ]
+  },
+  "free_access": [
+    "500K free tokens every month, per account",
+    "No card; all 33 models on the free plan",
+    "OpenAI-compatible with streaming, tools and vision",
+    "Overage bills at list rates, HTTP 402 when empty"
+  ],
+  "notes": "Same catalogue and dashboard as cleanapis.com and radoxai.com, but a separate account and a separate monthly allowance.",
+  "free_token_allowance": 500000,
+  "allowance_period": "month",
+  "catalog_size": 33,
+  "models": [
+    {
+      "id": "deepseek-v4-flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "deepseek-v4-pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "gpt-5.6-luna",
+      "name": "GPT-5.6 Luna",
+      "family": "GPT-5.6",
+      "context_window": 1050624
+    },
+    {
+      "id": "qwen3.8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144
+    },
+    {
+      "id": "seed-2.1-turbo",
+      "name": "Seed 2.1 Turbo",
+      "family": "Seed",
+      "context_window": 262144
+    },
+    {
+      "id": "gemma-2-2b",
+      "name": "Gemma 2 2B",
+      "family": "Gemma 2",
+      "context_window": 8192
+    }
+  ]
+}
