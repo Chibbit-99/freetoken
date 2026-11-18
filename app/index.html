@@ -192,9 +192,8 @@
             <div class="flex flex-wrap items-baseline justify-between gap-2 mb-5">
                 <div>
                     <h2 id="aggregate-heading" class="text-sm font-bold text-slate-900">The bigger picture</h2>
-                    <p class="text-xs text-slate-500 mt-1">A snapshot of listed offers, not a guaranteed combined balance or throughput.</p>
+                    <p class="text-xs text-slate-500 mt-1">Estimates from listed offers, not guaranteed totals.</p>
                 </div>
-                <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Catalogue estimates</span>
             </div>
             <dl class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
                 <div>
@@ -213,6 +212,10 @@
                     <p id="stat-rpm-note" class="text-[11px] text-slate-500 mt-1 leading-relaxed">Loading documented rate limits&hellip;</p>
                 </div>
             </dl>
+            <details class="mt-5 text-xs text-slate-500">
+                <summary class="cursor-pointer font-medium hover:text-slate-900">How these are calculated</summary>
+                <p class="mt-2 leading-relaxed">Credits include known one-time USD grants only; some require a card or eligibility. Tokens include known quotas normalized to 30 days and one-time grants counted once. RPM sums one listed limit per provider; limits differ in scope. Unknown amounts are excluded, and offers may overlap, expire or change.</p>
+            </details>
         </section>
     </main>
 
@@ -550,7 +553,7 @@
             var tokens = pools.reduce(function (sum, row) { return sum + row.monthly; }, 0);
             $('stat-tokens').textContent = pools.length ? compactTokens(tokens) : 'Not available';
             $('stat-tokens').title = pools.length ? Math.round(tokens).toLocaleString('en-US') + ' estimated tokens' : '';
-            $('stat-tokens-note').textContent = pools.length + ' providers with numeric quotas; daily × 30, weekly × 30/7, annual × 30/365, plus one-time grants once. Quotas may overlap or expire.';
+            $('stat-tokens-note').textContent = pools.length + ' providers · includes one-time grants';
 
             var data = state.aggregates;
             if (!data) {
@@ -572,9 +575,9 @@
             var credits = totalKnown(data.trial_credit_usd);
             var rpm = totalKnown(data.requests_per_minute);
             $('stat-credit').textContent = credits.count ? '$' + credits.total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : 'Not available';
-            $('stat-credit-note').textContent = credits.count + ' providers with stated USD one-time credits; excludes recurring, unknown and non-USD amounts. Some require eligibility or a card.';
+            $('stat-credit-note').textContent = credits.count + ' providers · USD grants only';
             $('stat-rpm').textContent = rpm.count ? rpm.total.toLocaleString('en-US') + ' RPM' : 'Not available';
-            $('stat-rpm-note').textContent = rpm.count + ' providers with curated limits, counted once each. Per-key, per-model and shared limits differ; this is not guaranteed simultaneous throughput.';
+            $('stat-rpm-note').textContent = rpm.count + ' providers · one limit each';
         }
 
         function modelFamilies(p) {
