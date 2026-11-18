@@ -148,6 +148,11 @@
     "unorouter.json",
     "onomeo.json",
     "studiolm.json",
-    "dgrid.json"
+    "dgrid.json",
+    "tokenreply.json",
+    "coarena.json",
+    "valorgpt.json",
+    "freemodel.json",
+    "cleanapis.json"
   ]
 }

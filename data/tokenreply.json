@@ -1,0 +1,146 @@
+{
+  "id": "tokenreply",
+  "name": "TokenReply",
+  "website": "https://www.tokenreply.com",
+  "docs": "https://www.tokenreply.com",
+  "signup": "https://www.tokenreply.com",
+  "description": "175-model router with a free tier: free-tagged models plus 40 featured requests a day.",
+  "overview": "TokenReply fronts 175 models from OpenAI, Anthropic, Google, DeepSeek, Z.ai, Qwen, Moonshot, Nvidia and more behind one OpenAI-compatible endpoint. The free Default tier serves the 28 models tagged Free, allows up to 40 requests a day to the rotating 'Models of the week' pool, and adds a daily-reward top-up on top of the plan allowance. Paid models draw on plan allowance first and then the wallet; the Trial tier adds a one-month starter allowance for new accounts.",
+  "offer": {
+    "type": "free-models",
+    "label": "28 free models",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.tokenreply.com/docs/plans",
+      "https://www.tokenreply.com/models"
+    ]
+  },
+  "free_access": [
+    "28 models tagged Free, no card",
+    "Up to 40 requests/day to Models of the week",
+    "Daily reward adds to the allowance",
+    "OpenAI-compatible endpoint"
+  ],
+  "notes": "The free list rotates; 40 requests/day applies to the featured pool, not to free-tagged models.",
+  "catalog_size": 175,
+  "models": [
+    {
+      "id": "muse-spark-plus-free",
+      "name": "Muse Spark Plus",
+      "family": "Muse"
+    },
+    {
+      "id": "mistral-medium-3.5-plus-free",
+      "name": "Mistral Medium 3.5 Plus",
+      "family": "Mistral"
+    },
+    {
+      "id": "mistral-small-4-plus-free",
+      "name": "Mistral Small 4 Plus",
+      "family": "Mistral"
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "family": "Nemotron"
+    },
+    {
+      "id": "beam-free",
+      "name": "Beam (free)",
+      "family": "Beam"
+    },
+    {
+      "id": "grok-4.20-fast",
+      "name": "Grok 4.20 Fast",
+      "family": "Grok"
+    },
+    {
+      "id": "nemotron-3-ultra",
+      "name": "Nemotron 3 Ultra",
+      "family": "Nemotron",
+      "context_window": 1048576
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "family": "Nemotron",
+      "context_window": 1048576
+    },
+    {
+      "id": "nemotron-3.5-super-vl-free",
+      "name": "Nemotron 3.5 Super VL",
+      "family": "Nemotron",
+      "context_window": 1048576
+    },
+    {
+      "id": "glm-5.2-free",
+      "name": "GLM 5.2 (free)",
+      "family": "GLM"
+    },
+    {
+      "id": "glm-5.3-flash-free",
+      "name": "GLM 5.3 Flash (free)",
+      "family": "GLM"
+    },
+    {
+      "id": "meta/muse-glimmer-30b",
+      "name": "Muse Glimmer 30B",
+      "family": "Muse",
+      "context_window": 131072
+    },
+    {
+      "id": "gemini-3-flash-preview-free",
+      "name": "Gemini 3 Flash Preview",
+      "family": "Gemini",
+      "context_window": 1048576
+    },
+    {
+      "id": "gemini-3.1-flash-lite-free",
+      "name": "Gemini 3.1 Flash Lite",
+      "family": "Gemini",
+      "context_window": 1048576
+    },
+    {
+      "id": "gemini-3.8-flash-plus-free",
+      "name": "Gemini 3.8 Flash Plus",
+      "family": "Gemini",
+      "context_window": 1048576
+    },
+    {
+      "id": "gemma-4-26b-a4b-it-free",
+      "name": "Gemma 4 26B A4B IT",
+      "family": "Gemma 4",
+      "context_window": 262144
+    },
+    {
+      "id": "nemotron-3-nano-omni-30b-a3b-reasoning",
+      "name": "Nemotron 3 Nano Omni 30B A3B",
+      "family": "Nemotron"
+    },
+    {
+      "id": "north-mini-code",
+      "name": "North Mini Code",
+      "family": "Cohere",
+      "context_window": 262144
+    },
+    {
+      "id": "dots-3-note-preview",
+      "name": "Dots 3 Note Preview",
+      "family": "Dots"
+    },
+    {
+      "id": "ernie-5.5-flash-preview",
+      "name": "ERNIE 5.5 Flash Preview",
+      "family": "ERNIE"
+    }
+  ]
+}

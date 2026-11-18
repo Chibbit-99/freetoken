@@ -3,6 +3,28 @@
   "intro": "Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.",
   "items": [
     {
+      "id": "2026-11-17-ten-leads-added-from-account-level-checks-five-n",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Ten leads added from account-level checks; five new domains triaged",
+      "summary": "TokenReply, Coarena and ValorGPT free model lists arrived from logged-in catalogues and are now rows. FreeModel and Clean APIs were checked from a direct report and publish 1M and 0.5M monthly free allowances.",
+      "providers": [
+        "tokenreply",
+        "coarena",
+        "valorgpt",
+        "freemodel",
+        "cleanapis"
+      ],
+      "details": [
+        "TokenReply: 22 free-tagged IDs, 40 requests/day to Models of the week, daily reward.",
+        "Coarena: 3 free models, 30 rpm, 2 concurrent",
+        "ValorGPT: 15 free text models of 523, image model excluded.",
+        "FreeModel and Clean APIs publish monthly token allowances with no card",
+        "radoxai and oxionai are the same product and are covered by the Clean APIs card.",
+        "codecraftapi.com is the same product without any free tier — rejected."
+      ]
+    },
+    {
       "id": "2026-11-17-five-leads-verified-and-added-subaxis-confirmed-",
       "date": "2026-11-17",
       "kind": "added",

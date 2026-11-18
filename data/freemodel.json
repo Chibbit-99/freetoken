@@ -1,0 +1,81 @@
+{
+  "id": "freemodel",
+  "name": "FreeModel",
+  "website": "https://freemodel.in",
+  "docs": "https://freemodel.in",
+  "signup": "https://freemodel.in",
+  "description": "29 models behind one endpoint with a monthly 1M-token free allowance, no card.",
+  "overview": "FreeModel serves 29 models — Claude, GPT, Gemini, Kimi, DeepSeek, Qwen, GLM, Grok and Seed among them — through an OpenAI- and Anthropic-compatible endpoint at freemodel.in/v1. The free tier allows 1,000,000 tokens a month with no card, and every model is reachable on every plan, so the free allowance buys Claude Fable 5 tokens as readily as a small open model. Payments for paid tiers run through UPI in India or USDT, and the dashboard tracks spend per key and model.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "1M free tokens/month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Routed upstreams, check per model"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://freemodel.in/",
+      "https://freemodel.in/pricing"
+    ]
+  },
+  "free_access": [
+    "1M free tokens every month",
+    "No card; 29 models on every plan",
+    "OpenAI and Anthropic API shapes",
+    "UPI or USDT for paid tiers"
+  ],
+  "notes": "The same catalogue and dashboard ship on cleanapis.com, radoxai.com, oxionai.com and codecraftapi.com; this entry covers the family, the free allowances differ by domain (0.5M/month on three of them, 1M here).",
+  "free_token_allowance": 1000000,
+  "allowance_period": "month",
+  "catalog_size": 29,
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "family": "GLM",
+      "context_window": 1048576
+    },
+    {
+      "id": "qwen3.7-max",
+      "name": "Qwen3.7 Max",
+      "family": "Qwen 3.7",
+      "context_window": 1048576
+    },
+    {
+      "id": "qwen3.8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen 3.8",
+      "context_window": 262144
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi",
+      "context_window": 1048576
+    },
+    {
+      "id": "gemini-3.1-pro",
+      "name": "Gemini 3.1 Pro",
+      "family": "Gemini",
+      "context_window": 1048576
+    },
+    {
+      "id": "grok-4.6",
+      "name": "Grok 4.6",
+      "family": "Grok",
+      "context_window": 524288
+    }
+  ]
+}

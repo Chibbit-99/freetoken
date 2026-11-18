@@ -23,6 +23,7 @@ from new_providers_g import PART_G  # noqa: E402
 from new_providers_h import PART_H  # noqa: E402
 from new_providers_i import PART_I  # noqa: E402
 from new_providers_j import PART_J  # noqa: E402
+from new_providers_k import PART_K  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -83,6 +84,11 @@ SOURCES = {
     "onomeo": ["https://onomeo.com/integrations", "https://onomeo.com/models"],
     "studiolm": ["https://studiolm.dev/", "https://docs.studiolm.dev/getting-started/quickstart/"],
     "dgrid": ["https://dgrid.ai/models/dgridai/free/", "https://dgrid.ai"],
+    "tokenreply": ["https://www.tokenreply.com/docs/plans", "https://www.tokenreply.com/models"],
+    "coarena": ["https://coarena.ai/docs", "https://coarena.ai/account/api"],
+    "valorgpt": ["https://www.valorgpt.com/models", "https://www.valorgpt.com"],
+    "freemodel": ["https://freemodel.in/", "https://freemodel.in/pricing"],
+    "cleanapis": ["https://cleanapis.com/", "https://cleanapis.com/pricing"],
 }
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
@@ -97,6 +103,10 @@ PROVIDER_EXTRA = {
     "unorouter": {"catalog_size": 294},
     "onomeo": {"catalog_size": 40},
     "dgrid": {"catalog_size": 1},
+    "tokenreply": {"catalog_size": 175},
+    "valorgpt": {"catalog_size": 523},
+    "freemodel": {"free_token_allowance": 1000000, "allowance_period": "month", "catalog_size": 29},
+    "cleanapis": {"free_token_allowance": 500000, "allowance_period": "month", "catalog_size": 33},
     "navy-ai": {"free_token_allowance": 150000, "allowance_period": "day"},
     "ant-ling": {"free_token_allowance": 500000, "allowance_period": "day"},
     "baichuan": {"free_token_allowance": 5000000, "allowance_period": "one-time"},
@@ -181,7 +191,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:
