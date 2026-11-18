@@ -32,6 +32,19 @@
       ]
     },
     {
+      "id": "2026-11-17-more-token-quotas-counted",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "More token quotas counted",
+      "summary": "Researched existing providers and added documented token allowances to the first-month estimate.",
+      "providers": [],
+      "details": [
+        "Includes recurring limits and one-time grants",
+        "Shared pools counted once",
+        "Availability and other limits may apply"
+      ]
+    },
+    {
       "id": "2026-11-17-trial-credit-totals-now-include-foreign-currenci",
       "date": "2026-11-17",
       "kind": "update",

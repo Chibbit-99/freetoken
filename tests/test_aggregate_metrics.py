@@ -53,15 +53,17 @@ class AggregateMetricsTest(unittest.TestCase):
 const state = {providers: [
   {id:'shared', name:'Shared', free_token_allowance:100, allowance_period:'week', models:[{token_allowance:999}]},
   {id:'grant', name:'Grant', free_token_allowance:50, allowance_period:'one-time', models:[]},
+  {id:'bonus', name:'Bonus', free_token_allowance:200, allowance_period:'month', one_time_token_bonus:75, models:[]},
   {id:'daily', name:'Daily', models:[{token_allowance:2}, {token_allowance:3}]},
   {id:'unknown', name:'Unknown', models:[{}]}
 ]};
 ''' + function + '''
 const rows = providerAllowanceRows();
-if (rows.length !== 3) throw new Error('unknown quota included');
+if (rows.length !== 4) throw new Error('unknown quota included');
 const byId = Object.fromEntries(rows.map(r => [r.provider.id, r]));
 if (Math.abs(byId.shared.monthly - 100 * 30 / 7) > 0.00001) throw new Error('weekly conversion or shared pool');
 if (byId.grant.monthly !== 50) throw new Error('one-time grant');
+if (byId.bonus.monthly !== 275) throw new Error('welcome bonus');
 if (byId.daily.monthly !== 150) throw new Error('daily model total');
 '''
         subprocess.run(['node', '-e', script], check=True, cwd=ROOT)

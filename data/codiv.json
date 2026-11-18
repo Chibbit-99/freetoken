@@ -37,5 +37,7 @@
       "name": "DiffusionGemma 26B",
       "family": "Gemma"
     }
-  ]
+  ],
+  "free_token_allowance": 10000000,
+  "allowance_period": "one-time"
 }

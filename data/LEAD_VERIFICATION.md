@@ -246,3 +246,17 @@ All amounts below are provider statements checked on public pages; no account, i
 - **Flonno:** [docs](https://www.flonno.com/docs) state $1 once after email verification, no card, one Qwen model and 402 if insufficient credit. **Boundless API:** [FAQ](https://www.boundlessapi.com/en/faq.html) says $5 signup, no card, 10 RPM on Starter models; optional automatic recharge, and the exact trial-eligible model set remains unconfirmed.
 - **LLM EU** [terms](https://llmeu.com/en/free-llm-api/) now say 1M one-time tokens only after attaching a Stripe payment method; the older third-party $5 no-card claim is stale. Defer, do not assert no-card access. **OpenPaths** free LLM URL currently returns an invalid-fiddle error. **Teapot Router** claims signup credits but [homepage](https://teapotrouter.com/en) also says add balance before API requests and recommends Model Lab; API use before payment is unconfirmed. **LLMCloud** signup advertises $1 no card, but first-party API endpoint and eligible text models were not established in this pass; defer.
 - All newly added claims are provider statements, not authenticated inference, signup, billing or model identity verification. APInex and AgentRouter remain excluded per user instructions.
+
+### Existing provider token quota audit — 17 November 2026
+
+- [Experiential Labs](https://www.experientiallabs.ai/pricing): 1M/day shared by the free core models, temporary refunded $1 card verification. Count the shared pool once; overflow can bill credits.
+- [Synap](https://synap402.com/account.html): 100K/day for the first seven days, then 50K/day. Count the ongoing 50K/day; the same page still contains an unqualified 100K statement.
+- [ModelBridge](https://aibridge-api.com/pricing.html): 500K/month plus 500K welcome bonus; count each once in the first month, no card, overage may bill.
+- [Codiv](https://codiv.ai/): 10M one-time text-generation tokens; exclude the separate 100M System One decision-model tokens from this text-generation directory.
+- [SlashAI](https://slashai.my.id/): search-indexed provider pricing advertises 2M tokens for a single one-hour trial. Site returned HTTP 500 during this recheck; retain the prior recorded offer as provisional.
+- [Bee](https://bee.heossi.com/pricing): Cell describes a 2M/month ceiling and a five-hour refill window; the API pricing track is separately metered. Treat this as an upper bound pending account verification.
+- [Flux Router](https://fluxrouter.ai/pricing): 100K/month OR $1/month, whichever runs out first; the count is an upper bound, not guaranteed tokens.
+- [100milionseek](https://100milionseek.top/): normal 100M/day, but signup paused and requests failing due to overload. Omitted from numeric aggregation until availability is restored; temporary 400M/day promotion is not extrapolated.
+- [Tencent TokenHub](https://www.tencentcloud.com/act/pro/tokenhub): trial quota scope is inconsistent across Tencent's own pages and other evidence indicates a $10 balance freeze. No token pool added without resolving the initial-funding requirement and scope. GW BUS's 1M/day is bounded by finite $5 credit, not an additional recurring grant.
+
+All are advertised allowances or ceilings, not independently tested inference, billing, or model identity.

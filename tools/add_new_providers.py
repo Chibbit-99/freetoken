@@ -195,7 +195,13 @@ SOURCES = {
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
 PROVIDER_EXTRA = {
-    "flux-router": {"api_endpoint": "https://api.fluxrouter.ai/v1", "docs": "https://fluxrouter.ai/faq", "signup": "https://fluxrouter.ai/auth/sign-up"},
+    "experiential-labs": {"free_token_allowance": 1000000, "allowance_period": "day"},
+    "synap": {"free_token_allowance": 50000, "allowance_period": "day"},
+    "modelbridge": {"free_token_allowance": 500000, "allowance_period": "month", "one_time_token_bonus": 500000},
+    "codiv": {"free_token_allowance": 10000000, "allowance_period": "one-time"},
+    "slashai": {"free_token_allowance": 2000000, "allowance_period": "one-time"},
+    "bee-heossi": {"free_token_allowance": 2000000, "allowance_period": "month"},
+    "flux-router": {"free_token_allowance": 100000, "allowance_period": "month", "api_endpoint": "https://api.fluxrouter.ai/v1", "docs": "https://fluxrouter.ai/faq", "signup": "https://fluxrouter.ai/auth/sign-up"},
     "infercom": {"api_endpoint": "https://api.infercom.ai/v1", "docs": "https://docs.infercom.ai/en/models/rate-limits", "signup": "https://cloud.infercom.ai/"},
     "flonno": {"api_endpoint": "https://www.flonno.com/v1", "docs": "https://www.flonno.com/docs", "signup": "https://www.flonno.com/sign-up"},
     "boundless-api": {"api_endpoint": "https://api.boundlessapi.com/v1", "docs": "https://www.boundlessapi.com/en/faq.html"},

@@ -71,6 +71,7 @@ The order of the `providers` array is the display order in the catalogue.
 | `verified` | object | yes | Where and when free access was checked (see below). |
 | `free_token_allowance` | integer | no | Account-wide free tokens shared by every model. Takes precedence over summing per-model `token_allowance` on the allowance leaderboard. |
 | `allowance_period` | string | no | `day` (default), `week`, `month`, `year` or `one-time`. Controls how the allowance is labelled — a one-time signup balance is never shown as tokens/day. |
+| `one_time_token_bonus` | integer | no | Additional one-time token grant alongside a recurring account-wide allowance; counted once in first-month totals. |
 | `catalog_size` | integer | no | Total number of models the free tier carries, when the provider states it. The app shows "4 of 22 models" and a "4 of 22 listed" heading instead of implying the listed models are the whole catalogue. |
 | `free_access` | array of strings | yes | Exactly four bullets summarising the free offer and its conditions, shown in the detail view. Keep each under ~80 characters. |
 | `api_endpoint` | string | no | Base URL of the OpenAI-compatible API, where one exists. Omit for speech-only, embeddings-only or non-OpenAI APIs. |
@@ -435,4 +436,4 @@ are counted once. Update the maps when offers change; do not parse prose or
 count multiple model/key RPMs as separate providers. Figures are estimates,
 not guaranteed usable together: trials can require cards or eligibility and
 rate limits have different scopes. The 30-day token figure uses quota fields,
-counting shared pools and one-time balances once; unknown quotas are excluded.
+counting shared pools and one-time balances or bonuses once; unknown quotas are excluded.

@@ -37,5 +37,7 @@
       "name": "Qwen3 Coder 30B",
       "family": "Qwen"
     }
-  ]
+  ],
+  "free_token_allowance": 50000,
+  "allowance_period": "day"
 }

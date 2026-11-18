@@ -37,5 +37,8 @@
       "name": "DeepSeek Chat",
       "family": "DeepSeek"
     }
-  ]
+  ],
+  "free_token_allowance": 500000,
+  "allowance_period": "month",
+  "one_time_token_bonus": 500000
 }

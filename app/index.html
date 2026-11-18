@@ -112,6 +112,27 @@
 
     <!-- Data Dashboard Grid -->
     <main id="dashboard-main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <section aria-label="Catalogue totals" class="mb-8 rounded-xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6">
+            <dl class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+                <div>
+                    <dt class="sr-only">Estimated one-time trial credits in USD</dt>
+                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-credit" class="font-mono" aria-live="polite">&ndash;</span> in trial credits</dd>
+                </div>
+                <div class="sm:border-l sm:border-slate-200 sm:pl-6">
+                    <dt class="sr-only">Estimated 30-day token allowance, including one-time grants</dt>
+                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-tokens" class="font-mono" aria-live="polite">&ndash;</span> tokens in first month</dd>
+                </div>
+                <div class="sm:border-l sm:border-slate-200 sm:pl-6">
+                    <dt class="sr-only">Combined listed requests per minute</dt>
+                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-rpm" class="font-mono" aria-live="polite">&ndash;</span> combined RPM</dd>
+                </div>
+            </dl>
+            <details class="mt-5 text-xs text-slate-500">
+                <summary class="cursor-pointer font-medium hover:text-slate-900">How these are calculated</summary>
+                <p class="mt-2 leading-relaxed">Estimates, not guaranteed totals. Credits include known one-time grants converted to USD at <a class="underline" href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">ECB reference rates</a> from 17 November 2026; some require a card or eligibility. Tokens include known quotas normalized to 30 days and one-time grants counted once. RPM sums one listed limit per provider; limits differ in scope. Unknown amounts are excluded; 100milionseek is excluded while signups are paused; some ceilings may be constrained by credits, fair use or short trials. Offers may overlap, expire or change.</p>
+            </details>
+        </section>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- Card Column 1: Speed (TPS) -->
@@ -188,26 +209,7 @@
 
         </div>
 
-        <section aria-label="Catalogue totals" class="mt-8 rounded-xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6">
-            <dl class="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
-                <div>
-                    <dt class="sr-only">Estimated one-time trial credits in USD</dt>
-                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-credit" class="font-mono" aria-live="polite">&ndash;</span> in trial credits</dd>
-                </div>
-                <div class="sm:border-l sm:border-slate-200 sm:pl-6">
-                    <dt class="sr-only">Estimated 30-day token allowance, including one-time grants</dt>
-                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-tokens" class="font-mono" aria-live="polite">&ndash;</span> tokens per month</dd>
-                </div>
-                <div class="sm:border-l sm:border-slate-200 sm:pl-6">
-                    <dt class="sr-only">Combined listed requests per minute</dt>
-                    <dd class="text-xl sm:text-2xl font-semibold tracking-tight text-slate-950"><span id="stat-rpm" class="font-mono" aria-live="polite">&ndash;</span> combined RPM</dd>
-                </div>
-            </dl>
-            <details class="mt-5 text-xs text-slate-500">
-                <summary class="cursor-pointer font-medium hover:text-slate-900">How these are calculated</summary>
-                <p class="mt-2 leading-relaxed">Estimates, not guaranteed totals. Credits include known one-time grants converted to USD at <a class="underline" href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">ECB reference rates</a> from 17 November 2026; some require a card or eligibility. Tokens include known quotas normalized to 30 days and one-time grants counted once. RPM sums one listed limit per provider; limits differ in scope. Unknown amounts are excluded, and offers may overlap, expire or change.</p>
-            </details>
-        </section>
+
     </main>
 
     <!-- Catalogue Container Section -->
@@ -526,7 +528,7 @@
                 return {
                     primary: r.provider.name,
                     secondary: recurrenceOf(r.provider) + ' \u00b7 ' + (r.shared ? 'shared pool' : 'per-model quotas'),
-                    value: formatAllowance(r.value, r.period),
+                    value: formatAllowance(r.value, r.period) + (r.provider.one_time_token_bonus ? ' + ' + compactTokens(r.provider.one_time_token_bonus) + ' once' : ''),
                     v: r.monthly,
                     width: Math.min(100, Math.max(6, Math.round(r.monthly / (maxAllowance || 1) * 100)))
                 };
@@ -933,6 +935,9 @@
                 else if (r.period === 'week') r.monthly = r.value * 30 / 7;
                 else if (r.period === 'year') r.monthly = r.value * 30 / 365;
                 else r.monthly = r.value;
+                // A separately documented welcome grant is counted once in the first month.
+                var bonus = r.provider.one_time_token_bonus;
+                if (typeof bonus === 'number' && isFinite(bonus) && bonus > 0) r.monthly += bonus;
             });
             rows.sort(function (a, b) {
                 if (b.monthly !== a.monthly) return b.monthly - a.monthly;
@@ -1045,7 +1050,7 @@
                     '<tr class="border-t border-slate-100 hover:bg-slate-50 cursor-pointer" data-provider="' + esc(r.provider.id) + '" tabindex="0">' +
                         '<td class="px-3 py-2 font-mono text-slate-400 text-right w-10">' + (i + 1) + '</td>' +
                         '<td class="px-3 py-2 font-semibold text-slate-900 font-sans whitespace-nowrap">' + esc(r.provider.name) + '</td>' +
-                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(formatAllowance(r.value, r.period)) + '</td>' +
+                        '<td class="px-3 py-2 font-mono font-bold text-slate-900 text-right whitespace-nowrap">' + esc(formatAllowance(r.value, r.period) + (r.provider.one_time_token_bonus ? ' + ' + compactTokens(r.provider.one_time_token_bonus) + ' once' : '')) + '</td>' +
                         '<td class="px-3 py-2 font-mono text-slate-500 text-right whitespace-nowrap">' + (r.shared ? 'account-wide' : r.counted + ' of ' + r.modelCount) + '</td>' +
                         '<td class="px-3 py-2 font-sans whitespace-nowrap ' + kindClass + '">' + kind + '</td>' +
                         '<td class="px-3 py-2 text-slate-600 font-sans">' + esc((r.provider.offer && r.provider.offer.label) || '') + '</td>' +

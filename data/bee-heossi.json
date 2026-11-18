@@ -38,5 +38,7 @@
       "family": "Bee",
       "context_window": 131072
     }
-  ]
+  ],
+  "free_token_allowance": 2000000,
+  "allowance_period": "month"
 }

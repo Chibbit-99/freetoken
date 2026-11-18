@@ -38,5 +38,7 @@
       "name": "Flux Fast (routing alias)",
       "family": "Router"
     }
-  ]
+  ],
+  "free_token_allowance": 100000,
+  "allowance_period": "month"
 }
