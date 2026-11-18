@@ -1,0 +1,41 @@
+{
+  "id": "toapis",
+  "name": "ToAPIs",
+  "website": "https://toapis.com/",
+  "docs": "https://toapis.com/",
+  "signup": "https://toapis.com/",
+  "description": "A multimodal gateway advertising no-card signup credits for text APIs.",
+  "overview": "ToAPIs advertises free trial credits at signup without a card and documents text chat models alongside media models. The public pages reviewed do not specify the credit amount or expiry. Model access, charges and the grant were not tested; treat it as finite rather than a recurring tier.",
+  "offer": {
+    "type": "trials",
+    "label": "Signup trial credits; amount unspecified",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://toapis.com/",
+      "https://toapis.com/model-guide/deepseek-v4-flash"
+    ]
+  },
+  "free_access": [
+    "No-card signup trial credits",
+    "Amount and expiry not published on reviewed pages",
+    "Text models billed per token after credit",
+    "Review privacy and upstream terms before sending data"
+  ],
+  "notes": "See https://docs.toapis.com/docs/en/api-reference/chat for endpoint and credentials.",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek"
+    }
+  ]
+}

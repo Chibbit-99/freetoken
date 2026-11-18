@@ -32,6 +32,30 @@
       ]
     },
     {
+      "id": "2026-11-17-eight-trial-api-listings-and-aihubmix-correction",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Eight trial API listings and AIHubMix correction",
+      "summary": "Eight limited-access gateways added; AIHubMix now reflects its ten-call no-payment trial.",
+      "providers": [
+        "zerolimitai",
+        "yepapi",
+        "smartoken",
+        "tokenmix",
+        "toapis",
+        "anyrouter-dev",
+        "helyx-ai",
+        "tokenlab",
+        "aihubmix"
+      ],
+      "details": [
+        "All eight additions are limited trials or conditional access",
+        "check terms",
+        "AIHubMix recurring quota requires a top-up",
+        "No authenticated inference, identity or billing tests were performed"
+      ]
+    },
+    {
       "id": "2026-11-17-eleven-new-api-listings-bring-the-index-to-200",
       "date": "2026-11-17",
       "kind": "added",

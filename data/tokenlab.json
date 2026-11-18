@@ -1,0 +1,41 @@
+{
+  "id": "tokenlab",
+  "name": "TokenLab",
+  "website": "https://tokenlab.sh/",
+  "docs": "https://tokenlab.sh/",
+  "signup": "https://tokenlab.sh/",
+  "description": "TokenLab, formerly reached via LemonData, advertises a small time-limited trial.",
+  "overview": "The homepage advertises a one-time $0.25 trial limited to ten calls in seven days. The site redirects the former lemondata.cc domain to TokenLab. Card requirement and eligible routes for the trial were not confirmed. Paid use is prepaid; its privacy page says requests may be retained in service logs.",
+  "offer": {
+    "type": "trials",
+    "label": "$0.25 trial; up to 10 calls in 7 days",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://tokenlab.sh/",
+      "https://tokenlab.sh/en/pricing"
+    ]
+  },
+  "free_access": [
+    "$0.25 one-time trial; at most 10 calls in 7 days",
+    "Card requirement and trial route eligibility unconfirmed",
+    "Former LemonData domain redirects here",
+    "Requests may be retained in service logs"
+  ],
+  "notes": "Confirm trial eligibility, endpoint and current pricing before calling; inference and billing not tested.",
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek"
+    }
+  ]
+}

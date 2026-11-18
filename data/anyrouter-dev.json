@@ -1,0 +1,41 @@
+{
+  "id": "anyrouter-dev",
+  "name": "AnyRouter",
+  "website": "https://anyrouter.dev/",
+  "docs": "https://anyrouter.dev/",
+  "signup": "https://anyrouter.dev/",
+  "description": "A distinct gateway offering five no-card trial requests on free and decision models.",
+  "overview": "AnyRouter at anyrouter.dev says new accounts can try five requests without a card. Continued free-model access requires the paid Go plan or donation of a valid unique upstream provider key. It is not the similarly named AgentRouter. Older promotional articles conflict with current plan terms; use the current pricing page.",
+  "offer": {
+    "type": "trials",
+    "label": "5 free trial requests",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://anyrouter.dev/",
+      "https://anyrouter.dev/pricing"
+    ]
+  },
+  "free_access": [
+    "Five trial requests with no card",
+    "Continued access requires Go subscription or donated key",
+    "Older articles conflict with current terms",
+    "Separate service from AgentRouter"
+  ],
+  "notes": "Base URL https://anyrouter.dev/api/v1. A donated key may have upstream costs and privacy implications.",
+  "models": [
+    {
+      "id": "anyrouter/free",
+      "name": "AnyRouter Free router",
+      "family": "Router"
+    }
+  ]
+}

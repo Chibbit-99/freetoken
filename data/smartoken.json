@@ -1,0 +1,41 @@
+{
+  "id": "smartoken",
+  "name": "SmarToken",
+  "website": "https://thesmartoken.com/",
+  "docs": "https://thesmartoken.com/",
+  "signup": "https://thesmartoken.com/",
+  "description": "OpenAI-compatible gateway with an eligibility-dependent, one-time $1 trial.",
+  "overview": "The campaign offers approved eligible accounts $1 of credit for 30 days, usable on live models. It is not a recurring grant. Google sign-in is required; approval, payment-card requirements and actual credit delivery were not independently tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$1 trial for eligible accounts",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://thesmartoken.com/campaign",
+      "https://thesmartoken.com/"
+    ]
+  },
+  "free_access": [
+    "$1 one-time trial for approved eligible accounts",
+    "Expires after 30 days",
+    "Google sign-in; card requirement unconfirmed",
+    "Paid prepaid wallet after trial"
+  ],
+  "notes": "Base URL https://thesmartoken.com/v1; check current eligibility and model rates.",
+  "models": [
+    {
+      "id": "deepseek-chat",
+      "name": "DeepSeek Flash",
+      "family": "DeepSeek"
+    }
+  ]
+}

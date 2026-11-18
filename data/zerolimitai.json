@@ -1,0 +1,41 @@
+{
+  "id": "zerolimitai",
+  "name": "ZeroLimitAI",
+  "website": "https://www.zerolimitai.com/developers",
+  "docs": "https://www.zerolimitai.com/developers",
+  "signup": "https://www.zerolimitai.com/developers",
+  "description": "A seven-day no-card evaluation of an OpenAI-compatible model router.",
+  "overview": "The evaluation key allows 25 calls per day for seven days; a paid plan is required afterward. The auto route selects from free upstream models and may substitute a requested model, identifying the model that answered in the response. The trial is for evaluation, not production.",
+  "offer": {
+    "type": "trials",
+    "label": "25 calls/day for 7 days",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.zerolimitai.com/developers",
+      "https://www.zerolimitai.com/docs/api"
+    ]
+  },
+  "free_access": [
+    "25 API calls/day for seven days",
+    "No card or automatic charge",
+    "Router may substitute the requested model",
+    "Evaluation only; paid plan required afterward"
+  ],
+  "notes": "Base URL https://www.zerolimitai.com/api/v1; inspect response model. No inference or billing test performed.",
+  "models": [
+    {
+      "id": "auto",
+      "name": "Auto router",
+      "family": "Router"
+    }
+  ]
+}

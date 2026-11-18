@@ -153,3 +153,29 @@ Added 100milionseek and ten additional services. All findings below are based on
 | APIShare | [Marketplace homepage](https://apishare.cc/) lists zero-cost promotional routes and one signup credit; promotion term and daily cap unpublished, Qwen RPM claim conflicts. Card status unknown. |
 | Zydit | Not added: [operator notice](https://zydit.in/) says service is permanently over, contrary to stale directories. |
 | APInex | Excluded: mandatory initial top-up, per user instruction. |
+
+## Iteration 18 — 2026-11-17
+
+Target: 20 new providers; eight supported additions, all limited or trial access. Public pages were reviewed; no account creation, authenticated inference, identity, billing, credit delivery or reliability was independently tested. Do not mistake model names in marketing for verified upstream identity.
+
+| Lead | Decision and evidence |
+| --- | --- |
+| ZeroLimitAI | Include: [developers](https://www.zerolimitai.com/developers) and [API docs](https://www.zerolimitai.com/docs/api) state 25 calls/day for seven days, no card; routing may substitute the requested model. Evaluation only. |
+| YepAPI | Include as trial: [homepage](https://www.yepapi.com/) advertises $5, no card; [Nemotron page](https://www.yepapi.com/ai-api/nvidia/nemotron-3-super) says $0 per token but also mentions per-request billing. Zero-balance operation and charges are unverified. |
+| SmarToken | Include: [$1 campaign](https://thesmartoken.com/campaign) is for approved eligible accounts, expires in 30 days; [homepage](https://thesmartoken.com/) documents text routes. Card requirement unconfirmed. |
+| TokenMix | Include: [homepage](https://tokenmix.ai/) advertises signup credits and no card, but amount/expiry unconfirmed; [model page](https://tokenmix.ai/models/qwen/qwen3.8-flash) gives chat API example. |
+| ToAPIs | Include: [homepage](https://toapis.com/) advertises no-card trial credits; [model guide](https://toapis.com/model-guide/deepseek-v4-flash) documents chat. Credit amount and expiry unconfirmed. |
+| AnyRouter | Include only its five-call trial per [homepage](https://anyrouter.dev/) and [pricing](https://anyrouter.dev/pricing). Ongoing models require paid Go or donating an upstream key. Distinct from AgentRouter. |
+| Helyx AI | Include cautiously: [$10 signup](https://helyxai.space/signup) advertised, but 50+ model claim conflicts with [eight-model catalog](https://helyxai.space/models-list), which mentions unclear daily claims. Actual operation, identity and credit delivery unknown. |
+| TokenLab | Include: [homepage](https://tokenlab.sh/) advertises $0.25 for up to ten calls in seven days. lemondata.cc redirects here; card and eligible trial models unconfirmed. |
+| AIHubMix | Correct existing entry: [free models](https://aihubmix.com/models/free) says only ten trial calls without payment; recurring daily quotas require a $1 top-up. Replace old recurring claim and unsupported model IDs. |
+| InferAll, ApiFreeLLM | Already indexed; not new. InferAll's [homepage](https://inferall.ai/) distinguishes 25 no-payment calls/day from a paid higher cap. |
+| AgentRouter | Excluded at user's explicit direction: user reports purported Claude Opus is not genuine and service is unstable. This is a user report, not an independently verified finding. |
+| APInex | Excluded at user's direction: initial top-up required. |
+| AkashML | [Documentation](https://akashml.com/docs/getting-started/introduction) and homepage conflict over payment verification / API access; no no-purchase API eligibility established. |
+| Grokified | [Pricing](https://grokified.com/pricing) conditions bonus on top-up or plan. |
+| OfoxAI | Its formerly free [GLM route](https://ofox.ai/models/z-ai/glm-4.7-flash%3Afree) is marked deprecated and no longer accepts requests. |
+| InferRoute | Live site could not be fetched; archived marketing alone is insufficient. |
+| deAPI, Articul8 Bivia | Media/embedding and decision APIs respectively; no general text generation established, so outside catalogue scope. |
+| Anakin | [Pricing](https://anakin.ai/pricing) says model usage is BYOK, not a free hosted model allowance. |
+| Runtime, OpenScale | Runtime now redirects to a paid model site with no confirmed free offer; OpenScale domain is for sale. |

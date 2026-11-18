@@ -1,0 +1,42 @@
+{
+  "id": "helyx-ai",
+  "name": "Helyx AI",
+  "website": "https://helyxai.space/",
+  "docs": "https://helyxai.space/",
+  "signup": "https://helyxai.space/",
+  "description": "A gateway advertising no-card signup credit, with inconsistent public catalog claims.",
+  "overview": "The signup page advertises $10 credit for new accounts via Google or GitHub. It advertises over 50 models, while the live catalog displays only eight and also mentions daily claims without clear terms. Availability, credit delivery, model identity and reliability were not tested; exercise caution.",
+  "offer": {
+    "type": "trials",
+    "label": "$10 signup credit advertised",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://helyxai.space/signup",
+      "https://helyxai.space/models-list"
+    ]
+  },
+  "free_access": [
+    "$10 signup credit advertised; no card",
+    "Google or GitHub OAuth",
+    "Advertised and live catalog sizes conflict",
+    "Daily-claim terms and credit expiry unclear"
+  ],
+  "notes": "Endpoint https://helyxai.space/v1/chat/completions. Verify actual balance and model availability before use.",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "context_window": 270000
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "tokenmix",
+  "name": "TokenMix",
+  "website": "https://tokenmix.ai/",
+  "docs": "https://tokenmix.ai/",
+  "signup": "https://tokenmix.ai/",
+  "description": "A no-card API gateway advertising finite signup credits.",
+  "overview": "TokenMix advertises complimentary signup credits and no credit card to start, but its homepage does not specify their amount, expiry or conditions. Paid usage is metered and prepaid. Its site says it does not use data for model training; upstream handling and retention should be checked separately.",
+  "offer": {
+    "type": "trials",
+    "label": "Signup credits; amount unspecified",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://tokenmix.ai/",
+      "https://tokenmix.ai/models/qwen/qwen3.8-flash"
+    ]
+  },
+  "free_access": [
+    "Signup credits; current amount and expiry not confirmed",
+    "No card to start",
+    "Paid routes consume balance",
+    "Provider says it does not train on user data"
+  ],
+  "notes": "Use https://api.tokenmix.ai/v1; confirm the trial balance and charges in the dashboard.",
+  "models": [
+    {
+      "id": "qwen3.8-flash",
+      "name": "Qwen 3.8 Flash",
+      "family": "Qwen",
+      "context_window": 1000000
+    }
+  ]
+}

@@ -30,6 +30,7 @@ from new_providers_n import PART_N  # noqa: E402
 from new_providers_o import PART_O  # noqa: E402
 from new_providers_p import PART_P  # noqa: E402
 from new_providers_r import PART_R  # noqa: E402
+from new_providers_s import PART_S  # noqa: E402
 from new_providers_q import PART_Q  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
@@ -59,6 +60,15 @@ SKIP = {
 
 # First-party pages read for each added provider, used for verified.sources.
 SOURCES = {
+    "aihubmix": ["https://aihubmix.com/models/free"],
+    "zerolimitai": ["https://www.zerolimitai.com/developers", "https://www.zerolimitai.com/docs/api"],
+    "yepapi": ["https://www.yepapi.com/", "https://www.yepapi.com/ai-api/nvidia/nemotron-3-super"],
+    "smartoken": ["https://thesmartoken.com/campaign", "https://thesmartoken.com/"],
+    "tokenmix": ["https://tokenmix.ai/", "https://tokenmix.ai/models/qwen/qwen3.8-flash"],
+    "toapis": ["https://toapis.com/", "https://toapis.com/model-guide/deepseek-v4-flash"],
+    "anyrouter-dev": ["https://anyrouter.dev/", "https://anyrouter.dev/pricing"],
+    "helyx-ai": ["https://helyxai.space/signup", "https://helyxai.space/models-list"],
+    "tokenlab": ["https://tokenlab.sh/", "https://tokenlab.sh/en/pricing"],
     "100milionseek": ["https://100milionseek.top/docs", "https://100milionseek.top/"],
     "devseek": ["https://devseek.space/", "https://devseek.space/docs"],
     "runcrate": ["https://www.runcrate.ai/inference/free", "https://www.runcrate.ai/privacy"],
@@ -269,7 +279,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P + PART_Q + PART_R:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P + PART_Q + PART_R + PART_S:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:
