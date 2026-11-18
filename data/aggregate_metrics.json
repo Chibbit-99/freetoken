@@ -1,0 +1,141 @@
+{
+  "description": "Curated trial amounts from catalogue records and one conservative RPM per provider. Non-USD amounts are converted using the dated ECB reference rates; recurring and unknown credits are excluded.",
+  "trial_credit_usd": {
+    "upstage": 10,
+    "fireworks-ai": 1,
+    "hyperbolic": 1,
+    "friendli-ai": 10,
+    "oracle-oci": 300,
+    "google-vertex-ai": 300,
+    "aws-bedrock": 100,
+    "azure-ai-foundry": 200,
+    "lightning-ai": 5,
+    "public-ai": 2,
+    "entrim": 10,
+    "arcee": 5,
+    "sovinfra": 380,
+    "ramp-router": 26,
+    "mara": 5,
+    "scale-down": 2.5,
+    "hpc-ai": 2,
+    "nscale": 5,
+    "vectoree": 5,
+    "nlp-cloud": 15,
+    "liquid-ai": 2,
+    "gonka24": 1,
+    "yepapi": 5,
+    "smartoken": 1,
+    "helyx-ai": 10,
+    "tokenlab": 0.25,
+    "getaiapikey": 0.5,
+    "notrack-api": 0.5,
+    "routerplex": 1,
+    "wallaby": 0.5,
+    "mixedbread": 5,
+    "apivale": 0.2,
+    "aevon": 100,
+    "mixroute": 5,
+    "gwbus": 5,
+    "flonno": 1,
+    "boundless-api": 5
+  },
+  "requests_per_minute": {
+    "groq": 30,
+    "openrouter": 20,
+    "cohere": 20,
+    "cloudflare-workers-ai": 300,
+    "nvidia-nim": 40,
+    "ovhcloud-ai-endpoints": 2,
+    "hetzner-inference": 10,
+    "llm7-io": 120,
+    "novai": 5,
+    "token-harbor": 60,
+    "bazaarlink": 10,
+    "routeway": 5,
+    "kiosapi": 5,
+    "fireworks-ai": 10,
+    "scaleway": 60,
+    "novita-ai": 60,
+    "hyperbolic": 300,
+    "vertex-ai-express": 10,
+    "opentyphoon": 200,
+    "inception": 100,
+    "experiential-labs": 10,
+    "amd-radeon-cloud": 30,
+    "merkium": 30,
+    "miapi": 60,
+    "sambanova": 20,
+    "nara-router": 15,
+    "navy-ai": 20,
+    "stepfun": 5,
+    "baichuan": 5,
+    "slashai": 15,
+    "nexusify": 130,
+    "coarena": 30,
+    "qiniu": 5,
+    "typhoon": 200,
+    "sarvam": 60,
+    "naga-ai": 10,
+    "plugsky": 30,
+    "dreamprompting": 100,
+    "modelbridge": 20,
+    "codiv": 60,
+    "callmissed": 60,
+    "evolvex": 5,
+    "helixmind": 3,
+    "kenari": 5,
+    "zylo-api": 10,
+    "1min-ai": 180,
+    "notrack-api": 300,
+    "routerplex": 10,
+    "speka": 10,
+    "nabh-cloud": 5,
+    "flux-router": 60,
+    "flonno": 60,
+    "boundless-api": 10,
+    "infercom": 20
+  },
+  "fx_reference": {
+    "date": "2026-11-17",
+    "source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html",
+    "base": "EUR",
+    "rates_per_eur": {
+      "EUR": 1,
+      "USD": 1.0989,
+      "CNY": 7.3254,
+      "INR": 102.72,
+      "MYR": 4.4983
+    },
+    "note": "ECB reference rates are informational, not live conversion rates. Sarvam and Sarvam AI describe the same signup credit; count it once."
+  },
+  "trial_credit_foreign": {
+    "infercom": {
+      "amount": 5,
+      "currency": "EUR"
+    },
+    "baidu-qianfan": {
+      "amount": 20,
+      "currency": "CNY"
+    },
+    "ilmu": {
+      "amount": 20,
+      "currency": "MYR"
+    },
+    "xiaomi-mimo": {
+      "amount": 10,
+      "currency": "CNY"
+    },
+    "stepfun": {
+      "amount": 10,
+      "currency": "CNY"
+    },
+    "ppio": {
+      "amount": 5,
+      "currency": "CNY"
+    },
+    "sarvam-ai": {
+      "amount": 100,
+      "currency": "INR"
+    }
+  }
+}

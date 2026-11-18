@@ -1,0 +1,41 @@
+{
+  "id": "nutrient",
+  "name": "Nutrient AI Gateway",
+  "website": "https://www.nutrient.io/api/ai-gateway-api/",
+  "docs": "https://www.nutrient.io/api/ai-gateway-api/",
+  "signup": "https://www.nutrient.io/api/ai-gateway-api/",
+  "description": "A document-workflow platform with an OpenAI-compatible text gateway.",
+  "overview": "The free plan includes $5 of usage each month without a card, shared across all Nutrient APIs. Credits reset each billing period and do not roll over. AI Gateway live generation spends that allowance; separately controlled test keys can make real text-only requests without consuming it. Optional prepaid wallet auto-reloads if enabled. No signup or inference was tested.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "$5 shared usage / month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.nutrient.io/api/ai-gateway-api/",
+      "https://www.nutrient.io/api/pricing/"
+    ]
+  },
+  "free_access": [
+    "$5 monthly usage shared across Nutrient APIs",
+    "No card on the free plan",
+    "Unused usage expires each billing period",
+    "Optional wallet auto-reloads; check spending controls"
+  ],
+  "notes": "Base URL https://api.nutrient.io/ai/v1. Rates and account access are provider claims.",
+  "models": [
+    {
+      "id": "nutrient-s",
+      "name": "Nutrient Small",
+      "family": "Nutrient"
+    }
+  ]
+}

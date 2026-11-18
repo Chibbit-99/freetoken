@@ -1,0 +1,41 @@
+{
+  "id": "liquid-inference",
+  "name": "Liquid Inference (Architect)",
+  "website": "https://liquidinference.ai/",
+  "docs": "https://liquidinference.ai/",
+  "signup": "https://liquidinference.ai/",
+  "description": "An inference exchange that auctions requests among model providers.",
+  "overview": "The operator says new workspaces receive starting credit for initial requests without a card. Its amount, expiry and eligibility are not published on the cited page; treat it as a finite starting grant, not a monthly allowance. Auction prices and exchange fees apply. This is distinct from Liquid AI and its model console. No account or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "Starting credit; amount unpublished",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://liquidinference.ai/",
+      "https://liquidinference.ai/docs"
+    ]
+  },
+  "free_access": [
+    "Starting credit for new workspaces; no card",
+    "Amount and expiry not published",
+    "Market prices and exchange fees apply",
+    "Distinct from Liquid AI / Liquid Console"
+  ],
+  "notes": "Base URL https://router.inference.ai.exchange/v1. Offers, balances and model identities were not independently verified.",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B (documentation example)",
+      "family": "GPT-OSS"
+    }
+  ]
+}

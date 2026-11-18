@@ -1,0 +1,46 @@
+{
+  "id": "1min-ai",
+  "name": "1min.AI",
+  "website": "https://1min.ai/",
+  "docs": "https://docs.1min.ai/docs/api/chat-with-ai-api",
+  "signup": "https://app.1min.ai/",
+  "description": "A multi-model platform with earned credits and a text-generation API.",
+  "overview": "The provider documents 15,000 credits for visiting the web app each day; a separate provider article says signup credits can be spent on its Chat with AI API. Whether daily-earned credits can be spent through the API was not independently established. Credits are platform units, not tokens. The model names and access were not independently verified.",
+  "offer": {
+    "type": "always-free",
+    "label": "15,000 credits/day with daily visit",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://1min.ai/free-ai-api-for-developers",
+      "https://1minai.tawk.help/article/daily-free-credits-15000-credits-per-day-approximately-450000-credits-per-month"
+    ]
+  },
+  "free_access": [
+    "15,000 credits/day requires a web-app visit",
+    "Free signup credits advertised for the chat API",
+    "API use of daily-earned credits unconfirmed",
+    "Default API limit: 180 requests/min per key"
+  ],
+  "notes": "Chat API https://api.1min.ai/api/chat-with-ai uses its own request format. Check the account credit rules before relying on daily API access.",
+  "models": [
+    {
+      "id": "gpt-4o-mini",
+      "name": "GPT-4o mini (provider example)",
+      "family": "GPT"
+    },
+    {
+      "id": "deepseek-chat",
+      "name": "DeepSeek Chat (provider example)",
+      "family": "DeepSeek"
+    }
+  ]
+}

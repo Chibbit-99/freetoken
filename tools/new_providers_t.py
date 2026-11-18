@@ -1,0 +1,21 @@
+"""Rate-limited zero-price model offers found while looking for recurring quotas."""
+PART_T = [
+('beatapi','BeatAPI','https://beatapi.io/','fm','Free models; 1 successful request/min','nn',None,None,
+ 'An API gateway with limited-time zero-priced text models.',
+ 'BeatAPI documents three free text model IDs available with zero balance before any top-up, subject to key group access. Before the first top-up the account is limited to one successful free request per minute. The provider explicitly promises no daily allowance and may withdraw free models at any time. Card requirements and live inference were not independently tested.',
+ ['Zero-balance access before first top-up','1 successful free request/minute before top-up','No daily allowance promised; models may disappear','Card requirement unconfirmed'],
+ [{'id':'glm-5.3-flash-free','name':'GLM 5.3 Flash Free','family':'GLM'}, {'id':'deepseek-v4.1-flash-free','name':'DeepSeek V4.1 Flash Free','family':'DeepSeek'}, {'id':'hy4-flash-free','name':'HY4 Flash Free','family':'Hunyuan'}],
+ 'Base URL https://api.beatapi.io/v1. Use exact -free IDs; paid siblings are billable. Model identity and reliability not independently tested.'),
+('crowllm','CrowLLM','https://crowllm.com/','fm','Free models; limited requests/min','nn',None,False,
+ 'A model gateway with a no-card, zero-priced free model shelf.',
+ 'CrowLLM says its free lane needs no card or top-up, and is limited to a handful of requests per minute. Free and paid models share an API; check each model price because some IDs ending in :free are earned-credit rather than zero-priced routes. The listed model was advertised as zero-priced when checked. Older operator claims of a daily Discord reward were not confirmed by current pricing. No inference, billing or model identity was independently tested.',
+ ['Free lane requires no card or top-up','A handful of requests per minute; exact cap unpublished','Check live pricing; not every :free ID is zero-priced','Paid routes spend credit'],
+ [{'id':'solar-mini4:free','name':'Solar Mini4 Free','family':'Solar'}, {'id':'hy4-flash:free','name':'HY4 Flash Free','family':'Hunyuan'}],
+ 'Base URL https://crowllm.com/v1. Free model availability, rate limits and pricing may change.'),
+('numes','Numes','https://numes.ai/','fm','Free models; rate limits unpublished','nn',None,None,
+ 'An inference marketplace with separate zero-priced free model routes.',
+ 'Numes documents :free routes that only use zero-priced endpoints and never fall back to paid ones. Free requests require verified email and have separate rate limits, but their numerical limits and card requirements were not established. Zero-balance traffic has lower priority under load; supply and model availability change; no authenticated inference, billing or model identity was independently tested.',
+ ['Free routes never fall back to paid endpoints','Verified email required; rate limits apply','Numeric limit and card requirement unconfirmed','Live free model supply may change'],
+ [{'id':'deepseek/deepseek-v4.1-flash:free','name':'DeepSeek V4.1 Flash Free','family':'DeepSeek'}, {'id':'moonshotai/kimi-k3.1-pro:free','name':'Kimi K3.1 Pro Free','family':'Kimi'}],
+ 'Base URL https://api.numes.ai/api/v1. Select exact :free IDs and check the live catalog.'),
+]

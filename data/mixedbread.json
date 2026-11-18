@@ -1,0 +1,42 @@
+{
+  "id": "mixedbread",
+  "name": "Mixedbread",
+  "website": "https://www.mixedbread.com/",
+  "docs": "https://www.mixedbread.com/docs/agent/chat-completions",
+  "signup": "https://www.platform.mixedbread.com/",
+  "description": "A search infrastructure provider with a text-generating retrieval agent.",
+  "overview": "The Starter plan offers $5 in one-time credits with no card. Toast 1 is a specialized search model available through Chat Completions; search and other services may draw from the same balance. No signup, billing or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 one-time Starter credits",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.mixedbread.com/pricing",
+      "https://www.mixedbread.com/docs/agent/chat-completions"
+    ]
+  },
+  "free_access": [
+    "$5 one-time Starter credit; no card",
+    "Toast 1 is specialized for search",
+    "Search usage is billed separately",
+    "Not a recurring free grant"
+  ],
+  "notes": "Base URL https://api.mixedbread.com/v1. Check current rates and balance before use.",
+  "api_endpoint": "https://api.mixedbread.com/v1",
+  "models": [
+    {
+      "id": "toast-1",
+      "name": "Toast 1",
+      "family": "Toast"
+    }
+  ]
+}

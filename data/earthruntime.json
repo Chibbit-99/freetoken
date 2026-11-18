@@ -1,0 +1,53 @@
+{
+  "id": "earthruntime",
+  "name": "earthruntime",
+  "website": "https://earthruntime.com/",
+  "docs": "https://earthruntime.com/docs",
+  "signup": "https://earthruntime.com/",
+  "description": "A developer-preview inference API for Qwen and GPT-OSS.",
+  "overview": "The operator says new users receive 100,000 free tokens on their key, with no card, after an emailed verification code. This is a starting grant, not a published recurring quota. The listed models and allocation were not tested with an account.",
+  "offer": {
+    "type": "trials",
+    "label": "100,000 tokens to start",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://earthruntime.com/"
+    ]
+  },
+  "free_access": [
+    "100,000 starting tokens; no card",
+    "Email verification code required",
+    "One-time starting allocation, not daily",
+    "DeepSeek V4 Flash listed as coming soon, excluded"
+  ],
+  "notes": "Base URL https://api.earthruntime.com/v1. Actual grant, identity and inference not independently verified.",
+  "api_endpoint": "https://api.earthruntime.com/v1",
+  "free_token_allowance": 100000,
+  "allowance_period": "one-time",
+  "models": [
+    {
+      "id": "qwen3.6-35b",
+      "name": "Qwen 3.6 35B",
+      "family": "Qwen"
+    },
+    {
+      "id": "qwen3.8-27b",
+      "name": "Qwen 3.8 27B",
+      "family": "Qwen"
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS"
+    }
+  ]
+}

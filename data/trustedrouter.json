@@ -1,0 +1,43 @@
+{
+  "id": "trustedrouter",
+  "name": "TrustedRouter",
+  "website": "https://trustedrouter.com/",
+  "docs": "https://trustedrouter.com/",
+  "signup": "https://trustedrouter.com/",
+  "description": "A model router advertising an initial token grant.",
+  "overview": "The operator says new users can start with 1 million free tokens with no card, using an OpenAI-compatible gateway. It does not establish a recurring allowance; the grant expiry, eligible routes and how different prices affect it are unclear. Provider privacy and routing vary. No signup, inference, billing or model identity was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "1M starting tokens",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy varies by route"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://trustedrouter.com/"
+    ]
+  },
+  "free_access": [
+    "1M starting tokens advertised; no card",
+    "Treat as one-time, not recurring",
+    "Eligible models and expiry unclear",
+    "Route-specific privacy varies"
+  ],
+  "notes": "Base URL https://api.trustedrouter.com/v1. Verify trial eligibility and charges for the selected route.",
+  "api_endpoint": "https://api.trustedrouter.com/v1",
+  "free_token_allowance": 1000000,
+  "allowance_period": "one-time",
+  "models": [
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "name": "GLM 5.3 Flash (catalogue listing)",
+      "family": "GLM"
+    }
+  ]
+}

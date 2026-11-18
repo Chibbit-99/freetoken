@@ -1,0 +1,47 @@
+{
+  "id": "ireze",
+  "name": "ireze",
+  "website": "https://ireze.site/",
+  "docs": "https://ireze.site/#docs",
+  "signup": "https://ireze.site/",
+  "description": "A Discord-based gateway advertising manually claimed daily credits.",
+  "overview": "The operator advertises 4,000,000 credits every 24 hours after completing a Work.ink task and signing in with Discord; its changelog also mentions a 2,000,000-credit welcome bonus. Credits are not necessarily tokens or dollars. Model names and upstream identity are unverified: the site says unknown IDs route to its default, so do not assume any claimed Claude model is authentic. No signup or inference was tested.",
+  "offer": {
+    "type": "always-free",
+    "label": "4M credits/day; manual task",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://ireze.site/",
+      "https://ireze.site/changelog"
+    ]
+  },
+  "free_access": [
+    "4M credits per 24 hours after manual Work.ink task",
+    "Discord login required; no card advertised",
+    "2M welcome credits advertised",
+    "Model identity, billing and stability unverified"
+  ],
+  "notes": "Base URL https://ireze.site/v1. Treat model names as routing labels, not proof of upstream identity; avoid sensitive data.",
+  "api_endpoint": "https://ireze.site/v1",
+  "models": [
+    {
+      "id": "claude-opus-5",
+      "name": "claude-opus-5 (operator label; unverified)",
+      "family": "Unverified gateway model"
+    },
+    {
+      "id": "molab-copilot",
+      "name": "molab-copilot (operator label; unverified)",
+      "family": "Unverified gateway model"
+    }
+  ]
+}

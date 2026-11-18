@@ -1,0 +1,42 @@
+{
+  "id": "getaiapikey",
+  "name": "GetAiApiKey",
+  "website": "https://getaiapikey.com/",
+  "docs": "https://getaiapikey.com/docs/",
+  "signup": "https://getaiapikey.com/get-api-key/",
+  "description": "A single-model OpenAI-compatible API with a short introductory trial.",
+  "overview": "New accounts can claim $0.50 in trial credit on the API-key page without a card; it expires seven days after signup. The operator calls its sole model uncensored but does not identify its underlying weights. No account, balance or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$0.50 trial; 7 days",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://getaiapikey.com/",
+      "https://getaiapikey.com/terms/"
+    ]
+  },
+  "free_access": [
+    "$0.50 one-time trial; claim on key page",
+    "Expires seven days after signup",
+    "No card required for trial",
+    "One hosted model; identity not published"
+  ],
+  "notes": "Base URL https://api.getaiapikey.com/v1. Trial is finite; paid top-ups are separate.",
+  "api_endpoint": "https://api.getaiapikey.com/v1",
+  "models": [
+    {
+      "id": "uncensored",
+      "name": "Uncensored (provider model)",
+      "family": "Unspecified"
+    }
+  ]
+}

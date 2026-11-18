@@ -1,0 +1,42 @@
+{
+  "id": "boundless-api",
+  "name": "Boundless API",
+  "website": "https://www.boundlessapi.com/en/",
+  "docs": "https://www.boundlessapi.com/en/faq.html",
+  "signup": "https://www.boundlessapi.com/en/",
+  "description": "A third-party OpenAI-compatible model router.",
+  "overview": "Boundless advertises a $5 signup credit without a card. Its FAQ says the welcome tier is limited to Starter models and 10 requests/minute; trial eligibility and expiry should be confirmed in the dashboard. It also offers optional automatic recharge. No signup, inference, billing or claimed model identity was independently tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 signup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Relay; privacy and identity unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.boundlessapi.com/en/",
+      "https://www.boundlessapi.com/en/faq.html"
+    ]
+  },
+  "free_access": [
+    "$5 starting credit; no card",
+    "Welcome tier: 10 requests/minute",
+    "Starter model restrictions apply",
+    "Optional auto-recharge; check settings"
+  ],
+  "notes": "Base URL https://api.boundlessapi.com/v1. This example is a catalogue claim, not confirmation that it is included on Starter.",
+  "api_endpoint": "https://api.boundlessapi.com/v1",
+  "models": [
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6 (gateway example)",
+      "family": "Claude"
+    }
+  ]
+}

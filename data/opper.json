@@ -1,0 +1,41 @@
+{
+  "id": "opper",
+  "name": "Opper",
+  "website": "https://opper.ai/",
+  "docs": "https://opper.ai/",
+  "signup": "https://opper.ai/",
+  "description": "An EU-hosted multi-model gateway with selected free routes.",
+  "overview": "Opper says free models work through its API immediately after signup without a card; its OpenAI-compatible guide explicitly identifies the gemini/gemma-4-31b route as free. Premium models need a card and credits. A numeric recurring quota and free-model duration were not found; no inference or signup was tested.",
+  "offer": {
+    "type": "free-models",
+    "label": "Selected free models; quota unpublished",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.opper.ai/overview/quickstart",
+      "https://opper.ai/blog/openai-compatible-api"
+    ]
+  },
+  "free_access": [
+    "Selected free models available without a card",
+    "gemini/gemma-4-31b identified as a free route",
+    "Free allowance and duration not published",
+    "Premium models require card and credits"
+  ],
+  "notes": "Base URL https://api.opper.ai/v3/compat. Select the documented free route rather than a paid pool.",
+  "models": [
+    {
+      "id": "gemini/gemma-4-31b",
+      "name": "Gemma 4 31B (Gemini route)",
+      "family": "Gemma"
+    }
+  ]
+}

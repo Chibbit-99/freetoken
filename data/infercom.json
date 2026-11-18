@@ -1,0 +1,47 @@
+{
+  "id": "infercom",
+  "name": "Infercom Inference Service",
+  "website": "https://cloud.infercom.ai/plans",
+  "docs": "https://docs.infercom.ai/en/models/rate-limits",
+  "signup": "https://cloud.infercom.ai/",
+  "description": "European inference service with a finite free credit.",
+  "overview": "Infercom advertises €5 in API credits on signup, no card, expiring after 90 days. The no-payment Free tier has access to production models with per-model rate limits; the published table lists GPT OSS 120B and Gemma 4 31B at 20 requests per day. It is a separate Infercom service from the existing SambaNova listing; no signup or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "€5 trial / 90 days",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Provider privacy not independently assessed"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://cloud.infercom.ai/plans",
+      "https://docs.infercom.ai/en/models/rate-limits"
+    ]
+  },
+  "free_access": [
+    "€5 signup credit; expires after 90 days",
+    "No card required to start",
+    "Free tier has per-model request limits",
+    "Separate Infercom account and endpoint"
+  ],
+  "notes": "Base URL https://api.infercom.ai/v1. Confirm remaining credit and current production model limits.",
+  "api_endpoint": "https://api.infercom.ai/v1",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT OSS 120B",
+      "family": "GPT-OSS"
+    },
+    {
+      "id": "gemma-4-31B-it",
+      "name": "Gemma 4 31B IT",
+      "family": "Gemma"
+    }
+  ]
+}

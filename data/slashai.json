@@ -39,5 +39,7 @@
       "context_window": 262144,
       "rate_limits": "Free trial: 2M tokens in one hour, 15 RPM"
     }
-  ]
+  ],
+  "free_token_allowance": 2000000,
+  "allowance_period": "one-time"
 }

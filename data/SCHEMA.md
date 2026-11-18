@@ -70,7 +70,8 @@ The order of the `providers` array is the display order in the catalogue.
 | `last_updated` | string | yes | `YYYY-MM-DD` of the last data update. |
 | `verified` | object | yes | Where and when free access was checked (see below). |
 | `free_token_allowance` | integer | no | Account-wide free tokens shared by every model. Takes precedence over summing per-model `token_allowance` on the allowance leaderboard. |
-| `allowance_period` | string | no | `day` (default), `month` or `one-time`. Controls how the allowance is labelled — a one-time signup balance is never shown as tokens/day. |
+| `allowance_period` | string | no | `day` (default), `week`, `month`, `year` or `one-time`. Controls how the allowance is labelled — a one-time signup balance is never shown as tokens/day. |
+| `one_time_token_bonus` | integer | no | Additional one-time token grant alongside a recurring account-wide allowance; counted once in first-month totals. |
 | `catalog_size` | integer | no | Total number of models the free tier carries, when the provider states it. The app shows "4 of 22 models" and a "4 of 22 listed" heading instead of implying the listed models are the whole catalogue. |
 | `free_access` | array of strings | yes | Exactly four bullets summarising the free offer and its conditions, shown in the detail view. Keep each under ~80 characters. |
 | `api_endpoint` | string | no | Base URL of the OpenAI-compatible API, where one exists. Omit for speech-only, embeddings-only or non-OpenAI APIs. |
@@ -189,7 +190,7 @@ day), never a metric.
   example Inception's 100M tokens) **do count**, but the row is labelled
   "One-time" so a credit is never mistaken for recurring capacity.
 - Rows are ordered by a **30-day equivalent** (`value x 30` when the period is
-  `day`, the face value for `month` and `one-time`), because raw figures with
+  `day`, `value × 30 / 7` for `week`, `value × 30 / 365` for `year`, and the face value for `month` and `one-time`), because raw figures with
   different periods are not comparable — 7M/day is more capacity than
   30M/month. The value column always shows the period the provider publishes.
 - Values are shortened for display: `1000000` → `1M`, `5400` → `5.4K`.
@@ -420,3 +421,19 @@ A free-model-only provider with no token-denominated quota:
   price is exactly zero Pollen; a "Quest"-priced community model is a paid
   model that happens to accept earned credit, so it is described in `overview`
   instead of being enumerated as a free row.
+
+### Dashboard aggregate metadata
+
+`data/aggregate_metrics.json` maps provider IDs to manually curated one-time
+`trial_credit_usd`, `trial_credit_foreign` (amount and ISO currency), and one
+`requests_per_minute` limit per provider. Foreign credits are converted to USD
+using the stored dated ECB reference rates, then the combined sum is rounded
+once to two decimal places. Rates are a snapshot, not live or transactional;
+update `fx_reference` and its source date when refreshing. Exclude duplicate
+provider accounts, recurring credits, unknown values and unsupported currencies.
+The current Sarvam and Sarvam AI entries represent the same signup credit and
+are counted once. Update the maps when offers change; do not parse prose or
+count multiple model/key RPMs as separate providers. Figures are estimates,
+not guaranteed usable together: trials can require cards or eligibility and
+rate limits have different scopes. The 30-day token figure uses quota fields,
+counting shared pools and one-time balances or bonuses once; unknown quotas are excluded.

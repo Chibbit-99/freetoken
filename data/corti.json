@@ -1,0 +1,46 @@
+{
+  "id": "corti",
+  "name": "Corti Models",
+  "website": "https://corti.ai/models",
+  "docs": "https://corti.ai/models",
+  "signup": "https://corti.ai/models",
+  "description": "A hosted OpenAI-compatible coding and text model API.",
+  "overview": "Corti pricing says every account starts with free credits without a card and that model usage is paid after the credit. Its current pricing does not state the grant amount or expiry; older search-indexed copy mentions $50 and one year, which is not confirmed by the current page. No signup or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "Starting credit; amount unpublished",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://corti.ai/pricing",
+      "https://corti.ai/models"
+    ]
+  },
+  "free_access": [
+    "Starting credits; no card",
+    "Current amount and expiry not published",
+    "Text model usage spends the shared credit",
+    "Pay-as-you-go after credits; check billing controls"
+  ],
+  "notes": "Base URL https://ai.eu.corti.app/v1. Actual credit and access not independently verified.",
+  "models": [
+    {
+      "id": "corti-s1",
+      "name": "Corti S1",
+      "family": "Corti"
+    },
+    {
+      "id": "corti-s1-mini",
+      "name": "Corti S1 Mini",
+      "family": "Corti"
+    }
+  ]
+}

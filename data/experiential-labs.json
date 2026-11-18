@@ -21,7 +21,8 @@
     "checked": "2026-11-17",
     "sources": [
       "https://experientiallabs.ai",
-      "https://freeinferencing.com/"
+      "https://freeinferencing.com/",
+      "https://www.experientiallabs.ai/pricing"
     ]
   },
   "free_access": [
@@ -62,5 +63,7 @@
         "intelligence": 29
       }
     }
-  ]
+  ],
+  "free_token_allowance": 1000000,
+  "allowance_period": "day"
 }

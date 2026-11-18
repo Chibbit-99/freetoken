@@ -32,6 +32,142 @@
       ]
     },
     {
+      "id": "2026-11-17-more-token-quotas-counted",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "More token quotas counted",
+      "summary": "Researched existing providers and added documented token allowances to the first-month estimate.",
+      "providers": [],
+      "details": [
+        "Includes recurring limits and one-time grants",
+        "Shared pools counted once",
+        "Availability and other limits may apply"
+      ]
+    },
+    {
+      "id": "2026-11-17-trial-credit-totals-now-include-foreign-currenci",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "Trial credit totals now include foreign currencies",
+      "summary": "The dashboard converts listed trial grants to USD using dated ECB reference rates.",
+      "providers": [],
+      "details": [
+        "EUR, CNY, INR and MYR grants converted before rounding the total",
+        "Duplicate Sarvam signup credit counted once",
+        "Rates are a dated snapshot and eligibility varies"
+      ]
+    },
+    {
+      "id": "2026-11-17-dashboard-adds-aggregate-offer-estimates",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "Dashboard adds aggregate offer estimates",
+      "summary": "New dashboard stats summarize documented one-time USD credits, 30-day token quotas and listed RPM limits.",
+      "providers": [],
+      "details": [
+        "Shared token pools counted once and weekly quotas converted to 30 days",
+        "Unknown amounts and non-USD trial credits excluded",
+        "Separate provider limits and eligibility prevent guaranteed combined throughput"
+      ]
+    },
+    {
+      "id": "2026-11-17-flux-router-and-three-inference-trials",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Flux Router and three inference trials",
+      "summary": "Added Flux Router’s capped monthly free lane and three time-limited or finite signup credits.",
+      "providers": [
+        "flux-router",
+        "infercom",
+        "flonno",
+        "boundless-api"
+      ],
+      "details": [
+        "Flux: up to $1 or 100K tokens monthly on Fast",
+        "Infercom: €5 trial expires after 90 days",
+        "Flonno and Boundless: finite starting credits",
+        "model identity and billing untested"
+      ]
+    },
+    {
+      "id": "2026-11-17-seven-more-inference-offers-including-recurring-",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Seven more inference offers, including recurring credits",
+      "summary": "Added EdgeOne Makers, PEKPIK, nabh.cloud and four gateway trials, with caveats for credit limits and model identity.",
+      "providers": [
+        "edgeone-makers",
+        "pekpik",
+        "nabh-cloud",
+        "aevon",
+        "mixroute",
+        "trustedrouter",
+        "gwbus"
+      ],
+      "details": [
+        "EdgeOne Makers: 500K monthly tokens on built-in models",
+        "PEKPIK: manually claim $0.50 per day",
+        "nabh.cloud: 50 INR credits monthly",
+        "Trials are finite and gateway claims remain untested"
+      ]
+    },
+    {
+      "id": "2026-11-17-vikasit-ai-2m-daily-tokens-on-nova",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Vikasit AI: 2M daily tokens on Nova",
+      "summary": "Added a recurring no-card inference offer for Vikasit Nova, subject to fair use and change.",
+      "providers": [
+        "vikasit-ai"
+      ],
+      "details": [
+        "GitHub sign-in and fair-use limits apply",
+        "Other models are paid",
+        "no signup or inference independently tested"
+      ]
+    },
+    {
+      "id": "2026-11-17-daily-rewards-and-new-trial-leads",
+      "date": "2026-11-17",
+      "kind": "update",
+      "title": "Daily rewards and new trial leads",
+      "summary": "Added manually earned daily credits and finite no-top-up trials; clarified free-model limits and uncertain model identity.",
+      "providers": [
+        "ireze",
+        "1min-ai",
+        "earthruntime",
+        "getaiapikey",
+        "notrack-api",
+        "routerplex",
+        "wallaby",
+        "abliteration",
+        "mixedbread",
+        "apivale",
+        "beatapi",
+        "crowllm",
+        "numes"
+      ],
+      "details": []
+    },
+    {
+      "id": "2026-11-17-three-rate-limited-free-model-gateways",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Three rate-limited free model gateways",
+      "summary": "BeatAPI, CrowLLM and Numes added as free-model routes; no fixed daily or monthly quota was established.",
+      "providers": [
+        "beatapi",
+        "crowllm",
+        "numes"
+      ],
+      "details": [
+        "BeatAPI: one successful free request per minute before top-up",
+        "no daily allowance promised",
+        "CrowLLM: no-card free lane with a small per-minute ceiling",
+        "Numes: zero-priced free routes require verified email and have unpublished rate limits"
+      ]
+    },
+    {
       "id": "2026-11-17-eight-trial-api-listings-and-aihubmix-correction",
       "date": "2026-11-17",
       "kind": "added",

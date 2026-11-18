@@ -1,0 +1,50 @@
+{
+  "id": "edgeone-makers",
+  "name": "EdgeOne Makers Models",
+  "website": "https://pages.edgeone.ai/document/models",
+  "docs": "https://pages.edgeone.ai/document/models",
+  "signup": "https://pages.edgeone.ai/document/models",
+  "description": "Tencent EdgeOne Makers hosted built-in model gateway.",
+  "overview": "EdgeOne Makers free edition includes 500,000 tokens per month shared across built-in @makers/ models. Its API documentation supports OpenAI-compatible requests; other vendor-prefixed models require the user’s own provider key. The quota may change when the commercial edition launches. Signup requirements and card status were not independently verified.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "500K tokens / month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Provider privacy not independently assessed"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://pages.edgeone.ai/document/limits-and-quotas",
+      "https://pages.edgeone.ai/document/models",
+      "https://pages.edgeone.ai/document/makers-models-integration"
+    ]
+  },
+  "free_access": [
+    "500K tokens/month shared across built-in models",
+    "OpenAI-compatible Models API",
+    "Third-party vendor routes require own keys",
+    "Free edition quotas subject to change"
+  ],
+  "notes": "Base URL https://ai-gateway.edgeone.link/v1. Activate Makers and create a Models API key; use built-in @makers/ IDs.",
+  "api_endpoint": "https://ai-gateway.edgeone.link/v1",
+  "free_token_allowance": 500000,
+  "allowance_period": "month",
+  "models": [
+    {
+      "id": "@makers/deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash (built-in)",
+      "family": "DeepSeek"
+    },
+    {
+      "id": "@makers/kimi-k2.6",
+      "name": "Kimi K2.6 (built-in)",
+      "family": "Kimi"
+    }
+  ]
+}

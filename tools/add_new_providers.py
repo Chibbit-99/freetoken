@@ -31,6 +31,10 @@ from new_providers_o import PART_O  # noqa: E402
 from new_providers_p import PART_P  # noqa: E402
 from new_providers_r import PART_R  # noqa: E402
 from new_providers_s import PART_S  # noqa: E402
+from new_providers_t import PART_T  # noqa: E402
+from new_providers_u import PART_U  # noqa: E402
+from new_providers_v import PART_V  # noqa: E402
+from new_providers_w import PART_W  # noqa: E402
 from new_providers_q import PART_Q  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
@@ -60,6 +64,36 @@ SKIP = {
 
 # First-party pages read for each added provider, used for verified.sources.
 SOURCES = {
+    "flux-router": ["https://fluxrouter.ai/pricing", "https://fluxrouter.ai/faq"],
+    "infercom": ["https://cloud.infercom.ai/plans", "https://docs.infercom.ai/en/models/rate-limits"],
+    "flonno": ["https://www.flonno.com/", "https://www.flonno.com/docs"],
+    "boundless-api": ["https://www.boundlessapi.com/en/", "https://www.boundlessapi.com/en/faq.html"],
+    "pekpik": ["https://aiapiv2.pekpik.com/free-credit", "https://aiapiv2.pekpik.com/docs/quickstart/"],
+    "nabh-cloud": ["https://nabh.cloud/pricing/", "https://nabh.cloud/docs/"],
+    "aevon": ["https://aevon.sh/", "https://aevon.sh/docs"],
+    "mixroute": ["https://mixroute.ai/", "https://mixroute.ai/docs/introduction"],
+    "trustedrouter": ["https://trustedrouter.com/"],
+    "gwbus": ["https://gwbus.com/", "https://gwbus.com/docs"],
+    "edgeone-makers": ["https://pages.edgeone.ai/document/limits-and-quotas", "https://pages.edgeone.ai/document/models", "https://pages.edgeone.ai/document/makers-models-integration"],
+    "vikasit-ai": ["https://vikasit.ai/inference", "https://vikasit.ai/privacy"],
+    "nutrient": ["https://www.nutrient.io/api/ai-gateway-api/", "https://www.nutrient.io/api/pricing/"],
+    "speka": ["https://speka.me/pricing", "https://speka.me/docs", "https://speka.me/models"],
+    "opper": ["https://docs.opper.ai/overview/quickstart", "https://opper.ai/blog/openai-compatible-api"],
+    "liquid-inference": ["https://liquidinference.ai/", "https://liquidinference.ai/docs"],
+    "corti": ["https://corti.ai/pricing", "https://corti.ai/models"],
+    "ireze": ["https://ireze.site/", "https://ireze.site/changelog"],
+    "1min-ai": ["https://1min.ai/free-ai-api-for-developers", "https://1minai.tawk.help/article/daily-free-credits-15000-credits-per-day-approximately-450000-credits-per-month"],
+    "earthruntime": ["https://earthruntime.com/"],
+    "getaiapikey": ["https://getaiapikey.com/", "https://getaiapikey.com/terms/"],
+    "notrack-api": ["https://notrack.ai/api"],
+    "routerplex": ["https://routerplex.com/", "https://docs.routerplex.com/quickstart"],
+    "wallaby": ["https://wallabytoken.com/", "https://wallabytoken.com/blog/p/kimi-k3-free-trial"],
+    "abliteration": ["https://abliteration.ai/pricing", "https://docs.abliteration.ai/api/rate-limits"],
+    "mixedbread": ["https://www.mixedbread.com/pricing", "https://www.mixedbread.com/docs/agent/chat-completions"],
+    "apivale": ["https://apivale.com/", "https://apivale.com/docs"],
+    "beatapi": ["https://docs.beatapi.io/free-models", "https://beatapi.io/"],
+    "crowllm": ["https://crowllm.com/pricing", "https://crowllm.com/models/solar-mini4:free", "https://crowllm.com/models/hy4-flash:free"],
+    "numes": ["https://numes.ai/docs/models", "https://numes.ai/docs/api-reference/overview", "https://numes.ai/docs/api-reference/limits"],
     "aihubmix": ["https://aihubmix.com/models/free"],
     "zerolimitai": ["https://www.zerolimitai.com/developers", "https://www.zerolimitai.com/docs/api"],
     "yepapi": ["https://www.yepapi.com/", "https://www.yepapi.com/ai-api/nvidia/nemotron-3-super"],
@@ -161,6 +195,37 @@ SOURCES = {
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
 PROVIDER_EXTRA = {
+    "experiential-labs": {"free_token_allowance": 1000000, "allowance_period": "day"},
+    "synap": {"free_token_allowance": 50000, "allowance_period": "day"},
+    "modelbridge": {"free_token_allowance": 500000, "allowance_period": "month", "one_time_token_bonus": 500000},
+    "codiv": {"free_token_allowance": 10000000, "allowance_period": "one-time"},
+    "slashai": {"free_token_allowance": 2000000, "allowance_period": "one-time"},
+    "bee-heossi": {"free_token_allowance": 2000000, "allowance_period": "month"},
+    "flux-router": {"free_token_allowance": 100000, "allowance_period": "month", "api_endpoint": "https://api.fluxrouter.ai/v1", "docs": "https://fluxrouter.ai/faq", "signup": "https://fluxrouter.ai/auth/sign-up"},
+    "infercom": {"api_endpoint": "https://api.infercom.ai/v1", "docs": "https://docs.infercom.ai/en/models/rate-limits", "signup": "https://cloud.infercom.ai/"},
+    "flonno": {"api_endpoint": "https://www.flonno.com/v1", "docs": "https://www.flonno.com/docs", "signup": "https://www.flonno.com/sign-up"},
+    "boundless-api": {"api_endpoint": "https://api.boundlessapi.com/v1", "docs": "https://www.boundlessapi.com/en/faq.html"},
+    "pekpik": {"api_endpoint": "https://aiapiv2.pekpik.com/v1", "docs": "https://aiapiv2.pekpik.com/docs/quickstart/", "signup": "https://aiapiv2.pekpik.com/register"},
+    "nabh-cloud": {"api_endpoint": "https://api.nabh.cloud/v1", "docs": "https://nabh.cloud/docs/", "signup": "https://app.nabh.cloud/signup"},
+    "aevon": {"api_endpoint": "https://aevon.sh/v1", "docs": "https://aevon.sh/docs", "signup": "https://aevon.sh/auth"},
+    "mixroute": {"api_endpoint": "https://api.mixroute.ai/v1", "docs": "https://mixroute.ai/docs/introduction", "signup": "https://console.mixroute.ai/"},
+    "trustedrouter": {"api_endpoint": "https://api.trustedrouter.com/v1", "free_token_allowance": 1000000, "allowance_period": "one-time"},
+    "gwbus": {"api_endpoint": "https://api.gwbus.com/v1", "docs": "https://gwbus.com/docs"},
+    "edgeone-makers": {"api_endpoint": "https://ai-gateway.edgeone.link/v1", "free_token_allowance": 500000, "allowance_period": "month", "docs": "https://pages.edgeone.ai/document/models"},
+    "vikasit-ai": {"api_endpoint": "https://api.vikasit.ai/v1", "free_token_allowance": 2000000, "allowance_period": "day", "docs": "https://vikasit.ai/inference", "signup": "https://vikasit.ai/auth"},
+    "ireze": {"docs": "https://ireze.site/#docs", "api_endpoint": "https://ireze.site/v1"},
+    "1min-ai": {"docs": "https://docs.1min.ai/docs/api/chat-with-ai-api", "signup": "https://app.1min.ai/"},
+    "earthruntime": {"docs": "https://earthruntime.com/docs", "api_endpoint": "https://api.earthruntime.com/v1", "free_token_allowance": 100000, "allowance_period": "one-time"},
+    "getaiapikey": {"docs": "https://getaiapikey.com/docs/", "signup": "https://getaiapikey.com/get-api-key/", "api_endpoint": "https://api.getaiapikey.com/v1"},
+    "notrack-api": {"docs": "https://notrack.ai/api/docs", "signup": "https://notrack.ai/api-keys", "api_endpoint": "https://api.notrack.ai/v1"},
+    "routerplex": {"docs": "https://docs.routerplex.com/quickstart", "signup": "https://routerplex.com/sign-up", "api_endpoint": "https://api.routerplex.com/v1"},
+    "wallaby": {"docs": "https://wallabytoken.com/docs", "signup": "https://api.wallabytoken.com/register", "api_endpoint": "https://api.wallabytoken.com/v1"},
+    "abliteration": {"docs": "https://docs.abliteration.ai/", "signup": "https://abliteration.ai/sign-up", "api_endpoint": "https://api.abliteration.ai/v1"},
+    "mixedbread": {"docs": "https://www.mixedbread.com/docs/agent/chat-completions", "signup": "https://www.platform.mixedbread.com/", "api_endpoint": "https://api.mixedbread.com/v1"},
+    "apivale": {"docs": "https://apivale.com/docs", "signup": "https://apivale.com/sign-up", "api_endpoint": "https://apivale.com/v1"},
+    "beatapi": {"docs": "https://docs.beatapi.io/free-models", "signup": "https://beatapi.io/dashboard/apikeys", "api_endpoint": "https://api.beatapi.io/v1"},
+    "crowllm": {"docs": "https://crowllm.com/docs", "signup": "https://crowllm.com/sign-up", "api_endpoint": "https://crowllm.com/v1"},
+    "numes": {"docs": "https://numes.ai/docs/models", "signup": "https://numes.ai/", "api_endpoint": "https://api.numes.ai/api/v1"},
     "plugsky": {"free_token_allowance": 250000, "allowance_period": "day"},
     "septor-labs": {"free_token_allowance": 250000, "allowance_period": "day"},
     "dreamprompting": {"free_token_allowance": 500000, "allowance_period": "day"},
@@ -279,7 +344,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P + PART_Q + PART_R + PART_S:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P + PART_Q + PART_R + PART_S + PART_T + PART_U + PART_V + PART_W:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

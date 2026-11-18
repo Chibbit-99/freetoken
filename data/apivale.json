@@ -1,0 +1,42 @@
+{
+  "id": "apivale",
+  "name": "APIVALE",
+  "website": "https://apivale.com/",
+  "docs": "https://apivale.com/docs",
+  "signup": "https://apivale.com/sign-up",
+  "description": "An OpenAI-compatible gateway advertising introductory credits.",
+  "overview": "The operator advertises $0.20 automatically at signup without a card to try models including DeepSeek and GLM. Its docs also instruct users to subscribe to a suitable plan, so whether signup credit is usable without a subscription is unclear. Trial expiry, actual credit and model identity were not independently verified.",
+  "offer": {
+    "type": "trials",
+    "label": "$0.20 signup trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://apivale.com/",
+      "https://apivale.com/docs"
+    ]
+  },
+  "free_access": [
+    "$0.20 one-time signup credit",
+    "No card required according to the operator",
+    "Docs mention plan subscription; trial access unclear",
+    "Expiry and model identity unverified"
+  ],
+  "notes": "Base URL https://apivale.com/v1. Docs also mention subscribing to a plan; verify trial eligibility before relying on it.",
+  "api_endpoint": "https://apivale.com/v1",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash (gateway listing)",
+      "family": "DeepSeek"
+    }
+  ]
+}

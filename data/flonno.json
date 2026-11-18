@@ -1,0 +1,42 @@
+{
+  "id": "flonno",
+  "name": "Flonno",
+  "website": "https://www.flonno.com/",
+  "docs": "https://www.flonno.com/docs",
+  "signup": "https://www.flonno.com/sign-up",
+  "description": "A single-model Qwen inference API.",
+  "overview": "Flonno documents $1 in one-time credit after email verification, with no card; its Qwen3.8 27B model is billed per input and output token. The gateway says it returns 402 when credit is unavailable or insufficient. Signup, actual balance, inference and the privacy claim were not independently tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$1 signup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Operator privacy claims unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.flonno.com/",
+      "https://www.flonno.com/docs"
+    ]
+  },
+  "free_access": [
+    "$1 once after email verification",
+    "No card required for trial credit",
+    "Qwen3.8 27B; usage draws down credit",
+    "60 requests/minute and 10 concurrent"
+  ],
+  "notes": "Base URL https://www.flonno.com/v1. Billing includes output and reasoning tokens.",
+  "api_endpoint": "https://www.flonno.com/v1",
+  "models": [
+    {
+      "id": "qwen3.8-27b",
+      "name": "Qwen3.8 27B",
+      "family": "Qwen"
+    }
+  ]
+}
