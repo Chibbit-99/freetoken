@@ -1,0 +1,42 @@
+{
+  "id": "yepapi",
+  "name": "YepAPI",
+  "website": "https://www.yepapi.com/",
+  "docs": "https://www.yepapi.com/",
+  "signup": "https://www.yepapi.com/",
+  "description": "A multi-API gateway advertising $5 signup credit and a zero-priced text model.",
+  "overview": "YepAPI advertises $5 of signup credit with no card. Its Nemotron 3 Super page lists zero input and output token prices, but also describes pay-per-request billing from the account balance; the exact zero-balance eligibility and any separate charges are unconfirmed. Treat the credit as finite, and confirm charges before using the route.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 signup credit; $0 model listed",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.yepapi.com/",
+      "https://www.yepapi.com/ai-api/nvidia/nemotron-3-super"
+    ]
+  },
+  "free_access": [
+    "$5 signup credit; no card",
+    "Nemotron 3 Super listed at $0 per token",
+    "Per-request billing language conflicts; verify actual charges",
+    "Expiry and zero-balance eligibility unconfirmed"
+  ],
+  "notes": "OpenAI-compatible chat is documented at https://api.yepapi.com/v1/ai/chat/completions; not tested.",
+  "models": [
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b:free",
+      "name": "Nemotron 3 Super Free",
+      "family": "Nemotron",
+      "context_window": 262144
+    }
+  ]
+}

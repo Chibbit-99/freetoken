@@ -7,14 +7,13 @@ four free-access bullets, model ids (or inline dicts), notes.
 
 # fmt: off
 PART_C = [
-    ("aihubmix", "AIHubMix", "https://aihubmix.com", "fm", "35 free (-free) routes", "nn",
-     "Free routes may be logged", False,
-     "OpenAI- and Anthropic-compatible gateway with about 35 zero-priced routes.",
-     "AIHubMix is a model gateway that keeps roughly 35 \"-free\" routes next to its paid catalog, each with per-account limits that are usually 5 requests/minute, 100 requests/day and 1M tokens/day. It also exposes an Anthropic-compatible endpoint, so Claude-style clients work without code changes.",
-     ["~35 zero-priced routes", "Usually 5 RPM, 100 requests/day, 1M tokens/day per route",
-      "OpenAI- and Anthropic-compatible endpoints", "No card required"],
-     ["glm-4-7-flash", "deepseek-v4-flash", "qwen3-8-flash", "gpt-oss-120b", "gemma-4-31b"],
-     "Limits are set per route in the description field, so check each model id."),
+    ("aihubmix", "AIHubMix", "https://aihubmix.com", "tr", "10 trial calls before top-up", "nn",
+     "Check provider privacy terms", False,
+     "Gateway with ten no-card trial calls before a top-up is needed for daily quotas.",
+     "AIHubMix offers ten total trial calls across its zero-priced routes without a card. Ongoing daily quotas require a one-time $1 top-up. Listed per-model daily limits apply after that top-up, not to the no-purchase trial. Availability and pricing can change.",
+     ["10 trial calls total before top-up", "Recurring daily quotas require $1 top-up", "No card required for trial", "OpenAI- and Anthropic-compatible endpoints"],
+     [{"id":"gpt-oss-20b-free", "name":"GPT OSS 20B Free", "family":"GPT OSS", "context_window":131000}],
+     "Check the free-model page and account limits before use; no authenticated inference test performed."),
     ("simplellm", "SimpleLLM", "https://simplellm.eu", "af", "Free tier models", "pp",
      "Check provider policy", False,
      "EU-hosted OpenAI-compatible chat API with models that work at zero credit.",
