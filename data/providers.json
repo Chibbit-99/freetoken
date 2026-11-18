@@ -155,6 +155,15 @@
     "freemodel.json",
     "cleanapis.json",
     "radoxai.json",
-    "oxionai.json"
+    "oxionai.json",
+    "axforge.json",
+    "gigachat.json",
+    "deepseek.json",
+    "gonkarouter.json",
+    "vectoree.json",
+    "nlp-cloud.json",
+    "liquid-ai.json",
+    "qiniu.json",
+    "blockrun.json"
   ]
 }

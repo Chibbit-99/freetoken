@@ -1,0 +1,63 @@
+{
+  "id": "gigachat",
+  "name": "GigaChat",
+  "website": "https://developers.sber.ru/portal/products/gigachat-api",
+  "docs": "https://developers.sber.ru/portal/products/gigachat-api",
+  "signup": "https://developers.sber.ru/portal/products/gigachat-api",
+  "description": "Sber's GigaChat gives individuals 365 million free tokens a year, renewed annually.",
+  "overview": "GigaChat is Sber's Russian-language model family, served through developers.sber.ru with an OpenAI-compatible endpoint at api.giga.chat. Individuals get a freemium quota of 365,000,000 tokens valid for twelve months and renewed yearly: 250M on Lite, 50M on GigaChat 3 Ultra, 40M on Pro and 25M on Max. Authorisation is via Sber ID rather than an API key alone, and the free quota is licensed for personal, non-commercial use. That is the largest published free allowance on this index, and it is measured per individual rather than per organisation.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "365M free tokens per year",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Stored in Russia, personal non-commercial use"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://developers.sber.ru/portal/products/gigachat-api",
+      "https://developers.sber.ru/docs/ru/gigachat/tariffs/individual-tariffs"
+    ]
+  },
+  "free_access": [
+    "365M tokens per year, split 250M Lite / 50M Ultra / 40M Pro / 25M Max",
+    "No card and no prepayment for the individual freemium quota",
+    "OpenAI-compatible endpoint at api.giga.chat",
+    "Personal, non-commercial use only under the beta terms"
+  ],
+  "notes": "Russian-language strength; the console and docs are Russian-first. Quotas are per model family and renew every twelve months. Commercial use requires a paid agreement.",
+  "free_token_allowance": 365000000,
+  "allowance_period": "year",
+  "catalog_size": 4,
+  "models": [
+    {
+      "id": "gigachat-2-lite",
+      "name": "GigaChat 2 Lite",
+      "family": "GigaChat",
+      "context_window": 32768
+    },
+    {
+      "id": "gigachat-2-pro",
+      "name": "GigaChat 2 Pro",
+      "family": "GigaChat",
+      "context_window": 131072
+    },
+    {
+      "id": "gigachat-2-max",
+      "name": "GigaChat 2 Max",
+      "family": "GigaChat",
+      "context_window": 131072
+    },
+    {
+      "id": "gigachat-3-ultra",
+      "name": "GigaChat 3 Ultra",
+      "family": "GigaChat",
+      "context_window": 131072
+    }
+  ]
+}

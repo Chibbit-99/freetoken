@@ -810,6 +810,7 @@
             // a trial can hand out a monthly quota and a recurring tier can be one-shot.
             if (p.allowance_period === 'one-time') return 'One-time';
             if (p.allowance_period === 'month') return 'Monthly';
+            if (p.allowance_period === 'year') return 'Yearly';
             if (p.allowance_period === 'day') return 'Recurring';
             var t = (p.offer && p.offer.type) || '';
             if (t === 'trials') return 'One-time';
@@ -820,6 +821,7 @@
         function periodLabel(period) {
             if (period === 'one-time') return 'one-time';
             if (period === 'month') return '/ month';
+            if (period === 'year') return '/ year';
             return '/ day';
         }
 
@@ -861,7 +863,9 @@
             // 30M/month. Rank on a 30-day equivalent while still showing the
             // published period, and treat a one-time balance as a single lump.
             rows.forEach(function (r) {
-                r.monthly = r.period === 'day' ? r.value * 30 : r.value;
+                if (r.period === 'day') r.monthly = r.value * 30;
+                else if (r.period === 'year') r.monthly = r.value * 30 / 365;
+                else r.monthly = r.value;
             });
             rows.sort(function (a, b) {
                 if (b.monthly !== a.monthly) return b.monthly - a.monthly;

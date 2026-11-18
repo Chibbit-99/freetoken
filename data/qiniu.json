@@ -1,0 +1,63 @@
+{
+  "id": "qiniu",
+  "name": "Qiniu AI",
+  "website": "https://www.qiniu.com/ai",
+  "docs": "https://www.qiniu.com/ai",
+  "signup": "https://www.qiniu.com/ai",
+  "description": "Chinese cloud vendor handing new accounts 3M tokens across 70+ models.",
+  "overview": "Qiniu's AI inference platform serves 70+ models — DeepSeek V4 Flash and Pro, Qwen3.5 35B, GLM, LongCat, Arcee Trinity and NVIDIA Nemotron among them — through both OpenAI and Anthropic compatible endpoints at api.qnaigc.com/v1. New accounts receive 3,000,000 free tokens usable on any model, with no card; enterprise verification adds a further 12M. Individual developer limits are 5 requests per minute and 60 per hour, which is the real constraint rather than the token balance.",
+  "offer": {
+    "type": "trials",
+    "label": "3M free tokens on signup",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Chinese-hosted, real-name verification"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://www.qiniu.com/ai",
+      "https://developer.qiniu.com/ai"
+    ]
+  },
+  "free_access": [
+    "3M free tokens on signup, spendable across the whole catalogue",
+    "No card required; real-name verification needed for a key",
+    "Both OpenAI and Anthropic request shapes at api.qnaigc.com/v1",
+    "5 requests/minute and 60/hour for individual developers"
+  ],
+  "notes": "Chinese-language console and real-name verification. The platform also resells several closed models; the free tokens are general-purpose credit rather than a per-model quota.",
+  "free_token_allowance": 3000000,
+  "allowance_period": "one-time",
+  "catalog_size": 70,
+  "models": [
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "qwen3-5-35b-a3b",
+      "name": "Qwen3.5 35B A3B",
+      "family": "Qwen 3.5",
+      "context_window": 262144
+    },
+    {
+      "id": "glm-4-7-flash",
+      "name": "GLM-4.7 Flash",
+      "family": "GLM 4.7",
+      "context_window": 204800
+    }
+  ]
+}

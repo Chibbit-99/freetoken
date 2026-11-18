@@ -1,0 +1,50 @@
+{
+  "id": "deepseek",
+  "name": "DeepSeek",
+  "website": "https://platform.deepseek.com",
+  "docs": "https://platform.deepseek.com",
+  "signup": "https://platform.deepseek.com",
+  "description": "DeepSeek's own platform credits new accounts with 5M tokens, no card up front.",
+  "overview": "DeepSeek's first-party platform gives every new account 5,000,000 free tokens on signup — roughly $8 of use — with no credit card until the grant is spent. The grant covers all models, including DeepSeek V4.1 Flash and V4 Pro, through an OpenAI-compatible endpoint at api.deepseek.com/v1 with a 1M-token context and automatic prefix caching. Caching makes repeated prompts roughly 90% cheaper, and off-peak pricing is half the peak rate. There is no perpetual free model: once the grant is used, calls bill against a prepaid balance.",
+  "offer": {
+    "type": "trials",
+    "label": "5M free tokens on signup",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Inputs may be used to improve the service"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://platform.deepseek.com/",
+      "https://api-docs.deepseek.com/quick_start/pricing"
+    ]
+  },
+  "free_access": [
+    "5M free tokens on signup, valid about 30 days",
+    "No card required until the grant is exhausted",
+    "OpenAI-compatible, 1M context on V4 Flash and V4 Pro",
+    "Automatic prefix caching, off-peak rates at half price"
+  ],
+  "notes": "The signup grant is not printed on the public pricing page; it appears in the console after registration. No fixed public rate limits — concurrency is throttled dynamically, with HTTP 429 under load.",
+  "free_token_allowance": 5000000,
+  "allowance_period": "one-time",
+  "models": [
+    {
+      "id": "deepseek-v4-1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "DeepSeek V4 Pro",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    }
+  ]
+}

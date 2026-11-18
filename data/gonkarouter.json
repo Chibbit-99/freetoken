@@ -1,0 +1,56 @@
+{
+  "id": "gonkarouter",
+  "name": "GonkaRouter",
+  "website": "https://gonkarouter.io",
+  "docs": "https://gonkarouter.io",
+  "signup": "https://gonkarouter.io",
+  "description": "Router on the Gonka network handing new accounts 1M free tokens, no card.",
+  "overview": "GonkaRouter routes to models running on the Gonka decentralised network through an OpenAI- and Anthropic-compatible API at api.gonkarouter.io/v1. Signing in with email or Google gives 1,000,000 free tokens as a one-time welcome grant, with no card and no wallet needed. The catalogue lists GLM-5.3-Flash, DeepSeek-V4-Flash and MiniMax-M2.7 at $0.0057 per million tokens and up, and topped-up accounts get 20% bonus credit plus higher concurrency.",
+  "offer": {
+    "type": "trials",
+    "label": "1M free tokens on signup",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "partial",
+    "label": "Prompts may be retained upstream"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://gonkarouter.io/",
+      "https://gonkarouter.io/docs"
+    ]
+  },
+  "free_access": [
+    "1M free tokens as a one-time signup grant",
+    "Email or Google sign-in, no card and no crypto wallet needed",
+    "OpenAI- and Anthropic-compatible endpoints",
+    "Paid top-ups add 20% bonus credit and higher concurrency"
+  ],
+  "notes": "Sibling of Gonka Broker, which is a separate product with a separate monthly phone-verified grant. This entry is the router, whose 1M tokens do not renew.",
+  "free_token_allowance": 1000000,
+  "allowance_period": "one-time",
+  "models": [
+    {
+      "id": "glm-5-3-flash",
+      "name": "GLM-5.3 Flash",
+      "family": "GLM 5.3",
+      "context_window": 262144
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "DeepSeek V4 Flash",
+      "family": "DeepSeek",
+      "context_window": 1048576
+    },
+    {
+      "id": "minimax-m2-7",
+      "name": "MiniMax M2.7",
+      "family": "MiniMax",
+      "context_window": 204800
+    }
+  ]
+}

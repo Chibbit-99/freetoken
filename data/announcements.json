@@ -3,6 +3,31 @@
   "intro": "Dated notes on what changed in the index: providers added, rows pruned, corrections and audits. Newest first.",
   "items": [
     {
+      "id": "2026-11-17-nine-providers-from-non-english-sweeps-including",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Nine providers from non-English sweeps, including a 365M-token yearly quota",
+      "summary": "Searching in Chinese, Russian, Japanese and German surfaced GigaChat's 365M tokens a year, plus AxForge, DeepSeek, GonkaRouter, Vectoree, NLP Cloud, Liquid AI, Qiniu and BlockRun.",
+      "providers": [
+        "gigachat",
+        "axforge",
+        "deepseek",
+        "gonkarouter",
+        "vectoree",
+        "nlp-cloud",
+        "liquid-ai",
+        "qiniu",
+        "blockrun"
+      ],
+      "details": [
+        "GigaChat is the largest published allowance on the index: 365M tokens a year for individuals, renewed annually.",
+        "AxForge renews 3M tokens every 30 days, the only recurring EU allowance found.",
+        "BlockRun leaves nine open-weight models free with no key, account or wallet.",
+        "The allowance board now understands yearly periods and ranks them on a 30-day equivalent.",
+        "Eight leads rejected and two confirmed dead, including ACLIDE's shutdown."
+      ]
+    },
+    {
       "id": "2026-11-17-sibling-domains-get-their-own-entries",
       "date": "2026-11-17",
       "kind": "corrected",

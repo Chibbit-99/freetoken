@@ -1,0 +1,66 @@
+{
+  "id": "nlp-cloud",
+  "name": "NLP Cloud",
+  "website": "https://nlpcloud.com",
+  "docs": "https://nlpcloud.com",
+  "signup": "https://nlpcloud.com",
+  "description": "Long-running NLP API with a $0 plan and $15 of free credit, no card.",
+  "overview": "NLP Cloud has run a $0 pay-as-you-go plan for years: two parallel requests, all pre-trained models available, and $15 of credit added automatically at signup with no card. The text models include ChatDolphin, Yi-34B, Mixtral-8x7B, GPT-OSS 120B and Llama 3.3 70B, billed per request plus per 1K tokens. It is a native REST API rather than an OpenAI-compatible one, which is the main trade-off for tooling that expects the OpenAI shape.",
+  "offer": {
+    "type": "trials",
+    "label": "$15 free credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "private",
+    "label": "No training on customer data"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://nlpcloud.com/pricing.html",
+      "https://docs.nlpcloud.com/"
+    ]
+  },
+  "free_access": [
+    "$15 credit on the $0 plan, added automatically",
+    "No card for the free plan; two parallel requests",
+    "ChatDolphin, Yi-34B, Mixtral, GPT-OSS 120B and Llama 3.3 70B",
+    "Hosted in the EU, with an explicit no-training policy"
+  ],
+  "notes": "Not OpenAI-compatible: requests go to a task-specific endpoint such as /v1/chatbot. Credit is one-time; after it, usage is invoiced on the $0 plan.",
+  "models": [
+    {
+      "id": "chatdolphin",
+      "name": "ChatDolphin",
+      "family": "Dolphin",
+      "context_window": 8192
+    },
+    {
+      "id": "yi-34b",
+      "name": "Yi 34B",
+      "family": "Yi",
+      "context_window": 4096
+    },
+    {
+      "id": "mixtral-8x7b",
+      "name": "Mixtral 8x7B",
+      "family": "Mixtral",
+      "context_window": 32768
+    },
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072
+    },
+    {
+      "id": "llama-3-3-70b",
+      "name": "Llama 3.3 70B",
+      "family": "Llama 3.3",
+      "context_window": 131072
+    }
+  ]
+}
