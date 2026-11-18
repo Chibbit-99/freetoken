@@ -5,10 +5,10 @@
   "docs": "https://developers.sber.ru/portal/products/gigachat-api",
   "signup": "https://developers.sber.ru/portal/products/gigachat-api",
   "description": "Sber's GigaChat gives individuals 365 million free tokens a year, renewed annually.",
-  "overview": "GigaChat is Sber's Russian-language model family, served through developers.sber.ru with an OpenAI-compatible endpoint at api.giga.chat. Individuals get a freemium quota of 365,000,000 tokens valid for twelve months and renewed yearly: 250M on Lite, 50M on GigaChat 3 Ultra, 40M on Pro and 25M on Max. Authorisation is via Sber ID rather than an API key alone, and the free quota is licensed for personal, non-commercial use. That is the largest published free allowance on this index, and it is measured per individual rather than per organisation.",
+  "overview": "GigaChat is Sber's Russian-language model family, served through developers.sber.ru with an OpenAI-compatible endpoint at api.giga.chat. Individuals get a freemium quota of 365,000,000 tokens valid for twelve months and renewed yearly: 250M on Lite, 50M on GigaChat 3 Ultra, 40M on Pro and 25M on Max. Authorisation is via Sber ID rather than an API key alone, and the free quota is licensed for personal, non-commercial use. Spread across the year that works out to roughly a million tokens a day: comfortable for personal use, but no larger than the daily quotas several providers on this index publish, and it is measured per individual rather than per organisation.",
   "offer": {
     "type": "monthly-credits",
-    "label": "365M free tokens per year",
+    "label": "365M tokens/year (≈1M/day)",
     "tone": "amber"
   },
   "privacy": {
@@ -25,12 +25,12 @@
     ]
   },
   "free_access": [
-    "365M tokens per year, split 250M Lite / 50M Ultra / 40M Pro / 25M Max",
+    "365M tokens a year — about 1M a day — split 250M Lite / 50M Ultra / 40M Pro / 25M Max",
     "No card and no prepayment for the individual freemium quota",
     "OpenAI-compatible endpoint at api.giga.chat",
     "Personal, non-commercial use only under the beta terms"
   ],
-  "notes": "Russian-language strength; the console and docs are Russian-first. Quotas are per model family and renew every twelve months. Commercial use requires a paid agreement.",
+  "notes": "A yearly lump rather than a daily drip: 365M sounds enormous but divides to about 1M tokens a day, which is mid-table on the allowance board, not the top. Russian-language strength; the console and docs are Russian-first. Quotas are per model family and renew every twelve months. Commercial use requires a paid agreement.",
   "free_token_allowance": 365000000,
   "allowance_period": "year",
   "catalog_size": 4,

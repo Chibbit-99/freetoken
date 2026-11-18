@@ -9,7 +9,7 @@ about. Every verdict below was taken from the provider's own page.
 | Lead | Verdict | Provider id | Evidence |
 | --- | --- | --- | --- |
 | AxForge (axforge.ai) | added | axforge | Pricing page: "Every new account includes 3M free serverless tokens every 30 days. No card required." Renews, so not trial credit. |
-| GigaChat (Sber) | added | gigachat | Product page states 365,000,000 tokens "with annual renewal" for individuals; split 250M Lite / 50M Ultra / 40M Pro / 25M Max. |
+| GigaChat (Sber) | added | gigachat | Product page states 365,000,000 tokens "with annual renewal" for individuals; split 250M Lite / 50M Ultra / 40M Pro / 25M Max. Divides to ~1M/day, so mid-table rather than the largest allowance. |
 | DeepSeek | added | deepseek | 5M tokens on signup, no card until the grant is spent; grant is console-side, not on the pricing page. |
 | GonkaRouter | added | gonkarouter | Homepage: "1M free tokens to start", email or Google sign-in, no card. Separate product from Gonka Broker. |
 | Vectoree | added | vectoree | Pricing: "$5 welcome credit after CLI login + link", card only needed to top up afterwards. |

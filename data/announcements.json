@@ -7,7 +7,7 @@
       "date": "2026-11-17",
       "kind": "added",
       "title": "Nine providers from non-English sweeps, including a 365M-token yearly quota",
-      "summary": "Searching in Chinese, Russian, Japanese and German surfaced GigaChat's 365M tokens a year, plus AxForge, DeepSeek, GonkaRouter, Vectoree, NLP Cloud, Liquid AI, Qiniu and BlockRun.",
+      "summary": "Searching in Chinese, Russian, Japanese and German surfaced GigaChat (365M tokens a year, about 1M a day), plus AxForge, DeepSeek, GonkaRouter, Vectoree, NLP Cloud, Liquid AI, Qiniu and BlockRun.",
       "providers": [
         "gigachat",
         "axforge",
@@ -20,7 +20,7 @@
         "blockrun"
       ],
       "details": [
-        "GigaChat is the largest published allowance on the index: 365M tokens a year for individuals, renewed annually.",
+        "GigaChat's 365M tokens a year divides to about 1M a day — a big number, a mid-table allowance; the card says so.",
         "AxForge renews 3M tokens every 30 days, the only recurring EU allowance found.",
         "BlockRun leaves nine open-weight models free with no key, account or wallet.",
         "The allowance board now understands yearly periods and ranks them on a 30-day equivalent.",
