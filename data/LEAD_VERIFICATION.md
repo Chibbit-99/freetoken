@@ -90,3 +90,24 @@ were not explicitly confirmed, so they are marked unknown, not no-card.
 
 The no-card filter excludes unknown card requirements; a $0 tier or lack of
 required top-up does not by itself prove card-free signup.
+
+# Lead verification — iteration 15 (2026-11-17)
+
+Five net-new providers added after checking the linked directories against
+provider pages. Quotas refer to free accounts and can change; no live inference
+requests were made.
+
+| Lead | Verdict | Evidence |
+| --- | --- | --- |
+| Plugsky | added | [Docs](https://plugsky.com/docs): Micro/Lite on permanent no-card Free plan, 500 requests and 250K tokens per day (100/50K first 24 hours), 30 RPM. |
+| Septor Labs | added | [Homepage](https://septorlabs.com/) and [free model](https://septorlabs.com/models/hermes-3-llama-3.1-405b-free): 50 requests and 250K tokens/day, no card; free inference uses independent aggregators. $1 signup balance is separate and one-time. |
+| CLōD | added | [Free page](https://clod.io/free-cheap-ai) and [catalogue](https://app.clod.io/auth/models): 100 daily free requests, no card; selected model badges say Free alongside token prices, so verify actual route before use. |
+| DreamPrompting | added | [Pricing](https://dreamprompting.com/pricing): 500K tokens and 5,000 requests per rolling day, no card, shared upstream pool; model fallback can be disabled. |
+| Gizmo | added | [API docs](https://gizmoplatforms.com/developers) and [Nemotron free model](https://gizmoplatforms.com/models/nvidia/nemotron-3-ultra-550b-a55b:free): 1,000 zero-cost-model API requests/calendar month and no-card signup. Separate paid-model usage may require a payment method. |
+| Router9 | unresolved, not added | [Pricing](https://www.router9.com/pricing) promises 10K credits/month; [model access docs](https://www.router9.com/docs/api-reference/models) say Free is restricted to explicitly flagged routes, but [public catalogue](https://www.router9.com/models) shows a dash in the Free Tier column for every text model. No free-account inference test was possible. Rate-limit docs mention rollover while [credits docs](https://www.router9.com/docs/token-plan/credits) say credits no longer roll over for new accounts. |
+| APInex | excluded | [Homepage](https://apinex.bond/) requires a $5 top-up to unlock 25M daily free-category tokens; user excludes payment-gated recurring offers. |
+| FreeAIapikey | excluded | [Pricing](https://freeaiapikey.com/pricing) says the daily free plan requires a one-time $5 payment, despite stale no-card directory claims. |
+| Free.ai | unresolved, not added | [Developer page](https://free.ai/developer/) claims free API key and 30K/day, but [API reference](https://free.ai/api/) says purchase tokens before generating a key. Purchase requirement needs clarification or an authenticated test. |
+
+All sources checked 2026-11-17. Router9 and Free.ai remain leads rather than
+confirmed usable no-payment text APIs.

@@ -28,6 +28,7 @@ from new_providers_l import PART_L  # noqa: E402
 from new_providers_m import PART_M  # noqa: E402
 from new_providers_n import PART_N  # noqa: E402
 from new_providers_o import PART_O  # noqa: E402
+from new_providers_p import PART_P  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(HERE), "data")
 CHECKED = "2026-11-17"
@@ -56,6 +57,11 @@ SKIP = {
 
 # First-party pages read for each added provider, used for verified.sources.
 SOURCES = {
+    "plugsky": ["https://plugsky.com/docs", "https://plugsky.com/articles/ai-api-for-law-firms-use-cases-security-and-deployment-options"],
+    "septor-labs": ["https://septorlabs.com/", "https://septorlabs.com/models/hermes-3-llama-3.1-405b-free"],
+    "clod": ["https://clod.io/free-cheap-ai", "https://app.clod.io/auth/models", "https://clod.io/docs"],
+    "dreamprompting": ["https://dreamprompting.com/pricing", "https://dreamprompting.com/models"],
+    "gizmo": ["https://gizmoplatforms.com/developers", "https://gizmoplatforms.com/models/nvidia/nemotron-3-ultra-550b-a55b:free"],
     "exaone": ["https://www.lgresearch.ai/news/view?seq=755", "https://docs.exaone.ai/en/docs/rate-limits"],
     "lxd-api": ["https://api.lxds.org/", "https://api.lxds.org/instructions"],
     "naga-ai": ["https://naga.ac/models/nvidia/nemotron-3-ultra-550b-a55b:free", "https://docs.naga.ac/api-reference/overview"],
@@ -122,6 +128,9 @@ SOURCES = {
 
 # Account-wide pools and published catalogue sizes, written onto the provider.
 PROVIDER_EXTRA = {
+    "plugsky": {"free_token_allowance": 250000, "allowance_period": "day"},
+    "septor-labs": {"free_token_allowance": 250000, "allowance_period": "day"},
+    "dreamprompting": {"free_token_allowance": 500000, "allowance_period": "day"},
     "iteracompute": {"free_token_allowance": 30000000, "allowance_period": "month"},
     "nara-router": {"free_token_allowance": 7000000, "allowance_period": "day"},
     "xkiro": {"free_token_allowance": 500000, "allowance_period": "day", "catalog_size": 69},
@@ -237,7 +246,7 @@ def main():
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     listed = set(manifest["providers"])
     added = []
-    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O:
+    for row in PART_A + PART_B + PART_C + PART_D + PART_E + PART_F + PART_G + PART_H + PART_I + PART_J + PART_K + PART_L + PART_M + PART_N + PART_O + PART_P:
         (pid, name, site, offer_code, offer_label, priv_code, priv_label, card,
          desc, overview, bullets, mids, notes) = row[:13]
         if pid in SKIP:

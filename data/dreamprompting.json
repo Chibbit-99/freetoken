@@ -1,0 +1,57 @@
+{
+  "id": "dreamprompting",
+  "name": "DreamPrompting",
+  "website": "https://dreamprompting.com/",
+  "docs": "https://dreamprompting.com/",
+  "signup": "https://dreamprompting.com/",
+  "description": "DreamPrompting routes through shared upstream free tiers with a rolling daily quota.",
+  "overview": "DreamPrompting offers a no-card OpenAI-compatible gateway backed by pooled upstream free tiers. Each account has 500,000 input plus output tokens and 5,000 requests per rolling 24 hours, plus a 100 request/minute per-IP burst limit. Google sign-in is required for an API key. Capacity is shared and the service may fall back to a different model; set allow_fallback to false if model identity matters.",
+  "offer": {
+    "type": "always-free",
+    "label": "500K tokens per rolling day",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://dreamprompting.com/pricing",
+      "https://dreamprompting.com/models"
+    ]
+  },
+  "free_access": [
+    "500K tokens and 5,000 requests per rolling 24 hours",
+    "100 requests/minute per IP",
+    "No card; Google sign-in for an API key",
+    "Pooled upstreams with optional fallback"
+  ],
+  "notes": "Use the provider's full route IDs, such as groq/openai/gpt-oss-120b. Shared upstreams can be exhausted; no SLA. Requests are forwarded to third parties and automatic fallback can substitute models.",
+  "free_token_allowance": 500000,
+  "allowance_period": "day",
+  "models": [
+    {
+      "id": "gpt-oss-120b",
+      "name": "GPT-OSS 120B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 285,
+        "intelligence": 4
+      }
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT-OSS 20B",
+      "family": "GPT-OSS",
+      "context_window": 131072,
+      "metrics": {
+        "tps": 430
+      }
+    }
+  ]
+}

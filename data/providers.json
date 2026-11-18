@@ -177,6 +177,11 @@
     "lxd-api.json",
     "naga-ai.json",
     "poixe-ai.json",
-    "literouter.json"
+    "literouter.json",
+    "plugsky.json",
+    "septor-labs.json",
+    "clod.json",
+    "dreamprompting.json",
+    "gizmo.json"
   ]
 }

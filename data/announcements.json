@@ -32,6 +32,26 @@
       ]
     },
     {
+      "id": "2026-11-17-five-more-recurring-free-api-providers",
+      "date": "2026-11-17",
+      "kind": "added",
+      "title": "Five more recurring free API providers",
+      "summary": "Added Plugsky, Septor Labs, CLōD, DreamPrompting and Gizmo with published recurring free usage.",
+      "providers": [
+        "plugsky",
+        "septor-labs",
+        "clod",
+        "dreamprompting",
+        "gizmo"
+      ],
+      "details": [
+        "Plugsky and Septor publish 250K tokens/day",
+        "DreamPrompting offers 500K tokens per rolling day from shared upstreams",
+        "Gizmo offers 1,000 free-model API calls per calendar month",
+        "Router9 remains unlisted pending a verified free-tier model route."
+      ]
+    },
+    {
       "id": "2026-11-17-five-providers-with-recurring-free-api-access",
       "date": "2026-11-17",
       "kind": "added",

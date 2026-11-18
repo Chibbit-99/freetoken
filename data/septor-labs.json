@@ -1,0 +1,44 @@
+{
+  "id": "septor-labs",
+  "name": "Septor Labs",
+  "website": "https://septorlabs.com/",
+  "docs": "https://septorlabs.com/",
+  "signup": "https://septorlabs.com/",
+  "description": "Septor provides daily no-card usage on selected free models.",
+  "overview": "Septor's OpenAI-compatible gateway offers a $0 account with 50 requests and 250,000 tokens a day on free models, separate from its one-time $1 signup credit that expires after 90 days. Hermes 3 Llama 3.1 405B is listed as a free model. Free inference is routed through independent aggregators, so their policies apply and Septor advises against sending sensitive data through the free tier.",
+  "offer": {
+    "type": "free-models",
+    "label": "250K tokens and 50 requests/day",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://septorlabs.com/",
+      "https://septorlabs.com/models/hermes-3-llama-3.1-405b-free"
+    ]
+  },
+  "free_access": [
+    "50 free-model requests/day",
+    "250K free-model tokens/day",
+    "No card required to start",
+    "Separate $1 signup credit expires after 90 days"
+  ],
+  "notes": "Use hermes-3-llama-3.1-405b-free. Free routes go through independent aggregators; avoid sensitive data. Model substitution has been reported by an independent integration; verify the response model.",
+  "free_token_allowance": 250000,
+  "allowance_period": "day",
+  "models": [
+    {
+      "id": "hermes-3-llama-3-1-405b",
+      "name": "Hermes 3 Llama 3.1 405B",
+      "family": "Hermes",
+      "context_window": 131072
+    }
+  ]
+}
