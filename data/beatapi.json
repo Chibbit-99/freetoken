@@ -1,0 +1,52 @@
+{
+  "id": "beatapi",
+  "name": "BeatAPI",
+  "website": "https://beatapi.io/",
+  "docs": "https://docs.beatapi.io/free-models",
+  "signup": "https://beatapi.io/dashboard/apikeys",
+  "description": "An API gateway with limited-time zero-priced text models.",
+  "overview": "BeatAPI documents three free text model IDs available with zero balance before any top-up, subject to key group access. Before the first top-up the account is limited to one successful free request per minute. The provider explicitly promises no daily allowance and may withdraw free models at any time. Card requirements and live inference were not independently tested.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models; 1 successful request/min",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://docs.beatapi.io/free-models",
+      "https://beatapi.io/"
+    ]
+  },
+  "free_access": [
+    "Zero-balance access before first top-up",
+    "1 successful free request/minute before top-up",
+    "No daily allowance promised; models may disappear",
+    "Card requirement unconfirmed"
+  ],
+  "notes": "Base URL https://api.beatapi.io/v1. Use exact -free IDs; paid siblings are billable. Model identity and reliability not independently tested.",
+  "api_endpoint": "https://api.beatapi.io/v1",
+  "models": [
+    {
+      "id": "glm-5.3-flash-free",
+      "name": "GLM 5.3 Flash Free",
+      "family": "GLM"
+    },
+    {
+      "id": "deepseek-v4.1-flash-free",
+      "name": "DeepSeek V4.1 Flash Free",
+      "family": "DeepSeek"
+    },
+    {
+      "id": "hy4-flash-free",
+      "name": "HY4 Flash Free",
+      "family": "Hunyuan"
+    }
+  ]
+}

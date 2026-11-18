@@ -1,0 +1,42 @@
+{
+  "id": "nabh-cloud",
+  "name": "nabh.cloud",
+  "website": "https://nabh.cloud/pricing/",
+  "docs": "https://nabh.cloud/docs/",
+  "signup": "https://app.nabh.cloud/signup",
+  "description": "Indian prepaid API with a free monthly GPT-OSS allowance.",
+  "overview": "The Free plan offers 50 credits on signup and 50 more on the first of each month, each worth INR 1, usable for GPT OSS 20B only. It advertises 5 requests/minute and 500/day. The Developer plan requires a recharge but is not needed for the free plan. Free-credit rollover is not clear. No account or billing was tested.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "50 INR credits / month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Operator privacy claims unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://nabh.cloud/pricing/",
+      "https://nabh.cloud/docs/"
+    ]
+  },
+  "free_access": [
+    "50 INR credits on signup and monthly",
+    "GPT OSS 20B only; no card",
+    "5 requests/minute; 500/day",
+    "Paid models require a recharge"
+  ],
+  "notes": "Base URL https://api.nabh.cloud/v1. Credits are currency-denominated, not tokens; per-request rounding applies.",
+  "api_endpoint": "https://api.nabh.cloud/v1",
+  "models": [
+    {
+      "id": "gpt-oss-20b",
+      "name": "GPT OSS 20B",
+      "family": "GPT-OSS"
+    }
+  ]
+}

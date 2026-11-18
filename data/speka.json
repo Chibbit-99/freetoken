@@ -1,0 +1,47 @@
+{
+  "id": "speka",
+  "name": "Speka",
+  "website": "https://speka.me/",
+  "docs": "https://speka.me/",
+  "signup": "https://speka.me/",
+  "description": "An OpenAI-compatible model gateway with a small recurring allowance.",
+  "overview": "Speka advertises $1 of model usage monthly on its $0 free plan, no card, with 10 requests per minute and one key. Its docs say exhausted allowance returns 402, while pricing also describes paid overages; verify account billing controls. Live model catalogue changes and identity, balance and inference were not independently tested.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "$1 model usage / month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://speka.me/pricing",
+      "https://speka.me/docs",
+      "https://speka.me/models"
+    ]
+  },
+  "free_access": [
+    "$1 model usage monthly; no card",
+    "10 requests/min and one API key",
+    "Pricing mentions billed overages; docs describe 402 on exhaustion",
+    "Model availability and billing unverified"
+  ],
+  "notes": "Base URL https://speka.me/v1. Check actual prices and billing controls before use.",
+  "models": [
+    {
+      "id": "google/gemma-4-31b-it",
+      "name": "Gemma 4 31B IT (gateway listing)",
+      "family": "Gemma"
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra (gateway listing)",
+      "family": "Nemotron"
+    }
+  ]
+}

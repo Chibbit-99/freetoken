@@ -1,0 +1,42 @@
+{
+  "id": "aevon",
+  "name": "Aevon",
+  "website": "https://aevon.sh/",
+  "docs": "https://aevon.sh/docs",
+  "signup": "https://aevon.sh/auth",
+  "description": "A small third-party gateway advertising a large signup credit.",
+  "overview": "Aevon claims $100 in one-time signup credit with GitHub login and no card, plus selected free-tier models. Its homepage and docs disagree on which models are free, and it recommends its gateway only for side projects or prototyping. Grant, model identities, availability and billing were not independently tested; do not treat its branded model names as verified.",
+  "offer": {
+    "type": "trials",
+    "label": "$100 signup credit claimed",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Gateway; identity and privacy unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aevon.sh/",
+      "https://aevon.sh/docs"
+    ]
+  },
+  "free_access": [
+    "$100 one-time credit advertised; GitHub login",
+    "No card required according to operator",
+    "Free-model lists conflict between pages",
+    "Prototype-only; model identity unverified"
+  ],
+  "notes": "Base URL https://aevon.sh/v1. Avoid sensitive data; independently verify actual access, balance and charges.",
+  "api_endpoint": "https://aevon.sh/v1",
+  "models": [
+    {
+      "id": "deepseek-v2-lite",
+      "name": "DeepSeek V2 Lite (gateway claim)",
+      "family": "DeepSeek"
+    }
+  ]
+}

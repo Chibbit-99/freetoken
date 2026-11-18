@@ -1,0 +1,41 @@
+{
+  "id": "notrack-api",
+  "name": "NoTrack API",
+  "website": "https://notrack.ai/api",
+  "docs": "https://notrack.ai/api/docs",
+  "signup": "https://notrack.ai/api-keys",
+  "description": "A single-model hosted text API with a first-key trial.",
+  "overview": "NoTrack advertises $0.50 on the first API key, valid seven days, and describes an account with a nickname and password. Card requirement for the trial is not explicit. The operator does not publish the underlying model identity. No account or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$0.50 first-key trial; 7 days",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://notrack.ai/api"
+    ]
+  },
+  "free_access": [
+    "$0.50 first-key trial, valid seven days",
+    "Nickname and password account",
+    "300 requests/min and 8 parallel requests per key advertised",
+    "Card requirement unconfirmed"
+  ],
+  "notes": "Base URL https://api.notrack.ai/v1. Paid top-ups are separate; identity unverified.",
+  "api_endpoint": "https://api.notrack.ai/v1",
+  "models": [
+    {
+      "id": "notrack-uncensored",
+      "name": "NoTrack Uncensored",
+      "family": "Unspecified"
+    }
+  ]
+}

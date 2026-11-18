@@ -1,0 +1,48 @@
+{
+  "id": "crowllm",
+  "name": "CrowLLM",
+  "website": "https://crowllm.com/",
+  "docs": "https://crowllm.com/docs",
+  "signup": "https://crowllm.com/sign-up",
+  "description": "A model gateway with a no-card, zero-priced free model shelf.",
+  "overview": "CrowLLM says its free lane needs no card or top-up, and is limited to a handful of requests per minute. Free and paid models share an API; check each model price because some IDs ending in :free are earned-credit rather than zero-priced routes. The listed model was advertised as zero-priced when checked. Older operator claims of a daily Discord reward were not confirmed by current pricing. No inference, billing or model identity was independently tested.",
+  "offer": {
+    "type": "free-models",
+    "label": "Free models; limited requests/min",
+    "tone": "blue"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://crowllm.com/pricing",
+      "https://crowllm.com/models/solar-mini4:free",
+      "https://crowllm.com/models/hy4-flash:free"
+    ]
+  },
+  "free_access": [
+    "Free lane requires no card or top-up",
+    "A handful of requests per minute; exact cap unpublished",
+    "Check live pricing; not every :free ID is zero-priced",
+    "Paid routes spend credit"
+  ],
+  "notes": "Base URL https://crowllm.com/v1. Free model availability, rate limits and pricing may change.",
+  "api_endpoint": "https://crowllm.com/v1",
+  "models": [
+    {
+      "id": "solar-mini4:free",
+      "name": "Solar Mini4 Free",
+      "family": "Solar"
+    },
+    {
+      "id": "hy4-flash:free",
+      "name": "HY4 Flash Free",
+      "family": "Hunyuan"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "wallaby",
+  "name": "Wallaby",
+  "website": "https://wallabytoken.com/",
+  "docs": "https://wallabytoken.com/docs",
+  "signup": "https://api.wallabytoken.com/register",
+  "description": "An Australian gateway with Kimi models and a small trial.",
+  "overview": "The provider advertises $0.50 for new accounts, with no card or top-up and no trial expiry. Its Kimi vendor-verifier results are operator-reported samples, not independent verification. No account, balance or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$0.50 one-time trial",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://wallabytoken.com/",
+      "https://wallabytoken.com/blog/p/kimi-k3-free-trial"
+    ]
+  },
+  "free_access": [
+    "$0.50 starting trial credit",
+    "No card or top-up; credit does not expire",
+    "Email registration",
+    "Reasoning tokens are billed as output"
+  ],
+  "notes": "Base URL https://api.wallabytoken.com/v1. Check actual availability and billing before use.",
+  "api_endpoint": "https://api.wallabytoken.com/v1",
+  "models": [
+    {
+      "id": "kimi-k3.1-pro",
+      "name": "Kimi K3.1 Pro",
+      "family": "Kimi"
+    },
+    {
+      "id": "kimi-k3",
+      "name": "Kimi K3",
+      "family": "Kimi"
+    }
+  ]
+}

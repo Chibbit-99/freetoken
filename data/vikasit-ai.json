@@ -1,0 +1,45 @@
+{
+  "id": "vikasit-ai",
+  "name": "Vikasit AI",
+  "website": "https://vikasit.ai/inference",
+  "docs": "https://vikasit.ai/inference",
+  "signup": "https://vikasit.ai/auth",
+  "description": "OpenAI-compatible inference API with a recurring Nova allowance.",
+  "overview": "The operator advertises 2 million free tokens per day on vikasit-nova for signed-in developers, no card, subject to per-account fair use and change or retirement. Other listed models are paid. GitHub sign-in is required. No signup, inference, billing behaviour or model identity was independently tested. Its privacy policy describes itself as a template pending legal review.",
+  "offer": {
+    "type": "always-free",
+    "label": "2M tokens/day on Nova",
+    "tone": "emerald"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Policy is a draft; terms unclear"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://vikasit.ai/inference",
+      "https://vikasit.ai/privacy"
+    ]
+  },
+  "free_access": [
+    "2M tokens/day on Vikasit Nova; no card",
+    "GitHub sign-in; fair-use limits per account",
+    "Other models are pay-as-you-go",
+    "Free allowance may change or be retired"
+  ],
+  "notes": "Base URL https://api.vikasit.ai/v1. Verify billing controls before selecting paid models; avoid sensitive data until privacy terms are clear.",
+  "api_endpoint": "https://api.vikasit.ai/v1",
+  "free_token_allowance": 2000000,
+  "allowance_period": "day",
+  "models": [
+    {
+      "id": "vikasit-nova",
+      "name": "Vikasit Nova",
+      "family": "Vikasit",
+      "rate_limits": "2M free tokens/day; fair-use limits per account"
+    }
+  ]
+}

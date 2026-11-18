@@ -1,0 +1,52 @@
+{
+  "id": "abliteration",
+  "name": "Abliteration.ai",
+  "website": "https://abliteration.ai/",
+  "docs": "https://docs.abliteration.ai/",
+  "signup": "https://abliteration.ai/sign-up",
+  "description": "A hosted model API with a one-credit introductory preview.",
+  "overview": "Pricing says a one-credit preview works in the API or playground with no card. It does not define a dollar conversion for that preview on the page; do not assume one credit equals one dollar. Rate limits are ceilings, not a recurring free grant. No account or inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "One-credit free preview",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://abliteration.ai/pricing",
+      "https://docs.abliteration.ai/api/rate-limits"
+    ]
+  },
+  "free_access": [
+    "One-credit preview; no card",
+    "API or playground after sign-in",
+    "Not a recurring allowance; credit value unspecified",
+    "Free-tier rate limits do not replenish trial credit"
+  ],
+  "notes": "Base URL https://api.abliteration.ai/v1. Model identity and billing not independently tested.",
+  "api_endpoint": "https://api.abliteration.ai/v1",
+  "models": [
+    {
+      "id": "abliterated-model",
+      "name": "Abliterated Model",
+      "family": "Abliteration"
+    },
+    {
+      "id": "abliterated-model-large-v2",
+      "name": "Abliterated Large v2",
+      "family": "Abliteration"
+    },
+    {
+      "id": "abliterated-model-large-flash",
+      "name": "Abliterated Large Flash",
+      "family": "Abliteration"
+    }
+  ]
+}

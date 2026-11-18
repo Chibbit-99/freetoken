@@ -1,0 +1,47 @@
+{
+  "id": "routerplex",
+  "name": "RouterPlex",
+  "website": "https://routerplex.com/",
+  "docs": "https://docs.routerplex.com/quickstart",
+  "signup": "https://routerplex.com/sign-up",
+  "description": "A multi-model gateway with a one-time eligible-account setup credit.",
+  "overview": "Eligible verified accounts receive $1 once upon creating a guided-setup key, with no card and no expiry. Eligibility excludes previous paid top-ups, existing credit and prior setup-credit grants. Trial keys have a $1 hard budget; live availability and identities were not tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$1 one-time setup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Privacy not documented"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://routerplex.com/",
+      "https://docs.routerplex.com/quickstart"
+    ]
+  },
+  "free_access": [
+    "$1 once for eligible verified accounts",
+    "Claim by creating a guided-setup key",
+    "No card; trial credit does not expire",
+    "10 RPM, 250,000 TPM and four concurrent requests"
+  ],
+  "notes": "Base URL https://api.routerplex.com/v1. Model access and trial eligibility are provider claims.",
+  "api_endpoint": "https://api.routerplex.com/v1",
+  "models": [
+    {
+      "id": "claude-sonnet-4-6",
+      "name": "Claude Sonnet 4.6 (gateway listing)",
+      "family": "Claude"
+    },
+    {
+      "id": "gemini-2.5-flash",
+      "name": "Gemini 2.5 Flash (gateway listing)",
+      "family": "Gemini"
+    }
+  ]
+}

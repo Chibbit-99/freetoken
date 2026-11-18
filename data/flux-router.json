@@ -1,0 +1,42 @@
+{
+  "id": "flux-router",
+  "name": "Flux Router",
+  "website": "https://fluxrouter.ai/pricing",
+  "docs": "https://fluxrouter.ai/faq",
+  "signup": "https://fluxrouter.ai/auth/sign-up",
+  "description": "An OpenAI-compatible smart-routing gateway with a recurring free lane.",
+  "overview": "The free plan includes up to $1 of Fast-lane usage or 100,000 tokens per month, whichever limit comes first, at 60 requests per minute. The operator says the free plan hard-stops at its cap; other lanes and pinned models are paid. Card requirement and the exact free alias should be checked during signup. No inference or billing tested.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "$1 or 100K tokens / month",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Upstream data policies vary"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://fluxrouter.ai/pricing",
+      "https://fluxrouter.ai/faq"
+    ]
+  },
+  "free_access": [
+    "Up to $1 or 100K tokens/month, whichever first",
+    "Fast lane only; 60 requests/minute",
+    "Hard stop at free cap, operator says",
+    "Card requirement not confirmed"
+  ],
+  "notes": "Base URL https://api.fluxrouter.ai/v1. Fast is a routing alias, not a fixed model; verify free-plan eligibility.",
+  "api_endpoint": "https://api.fluxrouter.ai/v1",
+  "models": [
+    {
+      "id": "flux-fast",
+      "name": "Flux Fast (routing alias)",
+      "family": "Router"
+    }
+  ]
+}

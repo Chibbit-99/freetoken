@@ -1,0 +1,42 @@
+{
+  "id": "gwbus",
+  "name": "GW BUS",
+  "website": "https://gwbus.com/",
+  "docs": "https://gwbus.com/docs",
+  "signup": "https://gwbus.com/",
+  "description": "An OpenAI-compatible gateway advertising starting credits.",
+  "overview": "GW BUS advertises $5 signup credit and a 1M tokens/day Free-plan limit. The page does not establish that the credit replenishes; treat 1M/day as a ceiling inside a finite balance, not a recurring grant. Card requirements, expiry and eligible models are unclear. Neither signup nor inference was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 signup credit; 1M/day cap",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Gateway; privacy and identity unverified"
+  },
+  "requires_payment_card": null,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://gwbus.com/",
+      "https://gwbus.com/docs"
+    ]
+  },
+  "free_access": [
+    "$5 starting credit advertised",
+    "1M/day is a limit, not a proven grant",
+    "Card requirement and expiry unknown",
+    "Model identity and billing unverified"
+  ],
+  "notes": "Base URL https://api.gwbus.com/v1. The docs show paid model prices and 402 on insufficient balance.",
+  "api_endpoint": "https://api.gwbus.com/v1",
+  "models": [
+    {
+      "id": "deepseek-chat",
+      "name": "DeepSeek Chat (gateway example)",
+      "family": "DeepSeek"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "mixroute",
+  "name": "MixRoute",
+  "website": "https://mixroute.ai/",
+  "docs": "https://mixroute.ai/docs/introduction",
+  "signup": "https://console.mixroute.ai/",
+  "description": "A multi-provider OpenAI-compatible routing gateway.",
+  "overview": "MixRoute advertises $5 starting credit on popular models with no card; topping up unlocks the wider catalogue. The grant is a finite starting credit, not a daily allowance, and eligible model IDs and expiry should be confirmed in the console. No signup, inference or billing was tested.",
+  "offer": {
+    "type": "trials",
+    "label": "$5 signup credit",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Gateway privacy claims unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://mixroute.ai/",
+      "https://mixroute.ai/docs/introduction"
+    ]
+  },
+  "free_access": [
+    "$5 one-time starting credit",
+    "No card required according to operator",
+    "Eligible models and expiry need confirmation",
+    "More models require a top-up"
+  ],
+  "notes": "Base URL https://api.mixroute.ai/v1. Confirm the selected model is eligible for the starting credit.",
+  "api_endpoint": "https://api.mixroute.ai/v1",
+  "models": [
+    {
+      "id": "deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017 (catalogue listing)",
+      "family": "DeepSeek"
+    }
+  ]
+}

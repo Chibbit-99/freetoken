@@ -1,0 +1,42 @@
+{
+  "id": "pekpik",
+  "name": "PEKPIK LLM",
+  "website": "https://aiapiv2.pekpik.com/free-credit",
+  "docs": "https://aiapiv2.pekpik.com/docs/quickstart/",
+  "signup": "https://aiapiv2.pekpik.com/register",
+  "description": "An unofficial model gateway with manually claimed daily credit.",
+  "overview": "The operator advertises $1 on email verification, then $0.50 per daily manual claim, continuing after the initial $20 campaign. Claims reset the balance rather than stack, so skipped or unused credit lapses. Its approximate 1.85M deepseek-chat input tokens is a price conversion, not an input-plus-output grant. Free model eligibility, billing and branded model identities were not independently tested.",
+  "offer": {
+    "type": "monthly-credits",
+    "label": "$0.50 daily claim",
+    "tone": "amber"
+  },
+  "privacy": {
+    "type": "none",
+    "label": "Gateway; privacy and model identity unverified"
+  },
+  "requires_payment_card": false,
+  "last_updated": "2026-11-17",
+  "verified": {
+    "checked": "2026-11-17",
+    "sources": [
+      "https://aiapiv2.pekpik.com/free-credit",
+      "https://aiapiv2.pekpik.com/docs/quickstart/"
+    ]
+  },
+  "free_access": [
+    "$1 after email verification; no card",
+    "Manually claim $0.50/day; balance resets",
+    "Token estimates depend on model prices",
+    "Unofficial relay; model identity unverified"
+  ],
+  "notes": "Base URL https://aiapiv2.pekpik.com/v1. Check available free models and current billing before use; do not send sensitive data.",
+  "api_endpoint": "https://aiapiv2.pekpik.com/v1",
+  "models": [
+    {
+      "id": "deepseek-chat",
+      "name": "DeepSeek Chat (gateway claim)",
+      "family": "DeepSeek"
+    }
+  ]
+}
